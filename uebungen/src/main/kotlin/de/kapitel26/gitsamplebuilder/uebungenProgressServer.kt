@@ -3,7 +3,7 @@ package de.kapitel26.gitsamplebuilder
 import com.fasterxml.jackson.module.kotlin.*
 import io.ktor.application.Application
 import io.ktor.application.ApplicationCall
-import io.ktor.application.call
+import io.ktor.application.*
 import io.ktor.client.*
 import io.ktor.client.statement.*
 import io.ktor.client.engine.cio.*
@@ -70,20 +70,8 @@ fun Application.participantsModule() {
         cookie<UserSession>("user_session")
     }
 
-    routing { 
-        get("/") {
-//            call.respondRedirect() { "/git-workshop" }
-            call.respondHtml {
-                body { 
-                    h1 { +"MOIN"} 
-                    // p { +"respProps=${response}" }
-                    // p { +"contentLength=${conny.contentLengthLong}" }
-                }
-            }
-        }
-     }
-
     routing {
+
         get("/git-workshop/{path...}") {
             val path = call.parameters.getAll("path")?.joinToString("/") ?: ""
             val url = "http://localhost:4000/git-workshop/${path}"
@@ -96,7 +84,7 @@ fun Application.participantsModule() {
         }
 
 //src="/git-workshop/assets/js/just-the-docs.js"
-        get("/schnurz") {
+        get("/me") {
             call.respondHtml {
                 val sessions: UserSession? = call.sessions.get()
                 val userId = call.parameters["id"] ?: sessions?.userId
@@ -152,6 +140,14 @@ fun Application.participantsModule() {
                 }
             }
 
+        }
+
+//        get("") { call.respondRedirect("/git-wokshop/") }
+        get("/") { call.respondRedirect("/git-workshop") }
+        get("*") {
+            call.respondHtml {
+                body { p { +"Fallback" } }
+            }
         }
     }
 }
