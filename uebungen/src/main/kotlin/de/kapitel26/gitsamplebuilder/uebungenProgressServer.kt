@@ -4,8 +4,14 @@ import com.fasterxml.jackson.module.kotlin.*
 import io.ktor.application.Application
 import io.ktor.application.ApplicationCall
 import io.ktor.application.call
+import io.ktor.client.*
+import io.ktor.client.statement.*
+import io.ktor.client.engine.cio.*
+import io.ktor.client.request.request
 import io.ktor.application.install
 import io.ktor.html.respondHtml
+import io.ktor.http.*
+import io.ktor.response.*
 import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
@@ -13,14 +19,15 @@ import io.ktor.server.netty.Netty
 import io.ktor.sessions.*
 import io.ktor.response.respondRedirect
 import java.io.File
+import java.net.URL
 import kotlin.math.abs
 import kotlinx.html.*
 import kotlin.coroutines.*
 
 fun main() {
-    val adminServer = embeddedServer(Netty, port = 8040) { adminModule() }
+//    val adminServer = embeddedServer(Netty, port = 8040) { adminModule() }
     val participantsServer = embeddedServer(Netty, port = 8080) { participantsModule() }
-    adminServer.start(wait = false)
+//    adminServer.start(wait = false)
     participantsServer.start(wait = true)
 }
 
@@ -63,8 +70,33 @@ fun Application.participantsModule() {
         cookie<UserSession>("user_session")
     }
 
-    routing {
+    routing { 
         get("/") {
+//            call.respondRedirect() { "/git-workshop" }
+            call.respondHtml {
+                body { 
+                    h1 { +"MOIN"} 
+                    // p { +"respProps=${response}" }
+                    // p { +"contentLength=${conny.contentLengthLong}" }
+                }
+            }
+        }
+     }
+
+    routing {
+        get("/git-workshop/{path...}") {
+            val path = call.parameters.getAll("path")?.joinToString("/") ?: ""
+            val url = "http://localhost:4000/git-workshop/${path}"
+
+            println(">>> url= $url") 
+            val response: HttpResponse = HttpClient().use {  c -> c.request(url) {} }     
+            println(">>> resp= $response")
+
+            call.respondBytes(response.readBytes(), status = response.status, contentType = response.contentType())
+        }
+
+//src="/git-workshop/assets/js/just-the-docs.js"
+        get("/schnurz") {
             call.respondHtml {
                 val sessions: UserSession? = call.sessions.get()
                 val userId = call.parameters["id"] ?: sessions?.userId
