@@ -74,11 +74,13 @@ fun Application.participantsModule() {
         participantsPage()
         registerPage()
         get("/") { call.respondRedirect("/git-workshop") }
-        get("*") {
-            call.respondHtml {
-                body { p { +"Fallback" } }
-            }
-        }
+        get("*") { call.respondHtml { body { p { +"Fallback" } } } }
+    }
+}
+
+fun Application.adminModule() {
+    routing {
+        adminDashboad()
     }
 }
 
@@ -156,58 +158,57 @@ fun Route.registerPage() {
     }
 }
 
-fun Application.adminModule() {
-    routing {
-        get("/") {
-            val selected = call.parameters["select"] ?: "?"
-            update(
-                    state.copy(
-                            aktuelleAufgabe = state.aufgaben.find { it.first == selected }
-                                            ?: state.aufgaben.first()
-                    )
-            )
-            call.respondHtml {
-                head { 
-                    meta() { 
-                        httpEquiv="refresh"
-                        content="3" 
+fun Route.adminDashboad() {
+    get("/") {
+        val selected = call.parameters["select"] ?: "?"
+        update(
+                state.copy(
+                        aktuelleAufgabe = state.aufgaben.find { it.first == selected }
+                                        ?: state.aufgaben.first()
+                )
+        )
+        call.respondHtml {
+            head { 
+                meta() { 
+                    httpEquiv="refresh"
+                    content="3" 
+                }
+            }
+
+            body {
+                h1 { text("Git Workshop - Progress Monitor") }
+                h2 { text("Aktuelle Aufgabe") }
+                val totalNum = state.participants.size
+                state.aktuelleAufgabe.also { (aufgabe, schritte) ->
+                    schritte.forEach { schritt ->
+                        val sid =
+                                abs((state.aktuelleAufgabe.first to schritt).hashCode())
+                                        .toString()
+                        p { +"$aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }}" }
                     }
                 }
-
-                body {
-                    h1 { text("Git Workshop - Progress Monitor") }
-                    h2 { text("Aktuelle Aufgabe") }
-                    val totalNum = state.participants.size
-                    state.aktuelleAufgabe.also { (aufgabe, schritte) ->
-                        schritte.forEach { schritt ->
-                            val sid =
-                                    abs((state.aktuelleAufgabe.first to schritt).hashCode())
-                                            .toString()
-                            p { +"$aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }}" }
+                h2 { text("Aufgaben") }
+                form(action = "/", method = FormMethod.get) {
+                    state.aufgaben.map { it.first }.forEach {
+                        input(name = "select") {
+                            value = it
+                            type = InputType.radio
+                            checked = it == state.aktuelleAufgabe.first
+                            onChange = "this.form.submit()"
+                            text(it)
                         }
+                        br {}
                     }
-                    h2 { text("Aufgaben") }
-                    form(action = "/", method = FormMethod.get) {
-                        state.aufgaben.map { it.first }.forEach {
-                            input(name = "select") {
-                                value = it
-                                type = InputType.radio
-                                checked = it == state.aktuelleAufgabe.first
-                                onChange = "this.form.submit()"
-                                text(it)
-                            }
-                            br {}
-                        }
-                    }
-                    h2 { text("Teilnehmer") }
-                    p {
-                        state.participants.forEach { (userId, alias) ->
-                            a(href="/?id=$userId") { +"$alias $userId" }
-                            br {}
-                        }
+                }
+                h2 { text("Teilnehmer") }
+                p {
+                    state.participants.forEach { (userId, alias) ->
+                        a(href="/?id=$userId") { +"$alias $userId" }
+                        br {}
                     }
                 }
             }
         }
-    }
+    }    
 }
+
