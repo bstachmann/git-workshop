@@ -11,6 +11,7 @@ import io.ktor.client.request.request
 import io.ktor.application.install
 import io.ktor.html.respondHtml
 import io.ktor.http.*
+import io.ktor.util.pipeline.*
 import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.embeddedServer
@@ -85,17 +86,18 @@ fun Application.adminModule() {
 }
 
 fun Route.workshopSiteFromLocalJekyll() {
-    get("/git-workshop/{path...}") {
-        val path = call.parameters.getAll("path")?.joinToString("/") ?: ""
-        val url = "http://localhost:4000/git-workshop/${path}"
-
-        println(">>> url= $url") 
-        val response: HttpResponse = HttpClient().use {  c -> c.request(url) {} }     
+    get("/git-workshop/{path...}") { 
+        
+        val response = this.getStaticContent(call.parameters.getAll("path")?.joinToString("/") ?: "")
         println(">>> resp= $response")
-
         call.respondBytes(response.readBytes(), status = response.status, contentType = response.contentType())
     }
 }
+
+suspend fun PipelineContext<Unit, ApplicationCall>.getStaticContent(path: String) : HttpResponse =
+    HttpClient().use {  c -> c.request("http://localhost:4000/git-workshop/${path}") {} }    
+
+
 
 fun Route.participantsPage() {
     get("/me") {
