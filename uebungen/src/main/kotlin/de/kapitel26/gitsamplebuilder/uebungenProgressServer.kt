@@ -12,8 +12,7 @@ import io.ktor.application.install
 import io.ktor.html.respondHtml
 import io.ktor.http.*
 import io.ktor.response.*
-import io.ktor.routing.get
-import io.ktor.routing.routing
+import io.ktor.routing.*
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.ktor.sessions.*
@@ -25,9 +24,9 @@ import kotlinx.html.*
 import kotlin.coroutines.*
 
 fun main() {
-//    val adminServer = embeddedServer(Netty, port = 8040) { adminModule() }
+    val adminServer = embeddedServer(Netty, port = 8040) { adminModule() }
+    adminServer.start(wait = false)
     val participantsServer = embeddedServer(Netty, port = 8080) { participantsModule() }
-//    adminServer.start(wait = false)
     participantsServer.start(wait = true)
 }
 
@@ -71,82 +70,87 @@ fun Application.participantsModule() {
     }
 
     routing {
-
-        get("/git-workshop/{path...}") {
-            val path = call.parameters.getAll("path")?.joinToString("/") ?: ""
-            val url = "http://localhost:4000/git-workshop/${path}"
-
-            println(">>> url= $url") 
-            val response: HttpResponse = HttpClient().use {  c -> c.request(url) {} }     
-            println(">>> resp= $response")
-
-            call.respondBytes(response.readBytes(), status = response.status, contentType = response.contentType())
-        }
-
-//src="/git-workshop/assets/js/just-the-docs.js"
-        get("/me") {
-            call.respondHtml {
-                val sessions: UserSession? = call.sessions.get()
-                val userId = call.parameters["id"] ?: sessions?.userId
-                val sid = call.parameters["sid"]
-                val completed = call.parameters["completed"].toBoolean()
-                if (sid != null && userId != null) {
-                    val olda: Set<String> = state.achievements[sid] ?: emptySet()
-                    val newa = if(completed) olda + userId else olda -userId
-                    update(state.copy(achievements = state.achievements + (sid to newa)))
-                }
-
-                head { 
-                    meta() { 
-                        httpEquiv="refresh"
-                        content="3" 
-                    }
-                }
-
-                body {
-                    h1 { text("Git Workshop - Progress Monitor") }
-                    if (userId == null) {
-                        form(action = "/register", method = FormMethod.get) {
-                            label { text("Dein Name/Alias:") }
-                            input(name = "newAlias") { value = "torfnase" }
-                        }
-                    } else {
-                        h2 { text("Hallo ${state.participants[userId]}!") }
-                        h2 { text("Aufgabe ${state.aktuelleAufgabe.first}") }
-                        state.aktuelleAufgabe.second.forEach { schritt ->
-                            p {
-                                val schrittSid = abs((state.aktuelleAufgabe.first to schritt).hashCode())
-                                                .toString()
-                                text(schritt)
-                                val isCompleted = state.achievements[schrittSid]?.contains(userId) ?: false
-                                a(href = "/?id=$userId&sid=$schrittSid&completed=${!isCompleted}") { +(if(isCompleted) " erledigt" else " offen"  ) }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        get("/register") {
-            val newAlias = call.parameters["newAlias"] ?: throw Exception("Missing parameter newAlias")
-            val newUserId = abs("participant/$newAlias".hashCode()).toString()
-            if (state.participants[newUserId] == null) {
-                update(state.copy(participants = state.participants + (newUserId to newAlias)))
-                call.sessions.set(UserSession(newUserId))
-                call.respondRedirect("/")
-            } else {
-                call.respondHtml {
-                    body { p { +"Alias $newAlias ist bereits vergeben." } }
-                }
-            }
-
-        }
-
-//        get("") { call.respondRedirect("/git-wokshop/") }
+        workshopSiteFromLocalJekyll()
+        participantsPage()
+        registerPage()
         get("/") { call.respondRedirect("/git-workshop") }
         get("*") {
             call.respondHtml {
                 body { p { +"Fallback" } }
+            }
+        }
+    }
+}
+
+fun Route.workshopSiteFromLocalJekyll() {
+    get("/git-workshop/{path...}") {
+        val path = call.parameters.getAll("path")?.joinToString("/") ?: ""
+        val url = "http://localhost:4000/git-workshop/${path}"
+
+        println(">>> url= $url") 
+        val response: HttpResponse = HttpClient().use {  c -> c.request(url) {} }     
+        println(">>> resp= $response")
+
+        call.respondBytes(response.readBytes(), status = response.status, contentType = response.contentType())
+    }
+}
+
+fun Route.participantsPage() {
+    get("/me") {
+        call.respondHtml {
+            val sessions: UserSession? = call.sessions.get()
+            val userId = call.parameters["id"] ?: sessions?.userId
+            val sid = call.parameters["sid"]
+            val completed = call.parameters["completed"].toBoolean()
+            if (sid != null && userId != null) {
+                val olda: Set<String> = state.achievements[sid] ?: emptySet()
+                val newa = if(completed) olda + userId else olda -userId
+                update(state.copy(achievements = state.achievements + (sid to newa)))
+            }
+
+            head { 
+                meta() { 
+                    httpEquiv="refresh"
+                    content="3" 
+                }
+            }
+
+            body {
+                h1 { text("Git Workshop - Progress Monitor") }
+                if (userId == null) {
+                    form(action = "/register", method = FormMethod.get) {
+                        label { text("Dein Name/Alias:") }
+                        input(name = "newAlias") { value = "torfnase" }
+                    }
+                } else {
+                    h2 { text("Hallo ${state.participants[userId]}!") }
+                    h2 { text("Aufgabe ${state.aktuelleAufgabe.first}") }
+                    state.aktuelleAufgabe.second.forEach { schritt ->
+                        p {
+                            val schrittSid = abs((state.aktuelleAufgabe.first to schritt).hashCode())
+                                            .toString()
+                            text(schritt)
+                            val isCompleted = state.achievements[schrittSid]?.contains(userId) ?: false
+                            a(href = "/?id=$userId&sid=$schrittSid&completed=${!isCompleted}") { +(if(isCompleted) " erledigt" else " offen"  ) }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+fun Route.registerPage() {
+    get("/register") {
+        val newAlias = call.parameters["newAlias"] ?: throw Exception("Missing parameter newAlias")
+        val newUserId = abs("participant/$newAlias".hashCode()).toString()
+        if (state.participants[newUserId] == null) {
+            update(state.copy(participants = state.participants + (newUserId to newAlias)))
+            call.sessions.set(UserSession(newUserId))
+            call.respondRedirect("/")
+        } else {
+            call.respondHtml {
+                body { p { +"Alias $newAlias ist bereits vergeben." } }
             }
         }
     }
