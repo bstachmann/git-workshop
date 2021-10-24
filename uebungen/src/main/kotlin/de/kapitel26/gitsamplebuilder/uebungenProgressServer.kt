@@ -71,6 +71,7 @@ fun Application.participantsModule() {
     }
 
     routing {
+        aufgabenFilesLocalJekyll()
         workshopSiteFromLocalJekyll()
         participantsPage()
         registerPage()
@@ -94,8 +95,19 @@ fun Route.workshopSiteFromLocalJekyll() {
     }
 }
 
+fun Route.aufgabenFilesLocalJekyll() {
+    get("/git-workshop/git-uebungen/{path...}") { 
+        val response = this.getStaticContent("git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
+        val processedContent = response.readText().replace("Schritt", "STEP")
+        call.respondText(processedContent, status = response.status, contentType = response.contentType())
+    }
+}
+
+
 suspend fun PipelineContext<Unit, ApplicationCall>.getStaticContent(path: String) : HttpResponse =
-    HttpClient().use {  c -> c.request("http://localhost:4000/git-workshop/${path}") {} }    
+    "http://localhost:4000/git-workshop/${path}"
+        .also { println("Requesting: $it") } 
+        .let { url ->   HttpClient().use {  c -> c.request(url) {} } }
 
 
 
