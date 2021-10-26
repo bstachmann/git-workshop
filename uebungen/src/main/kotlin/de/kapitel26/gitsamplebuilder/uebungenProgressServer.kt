@@ -86,20 +86,22 @@ fun Application.adminModule() {
     }
 }
 
+fun Route.aufgabenFilesLocalJekyll() {
+    get("/git-workshop/git-uebungen/{path...}") { 
+        val response = this.getStaticContent("git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
+        val processedContent = response.readText().replace(
+            """\<\!\-\-step\-(.+?)\-\-\>""".toRegex(), 
+            { step -> "<b>AA ${step.groups[1]?.value} BB</b> " }
+        )
+        call.respondText(processedContent, status = response.status, contentType = response.contentType())
+    }
+}
+
 fun Route.workshopSiteFromLocalJekyll() {
     get("/git-workshop/{path...}") { 
         
         val response = this.getStaticContent(call.parameters.getAll("path")?.joinToString("/") ?: "")
-        println(">>> resp= $response")
         call.respondBytes(response.readBytes(), status = response.status, contentType = response.contentType())
-    }
-}
-
-fun Route.aufgabenFilesLocalJekyll() {
-    get("/git-workshop/git-uebungen/{path...}") { 
-        val response = this.getStaticContent("git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
-        val processedContent = response.readText().replace("Schritt", "STEP")
-        call.respondText(processedContent, status = response.status, contentType = response.contentType())
     }
 }
 
@@ -127,7 +129,7 @@ fun Route.participantsPage() {
             head { 
                 meta() { 
                     httpEquiv="refresh"
-                    content="3" 
+                    content="20" 
                 }
             }
 
@@ -185,7 +187,7 @@ fun Route.adminDashboad() {
             head { 
                 meta() { 
                     httpEquiv="refresh"
-                    content="3" 
+                    content="2 0" 
                 }
             }
 

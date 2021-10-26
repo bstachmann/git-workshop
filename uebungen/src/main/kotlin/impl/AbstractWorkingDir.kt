@@ -141,7 +141,8 @@ abstract class AbstractWorkingDir<T>(
 
     @Suppress("UNCHECKED_CAST")
     fun createAufgabe(title: String, description: String = "", solution: T.() -> Unit = {}) {
-        val header = "Schritt ${solutionCollector.collectedCommands.size + 1} - $title"
+        val placeholder = """<!--step-$title-->"""
+        val header = "${placeholder}Schritt ${solutionCollector.collectedCommands.size + 1} - $title"
         solutionCollector.registerSchritt(header)
         solutionCollector.collectedCommands.add(
             header to {
