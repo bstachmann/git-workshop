@@ -141,8 +141,7 @@ abstract class AbstractWorkingDir<T>(
 
     @Suppress("UNCHECKED_CAST")
     fun createAufgabe(title: String, description: String = "", solution: T.() -> Unit = {}) {
-        val placeholder = """<!--step-$title-->"""
-        val header = "${placeholder}Schritt ${solutionCollector.collectedCommands.size + 1} - $title"
+        val header = "Schritt ${solutionCollector.collectedCommands.size + 1} - $title"
         solutionCollector.registerSchritt(header)
         solutionCollector.collectedCommands.add(
             header to {
@@ -152,8 +151,8 @@ abstract class AbstractWorkingDir<T>(
         )
         val pathInUebungsverzeichnis =
             Paths.get(rootDir.parentFile.parentFile.canonicalPath).relativize(Paths.get(rootDir.canonicalPath))
-        markdown("## " + header)
-        markdown("Starte im Verzeichnis `aufgaben/${pathInUebungsverzeichnis}`.")
+        markdown("<!--UEB-${solutionCollector.aufgabenName()}--><h2>${header}</h2>")
+        markdown("Starte im Verze{}ichnis `aufgaben/${pathInUebungsverzeichnis}`.")
         markdown(description)
     }
 

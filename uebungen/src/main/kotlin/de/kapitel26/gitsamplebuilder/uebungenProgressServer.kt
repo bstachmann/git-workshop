@@ -88,10 +88,27 @@ fun Application.adminModule() {
 
 fun Route.aufgabenFilesLocalJekyll() {
     get("/git-workshop/git-uebungen/{path...}") { 
+        val userId = call.sessions.get<UserSession>()?.userId
+        val sidParam = call.parameters["sid"]
+        println("userId=$userId, sid=$sidParam")
+        if (sidParam != null && userId != null) {
+            val completed = call.parameters["completed"].toBoolean()
+            val olda: Set<String> = state.achievements[sidParam] ?: emptySet()
+            val newa = if(completed) olda + userId else olda -userId
+            update(state.copy(achievements = state.achievements + (sidParam to newa)))
+        }
+
         val response = this.getStaticContent("git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
         val processedContent = response.readText().replace(
-            """\<\!\-\-step\-(.+?)\-\-\>""".toRegex(), 
-            { step -> "<b>AA ${step.groups[1]?.value} BB</b> " }
+            """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\> (.+?)\ <\/h2\>""".toRegex(), 
+            { step -> 
+                val aufgabname = step.groups[1]?.value
+                val schrittname = step.groups[2]?.value
+                val schrittSid = abs((aufgabname to schrittname).hashCode()).toString()    
+                val isCompleted = state.achievements[schrittSid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
+                
+                """<h2>$schrittname <a href="?sid=$schrittSid&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
+            }
         )
         call.respondText(processedContent, status = response.status, contentType = response.contentType())
     }
@@ -127,10 +144,10 @@ fun Route.participantsPage() {
             }
 
             head { 
-                meta() { 
-                    httpEquiv="refresh"
-                    content="20" 
-                }
+                // meta() { 
+                //     httpEquiv="refresh"
+                //     content="20" 
+                // }
             }
 
             body {
@@ -185,10 +202,10 @@ fun Route.adminDashboad() {
         )
         call.respondHtml {
             head { 
-                meta() { 
-                    httpEquiv="refresh"
-                    content="2 0" 
-                }
+                // meta() { 
+                //     httpEquiv="refresh"
+                //     content="2 0" 
+                // }
             }
 
             body {
@@ -200,7 +217,7 @@ fun Route.adminDashboad() {
                         val sid =
                                 abs((state.aktuelleAufgabe.first to schritt).hashCode())
                                         .toString()
-                        p { +"$aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }}" }
+                        p { +"[$sid] $aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }}" }
                     }
                 }
                 h2 { text("Aufgaben") }
