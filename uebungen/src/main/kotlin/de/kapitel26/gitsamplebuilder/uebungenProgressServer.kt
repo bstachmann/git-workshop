@@ -86,6 +86,11 @@ fun Application.adminModule() {
     }
 }
 
+
+val ApplicationCall.userId : String get() = 
+    sessions.get<UserSession>()?.userId 
+    ?: java.util.Random().nextInt().toString().also { sessions.set(UserSession(it)) }
+
 fun Route.aufgabenFilesLocalJekyll() {
     get("/git-workshop/git-uebungen/{path...}") { 
         val userId = call.sessions.get<UserSession>()?.userId
