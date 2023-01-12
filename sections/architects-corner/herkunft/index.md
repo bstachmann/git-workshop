@@ -10,7 +10,7 @@ durch **Linus Torvalds**.
 
 Später wurde eine kommerzielle Versionsverwaltung Namens Bitkeeper genutzt.
 
-*Aus Gründen* musste Torvads ab 2005 eine Alternative dazu finden.
+*Aus Gründen* musste Torvalds ab 2005 eine Alternative dazu finden.
 
 
 ---
