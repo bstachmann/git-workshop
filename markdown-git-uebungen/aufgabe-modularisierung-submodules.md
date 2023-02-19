@@ -20,33 +20,30 @@ Wir werden hier beide für folgende Anwendungsfälle erprobe:
 * Änderung in ein Modul übertragen
 * Übergeordnetes Repo klonen
 
-### Subtrees
+### Submodules
 
-Bei diesem Ansatz werden Commits aus dem aus dem untergeordeten
-Repository übertragen und per `merge` integriert, 
-ganz ähnlich wie beim normalen `pull`.
-Die Besonderheit ist, dass Zur Integraion 
-dabei eine sogenanntes `subtree`-Merge erfolgt, 
-bei dem die Dateien in eine vorgegebenes Zielverzeichnis (`prefix`) verschoben werden.
+Bei einem Submodule werden Git-Repositorys ineinander geschachtelt.
+Das übergeordnete Repo merkt sich dann für jedes untergeordnete Repo (*submodule*)
 
- * `subtree add --prefix=<Zielverzeichnis> <Quellrepository>`: Initales einbetten.
- * `subtree pull --prefix=<Zielverzeichnis> <Quellrepository>`: Aktualisieren aus dem Quellrepository.
- * `subtree push--prefix=<Zielverzeichnis> <Quellrepository>`: Übertragen ins Quellrepository.
 
-Tipp: Wer nicht mag,
-dass Subtree alle Commit aus dem Quellrepository holt,
-kann die Option `--squash` nutzen.
+ 1. von wo geklont werden soll (URL) und
+ 2. welche Revison benötigt wird.
+
+Da die Submodules in ihren Verzeichnissen eigenständige Git-Repositorys sind,
+kann man dort mit den üblichen Befehlen wie `switch`, `pull` oder auch `commit` arbeiten.
+Wenn man die Änderungen im übergeordneten Repo übernehmen möchen,
+tut dies durch ein *top-level*-commit.
+
+ * `git submodule add  <Quellrepository> <Zielverzeichnis>`:> Initales einbetten. *Danach* Commit erforderlich.
+ * `git submodule update --init`:> Holt beziehungsweise aktualisiert. Nach dem Klonen erforderlich. 
+
+
 
 ## Setup
 
 Zwei Repositorys `mod-a` und `mod-b` sind vorhanden.
-Diese sollen 
+Diese sollen in das übergeordnete repo `submodules` eingebettet werden.
 
-### Verzeichnisse
-
- * `./` Haupverzeichnis für diese Übung 
-   - `myfirstrepo/` Bereits vorhandenes Repository.
-  
   
 
 
