@@ -1,5 +1,3 @@
-# Repository
+### Repository
 
-## Refs
-
-### Branches Tags und `HEAD`
+## **Refs**: Branches Tags und `HEAD`

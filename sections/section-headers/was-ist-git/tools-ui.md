@@ -1,4 +1,4 @@
-# Was ist Git?
+### Was ist Git?
 
 ## Tools - GUI
 

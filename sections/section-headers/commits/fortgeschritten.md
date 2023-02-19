@@ -1,5 +1,3 @@
-# Commits
+### Commits
 
-## Fortgeschrittenes
-
-### Staging, Reverting, Stashing
+## Staging, Reverting, Stashing

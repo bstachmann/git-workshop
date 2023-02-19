@@ -1,3 +1,3 @@
-# Commits
+### Commits
 
 ## Anatomie eines Commits
