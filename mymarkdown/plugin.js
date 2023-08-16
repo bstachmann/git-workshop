@@ -389,20 +389,21 @@ const MyMarkdown = () => {
 			var markdown = getMarkdownFromSlide( section );
 			var sourcePath = "" + section.getAttribute("source-path");
 			var pathComps = sourcePath.split("/");
+			var lastPathComp = pathComps[pathComps.length - 1]
 			var sectionName = 
-				pathComps[pathComps.length - 1] == "index.md" && pathComps.length > 1 ? 
-				pathComps[pathComps.length - 2]
-				: pathComps[pathComps.length - 1];
+				(lastPathComp == "index.md" || lastPathComp == "section.md" ) && pathComps.length > 1 ? 
+				pathComps[pathComps.length - 2] + "/"
+				: lastPathComp;
 
 			section.innerHTML = 
 				marked( markdown, { baseUrl: section.getAttribute("marked-base-url") } )
-				+ `\n<div style="position:absolute;bottom:-40px;right:0px;font-size: 12px;">`
+				+ `\n<div style="position:absolute;bottom:-40px;right:0px;font-size: 10px;font-family: monospace;">`
 				+ `${sectionName}<br/>`
-				+ `<a href="https://github.dev/bstachmann/git-workshop/blob/main/${sourcePath}" target="_blank">GitHub dev</a>`
-				+ ` / <a href="https://github.com/bstachmann/git-workshop/blob/main/${sourcePath}" target="_blank">GitHub classic</a>`
+				+ `<div style="font-size: 8px">`
+				+ `<a href="https://github.dev/bstachmann/git-workshop/blob/main/${sourcePath}" target="_blank">dev</a>`
+				+ `/<a href="https://github.com/bstachmann/git-workshop/blob/main/${sourcePath}" target="_blank">classic</a> on GitHub`
 				+ ` <br/><a href="https://gitpod.io#https://github.com/bstachmann/git-workshop/blob/main/${sourcePath}" target="_blank">GitPod</a>`
-				+ ` / <a href="https://bitbucket.org/bstachmann/git-workshop/src/main/${sourcePath}?mode=edit" target="_blank">BitBucket</a>`
-				+ `</div>`
+				+ `</div></div>`
 			;
 			addAttributes( 	section, section, null, section.getAttribute( 'data-element-attributes' ) ||
 							section.parentNode.getAttribute( 'data-element-attributes' ) ||
