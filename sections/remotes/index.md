@@ -128,11 +128,5 @@ git show origin/master        # origin nach letztem Synch
 ```
 
 
----
-
-### Demo
-
-<h2><a href="markdown-git-uebungen/aufgabe-repository-sparse-checkout.html" target="_blank">Sparse Checkout<a></h2>
-
 
 

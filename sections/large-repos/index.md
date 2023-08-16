@@ -8,7 +8,13 @@
 
 ---
 
+### Übung
 
+<h2><a href="markdown-git-uebungen/aufgabe-repository-sparse-checkout.html" target="_blank">Sparse Checkout<a></h2>
+
+
+
+---
 ### Übung
 
 ## Git LFS
