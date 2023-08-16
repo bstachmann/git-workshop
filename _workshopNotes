@@ -1,8 +1,8 @@
 # Aliase in `bash`
 
-    alias myeditor="/usr/bin/vim"
+    alias myeditor="/ide/bin/remote-cli/code"
 
-Man kann die Zeile in die Datei `~/.bash_profile` eintragen, 
+Man kann die Zeile in die Datei `~/.bash_profile`eintragen, 
 damit das Alias bei jedem Login gesetzt wird.
 
 # Aliase in Git
