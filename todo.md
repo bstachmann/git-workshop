@@ -1,3 +1,4 @@
+ * in repository untersuchen: history doppelt main und master
  * Commit-Messages, Editor and Editor-Konfig -> übung
  * Übung zu --squash, Bonusübung zu Orphan-Branches
  * Bonusaufgaben immer am Ende
