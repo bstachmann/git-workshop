@@ -3,9 +3,11 @@
 Für `clone`, `fetch`, `pull` und `push` wird Zugriff auf andere Repos benötigt.
 Drei Arten des Zugangs sind üblich:
 
-  * `file:` Dateisystem, Berechtigung durch das Betriebssystem
-  * `ssh:` Secure Shell, Authentifizierung mit ssh-Zertifikaten, Netzwerkkommunikation verschlüsselt
-  * `https:` Secure Web, Authentifizierung per Passwort, Netzwerkkommunikation verschlüsselt
+| Protokoll | Authentifizierung |
+|-----------|-------------------|
+| `file:`   | Dateisystem, Berechtigung durch das Betriebssystem |
+| `ssh:`    | Secure Shell, Authentifizierung mit ssh-Zertifikaten, Netzwerkkommunikation verschlüsselt |
+| `https:`  | Secure Web, Authentifizierung per Passwort, Netzwerkkommunikation verschlüsselt |
     
 
 ---
