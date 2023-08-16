@@ -1,4 +1,4 @@
-# Klone und Remotes
+# Klone
 
 ---
 
