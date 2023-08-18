@@ -87,13 +87,3 @@ git remote -v
 
 git remote add mein-backup /backup/sample-repo.git
 ```
-
-
----
-
-### Demo
-
-<h2><a href="markdown-git-uebungen/aufgabe-repository-sparse-checkout.html" target="_blank">Sparse Checkout<a></h2>
-
-
-

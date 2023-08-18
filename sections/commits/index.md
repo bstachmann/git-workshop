@@ -5,7 +5,7 @@ in **Commits** \
 (auch Revisions genannt)
 
 
---- 
+---
 
 
 Ein **Commit** enthält ein
