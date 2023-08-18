@@ -8,6 +8,5 @@
 
 ## Lernziele
 
-* Remote Branches
-* Upstream Branches
+
 

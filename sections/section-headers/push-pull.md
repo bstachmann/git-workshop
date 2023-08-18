@@ -8,6 +8,8 @@
 
 Wie funktioniert die Zusammenarbeit zwischen den Klonen eines Repositorys?
 
+* Remote Branches
+* Upstream Branches
 * Synchronisiert zwischen Repositorys?
 * Holen mit `fetch`
 * Hochladen mit `push`
