@@ -50,7 +50,7 @@ Sieh Dir das übertragene Commit an.
 
 
 
-<pre><code>mod-b $ <b>git commit -am &quot;`berta`: Edit file berta at line 8 on branch main by bjoern. &quot;</b><br><br>[main 50698b6] : Edit file berta at line 8 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: berta: command not found<br><br></code></pre>
+<pre><code>mod-b $ <b>git commit -am &quot;`berta`: Edit file berta at line 8 on branch main by bjoern. &quot;</b><br><br>[main 50698b6] : Edit file berta at line 8 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: line 1: berta: command not found<br><br></code></pre>
 
 
 
@@ -112,7 +112,7 @@ Sieh Dir das übertragene Commit in `mod-a.git` an.
 
 
 
-<pre><code>mod-a $ <b>git commit -am &quot;`anton`: Edit file anton at line 5 on branch main by bjoern. &quot;</b><br><br>[main 92fc729] : Edit file anton at line 5 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: anton: command not found<br><br></code></pre>
+<pre><code>mod-a $ <b>git commit -am &quot;`anton`: Edit file anton at line 5 on branch main by bjoern. &quot;</b><br><br>[main 92fc729] : Edit file anton at line 5 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: line 1: anton: command not found<br><br></code></pre>
 
 
 

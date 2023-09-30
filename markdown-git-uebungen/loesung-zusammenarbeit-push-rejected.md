@@ -14,7 +14,7 @@ Bearbeite die Datei `frontend.java` und erstelle (mindestens) ein Commit mit den
 
 
 
-<pre><code>my-apollo $ <b>git commit -am &quot;`frontend.java`: Edit file frontend.java at line 1 on branch main by bjoern. &quot;</b><br><br>[main b09dd4a] : Edit file frontend.java at line 1 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: frontend.java: command not found<br><br></code></pre>
+<pre><code>my-apollo $ <b>git commit -am &quot;`frontend.java`: Edit file frontend.java at line 1 on branch main by bjoern. &quot;</b><br><br>[main b09dd4a] : Edit file frontend.java at line 1 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: line 1: frontend.java: command not found<br><br></code></pre>
 
 
 Und jetzt noch eben prüfen, ob `working tree clean` ist.
@@ -28,7 +28,7 @@ Und jetzt noch eben prüfen, ob `working tree clean` ist.
 Versuche jetzt Deine Änderungen zu pushen.
 
 
-<pre><code>my-apollo $ <b>git push</b><br><br>To ../blessed-apollo.git<br> ! [rejected]        main -&gt; main (fetch first)<br>error: failed to push some refs to '../blessed-apollo.git'<br>hint: Updates were rejected because the remote contains work that you do<br>hint: not have locally. This is usually caused by another repository pushing<br>hint: to the same ref. You may want to first integrate the remote changes<br>hint: (e.g., 'git pull ...') before pushing again.<br>hint: See the 'Note about fast-forwards' in 'git push --help' for details.<br><br></code></pre>
+<pre><code>my-apollo $ <b>git push</b><br><br>To ../blessed-apollo.git<br> ! [rejected]        main -&gt; main (fetch first)<br>error: failed to push some refs to '../blessed-apollo.git'<br>hint: Updates were rejected because the remote contains work that you do not<br>hint: have locally. This is usually caused by another repository pushing to<br>hint: the same ref. If you want to integrate the remote changes, use<br>hint: 'git pull' before pushing again.<br>hint: See the 'Note about fast-forwards' in 'git push --help' for details.<br><br></code></pre>
 
 
 Wie Du siehst, der Push wurde verweigert. 

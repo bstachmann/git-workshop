@@ -74,7 +74,7 @@ Der Graph zeigt, dass ein Merge enstanden ist.
 
 
 
-<pre><code>changes-in-different-files $ <b>git push</b><br><br>To ../origin-for-merge-samples.git<br> ! [rejected]        main -&gt; main (fetch first)<br>error: failed to push some refs to '../origin-for-merge-samples.git'<br>hint: Updates were rejected because the remote contains work that you do<br>hint: not have locally. This is usually caused by another repository pushing<br>hint: to the same ref. You may want to first integrate the remote changes<br>hint: (e.g., 'git pull ...') before pushing again.<br>hint: See the 'Note about fast-forwards' in 'git push --help' for details.<br><br></code></pre>
+<pre><code>changes-in-different-files $ <b>git push</b><br><br>To ../origin-for-merge-samples.git<br> ! [rejected]        main -&gt; main (fetch first)<br>error: failed to push some refs to '../origin-for-merge-samples.git'<br>hint: Updates were rejected because the remote contains work that you do not<br>hint: have locally. This is usually caused by another repository pushing to<br>hint: the same ref. If you want to integrate the remote changes, use<br>hint: 'git pull' before pushing again.<br>hint: See the 'Note about fast-forwards' in 'git push --help' for details.<br><br></code></pre>
 
 
 Diese Meldung zeigt, dass im `origin` Änderungen vorliegen,
@@ -127,7 +127,7 @@ den wir aulösen müssen.
 Wie erwartet, ist es zu einem Konflikt gekommen.
 
 
-<pre><code>changes-in-same-files $ <b>git status</b><br><br>On branch main<br>Your branch and 'origin/main' have diverged,<br>and have 1 and 3 different commits each, respectively.<br>  (use &quot;git pull&quot; to merge the remote branch into yours)<br><br>You have unmerged paths.<br>  (fix conflicts and run &quot;git commit&quot;)<br>  (use &quot;git merge --abort&quot; to abort the merge)<br><br>Changes to be committed:<br>	modified:   README.md<br><br>Unmerged paths:<br>  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)<br>	both modified:   average.kts<br><br><br></code></pre>
+<pre><code>changes-in-same-files $ <b>git status</b><br><br>On branch main<br>Your branch and 'origin/main' have diverged,<br>and have 1 and 3 different commits each, respectively.<br>  (use &quot;git pull&quot; if you want to integrate the remote branch with yours)<br><br>You have unmerged paths.<br>  (fix conflicts and run &quot;git commit&quot;)<br>  (use &quot;git merge --abort&quot; to abort the merge)<br><br>Changes to be committed:<br>	modified:   README.md<br><br>Unmerged paths:<br>  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)<br>	both modified:   average.kts<br><br><br></code></pre>
 
 
 In der Datei stehen Konfliktmarkierungen.

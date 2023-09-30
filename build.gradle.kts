@@ -42,7 +42,7 @@ dependencies {
 
 
 application {
-    mainClassName = "de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsamplesKt"
+    mainClass = "de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsamplesKt"
 }
 
 
@@ -55,7 +55,7 @@ task("distUebungenMarkdown", JavaExec::class) {
     description = "Deploy markdown files for exercises, to website dir."
     dependsOn("run")
 
-    main = "de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToWebsiteKt"
+    mainClass = "de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToWebsiteKt"
     classpath = sourceSets["main"].runtimeClasspath
 }
 
@@ -64,21 +64,21 @@ task("distUebungenZip", JavaExec::class) {
     description = "Create a new zip file."
     dependsOn("run")
 
-    main = "de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToZipKt"
+    mainClass = "de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToZipKt"
     classpath = sourceSets["main"].runtimeClasspath
 }
 
 task("sandbox", JavaExec::class) {
     group = "Application"
     description = "Run sandbox samples from gitworkshopsandbox.kt."
-    main = "de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsandboxKt"
+    mainClass = "de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsandboxKt"
     classpath = sourceSets["main"].runtimeClasspath
 }
 
 task("progress", JavaExec::class) {
     group = "Application"
     description = "Run sandbox samples from gitworkshopsandbox.kt."
-    main = "de.kapitel26.gitsamplebuilder.UebungenProgressServerKt"
+    mainClass = "de.kapitel26.gitsamplebuilder.UebungenProgressServerKt"
     classpath = sourceSets["main"].runtimeClasspath
 }
 
