@@ -8,6 +8,10 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 3.9.3"
+gem "kramdown-parser-gfm"
+gem "kramdown"
+gem "ffi"
+gem "webrick"
 # To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
@@ -17,7 +21,4 @@ group :jekyll_plugins do
   gem "jekyll-optional-front-matter"
   gem "jekyll-relative-links"
   gem "jekyll-default-layout"
-  gem "kramdown-parser-gfm"
-  gem "kramdown"
-  gem "ffi"
 end
