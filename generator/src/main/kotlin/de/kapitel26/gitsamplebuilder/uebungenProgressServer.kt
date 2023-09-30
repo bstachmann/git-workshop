@@ -73,7 +73,7 @@ fun Application.participantsModule() {
     }
 
     install(StatusPages) {
-        exception<Throwable> { cause ->
+        exception<Throwable> { call, cause ->
             call.respondHtml(HttpStatusCode.InternalServerError) {
                 body {
                     h1 { +"Dumm gelaufen: $cause.message"}
@@ -149,7 +149,7 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
 
             val response = this.getStaticContent("markdown-git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
-            val processedContent = response.readText().replace(
+            val processedContent = response.bodyAsText().replace(
                 """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\> (.+?)\ <\/h2\>""".toRegex(), 
                 { step -> 
                     val aufgabname = step.groups[1]?.value
