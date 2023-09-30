@@ -7,7 +7,7 @@ plugins {
 
 apply(plugin = "application")
 
-val ktorVersion: String by extra { "1.6.8" }
+val ktorVersion: String by extra { "2.0.0" }
 // val ktorVersion: String by extra { "2.3.4" }
 
 allprojects {
