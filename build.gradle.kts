@@ -7,13 +7,13 @@ plugins {
 
 apply(plugin = "application")
 
-val ktorVersion: String by extra { "1.4.0" }
+val ktorVersion: String by extra { "1.6.8" }
+// val ktorVersion: String by extra { "2.3.4" }
 
 allprojects {
 
     repositories {
         mavenCentral()
-        jcenter()
         maven("https://kotlin.bintray.com/kotlinx")
         maven("https://dl.bintray.com/jetbrains/markdown")
     }
@@ -42,7 +42,7 @@ dependencies {
 
 
 application {
-    mainClass = "de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsamplesKt"
+    mainClass.set("de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsamplesKt")
 }
 
 
@@ -55,7 +55,7 @@ task("distUebungenMarkdown", JavaExec::class) {
     description = "Deploy markdown files for exercises, to website dir."
     dependsOn("run")
 
-    mainClass = "de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToWebsiteKt"
+    mainClass.set("de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToWebsiteKt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
@@ -64,21 +64,21 @@ task("distUebungenZip", JavaExec::class) {
     description = "Create a new zip file."
     dependsOn("run")
 
-    mainClass = "de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToZipKt"
+    mainClass.set("de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToZipKt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
 task("sandbox", JavaExec::class) {
     group = "Application"
     description = "Run sandbox samples from gitworkshopsandbox.kt."
-    mainClass = "de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsandboxKt"
+    mainClass.set("de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsandboxKt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
 task("progress", JavaExec::class) {
     group = "Application"
     description = "Run sandbox samples from gitworkshopsandbox.kt."
-    mainClass = "de.kapitel26.gitsamplebuilder.UebungenProgressServerKt"
+    mainClass.set("de.kapitel26.gitsamplebuilder.UebungenProgressServerKt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
