@@ -82,5 +82,3 @@ git remote -v
 
 git remote add mein-backup /backup/sample-repo.git
 ```
-
-

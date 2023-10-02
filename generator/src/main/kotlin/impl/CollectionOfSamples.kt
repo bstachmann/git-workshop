@@ -1,7 +1,7 @@
 package impl
 
 import java.io.File
-import io.ktor.client.features.json.JacksonSerializer
+import io.ktor.serialization.jackson.*
 import com.fasterxml.jackson.databind.ObjectMapper
 
 class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) : AbstractDir<CollectionOfSamples>(

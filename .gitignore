@@ -5,4 +5,5 @@ sandbox.md
 build/
 .gradle/
 git-uebungen/
-_tmp* 
+_tmp*
+.sass-cache/

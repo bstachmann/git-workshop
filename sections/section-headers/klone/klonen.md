@@ -1,4 +1,3 @@
-### Klone
+### Klone und Remotes
 
 ## Klonen
-

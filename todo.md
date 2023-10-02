@@ -1,4 +1,14 @@
- * Commit-Messages, Editor and Editor-Konfig -> übung
+ * Remote Tracking Branches nach "Push Pull"
+   - git branch -a
+   - ersten fetch zeigen,
+   - git branch -a (evtl auch übung)
+ * In Agenda branches Abschnitt doppelt
+ * Integration von Änderungen Übung braucht Optionals
+ * Idee: Optionals immer ans Ende bringen
+ * Interaktivere übungen (Pairint, Gegenseitig erklären)
+ * Miro nutzen?
+ * Repos sprechende namen  submodules
+ * In Submodule uebung steht immer noch subtree drinsti * Commit-Messages, Editor and Editor-Konfig -> übung
  * Übung zu --squash, Bonusübung zu Orphan-Branches
  * Bonusaufgaben immer am Ende
  * Optionals für Integration von änderung: Löschen von Dateien, Umbenennen/Verschieben

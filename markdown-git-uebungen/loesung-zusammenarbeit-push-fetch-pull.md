@@ -16,7 +16,7 @@ ohne den lokalen `main` zu verändern.
 Die Ausgabe zeigt, dass Änderungen auf dem Branch `main` geholt wurden.
 
 
-<pre><code>mein-klon $ <b>git status</b><br><br>On branch main<br>Your branch and 'origin/main' have diverged,<br>and have 1 and 2 different commits each, respectively.<br>  (use &quot;git pull&quot; to merge the remote branch into yours)<br><br>nothing to commit, working tree clean<br><br></code></pre>
+<pre><code>mein-klon $ <b>git status</b><br><br>On branch main<br>Your branch and 'origin/main' have diverged,<br>and have 1 and 2 different commits each, respectively.<br>  (use &quot;git pull&quot; if you want to integrate the remote branch with yours)<br><br>nothing to commit, working tree clean<br><br></code></pre>
 
 
 ## Lösung zu Schritt 2 - Änderungen untersuchen
@@ -27,7 +27,7 @@ welche Commits im `main` des `origin`-Repository vorhanden sind,
 welche im lokalen `main` noch nicht integriert wurden..
 
 
-<pre><code>mein-klon $ <b>git status</b><br><br>On branch main<br>Your branch and 'origin/main' have diverged,<br>and have 1 and 2 different commits each, respectively.<br>  (use &quot;git pull&quot; to merge the remote branch into yours)<br><br>nothing to commit, working tree clean<br><br></code></pre>
+<pre><code>mein-klon $ <b>git status</b><br><br>On branch main<br>Your branch and 'origin/main' have diverged,<br>and have 1 and 2 different commits each, respectively.<br>  (use &quot;git pull&quot; if you want to integrate the remote branch with yours)<br><br>nothing to commit, working tree clean<br><br></code></pre>
 
 
 Der Status zeigt, dass es im Origin-Repo

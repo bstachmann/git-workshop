@@ -38,7 +38,7 @@ Sieh Dir das übertragene Commit an.
 
 
 
-<pre><code>mod-b $ <b>git commit -am &quot;`berta`: Edit file berta at line 7 on branch main by bjoern. &quot;</b><br><br>[main 778b41f] : Edit file berta at line 7 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: berta: command not found<br><br></code></pre>
+<pre><code>mod-b $ <b>git commit -am &quot;`berta`: Edit file berta at line 7 on branch main by bjoern. &quot;</b><br><br>[main 778b41f] : Edit file berta at line 7 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: line 1: berta: command not found<br><br></code></pre>
 
 
 
@@ -84,7 +84,7 @@ Sieh Dir das übertragene Commit in `mod-a.git` an.
 
 
 
-<pre><code>subtrees $ <b>git commit -am &quot;`mod-a/anton`: Edit file mod-a/anton at line 3 on branch main by bjoern. &quot;</b><br><br>[main 816bfab] : Edit file mod-a/anton at line 3 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: mod-a/anton: Permission denied<br><br></code></pre>
+<pre><code>subtrees $ <b>git commit -am &quot;`mod-a/anton`: Edit file mod-a/anton at line 3 on branch main by bjoern. &quot;</b><br><br>[main 816bfab] : Edit file mod-a/anton at line 3 on branch main by bjoern.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: line 1: mod-a/anton: Permission denied<br><br></code></pre>
 
 
 

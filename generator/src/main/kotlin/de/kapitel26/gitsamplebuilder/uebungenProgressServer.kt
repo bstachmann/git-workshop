@@ -1,24 +1,24 @@
 package de.kapitel26.gitsamplebuilder
 
 import com.fasterxml.jackson.module.kotlin.*
-import io.ktor.application.Application
-import io.ktor.application.ApplicationCall
-import io.ktor.application.*
+import io.ktor.server.application.Application
+import io.ktor.server.application.ApplicationCall
+import io.ktor.server.application.*
 import io.ktor.client.*
 import io.ktor.client.statement.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.request.request
-import io.ktor.application.install
-import io.ktor.features.*
-import io.ktor.html.respondHtml
+import io.ktor.server.application.install
+import io.ktor.server.plugins.statuspages.*
+import io.ktor.server.html.respondHtml
 import io.ktor.http.*
 import io.ktor.util.pipeline.*
-import io.ktor.response.*
-import io.ktor.routing.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import io.ktor.sessions.*
-import io.ktor.response.respondRedirect
+import io.ktor.server.sessions.*
+import io.ktor.server.response.respondRedirect
 import java.io.File
 import java.net.URL
 import kotlin.math.*
@@ -73,7 +73,7 @@ fun Application.participantsModule() {
     }
 
     install(StatusPages) {
-        exception<Throwable> { cause ->
+        exception<Throwable> { call, cause ->
             call.respondHtml(HttpStatusCode.InternalServerError) {
                 body {
                     h1 { +"Dumm gelaufen: $cause.message"}
@@ -149,7 +149,7 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
 
             val response = this.getStaticContent("markdown-git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
-            val processedContent = response.readText().replace(
+            val processedContent = response.bodyAsText().replace(
                 """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\> (.+?)\ <\/h2\>""".toRegex(), 
                 { step -> 
                     val aufgabname = step.groups[1]?.value
