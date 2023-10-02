@@ -21,7 +21,7 @@ Google Trends
  * Tracing von Code-Snippets m. rename detection, evtl. auch in GitLens
 
 
-## Klone und Remotes
+## Klone
 
  * VSCode Clone to docker image
  * Tricks: Lokale Clone, Remote verbiegen, 2. Remote hinzufügen

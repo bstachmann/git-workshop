@@ -32,7 +32,7 @@
 ---
 
 
-## Klone und Remotes
+## Klone
 
  * Konzept: Dezentralisierung
  * Klonen von Repositorys

@@ -1,8 +1,3 @@
-
-
-
----
-
 ### Klonen
 
 Mit dem clone-Befehl können Repositorys geklont werden.

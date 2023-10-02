@@ -61,7 +61,7 @@ Weitere Informationen finden Sie in unserem Blog [Kapitel 26](http://kapitel26.g
 
    * Über Git-Repositorys
    * Commits
-   * Dezentralität, Klone und Remotes
+   * Dezentralität, Klone
    * Merges
    * Branches
    * Typische Workflows

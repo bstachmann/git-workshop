@@ -9,7 +9,7 @@
 * **Commits**\
   Erstellen von Commits\
   diff: Sehen, was sich geändert hat.
-* **Klone und Remotes**\
+* **Klone**\
   Das Klonen\
   Umgang mit Remote-Repositories
 * **Push & Pull**\
