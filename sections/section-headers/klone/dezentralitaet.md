@@ -1,4 +1,4 @@
-### Klone
+### Klone und Remotes
 
 ## Dezentralität
 
