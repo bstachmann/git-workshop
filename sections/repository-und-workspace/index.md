@@ -60,6 +60,9 @@ mit der **gesamten Historie** eines Projekts.
 
 ---
 
+![revision](revision.png)
+
+---
 
 ### Begriffe 
 
