@@ -1,3 +1,11 @@
+ * Dateiname stimmt nicht mehr : https://bstachmann.github.io/git-workshop/installation/uebungen
+ * in uebungsbeschreibung: Anwendungen öfnnen 
+ * Übungschrit "Arbeitsverzeichnisse anzeigen" falscher Name
+ * Timing: Was ist git big 10:30 Repository bis 12:00
+ *repository-log Übung: show HEAD:datei.txt erläutern in Tipps
+ * repository-untersuchen: Enthält noch Tipps zur vorigen übung
+ * diff slides im nach vorne und zusammen ziehen (nich in refs)
+ * checkin/step-0 für den tracker
  * Remote Tracking Branches nach "Push Pull"
    - git branch -a
    - ersten fetch zeigen,
