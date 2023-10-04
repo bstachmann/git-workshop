@@ -21,6 +21,8 @@ class LogBuilder(val options: LogBuilderOptions = LogBuilderOptions(), val gitSa
 
     var collectedLogs = mutableListOf<Pair<String, Set<String>>>()
 
+    val nav_order = mutableMapOf<String, Int>()
+
     fun createDir(dirName: String, where: String) = shell("mkdir $dirName", where)
 
     fun cd(dirName: String, where: String) = shell("cd $dirName", where)
@@ -95,6 +97,7 @@ class LogBuilder(val options: LogBuilderOptions = LogBuilderOptions(), val gitSa
                                     layout: page
                                     title: <code>${title}</code>
                                     ${type}
+                                    nav_order: ${nav_order.get(name)}
                                     ---
                                     
                                  """.trimIndent()
