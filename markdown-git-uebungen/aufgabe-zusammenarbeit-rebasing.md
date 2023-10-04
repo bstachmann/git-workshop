@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-rebasing</code>
 parent: Aufgaben
 
+nav_order: 14
 ---
 # Übung - Rebasing
 

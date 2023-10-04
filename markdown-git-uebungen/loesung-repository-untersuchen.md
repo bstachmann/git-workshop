@@ -3,6 +3,7 @@ layout: page
 title: <code>repository-untersuchen</code>
 parent: Lösungen
 
+nav_order: 3
 ---
 ## Lösung zu Schritt 1 - Inhalte vergangener Versionen untersuchen
 

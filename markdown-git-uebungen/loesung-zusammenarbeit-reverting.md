@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-reverting</code>
 parent: Lösungen
 
+nav_order: 13
 ---
 ## Lösung zu Schritt 1 - Einzelnes Commit rückgängig machen.
 

@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-rebasing</code>
 parent: Lösungen
 
+nav_order: 14
 ---
 ## Lösung zu Schritt 1 - Feature-Branch per Rebase aktualiseren.
 
@@ -19,7 +20,7 @@ Lasse Dir den Commit-Graphen über alle Branches zeigen.
 
 
 
-<pre><code>repo $ <b>git rebase main</b><br><br>Rebasing (1/2)<br>Rebasing (2/2)<br><br>[KSuccessfully rebased and updated refs/heads/feature.<br><br></code></pre>
+<pre><code>repo $ <b>git rebase main</b><br><br>Rebasing (1/2)<br>Rebasing (2/2)<br><br>                                                                                <br>Successfully rebased and updated refs/heads/feature.<br><br></code></pre>
 
 
 

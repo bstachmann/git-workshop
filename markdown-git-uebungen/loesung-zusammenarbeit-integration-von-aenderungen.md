@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-integration-von-aenderungen</code>
 parent: Lösungen
 
+nav_order: 11
 ---
 ## Lösung zu Schritt 1 - Fast-Forward beim Pull
 

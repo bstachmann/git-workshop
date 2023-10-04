@@ -3,6 +3,7 @@ layout: page
 title: <code>commits-staging</code>
 parent: Lösungen
 
+nav_order: 7
 ---
 ## Lösung zu Schritt 1 - Staging
 

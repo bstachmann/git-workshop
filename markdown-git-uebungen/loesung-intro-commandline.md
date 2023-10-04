@@ -3,6 +3,7 @@ layout: page
 title: <code>intro-commandline</code>
 parent: Lösungen
 
+nav_order: 0
 ---
 ## Lösung zu Schritt 1 - Navigation in Übungsverzeichnisse
 

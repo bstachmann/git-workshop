@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-push-fetch-pull</code>
 parent: Lösungen
 
+nav_order: 9
 ---
 ## Lösung zu Schritt 1 - Änderungen holen
 

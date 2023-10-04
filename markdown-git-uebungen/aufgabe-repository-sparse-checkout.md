@@ -3,6 +3,7 @@ layout: page
 title: <code>repository-sparse-checkout</code>
 parent: Aufgaben
 
+nav_order: 5
 ---
 # Übung - Sparse Checkout
 

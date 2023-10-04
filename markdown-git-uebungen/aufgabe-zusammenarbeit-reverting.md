@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-reverting</code>
 parent: Aufgaben
 
+nav_order: 13
 ---
 # Übung - Reverting
 

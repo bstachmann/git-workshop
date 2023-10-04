@@ -3,6 +3,7 @@ layout: page
 title: <code>commits-erstellen</code>
 parent: Lösungen
 
+nav_order: 6
 ---
 ## Lösung zu Schritt 1 - Commit - mit Staging
 

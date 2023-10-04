@@ -3,6 +3,7 @@ layout: page
 title: <code>repository-log</code>
 parent: Aufgaben
 
+nav_order: 2
 ---
 # Übung - Repository - Log
 

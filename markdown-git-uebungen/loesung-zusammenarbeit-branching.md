@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-branching</code>
 parent: Lösungen
 
+nav_order: 8
 ---
 ## Lösung zu Schritt 1 - Branch erstellen
 

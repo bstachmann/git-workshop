@@ -3,6 +3,7 @@ layout: page
 title: <code>repository-log</code>
 parent: Lösungen
 
+nav_order: 2
 ---
 ## Lösung zu Schritt 1 - Verzeichnisstruktur
 

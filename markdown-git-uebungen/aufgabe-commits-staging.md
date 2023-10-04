@@ -3,6 +3,7 @@ layout: page
 title: <code>commits-staging</code>
 parent: Aufgaben
 
+nav_order: 7
 ---
 # Übung - Staging
 

@@ -3,6 +3,7 @@ layout: page
 title: <code>modularisierung-subtrees</code>
 parent: Aufgaben
 
+nav_order: 16
 ---
 # Übung - Modularisierung mit Subtrees
 

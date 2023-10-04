@@ -3,6 +3,7 @@ layout: page
 title: <code>repository-sparse-checkout</code>
 parent: Lösungen
 
+nav_order: 5
 ---
 ## Lösung zu Schritt 1 - Sparse-Klon durchführen
 

@@ -3,6 +3,7 @@ layout: page
 title: <code>intro-hallo-welt</code>
 parent: Lösungen
 
+nav_order: 1
 ---
 ## Lösung zu Schritt 1 - Das erste Repo
 

@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-push-rejected</code>
 parent: Lösungen
 
+nav_order: 10
 ---
 ## Lösung zu Schritt 1 - Lokal Commit(s) erstellen
 

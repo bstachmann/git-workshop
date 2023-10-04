@@ -3,6 +3,7 @@ layout: page
 title: <code>zusammenarbeit-push-rejected</code>
 parent: Aufgaben
 
+nav_order: 10
 ---
 # Übung - Umgang mit "Push Reject"
 

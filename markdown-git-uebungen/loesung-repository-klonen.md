@@ -3,6 +3,7 @@ layout: page
 title: <code>repository-klonen</code>
 parent: Lösungen
 
+nav_order: 4
 ---
 ## Lösung zu Schritt 1 - Klon durchführen
 

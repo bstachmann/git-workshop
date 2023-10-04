@@ -3,6 +3,7 @@ layout: page
 title: <code>repository-klonen</code>
 parent: Aufgaben
 
+nav_order: 4
 ---
 # Übung - Klonen von Repositorys
 

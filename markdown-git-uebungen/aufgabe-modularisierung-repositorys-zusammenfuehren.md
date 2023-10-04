@@ -3,6 +3,7 @@ layout: page
 title: <code>modularisierung-repositorys-zusammenfuehren</code>
 parent: Aufgaben
 
+nav_order: 17
 ---
 # Übung - Kleine Projekte zusammenfuehren
 
