@@ -1,3 +1,4 @@
+ * Integration von änderungen: Spezialfälle nach hinten 
  * Dateiname stimmt nicht mehr : https://bstachmann.github.io/git-workshop/installation/uebungen
  * in uebungsbeschreibung: Anwendungen öfnnen 
  * Übungschrit "Arbeitsverzeichnisse anzeigen" falscher Name
