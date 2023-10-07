@@ -5,9 +5,14 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
-		"ghcr.io/devcontainers/features/ruby:1": {},
-		"ghcr.io/devcontainers-contrib/features/kotlin-sdkman:2": {},
-		"ghcr.io/devcontainers-contrib/features/gradle-sdkman:2": {}
+		"ghcr.io/devcontainers/features/ruby:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/gradle-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "11",
+			"jdkDistro": "ms"
+		}
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
