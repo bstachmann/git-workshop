@@ -45,10 +45,10 @@ fun CollectionOfSamples.staging() {
 
                 createDir("ufer") { 
                     createDir("west") {
-                        createFile("👨‍🌾")
-                        createFile("🥬")
-                        createFile("🐐")
-                        createFile("🐺")
+                        createFile("BAUER")
+                        createFile("KOHL")
+                        createFile("ZIEGE")
+                        createFile("WOLF")
                     }
                     createDir("ost")
                 }
@@ -56,13 +56,13 @@ fun CollectionOfSamples.staging() {
                 git("commit -m'Starte spiel'")
                 inDir("ufer") {
                     listOf(
-                        "west/🐐 west/👨‍🌾 ost/",
-                        "ost/👨‍🌾 west/",
-                        "west/🐺 west/👨‍🌾 ost/",
-                        "ost/🐐 ost/👨‍🌾 west/",
-                        "west/🥬 west/👨‍🌾 ost/",
-                        "ost/👨‍🌾 west/",
-                        "west/🐐 west/👨‍🌾 ost/"
+                        "west/ZIEGE west/BAUER ost/",
+                        "ost/BAUER west/",
+                        "west/WOLF west/BAUER ost/",
+                        "ost/ZIEGE ost/BAUER west/",
+                        "west/KOHL west/BAUER ost/",
+                        "ost/BAUER west/",
+                        "west/ZIEGE west/BAUER ost/"
                     ).forEachIndexed { i, s ->
                         git(" mv $s")
                         git("commit -am 'Zug ${i+1}'")    
