@@ -3,7 +3,9 @@ plugins {
     id("application")
 }
 
-
+kotlin {
+    jvmToolchain(17)
+}
 
 apply(plugin = "application")
 
