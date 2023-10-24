@@ -124,20 +124,6 @@ $ echo 'test content' | git hash-object -w --stdin
 
 ---
 
-
-
-![Commit Trees](commits-im-object-store.svg)
-
-[Download](commits-im-object-store.svg)
-
----
-
-
-![Commit Trees](commits-im-object-store.png)
-
-
----
-
 Was genau ist in einem Commit enthalten?
 
     git log --pretty=raw
