@@ -20,8 +20,8 @@ git show origin/master        # origin nach letztem Synch
 
 *Remote Refs* werden bei ˋcloneˋ, ˋfetchˋ und ˋpullˋ aktualisiert.
 
-Sind mehrere Remotes (nicht nur ˋoriginˋ) deklariert, 
-gibt es auch mehrere Sätze von *Remote Refs*.
+Sind mehrere Remotes deklariert (nicht nur ˋoriginˋ), 
+dann gibt es auch mehrere Sätze von *Remote Refs*.
 
 
 ---
