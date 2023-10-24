@@ -58,12 +58,6 @@ $ git ls-tree -r HEAD
 ---
 
 
-![Commit Trees](commits-im-object-store.png)
-
-
----
-
-
 ## Git hat eine Datenbank:
 
 
@@ -71,6 +65,10 @@ $ git ls-tree -r HEAD
 
 ---
 
+
+![Commit Trees](commits-im-object-store.png)
+
+---
 
 Das Herz von Git ist der sogenannte **Object Store**,
 eine Datenbank, in der
