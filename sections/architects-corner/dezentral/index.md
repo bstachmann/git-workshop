@@ -58,9 +58,7 @@ und die Änderungen übertragen: `push`, `pull`, `clone`, und`fetch`.
 
 ---
 
-### Git ist dezentral,
-
-### aber
+### Git ist dezentral, **aber**
 
 Projekte nutzen dennoch oft ein *blessed Repository* als Hort der Wahrheit.
 
