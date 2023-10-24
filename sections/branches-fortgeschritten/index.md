@@ -2,30 +2,30 @@
 
 ---
 
-Die Befehle ˋpushˋ und ˋpullˋ erwarten\
-zwei Parameter ˋ<repository>ˋ und ˋ<branch>ˋ (bzw. refspec).
+Die Befehle `push` und `pull` erwarten\
+zwei Parameter `<repository>` und `<branch>` (bzw. refspec).
 
     git pull origin main
 
-Für parameterlosen Aufruf ˋgit pullˋ kann main ein *upstream configuration* eintragen: 
+Für parameterlosen Aufruf `git pull` kann main ein *upstream configuration* eintragen: 
 
-ˋˋˋini
+```ini
 [branch "main"]
 	remote = origin
 	merge = refs/heads/main
-ˋˋˋ
+```
 
 ---
 
 Man muss *upstream configuration* in der Regel nicht eintragen.
 
-Wenn man einen *remote Branch* benutzt, erstellt ˋgit switch <branchname>ˋ diese automatisch.
+Wenn man einen *remote Branch* benutzt, erstellt `git switch <branchname>` diese automatisch.
 
 Erstellt man einen neuen Branch, kann dies beim ersten Push forcieren:
 
-ˋˋˋ
+```bash
 git push --set-upstream <repo> <branch>
-ˋˋˋ
+```
 
 ---
 
