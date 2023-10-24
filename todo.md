@@ -1,3 +1,5 @@
+ * "Branches sind Zeiger auf Commits" das Bild ist echt doof. (Branchname irreführend)
+ * ein paarmal sollte "git branch" durch switch ersetzt werden
  * In der branches fortgeschritten Hinweise auf dff ... und log .. in Tipps
  * Integration von änderungen: Spezialfälle nach hinten 
  * Dateiname stimmt nicht mehr : https://bstachmann.github.io/git-workshop/installation/uebungen

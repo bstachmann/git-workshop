@@ -8,8 +8,9 @@
 
 ## Nicht Git 
 
-![Zentral](zentral-dezentral-1.png)
+Zentrales Repository
 
+![Zentral](zentral-dezentral-1.png)
 
 
 ---
@@ -21,7 +22,6 @@ Branches und Tags.
  * Alle Versionieirungsoperationen erfordern Zugriff auf den zentralen Server.
  * dezentral sind hier nur die Workspaces mit den Arbeitsdateien
 
-
 ---
 
 ### Es heisst: *"Git ist dezentral"*. <br/> Was ist damit gemeint?
@@ -31,6 +31,13 @@ Es wird auf *Kopien* des Repositorys, genannt **Klon**, gearbeitet.
 Die gesamte Historie liegt *lokal* vor.
 Alle Versionierungsoperationen erfolgen lokal.
 
+---
+
+## Git
+
+Dezentraler Austausch
+
+![Dezentraler Austausch](zentral-dezentral-3.png)
 
 ---
 
@@ -50,12 +57,6 @@ und die Änderungen übertragen: `push`, `pull`, `clone`, und`fetch`.
 ---
 
 
-## Dezentraler Austausch
-
-![Dezentraler Austausch](zentral-dezentral-3.png)
-
-
----
 
 
 Projekte nutzen dennoch oft ein *blessed Repository* als Hort der Wahrheit.
