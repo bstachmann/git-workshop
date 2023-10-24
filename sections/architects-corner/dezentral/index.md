@@ -48,6 +48,8 @@ Es besteht aus *Kommandozeilenbefehlen* (CLI)
 die das Repository (lokal abgelegt als Dateien im `.git`-Verzeichnis)
 bearbeiten.
 
+---
+
 ## The magic of Git
 
 Git kann Unterschiede zwischen Klonen ermitteln (Delta)
