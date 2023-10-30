@@ -20,7 +20,7 @@ jobs:
         with:
           arguments: distUebungenZip
       - name: Release
-        uses: oftprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           file: build/distributions/git-uebungen.zip
