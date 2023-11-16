@@ -9,6 +9,8 @@
     $ gradle clean assembleDist
     $ cd git-uebungen/aufgaben
 
+Aenderung
+
     
 ## Per GitHub-Action gebautes Zip-File
 
