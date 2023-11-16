@@ -16,6 +16,8 @@ Der Workflow [ist hier](https://github.com/bstachmann/git-workshop/actions/workf
 
 ### Presentation und Website
 
+toller neuer text
+
 Hosted on GitHub Pages as https://bstachmann.github.io/git-workshop/. Just push to update.
 
 Preview on http://localhost:4000/git-workshop/ by using [GitPod local Companion](https://www.gitpod.io/blog/local-app) as proxy.
