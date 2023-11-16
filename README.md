@@ -1,5 +1,5 @@
 # Git Workshop Material
-
+cd 
 ## Vorgebaute Übungen entpacken
 
     $ unzip build/distributions/git-uebungen.zip
