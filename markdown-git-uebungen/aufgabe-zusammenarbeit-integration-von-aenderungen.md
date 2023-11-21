@@ -3,7 +3,7 @@ layout: page
 title: <code>zusammenarbeit-integration-von-aenderungen</code>
 parent: Aufgaben
 
-nav_order: 11
+nav_order: 12
 ---
 # Übung - Integration von Änderungen
 

@@ -31,6 +31,7 @@ fun buildGitUebungen() {
         thema("Zusammenarbeit") {
             branching()
             fetchAndPull()
+            tags()
             pushRejected()
             integrationVonAenderungen()
             branchingFortgeschritten()
