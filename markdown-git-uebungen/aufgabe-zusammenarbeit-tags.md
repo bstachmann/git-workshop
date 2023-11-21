@@ -45,6 +45,12 @@ Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
 TODO.
 
+<!--UEB-Tags--><h2>Schritt 4 - Manipulieren</h2>
+
+Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
+
+TODO.
+
 
 <pre><code>mein-klon $ <b>cd ..</b><br><br><br></code></pre>
 

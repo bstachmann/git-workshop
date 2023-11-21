@@ -55,6 +55,62 @@ TODO.
 <pre><code>mein-klon $ <b>git push --tags</b><br><br>To ../blessed.git<br> * [new tag]         annotated1 -&gt; annotated1<br><br></code></pre>
 
 
+## Lösung zu Schritt 4 - Manipulieren
+
+TODO.
+
+
+<pre><code>mein-klon $ <b># Something else</b><br><br><br></code></pre>
+
+
+
+<pre><code>mein-klon $ <b>git commit -am &quot;`foobar`: Something else &quot;</b><br><br>[main 038ab4f] : Something else<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>/bin/bash: line 1: foobar: command not found<br><br></code></pre>
+
+
+
+<pre><code>mein-klon $ <b>git tag v0.1 -f -m 'Moved later on'</b><br><br>Updated tag 'v0.1' (was 3765c1c)<br><br></code></pre>
+
+
+
+<pre><code>mein-klon $ <b>git push origin v0.1</b><br><br>To ../blessed.git<br> ! [rejected]        v0.1 -&gt; v0.1 (already exists)<br>error: failed to push some refs to '../blessed.git'<br>hint: Updates were rejected because the tag already exists in the remote.<br><br></code></pre>
+
+
+
+<pre><code>mein-klon $ <b>git push -f origin v0.1 </b><br><br>To ../blessed.git<br> + 3765c1c...1f8ce21 v0.1 -&gt; v0.1 (forced update)<br><br></code></pre>
+
+
+
+<pre><code>mein-klon $ <b>git log --oneline --decorate</b><br><br>038ab4f (HEAD -&gt; main, tag: v0.1) : Something else<br>06d348f (origin/main, origin/HEAD) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: annotated1) Initial edit before cloning<br><br></code></pre>
+
+
+
+<pre><code>.. $ <b>cd anderer-klon</b><br><br><br></code></pre>
+
+
+
+<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 : Just editing<br>d4d7875 (tag: v0.2, tag: v0.1) Initial edit before cloning<br><br></code></pre>
+
+
+
+<pre><code>anderer-klon $ <b>git pull</b><br><br>Already up to date.<br>From ../blessed<br> * [new tag]         annotated1 -&gt; annotated1<br> * [new tag]         simple1    -&gt; simple1<br><br></code></pre>
+
+
+
+<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: v0.1, tag: annotated1) Initial edit before cloning<br><br></code></pre>
+
+
+
+<pre><code>anderer-klon $ <b>git pull -f --tags</b><br><br>Already up to date.<br>From ../blessed<br> t [tag update]      v0.1       -&gt; v0.1<br><br></code></pre>
+
+
+
+<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: annotated1) Initial edit before cloning<br><br></code></pre>
+
+
+
+<pre><code>anderer-klon $ <b>cd ..</b><br><br><br></code></pre>
+
+
 [Zur Aufgabe](aufgabe-zusammenarbeit-tags.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [Zum Überblick](../../ueberblick.html){:style="visibility: hidden"}

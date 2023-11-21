@@ -83,6 +83,26 @@ fun CollectionOfSamples.tags() {
                 git("push origin simple1")
                 git("push --tags")
             }
+
+            createAufgabe(
+                "Manipulieren", """
+                    TODO.
+                """
+            ) {
+                editAndCommit("foobar", 8, "Something else")
+                git("tag v0.1 -f -m 'Moved later on'")
+                git("push origin v0.1", acceptableExitCodes = setOf(1))
+                git("push -f origin v0.1 ")
+                git("log --oneline --decorate")
+                inRepo("../anderer-klon") {
+                    git("log --oneline --decorate")
+                    git("pull")
+                    git("log --oneline --decorate")
+                    git("pull --tags", acceptableExitCodes = setOf(1))
+                    git("pull -f --tags")
+                    git("log --oneline --decorate")
+                }
+            }
         }
     }    
 }
