@@ -9,7 +9,7 @@ nav_order: 10
 
 Erstelle ein einfaches Tag `simple1` auf `HEAD` und
 ein annotated Tag `annotated1` auf `HEAD~1`.
-Sieh das erst das Log und dann eide Tags mit `git show an`.
+Sieh zuerst das Log und dann beide Tags einzeln an (`git show an`).
 
 
 <pre><code>mein-klon $ <b>git tag simple1</b><br><br><br></code></pre>
@@ -20,18 +20,20 @@ Sieh das erst das Log und dann eide Tags mit `git show an`.
 
 
 
+<pre><code>mein-klon $ <b>git log --oneline --decorate</b><br><br>af500f3 (HEAD -&gt; main, tag: simple1, origin/main, origin/HEAD) : Just editing<br>d4d7875 (tag: v0.1, tag: annotated1) Initial edit before cloning<br><br></code></pre>
+
+
+
 <pre><code>mein-klon $ <b>git show simple1 --no-patch</b><br><br>commit af500f303ef2cc7b770c560190d4072d2c879972<br>Author: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>    : Just editing<br><br></code></pre>
 
+
+Beim *annotated Tag* werden zusätzlich Beschreiunb und Metadaten angezeigt:
 
 
 <pre><code>mein-klon $ <b>git show annotated1 --no-patch</b><br><br>tag annotated1<br>Tagger: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>Mit Beschreibung<br><br>commit d4d7875a179ac89a40ed04b1e6cf33a5111fcedf<br>Author: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>    Initial edit before cloning<br><br></code></pre>
 
 
-
-<pre><code>mein-klon $ <b>git log --oneline --decorate</b><br><br>af500f3 (HEAD -&gt; main, tag: simple1, origin/main, origin/HEAD) : Just editing<br>d4d7875 (tag: v0.1, tag: annotated1) Initial edit before cloning<br><br></code></pre>
-
-
-## Lösung zu Schritt 2 - Tags pullen
+## Lösung zu Schritt 2 - Tags hollen
 
 TODO.
 
@@ -41,7 +43,9 @@ TODO.
 
 ## Lösung zu Schritt 3 - Tags pushen
 
-TODO.
+Beim einfachen `git push` werden keine Tags übertragen.
+Übertrage zunächste gezielt das Tag `simple1` mit einem Push
+und danach alle weiteren Tags mit einem weiteren Push
 
 
 <pre><code>mein-klon $ <b>git push</b><br><br>Everything up-to-date<br><br></code></pre>
@@ -57,7 +61,10 @@ TODO.
 
 ## Lösung zu Schritt 4 - Manipulieren
 
-TODO.
+Überschreibe das Tag `v0.1`, so dass es auf den`HEAD` zeigt.
+Pushe das Tag.
+Gehe in das Verzeichnis `../anderer-klon` und hole das Tag mit pull.
+Schaue ins Log, um zu überprüfen, dass das Tag aktualisiert wurde.
 
 
 <pre><code>mein-klon $ <b># Something else</b><br><br><br></code></pre>
@@ -80,7 +87,7 @@ TODO.
 
 
 
-<pre><code>mein-klon $ <b>git log --oneline --decorate</b><br><br>038ab4f (HEAD -&gt; main, tag: v0.1) : Something else<br>06d348f (origin/main, origin/HEAD) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: annotated1) Initial edit before cloning<br><br></code></pre>
+<pre><code>mein-klon $ <b>git log --oneline --decorate -3</b><br><br>038ab4f (HEAD -&gt; main, tag: v0.1) : Something else<br>06d348f (origin/main, origin/HEAD) : Do something<br>27e367e (tag: v1.0) : Improve even more<br><br></code></pre>
 
 
 
@@ -96,19 +103,15 @@ TODO.
 
 
 
-<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: v0.1, tag: annotated1) Initial edit before cloning<br><br></code></pre>
-
-
-
 <pre><code>anderer-klon $ <b>git pull --tags</b><br><br>From ../blessed<br> ! [rejected]        v0.1       -&gt; v0.1  (would clobber existing tag)<br><br></code></pre>
 
 
 
-<pre><code>anderer-klon $ <b>git pull -f --tags</b><br><br>Already up to date.<br>From ../blessed<br> t [tag update]      v0.1       -&gt; v0.1<br><br></code></pre>
+<pre><code>anderer-klon $ <b>git pull -f</b><br><br>Already up to date.<br><br></code></pre>
 
 
 
-<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: annotated1) Initial edit before cloning<br><br></code></pre>
+<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: v0.1, tag: annotated1) Initial edit before cloning<br><br></code></pre>
 
 
 
