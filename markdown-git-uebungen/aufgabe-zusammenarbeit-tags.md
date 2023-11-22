@@ -41,11 +41,11 @@ Erstelle ein einfaches Tag `simple1` auf `HEAD` und
 ein annotated Tag `annotated1` auf `HEAD~1`.
 Sieh zuerst das Log und dann beide Tags einzeln an (`git show an`).
 
-<!--UEB-Tags--><h2>Schritt 2 - Tags hollen</h2>
+<!--UEB-Tags--><h2>Schritt 2 - Tags holen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
-TODO.
+Einfach per pull.
 
 <!--UEB-Tags--><h2>Schritt 3 - Tags pushen</h2>
 

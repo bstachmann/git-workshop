@@ -21,7 +21,9 @@ fun CollectionOfSamples.tags() {
                   - `-m 'Und hier kommt Text'` für die Beschreibung                    
                 * Tags werden beim *Push* nicht automatisch Übertragen.
                    - Man gibt entweder einzelne Tags an, z.B. `git push origin v1.0 v1.1`
-                   - `git push --tags` überträgt Tags
+                   - `git push --tags` überträgt tags
+                * Beim Pull werden Tags in der Regel mit übertragen. 
+                  Mit `--tags` kann man alle Tags übertragen lassen.
                 * Empfehlung: Tags, die man mit Anderen teilt (push),
                   sollte man nicht mehr ändern.
                   Git warnt, bevor man geänderte Tags überträgt.
