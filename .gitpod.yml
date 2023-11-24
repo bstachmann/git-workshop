@@ -32,6 +32,6 @@ ports:
 vscode:
   extensions:
     - eamodio.gitlens
-    - mathiasfrohlich.Kotlin
     - richardwillis.vscode-gradle
     - formulahendry.code-runner
+    - fwcd.kotlin
