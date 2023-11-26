@@ -1,5 +1,4 @@
 ### Push & Pull
 
-## Remote Branches
+## Pushing and Pulling branches and tags
 
-## Pushing and pulling tags
