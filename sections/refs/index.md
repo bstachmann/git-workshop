@@ -3,22 +3,25 @@
 
 ---
 
-Die Commits in einem Repository, bilden zusammen den Commit-Graphen, 
-der die **Historie der Inhalte vollständig abbildet**
-(*Wer* hat *wann* *welche* Dateien erstellt oder bearbeit).
+Die Commits in einem Repository, bilden zusammen den **Commit-Graphen**, 
+der die *Historie der Inhalte vollständig abbildet*
+
+*Wer* hat *wann* *welche* Dateien erstellt oder bearbeit?
 
 **Commit-Hashes** identifizieren die Koten in diesem Graphen
 
+
 ---
 
-Menschen fällte es schwer sich Commit-Hashes zu merken,
+
+Menschen fällt es schwer sich Commit-Hashes zu merken,
 daher ist es sinnvoll **symbolische Namen** vergeben zu können:
 
  * **Branches**: \
    Was ist der aktuelle Entwicklungsstand von `feature-4711`?
  * **Tags**: \
    Was genau ist als Version `v1.0.8` ausgeliefert worden?
- * **`HEAD`: \
+ * `HEAD`: \
    Welche Version wird in meinem Workspace gerade bearbeitet?
 
 ---
