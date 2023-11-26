@@ -10,48 +10,30 @@ Tag sind Namen für Commits, wie zum Beispiel
 
 ## `git tag`
 
-Das erstellen von Tags ist einfache
+**Light weight tags** sind einfach Namen für Commits.
 
 ```bash
     git tag v.1.0
     git tag b7ee6339d12 v0.7
 ```
 
-Neben diesen einfachen (light weight) Tags gibt es auch *annotated* Tags, 
-denen man Beschreibung oder digitale Signaturen anfügen kann.
+**Annotated Tags** enthalten zusätzliche Metadaten (Tagger, Datum, Beschreibung und ggf. PGP-Signatur)
 
 ```bash
     git tag v.1.1 --annotate -m "Beschreibung"
     git tag v1.2 --annotate --sign
 ```
 
-**Empfehlung**: Nutze *light weight*-Tags für temporäre Tags.
-*Annotated*-Tags für Releases.
+**Empfehlung**: Nutze *annotated Tags* für Releases, *light weight Tags* für lokale temporäre Tags, z.B. zum Enwickeln oder Debuggen.
 
 ---
 
-## Fallstricke
+## Fallstrick: Tags (besser nicht) ändern
 
-Tags werden beim Push nicht automatisch übertragen.
-Sie müssen explizit veröffentlicht werden.
+*Tags* sind sind Git als *feststehende* Namen für Commits konzipiert.
 
-```bash
-    git push orgin v1.0
-    git push --tags
-```
+*Veränderliche* Namen für Commits nennt man in Git *Branches*
 
-Beim Pull werden nur die Tags zu den Commits die übertragen werden geholt.
-Möchte man alle Tags holen muss man `--tags` angeben.
+Git-Befehle (`tag`, `push`, `pull`) warnen bevor tags überschrieben werden.
+Man dies mit der Option `-f` übergehen (wenn man weiß, was man tut)
 
----
-
-## Tags nicht verändern
-
-**Empfehlung**: Tags, nachdem man sie gepushed hat, nicht mehr verändern.
-Für Markierungen die aktualisiert werden sollen entweder einfach Branches nutze (`latest-success`)
-oder Tagnamen mit Timestamp versehen (`success-20231030203501`). 
-`describe` kann das jeweils letzte Tag ermitteln:
-
-```bash
-    git describe --tags --match="success-*"
-```

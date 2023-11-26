@@ -3,7 +3,7 @@ layout: page
 title: <code>modularisierung-repositorys-zusammenfuehren</code>
 parent: Lösungen
 
-nav_order: 17
+nav_order: 18
 ---
 ## Lösung zu Schritt 1 - Zusammenführen `git subtree`
 
