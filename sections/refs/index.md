@@ -3,6 +3,26 @@
 
 ---
 
+Die Commits in einem Repository, bilden zusammen den Commit-Graphen, 
+der die **Historie der Inhalte vollständig abbildet**
+(*Wer* hat *wann* *welche* Dateien erstellt oder bearbeit).
+
+**Commit-Hashes** identifizieren die Koten in diesem Graphen
+
+---
+
+Menschen fällte es schwer sich Commit-Hashes zu merken,
+daher ist es sinnvoll **symbolische Namen** vergeben zu können:
+
+ * **Branches**: \
+   Was ist der aktuelle Entwicklungsstand von `feature-4711`?
+ * **Tags**: \
+   Was genau ist als Version `v1.0.8` ausgeliefert worden?
+ * **`HEAD`: \
+   Welche Version wird in meinem Workspace gerade bearbeitet?
+
+---
+
 ### Ref - Ein Name für ein Commit
 
 Ein *Ref* ist ein Zeiger auf ein Commit.
@@ -14,6 +34,10 @@ git log --decorate --oneline
 1d8425c (HEAD -> master, tag: testtag) Add content to commits chapter.
 bb00978 (origin/master) Add content to repository chapter.
 ```
+
+---
+
+TODO Bild zu "Post-It"-Metapher.
 
 ---
 
