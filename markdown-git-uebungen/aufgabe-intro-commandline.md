@@ -139,7 +139,7 @@ um den Befehl zum Setzen von `merge.conflictStyle` erneut auszuführen.
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 
 Konfigurieren Sie einen Editor für git.
-[Tipps dazu](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config).f
+[Tipps dazu](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config).
 Testen Sie dann mit `git config -e`, ob es geklappt hat.
 
 <!--UEB-Das `git`-Kommando!--><h2>Schritt 8 - ⭐ Arbeitsverzeichnis</h2>
