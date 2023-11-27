@@ -19,12 +19,6 @@ Hier geht es darum, herauszufinden, was in einem Repository enthalten ist.
 * `git branch` und `git tag` listen vorhandene Branches und Tags auf.
 * Mit `git switch <branch-name>` kann man auf andere Branches wechseln.
 * Mit `git switch --detach <commit>` kann man auf beliebige Versionen wechseln.
-* Mit `blame` findet man heraus,in welchen Commit Zeilen zuletzt bearbeitet wurden.
-  - `-M` ermittelt Verschiebungen innerhalb einer Datei. 
-  - `-w` erkennt Zeilen wieder, auch wenn Whitespacing verändert wurde.
-  - `--show-number` zeigt vorherige Zeilennummern.
-  - `-C` ermittelt Kopien/Verschiebungen aus Dateien im selben  Commit, in dem die Zeile bearbeitet wurde,
-    `-C -C -C` sogar aus beliebigen Dateien.
 * Mit `git restore -s <commit> -- <datei-oder-pfad>` kann man *Inhalte* beliebiger Versionen 
   von Dateien/Pfaden in den Workspace holten. Es wird dabei nicht auf das angegebenen Commit
   gewechselt, sondern nur Dateiinhalte in den Workspace geholt. Die betroffenen Dateien 
