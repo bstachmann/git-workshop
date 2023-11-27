@@ -21,12 +21,6 @@ fun CollectionOfSamples.repositoryUntersuchen() {
                 * `git branch` und `git tag` listen vorhandene Branches und Tags auf.
                 * Mit `git switch <branch-name>` kann man auf andere Branches wechseln.
                 * Mit `git switch --detach <commit>` kann man auf beliebige Versionen wechseln.
-                * Mit `blame` findet man heraus,in welchen Commit Zeilen zuletzt bearbeitet wurden.
-                  - `-M` ermittelt Verschiebungen innerhalb einer Datei. 
-                  - `-w` erkennt Zeilen wieder, auch wenn Whitespacing verändert wurde.
-                  - `--show-number` zeigt vorherige Zeilennummern.
-                  - `-C` ermittelt Kopien/Verschiebungen aus Dateien im selben  Commit, in dem die Zeile bearbeitet wurde,
-                    `-C -C -C` sogar aus beliebigen Dateien.
                 * Mit `git restore -s <commit> -- <datei-oder-pfad>` kann man *Inhalte* beliebiger Versionen 
                   von Dateien/Pfaden in den Workspace holten. Es wird dabei nicht auf das angegebenen Commit
                   gewechselt, sondern nur Dateiinhalte in den Workspace geholt. Die betroffenen Dateien 
@@ -94,7 +88,9 @@ fun CollectionOfSamples.repositoryUntersuchen() {
                 editAndCommit("hallo-welt") { content = "Hello World!" }
                 inDir("foo") {
                     startBranch("feature-a") {
-                        editAndCommit("bar", 7)
+                        editAndCommit("bar") {
+                            content = "Jawoll, das ist hier feature-a!\n"
+                        }
                     }
 
                     editAndCommit("bar", 1)
@@ -111,37 +107,54 @@ fun CollectionOfSamples.repositoryUntersuchen() {
 
 
             createAufgabe(
-                "Inhalte vergangener Versionen untersuchen", """
-                    Lasse Dir anzeigen welche Dateien es in vorigen Commit gab.
-                    
-                    Gebe den Inhalt der Datei `bar`,  wie er im vorigen Commit war. aus.
-                    
+                "Branches zeigen", """
+                    Zeige an, welche Branches es gibt.
+                    Zeige jetzt den Commit-Graphen über alle Branches an.
+                """
+            ) {
+                git("branch -vv")
+                markdown("Im Commit-Graphen sieht man, wo die Branches und Tag stehen:")
+                git("log --decorate --oneline --graph --all")
+            }
+
+            createAufgabe(
+                "Branch wechseln", """
+                    Wechsle auf den Branch `feature-a`.
+                    Sieh Dir den Inhalt der Datei `bar` im Verzeichnis `foo` an.
+                    Wechsle zurück auf `main`.
+                """
+            ) {
+                onBranch("feature-a") { 
+                    bash("cat foo/bar") 
+                }
+            }
+
+            createAufgabe(
+                "Tags zeigen", """
+                    Zeige alle Tags an.
+                """
+            ) {
+                git("tag")
+            }
+
+            createAufgabe(
+                "⭐ Inhalte vergangener Versionen untersuchen", """
+                    Lasse dir anzeigen, welche Dateien es im Workspace gibt.
+                    Lasse Dir anzeigen welche Dateien es in vorigen Commit gab.            
                     Wechsle zum vorigen Commit, und untersuche, wie der Workspace dannn aussieht.
+
                     Wechsle dann wieder auf `main` zurück.
                 """
             ) {
+                markdown("\n\nDiese Dateien gibt es auf `main`:")
+                ll()
                 markdown("\n\nDiese Dateien gab es in `HEAD~1`:")
-                git("ls-tree -r HEAD~1")
-                markdown("\n\nUnd hier der Inhalt von `bar`:")
-                git("show HEAD~1:foo/bar")
+                git("ls-tree HEAD~1")
                 markdown("\n\nUnd jetzt holen wir genau diese Version in den Workspace:")
                 git("switch --detach HEAD~1")
                 ll()
                 git("switch main")
             }
-
-            createAufgabe(
-                "Branches und Tags", """
-                    Zeige die Branches und Tags an.
-                    Zeige jetzt den Commit-Graphen über alle Branches an.
-                """
-            ) {
-                git("branch -vv")
-                git("tag")
-                markdown("Im Commit-Graphen sieht man, wo die Branches und Tag stehen:")
-                git("log --decorate --oneline --graph --all")
-            }
-
            
             createAufgabe(
                 "⭐ Hole alten Stand einer einzelnen Datei zurück.", """

@@ -40,25 +40,38 @@ untersucht zu werden.
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<!--UEB-Repository untersuchen--><h2>Schritt 1 - Inhalte vergangener Versionen untersuchen</h2>
+<!--UEB-Repository untersuchen--><h2>Schritt 1 - Branches zeigen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
-Lasse Dir anzeigen welche Dateien es in vorigen Commit gab.
-
-Gebe den Inhalt der Datei `bar`,  wie er im vorigen Commit war. aus.
-
-Wechsle zum vorigen Commit, und untersuche, wie der Workspace dannn aussieht.
-Wechsle dann wieder auf `main` zurück.
-
-<!--UEB-Repository untersuchen--><h2>Schritt 2 - Branches und Tags</h2>
-
-Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
-
-Zeige die Branches und Tags an.
+Zeige an, welche Branches es gibt.
 Zeige jetzt den Commit-Graphen über alle Branches an.
 
-<!--UEB-Repository untersuchen--><h2>Schritt 3 - ⭐ Hole alten Stand einer einzelnen Datei zurück.</h2>
+<!--UEB-Repository untersuchen--><h2>Schritt 2 - Branch wechseln</h2>
+
+Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
+
+Wechsle auf den Branch `feature-a`.
+Sieh Dir den Inhalt der Datei `bar` im Verzeichnis `foo` an.
+Wechsle zurück auf `main`.
+
+<!--UEB-Repository untersuchen--><h2>Schritt 3 - Tags zeigen</h2>
+
+Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
+
+Zeige alle Tags an.
+
+<!--UEB-Repository untersuchen--><h2>Schritt 4 - ⭐ Inhalte vergangener Versionen untersuchen</h2>
+
+Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
+
+Lasse dir anzeigen, welche Dateien es im Workspace gibt.
+Lasse Dir anzeigen welche Dateien es in vorigen Commit gab.            
+Wechsle zum vorigen Commit, und untersuche, wie der Workspace dannn aussieht.
+
+Wechsle dann wieder auf `main` zurück.
+
+<!--UEB-Repository untersuchen--><h2>Schritt 5 - ⭐ Hole alten Stand einer einzelnen Datei zurück.</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
