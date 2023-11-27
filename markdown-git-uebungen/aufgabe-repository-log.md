@@ -55,7 +55,30 @@ Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 Sieh Dir die Commits. 
 Achte dabei auf die angezeigten Branches und Tags.
 
-<!--UEB-Repository - Log--><h2>Schritt 3 - ⭐ Commits ansehen: Datei-Statistik</h2>
+<!--UEB-Repository - Log--><h2>Schritt 3 - Head-Commit untersuchen</h2>
+
+Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
+
+Zeige Details zur aktuellen Version,
+die im Workspace ausgecheckt ist.
+
+<!--UEB-Repository - Log--><h2>Schritt 4 - Vergangene Commits untersuchen</h2>
+
+Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
+
+Zeige Details zum Release1.0,
+und dann zur Vorgängerversion des Releases 1.0
+
+<!--UEB-Repository - Log--><h2>Schritt 5 - ⭐ Inhalte vergangener Versionen untersuchen</h2>
+
+Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
+
+Lasse Dir anzeigen welche Dateien und Verzeichnisse
+es im vorigen Commit gab.
+
+Gebe den Inhalt der Datei `bar` so aus,  wie er im vorigen Commit war.
+
+<!--UEB-Repository - Log--><h2>Schritt 6 - ⭐ Commits ansehen: Datei-Statistik</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 
@@ -63,22 +86,7 @@ Sieh Dir die Commits an.
 Lase dir dabei die Statistik anzeigen, 
 d.h. wie viele Zeilen in welcher Datei geändert wurden.
 
-<!--UEB-Repository - Log--><h2>Schritt 4 - Einzelne Commits untersuchen</h2>
-
-Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
-
-Zeige Details zur aktuellen Version,
-und zur Vorgängerversion des Releases 1.0
-
-<!--UEB-Repository - Log--><h2>Schritt 5 - Inhalte vergangener Versionen untersuchen</h2>
-
-Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
-
-Lasse Dir anzeigen welche Dateien es im vorigen Commit gab.
-
-Gebe den Inhalt der Datei `bar` so aus,  wie er im vorigen Commit war.
-
-<!--UEB-Repository - Log--><h2>Schritt 6 - ⭐ Herkunft von Zeilen ermitteln</h2>
+<!--UEB-Repository - Log--><h2>Schritt 7 - ⭐ Herkunft von Zeilen ermitteln</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 

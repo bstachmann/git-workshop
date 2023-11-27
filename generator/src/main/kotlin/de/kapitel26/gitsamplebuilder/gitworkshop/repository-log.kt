@@ -137,33 +137,33 @@ fun CollectionOfSamples.repositoryLog() {
                 git("log --oneline")
             }
 
-
             createAufgabe(
-                "⭐ Commits ansehen: Datei-Statistik", """
-                    Sieh Dir die Commits an. 
-                    Lase dir dabei die Statistik anzeigen, 
-                    d.h. wie viele Zeilen in welcher Datei geändert wurden.
-                """
-            ) {
-                git("log --stat")
-            }
-
-
-            createAufgabe(
-                "Einzelne Commits untersuchen", """
+                "Head-Commit untersuchen", """
                     Zeige Details zur aktuellen Version,
-                    und zur Vorgängerversion des Releases 1.0
+                    die im Workspace ausgecheckt ist.
                 """
             ) {
                 markdown("\n\nHier die aktuelle Version `HEAD`:")
                 git("show")
-                markdown("\n\nUnd hier kommt die 1.0:")
-                git("show release1.0~1")
             }
 
             createAufgabe(
-                "Inhalte vergangener Versionen untersuchen", """
-                    Lasse Dir anzeigen welche Dateien es im vorigen Commit gab.
+                "Vergangene Commits untersuchen", """
+                    Zeige Details zum Release1.0,
+                    und dann zur Vorgängerversion des Releases 1.0
+                """
+            ) {
+                markdown("\n\nHier kommt die 1.0:")
+                git("show release1.0")
+                markdown("\n\nUnd hier der Vorgänger davon:")
+                git("show release1.0~1")
+            }
+
+
+            createAufgabe(
+                "⭐ Inhalte vergangener Versionen untersuchen", """
+                    Lasse Dir anzeigen welche Dateien und Verzeichnisse
+                    es im vorigen Commit gab.
                     
                     Gebe den Inhalt der Datei `bar` so aus,  wie er im vorigen Commit war.
                 """
@@ -174,6 +174,15 @@ fun CollectionOfSamples.repositoryLog() {
                 git("show HEAD~1:foo/bar")
             }
 
+            createAufgabe(
+                "⭐ Commits ansehen: Datei-Statistik", """
+                    Sieh Dir die Commits an. 
+                    Lase dir dabei die Statistik anzeigen, 
+                    d.h. wie viele Zeilen in welcher Datei geändert wurden.
+                """
+            ) {
+                git("log --stat")
+            }
 
             createAufgabe(
                 "⭐ Herkunft von Zeilen ermitteln", """
