@@ -46,7 +46,11 @@ fun buildGitUebungen() {
             repositorysZusammenfuehren()
             //lfs()
         }
-    }
+
+        thema("Weihnachten") {
+            gitmas()
+        }
+     }
 }
 
 
