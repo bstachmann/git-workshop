@@ -10,14 +10,26 @@ fun CollectionOfSamples.gitmas() {
             """Fröhliche Weihnachten!""",
             """
                 Auch Git kann ein Weihnachtliches Tool sein.
+
+                Hier geht es darum durch Branchen und mergen 
+                Git-Graphen zu erzeugen, der wie ein
+                Weihnachtsbaum aussieht.
+
+                Lasse Deiner Kreativität freien Lauf, oder folge diesen **Tipps:**
+
+                 * Zweige eine Reihe von Branches von ˋmainˋ ab
+                 * Mache ein Commit auf jedem der Branches, damit es was zu mergen gibt.
+                 * Gehe auf den zweiten Branch und merge den ersten. Gehe dann auf den dritten ...
+                 * Dann merge den letzten Branch nach ˋmainˋ.
+                 * Wenn Du scripten kannst, z.B. mit Bash oder Python: ˋforˋ-Schleifen sind nützlich.
+
             """
         )
 
         createAufgabe(
-                "Und jetzt ein Weihnachtsbaum", """
-                Hier geht es darum durch Branchen und mergen 
-                Git-Graphen zu erzeugen, der wie ein
-                Weihnachtsbaum aussieht.
+            "Und jetzt ein Weihnachtsbaum", """
+                Branche und Merge so, dass ˋgit log --graph --onelineˋ
+                einen Weihnachtsbaum ausgibt.
             """
         ) {
             createRepo("myrepo") { 
@@ -32,7 +44,7 @@ fun CollectionOfSamples.gitmas() {
                     git("switch ${targetBranch}")
                     git("merge --no-ff b${i} -m '${w}'")
                 }
-                markdown("## Merry **git**mas")
+                markdown("## Merry GITmas")
                 git("log --all --oneline --topo-order --graph -${words.size+1} main")
             }
         }
