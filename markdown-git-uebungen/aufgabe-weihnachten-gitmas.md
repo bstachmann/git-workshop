@@ -9,13 +9,25 @@ nav_order: 19
 
 Auch Git kann ein Weihnachtliches Tool sein.
 
+Hier geht es darum durch Branchen und mergen 
+Git-Graphen zu erzeugen, der wie ein
+Weihnachtsbaum aussieht.
+
+Lasse Deiner Kreativität freien Lauf, oder folge diesen **Tipps:**
+
+ * Zweige eine Reihe von Branches von ˋmainˋ ab
+ * Mache ein Commit auf jedem der Branches, damit es was zu mergen gibt.
+ * Gehe auf den zweiten Branch und merge den ersten. Gehe dann auf den dritten ...
+ * Dann merge den letzten Branch nach ˋmainˋ.
+ * Wenn Du scripten kannst, z.B. mit Bash oder Python: ˋforˋ-Schleifen sind nützlich.
+
+
 <!--UEB-Fröhliche Weihnachten!--><h2>Schritt 1 - Und jetzt ein Weihnachtsbaum</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/weihnachten-gitmas`.
 
-Hier geht es darum durch Branchen und mergen 
-Git-Graphen zu erzeugen, der wie ein
-Weihnachtsbaum aussieht.
+Branche und Merge so, dass ˋgit log --graph --onelineˋ
+einen Weihnachtsbaum ausgibt.
 
 [Zur Lösung](loesung-weihnachten-gitmas.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 

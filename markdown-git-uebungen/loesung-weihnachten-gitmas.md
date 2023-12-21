@@ -7,9 +7,8 @@ nav_order: 19
 ---
 ## Lösung zu Schritt 1 - Und jetzt ein Weihnachtsbaum
 
-Hier geht es darum durch Branchen und mergen 
-Git-Graphen zu erzeugen, der wie ein
-Weihnachtsbaum aussieht.
+Branche und Merge so, dass ˋgit log --graph --onelineˋ
+einen Weihnachtsbaum ausgibt.
 
 
 <pre><code>$ <b>git init -b main myrepo </b><br><br>Initialized empty Git repository in /workspace/git-workshop/build/git-uebungen/loesungen/weihnachten-gitmas/myrepo/.git/<br><br></code></pre>
@@ -295,7 +294,7 @@ Weihnachtsbaum aussieht.
 <pre><code>myrepo $ <b>git merge --no-ff b10 -m 'We'</b><br><br>Merge made by the 'ort' strategy.<br> f0  | 12 ++++++++++++<br> f1  | 12 ++++++++++++<br> f10 | 12 ++++++++++++<br> f2  | 12 ++++++++++++<br> f3  | 12 ++++++++++++<br> f4  | 12 ++++++++++++<br> f5  | 12 ++++++++++++<br> f6  | 12 ++++++++++++<br> f7  | 12 ++++++++++++<br> f8  | 12 ++++++++++++<br> f9  | 12 ++++++++++++<br> 11 files changed, 132 insertions(+)<br> create mode 100644 f0<br> create mode 100644 f1<br> create mode 100644 f10<br> create mode 100644 f2<br> create mode 100644 f3<br> create mode 100644 f4<br> create mode 100644 f5<br> create mode 100644 f6<br> create mode 100644 f7<br> create mode 100644 f8<br> create mode 100644 f9<br><br></code></pre>
 
 
-## Merry **git**mas
+## Merry GITmas
 
 
 <pre><code>myrepo $ <b>git log --all --oneline --topo-order --graph -12 main</b><br><br>*   529f0a7 We<br>|\  <br>| *   284b561 wish<br>| |\  <br>| | *   2cf3fe2 you<br>| | |\  <br>| | | *   0a0ac72 a<br>| | | |\  <br>| | | | *   3a5c254 merry<br>| | | | |\  <br>| | | | | *   852c32d Christmas<br>| | | | | |\  <br>| | | | | | *   80f41ba and<br>| | | | | | |\  <br>| | | | | | | *   fc0d499 a<br>| | | | | | | |\  <br>| | | | | | | | *   8f370b1 happy<br>| | | | | | | | |\  <br>| | | | | | | | | *   2adf7c5 new<br>| | | | | | | | | |\  <br>| | | | | | | | | | *   8795cf6 year<br>| | | | | | | | | | |\  <br>| | | | | | | | | | | * 92bdfa4 !<br>| |_|_|_|_|_|_|_|_|_|/  <br>|/| | | | | | | | | |   <br><br></code></pre>
