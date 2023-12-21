@@ -28,7 +28,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file hallo on branch main by bjoern. &quot;</b><br><br>[main (root-commit) 4c2d137] Created file hallo on branch main by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 hallo<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[main (root-commit) 0c7fe61] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 hallo<br><br></code></pre>
 
 
 
@@ -44,7 +44,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f0 on branch b0 by bjoern. &quot;</b><br><br>[b0 1f3da0e] Created file f0 on branch b0 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f0<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b0 92bdfa4] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f0<br><br></code></pre>
 
 
 
@@ -60,7 +60,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f1 on branch b1 by bjoern. &quot;</b><br><br>[b1 6258f69] Created file f1 on branch b1 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f1<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b1 09a0faa] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f1<br><br></code></pre>
 
 
 
@@ -76,7 +76,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f2 on branch b2 by bjoern. &quot;</b><br><br>[b2 36665c3] Created file f2 on branch b2 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f2<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b2 77ed93c] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f2<br><br></code></pre>
 
 
 
@@ -92,7 +92,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f3 on branch b3 by bjoern. &quot;</b><br><br>[b3 8e3bcf1] Created file f3 on branch b3 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f3<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b3 1828786] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f3<br><br></code></pre>
 
 
 
@@ -108,7 +108,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f4 on branch b4 by bjoern. &quot;</b><br><br>[b4 22c6c31] Created file f4 on branch b4 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f4<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b4 e044cda] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f4<br><br></code></pre>
 
 
 
@@ -124,7 +124,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f5 on branch b5 by bjoern. &quot;</b><br><br>[b5 e3e1a04] Created file f5 on branch b5 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f5<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b5 429f9d2] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f5<br><br></code></pre>
 
 
 
@@ -140,7 +140,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f6 on branch b6 by bjoern. &quot;</b><br><br>[b6 95ec7de] Created file f6 on branch b6 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f6<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b6 9349527] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f6<br><br></code></pre>
 
 
 
@@ -156,7 +156,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f7 on branch b7 by bjoern. &quot;</b><br><br>[b7 095a3fb] Created file f7 on branch b7 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f7<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b7 b6d8b78] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f7<br><br></code></pre>
 
 
 
@@ -172,7 +172,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f8 on branch b8 by bjoern. &quot;</b><br><br>[b8 4f0e7e8] Created file f8 on branch b8 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f8<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b8 63a5a99] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f8<br><br></code></pre>
 
 
 
@@ -188,7 +188,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f9 on branch b9 by bjoern. &quot;</b><br><br>[b9 4973788] Created file f9 on branch b9 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f9<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b9 3ae2b19] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f9<br><br></code></pre>
 
 
 
@@ -204,7 +204,7 @@ Weihnachtsbaum aussieht.
 
 
 
-<pre><code>myrepo $ <b>git commit -am &quot;Created file f10 on branch b10 by bjoern. &quot;</b><br><br>[b10 46ec5ee] Created file f10 on branch b10 by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f10<br><br></code></pre>
+<pre><code>myrepo $ <b>git commit -am &quot;! &quot;</b><br><br>[b10 3ff1aae] !<br> 1 file changed, 12 insertions(+)<br> create mode 100644 f10<br><br></code></pre>
 
 
 
@@ -298,7 +298,7 @@ Weihnachtsbaum aussieht.
 ## Merry **git**mas
 
 
-<pre><code>myrepo $ <b>git log --all --oneline --topo-order --graph -12 main</b><br><br>*   00ba08e We<br>|\  <br>| *   c9e6cd5 wish<br>| |\  <br>| | *   ad3770d you<br>| | |\  <br>| | | *   6f86e21 a<br>| | | |\  <br>| | | | *   d403422 merry<br>| | | | |\  <br>| | | | | *   73c70e9 Christmas<br>| | | | | |\  <br>| | | | | | *   347cbd4 and<br>| | | | | | |\  <br>| | | | | | | *   c9b82db a<br>| | | | | | | |\  <br>| | | | | | | | *   5f61dec happy<br>| | | | | | | | |\  <br>| | | | | | | | | *   abc992d new<br>| | | | | | | | | |\  <br>| | | | | | | | | | *   e7fc5ca year<br>| | | | | | | | | | |\  <br>| | | | | | | | | | | * 1f3da0e Created file f0 on branch b0 by bjoern.<br>| |_|_|_|_|_|_|_|_|_|/  <br>|/| | | | | | | | | |   <br><br></code></pre>
+<pre><code>myrepo $ <b>git log --all --oneline --topo-order --graph -12 main</b><br><br>*   529f0a7 We<br>|\  <br>| *   284b561 wish<br>| |\  <br>| | *   2cf3fe2 you<br>| | |\  <br>| | | *   0a0ac72 a<br>| | | |\  <br>| | | | *   3a5c254 merry<br>| | | | |\  <br>| | | | | *   852c32d Christmas<br>| | | | | |\  <br>| | | | | | *   80f41ba and<br>| | | | | | |\  <br>| | | | | | | *   fc0d499 a<br>| | | | | | | |\  <br>| | | | | | | | *   8f370b1 happy<br>| | | | | | | | |\  <br>| | | | | | | | | *   2adf7c5 new<br>| | | | | | | | | |\  <br>| | | | | | | | | | *   8795cf6 year<br>| | | | | | | | | | |\  <br>| | | | | | | | | | | * 92bdfa4 !<br>| |_|_|_|_|_|_|_|_|_|/  <br>|/| | | | | | | | | |   <br><br></code></pre>
 
 
 

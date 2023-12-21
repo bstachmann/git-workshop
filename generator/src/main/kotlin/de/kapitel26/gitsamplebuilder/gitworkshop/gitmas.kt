@@ -21,11 +21,11 @@ fun CollectionOfSamples.gitmas() {
             """
         ) {
             createRepo("myrepo") { 
-                createFileAndCommit("hallo")
+                createFileAndCommit("hallo", message = "!")
                 val words = "We wish you a merry Christmas and a happy new year".split(" ").reversed()
                 words.forEachIndexed { i, _  ->
                     git("switch -c b${i} main")
-                    createFileAndCommit("f${i}")
+                    createFileAndCommit("f${i}", message = "!")
                 }
                 words.forEachIndexed { i, w ->
                     val targetBranch = if( i < words.size-1 ) "b${i+1}" else "main"
