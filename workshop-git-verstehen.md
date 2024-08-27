@@ -17,7 +17,7 @@ Wir konzentrieren uns auf jene Befehle und Workflows, die im Projektalltag am h�
 
 ### Branching-Strategien praktisch umsetzen 
 
-Das Seminar fokussiert auf die typischen Abläufe im Projektalltag. Neben den wichtigen Befehlen und den technischen Grundlagen, werden die meistverbreiteten Worklfows in den Mittelpunkt gestellt.  
+Das Seminar fokussiert auf die typischen Abläufe im Projektalltag. Neben den wichtigen Befehlen und den technischen Grundlagen, werden die meistverbreiteten Workflows in den Mittelpunkt gestellt.  
 Ein wichtiger Teil des Seminars widmet sich den verschiedenen Branching-Strategien. Du lernst, wie du diese Strategien in deinen Projekten anwendest, um einen effektiven Workflow für die Entwicklung in deinem Team zu etablieren.   
 
 ### Deine Git-Kompetenzen erweitern  
