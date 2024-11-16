@@ -1,9 +1,9 @@
 sudo ln -s /usr/lib/git-core/git-subtree /usr/local/libexec/git-core/
 
-sudo git config --system pull.rebase false 
-sudo git config --system merge.conflictStyle diff3 
-sudo git config --system init.defaultBranch main  
-sudo git config --system protocol.file.allow always
+sudo git config --global pull.rebase false 
+sudo git config --global merge.conflictStyle diff3 
+sudo git config --global init.defaultBranch main  
+sudo git config --global protocol.file.allow always
 
 mkdir -p _log
 
