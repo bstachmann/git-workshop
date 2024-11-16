@@ -11,7 +11,7 @@ Branche und Merge so, dass ˋgit log --graph --onelineˋ
 einen Weihnachtsbaum ausgibt.
 
 
-<pre><code>$ <b>git init -b main myrepo </b><br><br>Initialized empty Git repository in /workspace/git-workshop/build/git-uebungen/loesungen/weihnachten-gitmas/myrepo/.git/<br><br></code></pre>
+<pre><code>$ <b>git init -b main myrepo </b><br><br>Initialized empty Git repository in /workspaces/git-workshop/build/git-uebungen/loesungen/weihnachten-gitmas/myrepo/.git/<br><br></code></pre>
 
 
 

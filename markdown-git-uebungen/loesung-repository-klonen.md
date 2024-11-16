@@ -30,7 +30,7 @@ Zeige dann den Status.
 
 
 
-<pre><code>myfirstclone $ <b>git remote -v</b><br><br>origin	/workspace/git-workshop/build/git-uebungen/loesungen/repository-klonen/myfirstrepo (fetch)<br>origin	/workspace/git-workshop/build/git-uebungen/loesungen/repository-klonen/myfirstrepo (push)<br><br></code></pre>
+<pre><code>myfirstclone $ <b>git remote -v</b><br><br>origin	/workspaces/git-workshop/build/git-uebungen/loesungen/repository-klonen/myfirstrepo (fetch)<br>origin	/workspaces/git-workshop/build/git-uebungen/loesungen/repository-klonen/myfirstrepo (push)<br><br></code></pre>
 
 
 

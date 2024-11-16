@@ -14,7 +14,7 @@ nav_order: 18
 4. Untersuche Verzeichnissstruktur und Commit-Graphen
 
 
-<pre><code>$ <b>git init -b main application </b><br><br>Initialized empty Git repository in /workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-repositorys-zusammenfuehren/application/.git/<br><br></code></pre>
+<pre><code>$ <b>git init -b main application </b><br><br>Initialized empty Git repository in /workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-repositorys-zusammenfuehren/application/.git/<br><br></code></pre>
 
 
 

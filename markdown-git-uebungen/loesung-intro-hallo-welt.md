@@ -17,7 +17,7 @@ Erstellen sie ihr erstes Repository mit den folgenden Befehlen:
     $ git log
 
 
-<pre><code>$ <b>git init -b main myrepo </b><br><br>Initialized empty Git repository in /workspace/git-workshop/build/git-uebungen/loesungen/intro-hallo-welt/myrepo/.git/<br><br></code></pre>
+<pre><code>$ <b>git init -b main myrepo </b><br><br>Initialized empty Git repository in /workspaces/git-workshop/build/git-uebungen/loesungen/intro-hallo-welt/myrepo/.git/<br><br></code></pre>
 
 
 
@@ -88,11 +88,11 @@ Wo liegt wohl das Git-Repository? Was enthält es?
 
 
 
-<pre><code>myrepo $ <b>ll -a</b><br><br>total 4.0K<br>drwxr-xr-x 3 gitpod gitpod  31  .<br>drwxr-xr-x 3 gitpod gitpod  92  ..<br>drwxr-xr-x 8 gitpod gitpod 166  .git<br>-rw-r--r-- 1 gitpod gitpod  10  hallo<br><br></code></pre>
+<pre><code>myrepo $ <b>ll -a</b><br><br>total 16K<br>drwxr-xr-x 3 vscode vscode 4.0K  .<br>drwxr-xr-x 3 vscode vscode 4.0K  ..<br>drwxr-xr-x 8 vscode vscode 4.0K  .git<br>-rw-r--r-- 1 vscode vscode   10  hallo<br><br></code></pre>
 
 
 
-<pre><code>myrepo $ <b>ll -a .git/</b><br><br>total 24K<br>drwxr-xr-x  8 gitpod gitpod  166  .<br>drwxr-xr-x  3 gitpod gitpod   31  ..<br>drwxr-xr-x  2 gitpod gitpod    6  branches<br>-rw-r--r--  1 gitpod gitpod   16  COMMIT_EDITMSG<br>-rw-r--r--  1 gitpod gitpod   92  config<br>-rw-r--r--  1 gitpod gitpod   73  description<br>-rw-r--r--  1 gitpod gitpod   21  HEAD<br>drwxr-xr-x  2 gitpod gitpod 4.0K  hooks<br>-rw-r--r--  1 gitpod gitpod  137  index<br>drwxr-xr-x  2 gitpod gitpod   21  info<br>drwxr-xr-x  3 gitpod gitpod   30  logs<br>drwxr-xr-x 10 gitpod gitpod   90  objects<br>drwxr-xr-x  4 gitpod gitpod   31  refs<br><br></code></pre>
+<pre><code>myrepo $ <b>ll -a .git/</b><br><br>total 52K<br>drwxr-xr-x  8 vscode vscode 4.0K  .<br>drwxr-xr-x  3 vscode vscode 4.0K  ..<br>-rw-r--r--  1 vscode vscode   16  COMMIT_EDITMSG<br>-rw-r--r--  1 vscode vscode   21  HEAD<br>drwxr-xr-x  2 vscode vscode 4.0K  branches<br>-rw-r--r--  1 vscode vscode   92  config<br>-rw-r--r--  1 vscode vscode   73  description<br>drwxr-xr-x  2 vscode vscode 4.0K  hooks<br>-rw-r--r--  1 vscode vscode  137  index<br>drwxr-xr-x  2 vscode vscode 4.0K  info<br>drwxr-xr-x  3 vscode vscode 4.0K  logs<br>drwxr-xr-x 10 vscode vscode 4.0K  objects<br>drwxr-xr-x  4 vscode vscode 4.0K  refs<br><br></code></pre>
 
 
 

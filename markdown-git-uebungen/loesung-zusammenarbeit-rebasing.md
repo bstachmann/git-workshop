@@ -20,7 +20,7 @@ Lasse Dir den Commit-Graphen über alle Branches zeigen.
 
 
 
-<pre><code>repo $ <b>git rebase main</b><br><br>Rebasing (1/2)<br>Rebasing (2/2)<br><br>                                                                                <br>Successfully rebased and updated refs/heads/feature.<br><br></code></pre>
+<pre><code>repo $ <b>git rebase main</b><br><br>Rebasing (1/2)<br>Rebasing (2/2)<br>Successfully rebased and updated refs/heads/feature.<br><br></code></pre>
 
 
 

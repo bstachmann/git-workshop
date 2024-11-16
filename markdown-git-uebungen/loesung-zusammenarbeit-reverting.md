@@ -20,7 +20,7 @@ Tipp: Das Commit ist als `umbenennung` getagged.
 
 
 
-<pre><code>repo $ <b>ls</b><br><br>from-feature<br>README.md<br><br></code></pre>
+<pre><code>repo $ <b>ls</b><br><br>README.md<br>from-feature<br><br></code></pre>
 
 
 ## Lösung zu Schritt 2 - Merge-Commit rückgängig machen.
@@ -30,7 +30,7 @@ Tipp: Das Merge-Commit ist als `feature-merge` getagged.
 Tipp: Am verschinden der Datei `from-feature` kann man den Erfolg erkennen.
 
 
-<pre><code>repo $ <b>ls</b><br><br>from-feature<br>README.md<br><br></code></pre>
+<pre><code>repo $ <b>ls</b><br><br>README.md<br>from-feature<br><br></code></pre>
 
 
 
@@ -88,7 +88,7 @@ auf denen die Weiterentwicklung des Features basiert.
 Tipp: Das Commit ist als `feature-merge` getagged.
 
 
-<pre><code>repo $ <b>git revert merge-reverted</b><br><br>[main 9357146] Revert &quot;Revert &quot;Merge branch 'feature'&quot;&quot;<br> Date: Thu Jul 29 00:00:00 2021 +0000<br> 1 file changed, 12 insertions(+)<br> create mode 100644 from-feature<br><br></code></pre>
+<pre><code>repo $ <b>git revert merge-reverted</b><br><br>[main d508eae] Reapply &quot;Merge branch 'feature'&quot;<br> Date: Thu Jul 29 00:00:00 2021 +0000<br> 1 file changed, 12 insertions(+)<br> create mode 100644 from-feature<br><br></code></pre>
 
 
 
@@ -96,7 +96,7 @@ Tipp: Das Commit ist als `feature-merge` getagged.
 
 
 
-<pre><code>repo $ <b>git log --oneline --graph</b><br><br>*   834d9f3 Merge branch 'feature'<br>|\  <br>| * dc5cc98 : Weiterentwicklung<br>* | 9357146 Revert &quot;Revert &quot;Merge branch 'feature'&quot;&quot;<br>* | 0cde08b Revert &quot;Merge branch 'feature'&quot;<br>* | 4a063fa Revert &quot;umbenennen&quot;<br>* | 6001692 Merge branch 'feature'<br>|\| <br>| * 2caf490 Created file from-feature on branch feature by bjoern.<br>* | 48619ce umbenennen<br>|/  <br>* 50bb121 Created file README.md on branch main by bjoern.<br><br></code></pre>
+<pre><code>repo $ <b>git log --oneline --graph</b><br><br>*   91dad09 Merge branch 'feature'<br>|\  <br>| * dc5cc98 : Weiterentwicklung<br>* | d508eae Reapply &quot;Merge branch 'feature'&quot;<br>* | 0cde08b Revert &quot;Merge branch 'feature'&quot;<br>* | 4a063fa Revert &quot;umbenennen&quot;<br>* | 6001692 Merge branch 'feature'<br>|\| <br>| * 2caf490 Created file from-feature on branch feature by bjoern.<br>* | 48619ce umbenennen<br>|/  <br>* 50bb121 Created file README.md on branch main by bjoern.<br><br></code></pre>
 
 
 
