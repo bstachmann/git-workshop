@@ -3,14 +3,14 @@
 {
 	"name": "Ubuntu",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:focal",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/devcontainers/features/ruby:1": {
 			"version": "latest"
 		},
 		"ghcr.io/devcontainers-contrib/features/gradle-sdkman:2": {
 			"version": "latest",
-			"jdkVersion": "11",
+			"jdkVersion": "21",
 			"jdkDistro": "ms"
 		}
 	},
