@@ -26,7 +26,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"vscjava.vscode-gradle"
+				"vscjava.vscode-gradle",
+				"GitHub.vscode-pull-request-github"
 			]
 		}
 	}
