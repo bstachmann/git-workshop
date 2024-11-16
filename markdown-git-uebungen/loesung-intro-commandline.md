@@ -162,7 +162,7 @@ Für Windows-User: Testen sie den Befehl auch mit der Option `-W`.
 <pre><code>repo $ <b>pwd</b><br><br>/workspace/git-workshop/build/git-uebungen/loesungen/intro-commandline/repo<br><br></code></pre>
 
 
-## Lösung zu Schritt 9 - ⭐ Anwendungen öfnnen
+## Lösung zu Schritt 9 - ⭐ Anwendungen öfnen
 
 Öffnen Sie die Datei `some-file.txt` mit der Standaranwendung.
 Öffnen Sie einen Datei-Explorer im aktuellen Arbeitsverzeichnis.

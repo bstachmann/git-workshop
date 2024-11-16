@@ -149,7 +149,7 @@ Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 Geben Sie aus, in welchem Arbeitzverzeichnis Sie sich gerade befinden.
 Für Windows-User: Testen sie den Befehl auch mit der Option `-W`.
 
-<!--UEB-Das `git`-Kommando!--><h2>Schritt 9 - ⭐ Anwendungen öfnnen</h2>
+<!--UEB-Das `git`-Kommando!--><h2>Schritt 9 - ⭐ Anwendungen öfnen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 

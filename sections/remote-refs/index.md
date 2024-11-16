@@ -8,13 +8,20 @@ Branches sind Zeiger auf Commits, z. B. `myfeature`, `master`
 
 ### Remote Refs
 
-*Remote Refs* repräsentieren den Stand der *Refs*, insbesondere Branches,
-im einem anderen Repository beim Klonen bzw. der letzen Synchronisation).
+#### Wissen was in anderen Klonen los ist
+
+*Remote Refs* repräsentieren den Stand der *Refs* 
+in anderen Repos. 
 
 ```bash
 git show master               # lokaler Stand
 git show origin/master        # origin nach letztem Synch
 ```
+
+*Remote Refs* werden bei ˋcloneˋ, ˋfetchˋ und ˋpullˋ aktualisiert.
+
+Sind mehrere Remotes deklariert (nicht nur ˋoriginˋ), 
+dann gibt es auch mehrere Sätze von *Remote Refs*.
 
 
 ---

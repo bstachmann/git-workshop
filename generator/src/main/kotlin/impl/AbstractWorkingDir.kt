@@ -220,9 +220,6 @@ abstract class AbstractWorkingDir<T>(
         git { commit(fileName, message) }
     }
 
-    //    fun aufgabenFilename(name: String) = "aufgabe-${name.toLowerCase()}.md"
-    fun aufgabenFilename(name: String) = "index.md"
-
     private fun formatNr(nr: Int): String = "%02d".format(nr)
 
     // TODO does not work in new repo

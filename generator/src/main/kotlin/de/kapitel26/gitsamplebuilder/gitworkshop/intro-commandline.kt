@@ -208,7 +208,7 @@ fun CollectionOfSamples.commandline() {
             }
             
             createAufgabe(
-                "⭐ Anwendungen öfnnen", """
+                "⭐ Anwendungen öfnen", """
                 Öffnen Sie die Datei `some-file.txt` mit der Standaranwendung.
                 Öffnen Sie einen Datei-Explorer im aktuellen Arbeitsverzeichnis.
                 """) {

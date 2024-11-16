@@ -114,7 +114,7 @@ Hole den mittleren Stand zurück und erstelle ein Commit.
 
 
 
-<pre><code>repo $ <b>git commit -am &quot;Mittlerer Stand wiederhergestellt.&quot;</b><br><br>[main 385245c] Mittlerer Stand wiederhergestellt.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>
+<pre><code>repo $ <b>git commit -am &quot;Mittlerer Stand wiederhergestellt.&quot;</b><br><br>[main 2045b52] Mittlerer Stand wiederhergestellt.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>
 
 
 ## Lösung zu Schritt 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen
@@ -129,7 +129,7 @@ Tipp: Beim `restore` werden unversionierte Dateien nicht abgeräumt.
 Man kann sie mit dem `stash`-Befehl abräumen.
 
 
-<pre><code>repo $ <b>git log --oneline -- ufer/</b><br><br>903358a Zug 7<br>8860599 Zug 6<br>008b7ed Zug 5<br>20816d2 Zug 4<br>a53bca8 Zug 3<br>e22a495 Zug 2<br>250324b Zug 1<br>a6d16cd Starte spiel<br><br></code></pre>
+<pre><code>repo $ <b>git log --oneline -- ufer/</b><br><br>b1ef622 Zug 7<br>f4bd978 Zug 6<br>d9717fe Zug 5<br>c3aaf58 Zug 4<br>742e18c Zug 3<br>ea7b14c Zug 2<br>751d90f Zug 1<br>cdc2f48 Starte spiel<br><br></code></pre>
 
 
 Zug 1
@@ -143,13 +143,13 @@ Zug 1
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br><br></code></pre>
 
 
 Zug 2
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 385245c Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -157,13 +157,13 @@ Zug 2
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br><br></code></pre>
 
 
 Zug 3
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 385245c Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -171,13 +171,13 @@ Zug 3
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br><br></code></pre>
 
 
 Zug 4
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 385245c Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -185,13 +185,13 @@ Zug 4
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br></code></pre>
 
 
 Zug 5
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 385245c Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -199,13 +199,13 @@ Zug 5
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br></code></pre>
 
 
 Zug 6
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 385245c Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -213,13 +213,13 @@ Zug 6
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br></code></pre>
 
 
 Zug 7
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 385245c Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -227,7 +227,7 @@ Zug 7
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br></code></pre>
 
 
 Zug 8
@@ -241,7 +241,7 @@ Zug 8
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 gitpod gitpod 181  🥬<br>-rw-r--r-- 1 gitpod gitpod 181  🐐<br>-rw-r--r-- 1 gitpod gitpod 181  🐺<br>-rw-r--r-- 1 gitpod gitpod 181  👨‍🌾<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 gitpod gitpod 181  BAUER<br>-rw-r--r-- 1 gitpod gitpod 181  KOHL<br>-rw-r--r-- 1 gitpod gitpod 181  WOLF<br>-rw-r--r-- 1 gitpod gitpod 181  ZIEGE<br><br></code></pre>
 
 
 [Zur Aufgabe](aufgabe-commits-staging.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}

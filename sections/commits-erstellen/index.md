@@ -21,13 +21,6 @@
 ---
 
 
- * In jedem Klon wird unabhängig gearbeit.
- * Fast alle Befehle arbeiten lokal (und damit schnell).
- * Nur die Befehle `push`, `pull` und `fetch` übertragen Informationen zwischen den Klonen.
- * Oft erfolgt der Austausch über ein *Blessed Repository*.
-
-
----
 ### Der Workspace
 
 umfasst alle Dateien und Verzeichnisse des Projekts
@@ -151,53 +144,6 @@ Es gibt auch einen Git-Befehl zum Löschen:
     git commit -am 'deleted my-file'
 
 
----
-
-
-Git kann Verschiebungen von Dateien erkennen (*Rename Detection*).
-
-Wie geht das?
-
-
----
-
-Wenn in einem Commit,
-
- * eine Datei gelöscht wurde,
- * und eine neue Datei hinzugekommen ist, und
- * die Inhalte (fast) gleich sind,
- 
-geht Git davon aus, dass eine Datei verschoben wurde.
-
-Die Option `--follow` am `log`-Befehl forciert die *rename detection*.
-
-
----
-
-
-### Commit - Verschieben von Dateien
-
-```
-   mv hallo hello       
-   git add .
-   git commit -m "hallo -> hello"
-```
-
-Die Historie von `hello`:
-
-   git log --follow -- hello
-   
-   
-
----
-
-
-###  Tipp: Separate move from change
-
- 1. Move
- 1. Commit
- 1. Change
- 1. Commit
 
 
 ---
@@ -206,12 +152,10 @@ Die Historie von `hello`:
 
 Verzeichnisse werden in Git nicht explizit versioniert.
 
+Sie werden (im *Tree*) mit abgebildet, wenn Dateien hinzugefügt werden.
+
 Ein Verzeichnis muss mindestens eine Datei enthalten.
 
-Ggf. legt man ein hidden File an, z. B. `.gitkeep`
+Ggf. legt man ein hidden File an, z. B. `.gitkeep`,
+um ein Verzeichnis zu erzwingen.
 
----
-
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-commits-erstellen.html" target="_blank">Commits erstellen<a></h2>

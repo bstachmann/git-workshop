@@ -1,10 +1,13 @@
+
+val javaVersion: Int by extra { 21 }
+
 plugins {
-    kotlin("jvm") version "1.9.10"
+    kotlin("jvm") version "1.9.21"
     id("application")
 }
 
 kotlin {
-    jvmToolchain(11)
+    jvmToolchain(javaVersion)
 }
 
 apply(plugin = "application")
@@ -26,13 +29,15 @@ allprojects {
     }
 
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
+        kotlinOptions.jvmTarget = "${javaVersion}"
     }
 
     dependencies {
-
         implementation(kotlin("script-runtime"))
         implementation(kotlin("stdlib"))
+
+        implementation("org.slf4j:slf4j-api:2.0.9")
+        implementation("org.slf4j:slf4j-simple:2.0.9")    
     }
 
 }

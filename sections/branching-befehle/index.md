@@ -6,6 +6,12 @@
 
 ---
 
+## Frage
+
+Welche Befehle/Operationen sind für Workflows im Team wichtig?
+
+---
+
 
 ## Branch
 

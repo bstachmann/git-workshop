@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
-          java-version: '11'
+          java-version: '21'
           distribution: 'adopt'
       - shell: bash
         run: |
@@ -19,7 +19,8 @@ jobs:
         uses: gradle/gradle-build-action@v2.4.2
         with:
           arguments: distUebungenZip
-      - uses: actions/upload-artifact@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          name: git-workshop
-          path: build/distributions/git-uebungen.zip
+          files: build/distributions/git-uebungen.zip

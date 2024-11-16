@@ -5,20 +5,47 @@
 
 ```bash
 $ git init
-$ vim hello
-$ git add hello
-$ git commit -m "A minimal commit"
+$ vim README
+$ git add README
+$ git commit -m "Neues Repo"
 ```
+
+---
+
+![Commit Trees](commits-im-object-store.svg)
+
+[Download](commits-im-object-store.svg)
+
+---
+
+```bash
+$ mkdir foo
+$ vim foo/bar
+$ git add foo/bar
+$ git commit -m "Jetzt foo"
+```
+
+---
+
+![Commit Trees](commits-im-object-store.svg)
+
+[Download](commits-im-object-store.svg)
+
+---
 
 Wie speichert Git Commits?
 
 ---
 
 ```
-    git show HEAD
-    git show HEAD:hello         
+$ git init
+$ vim README
+$ git add README
+$ git commit -m "Neues Repo"
 
-    git ls-tree -r HEAD
+$ git show HEAD
+$ git show HEAD:hello         
+$ git ls-tree -r HEAD
 ```
 
 
@@ -38,6 +65,10 @@ Wie speichert Git Commits?
 
 ---
 
+
+![Commit Trees](commits-im-object-store.png)
+
+---
 
 Das Herz von Git ist der sogenannte **Object Store**,
 eine Datenbank, in der
@@ -90,20 +121,6 @@ Identische Inhalte werden nur einmal abgelegt.
 ```bash
 $ echo 'test content' | git hash-object -w --stdin
 ``` 
-
----
-
-
-
-![Commit Trees](commits-im-object-store.svg)
-
-[Download](commits-im-object-store.svg)
-
----
-
-
-![Commit Trees](commits-im-object-store.png)
-
 
 ---
 

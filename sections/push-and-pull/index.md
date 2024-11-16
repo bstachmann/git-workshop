@@ -9,6 +9,7 @@
 
 ---
 
+
 ### Synchronisation
 
 ```bash
@@ -117,6 +118,7 @@ git pull
 
 ### Push rejected
 
+
 ---
 
 
@@ -125,13 +127,13 @@ git pull
 [Push Reject](repo-push-rejected.svg)
 
 
---- 
+---
 
 
 ![Push reject 2](push-reject-2.png)
 
 
---- 
+---
 
 ### Push rejected
 

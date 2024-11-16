@@ -31,6 +31,7 @@ fun buildGitUebungen() {
         thema("Zusammenarbeit") {
             branching()
             fetchAndPull()
+            tags()
             pushRejected()
             integrationVonAenderungen()
             branchingFortgeschritten()
@@ -45,7 +46,11 @@ fun buildGitUebungen() {
             repositorysZusammenfuehren()
             //lfs()
         }
-    }
+
+        thema("Weihnachten") {
+            gitmas()
+        }
+     }
 }
 
 

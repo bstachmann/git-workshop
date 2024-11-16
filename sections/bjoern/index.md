@@ -9,7 +9,7 @@
 | Name             |  Bjørn Stachmann              |
 |-----------------------|-----------------------|
 | Alter                 | ![VC-20](vc-20.png) |
-| 👷                | Senior Software Architect @otto.de<BR/>undmanchmal Git-Trainer      |
+| 👷                | Senior Cloud Architect @otto-payments.de<BR/>und manchmal Git-Trainer      |
 | ❤️ Programming           | Kotlin, Python, Elm, Ruby, Smalltalk  |
 | 🚀 IDE | VScode, IDEA, Eclipse, GitPod |
 | Versionierung | CVS, Subversion, ClearCase, Git |

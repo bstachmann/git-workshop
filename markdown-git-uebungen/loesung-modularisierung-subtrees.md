@@ -3,7 +3,7 @@ layout: page
 title: <code>modularisierung-subtrees</code>
 parent: Lösungen
 
-nav_order: 16
+nav_order: 17
 ---
 ## Lösung zu Schritt 1 - Module als Subtree einbinden
 
