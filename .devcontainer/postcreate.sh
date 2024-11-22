@@ -8,12 +8,15 @@ sudo git config --system protocol.file.allow always
 
 mkdir -p _log
 
-echo "Build exercise files and progress server"
-gradle clean distuebungenMarkdown 
+
+git submodule update --init revealjs
+
+echo "Build website"
+./run-website-build.sh 
 
 
 echo "Run web server"
-gradle run &
+gradle run  &
 
 
 echo run progress server
