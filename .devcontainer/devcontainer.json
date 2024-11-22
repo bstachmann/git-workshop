@@ -22,7 +22,13 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash .devcontainer/postcreate.sh",
+	"initializeCommand": "bash .devcontainer/10-initialize.sh",
+	"onCreateCommand": "bash .devcontainer/20-onCreate.sh",
+	"updateContentCommand": "bash .devcontainer/30-updateContent.sh",
+	"postCreateCommand": "bash .devcontainer/40-postCreate.sh",
+	"postStartCommand": "bash .devcontainer/50-postStart.sh",
+	"postAttachCommand": "bash .devcontainer/60-postAttach.sh",
+
 	"customizations": {
 		"vscode": {
 			"extensions": [
