@@ -58,6 +58,7 @@ plugins:
 #   - vendor/ruby/
 
 exclude:
+  - _log/
   - generator/
   - build/
   - revealjs/css/theme/README.md
