@@ -89,7 +89,7 @@ Sieh Dir das übertragene Commit in `mod-a.git` an.
 
 
 
-<pre><code>subtrees $ <b>git subtree push --prefix=mod-a ../mod-a.git main</b><br><br>git push using:  ../mod-a.git main<br>1/8 (0) [0]<br>2/8 (0) [0]<br>3/8 (0) [0]<br>4/8 (1) [0]<br>5/8 (2) [0]<br>6/8 (3) [0]<br>7/8 (4) [0]<br>8/8 (5) [0]<br>To ../mod-a.git<br>   d967be7..b641f6e  b641f6edf0d961d892939aa28f7d036f474eb2c9 -&gt; main<br><br></code></pre>
+<pre><code>subtrees $ <b>git subtree push --prefix=mod-a ../mod-a.git main</b><br><br>git push using:  ../mod-a.git main<br>1/8 (0) [0]<br>2/8 (0) [0]<br>3/8 (0) [0]<br>3/8 (1) [1]<br>3/8 (1) [2]<br>4/8 (1) [2]<br>5/8 (2) [2]<br>5/8 (3) [3]<br>6/8 (3) [3]<br>7/8 (4) [3]<br>7/8 (5) [4]<br>8/8 (5) [4]<br>To ../mod-a.git<br>   d967be7..b641f6e  b641f6edf0d961d892939aa28f7d036f474eb2c9 -&gt; main<br><br></code></pre>
 
 
 

@@ -12,17 +12,17 @@ per `submodule add` ein.
 Untersuche dann die entstandene Verzeichnisstruktur.
 
 
-<pre><code>submodules $ <b>git submodule add  ../mod-a.git mod-a</b><br><br>Cloning into '/workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/submodules/mod-a'...<br>done.<br><br></code></pre>
+<pre><code>submodules $ <b>git submodule add  ../mod-a.git mod-a</b><br><br>Cloning into '/workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/submodules/mod-a'...<br>done.<br><br></code></pre>
 
 
 
-<pre><code>submodules $ <b>git submodule add  ../mod-b.git mod-b</b><br><br>Cloning into '/workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/submodules/mod-b'...<br>done.<br><br></code></pre>
+<pre><code>submodules $ <b>git submodule add  ../mod-b.git mod-b</b><br><br>Cloning into '/workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/submodules/mod-b'...<br>done.<br><br></code></pre>
 
 
 Man sieht, dass die Module als eigenständige Git-Repositorys mit separatem `.git`-Verzeichnis eingebettet wurden.
 
 
-<pre><code>submodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  anton<br><br>mod-b:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  berta<br><br></code></pre>
+<pre><code>submodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  anton<br><br>mod-b:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  berta<br><br></code></pre>
 
 
 Achtung! Die submodule wurden hinzugefügt, aber es fehlt noch ein Commit.
@@ -75,7 +75,7 @@ Sieh Dir das übertragene Commit an.
 
 
 
-<pre><code>mod-b $ <b>git pull</b><br><br>Updating 6380ac8..50698b6<br>Fast-forward<br> berta | 2 +-<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>From /workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-b<br>   6380ac8..50698b6  main       -&gt; origin/main<br><br></code></pre>
+<pre><code>mod-b $ <b>git pull</b><br><br>Updating 6380ac8..50698b6<br>Fast-forward<br> berta | 2 +-<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br>From /workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-b<br>   6380ac8..50698b6  main       -&gt; origin/main<br><br></code></pre>
 
 
 
@@ -117,7 +117,7 @@ Sieh Dir das übertragene Commit in `mod-a.git` an.
 
 
 
-<pre><code>mod-a $ <b>git push</b><br><br>To /workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-a.git<br>   d967be7..92fc729  main -&gt; main<br><br></code></pre>
+<pre><code>mod-a $ <b>git push</b><br><br>To /workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-a.git<br>   d967be7..92fc729  main -&gt; main<br><br></code></pre>
 
 
 
@@ -173,11 +173,11 @@ Die Modulverzeichnisse sind da aber noch leer:
 Jetzt holen wir die Module:
 
 
-<pre><code>mysubmodules $ <b>git submodule update --init</b><br><br>Submodule path 'mod-a': checked out '92fc72941e8d368672750dd45352818d11147f75'<br>Submodule path 'mod-b': checked out '50698b6873247293afef905302e1fa0d7d835dd3'<br>Submodule 'mod-a' (/workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-a.git) registered for path 'mod-a'<br>Submodule 'mod-b' (/workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-b.git) registered for path 'mod-b'<br>Cloning into '/workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mysubmodules/mod-a'...<br>done.<br>Cloning into '/workspace/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mysubmodules/mod-b'...<br>done.<br><br></code></pre>
+<pre><code>mysubmodules $ <b>git submodule update --init</b><br><br>Submodule path 'mod-a': checked out '92fc72941e8d368672750dd45352818d11147f75'<br>Submodule path 'mod-b': checked out '50698b6873247293afef905302e1fa0d7d835dd3'<br>Submodule 'mod-a' (/workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-a.git) registered for path 'mod-a'<br>Submodule 'mod-b' (/workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mod-b.git) registered for path 'mod-b'<br>Cloning into '/workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mysubmodules/mod-a'...<br>done.<br>Cloning into '/workspaces/git-workshop/build/git-uebungen/loesungen/modularisierung-submodules/mysubmodules/mod-b'...<br>done.<br><br></code></pre>
 
 
 
-<pre><code>mysubmodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 242  anton<br><br>mod-b:<br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 242  berta<br><br></code></pre>
+<pre><code>mysubmodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 242  anton<br><br>mod-b:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 242  berta<br><br></code></pre>
 
 
 

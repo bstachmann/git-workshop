@@ -19,7 +19,7 @@ Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
 
 
 
-<pre><code>myrepo $ <b>ll </b><br><br>total 4.0K<br>-rw-r--r-- 1 gitpod gitpod 181  README.md<br><br></code></pre>
+<pre><code>myrepo $ <b>ll </b><br><br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  README.md<br><br></code></pre>
 
 
 
@@ -49,7 +49,7 @@ Validiere, dass `component-a` jetzt da ist.
 
 
 
-<pre><code>myrepo $ <b>ll </b><br><br>total 4.0K<br>drwxr-xr-x 2 gitpod gitpod  17  component-a<br>-rw-r--r-- 1 gitpod gitpod 181  README.md<br><br></code></pre>
+<pre><code>myrepo $ <b>ll </b><br><br>total 8.0K<br>drwxr-xr-x 2 vscode vscode 4.0K  component-a<br>-rw-r--r-- 1 vscode vscode  181  README.md<br><br></code></pre>
 
 
 
@@ -74,7 +74,7 @@ Validiere, dass `component-a` jetzt da ist.
 
 
 
-<pre><code>myrepo $ <b>ll </b><br><br>total 4.0K<br>drwxr-xr-x 2 gitpod gitpod  17  component-a<br>drwxr-xr-x 2 gitpod gitpod  17  component-b<br>-rw-r--r-- 1 gitpod gitpod 181  README.md<br><br></code></pre>
+<pre><code>myrepo $ <b>ll </b><br><br>total 12K<br>drwxr-xr-x 2 vscode vscode 4.0K  component-a<br>drwxr-xr-x 2 vscode vscode 4.0K  component-b<br>-rw-r--r-- 1 vscode vscode  181  README.md<br><br></code></pre>
 
 
 
@@ -107,7 +107,7 @@ und mache ein Checkout. Nutze die `--cone`-Option.
 
 
 
-<pre><code>myclone $ <b>ll </b><br><br>total 4.0K<br>drwxr-xr-x 2 gitpod gitpod  17  component-a<br>-rw-r--r-- 1 gitpod gitpod 181  README.md<br><br></code></pre>
+<pre><code>myclone $ <b>ll </b><br><br>total 8.0K<br>drwxr-xr-x 2 vscode vscode 4.0K  component-a<br>-rw-r--r-- 1 vscode vscode  181  README.md<br><br></code></pre>
 
 
 
