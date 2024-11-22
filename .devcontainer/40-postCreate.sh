@@ -7,18 +7,12 @@ echo ">>> Get revealjs sources"
 git submodule update --init revealjs
 
 
-# echo "Run web server"
-# gradle run  &
+echo ">>> Build generated pages (uebungen) and servers." 
+
+gradle build
+
+echo ">>> Build website" 
+
+bundle exec jekyll build
 
 
-# echo run progress server
-# gradle progress &
-
-
-# echo "Build website & Webserver on 4000"
-# ./run-website-build.sh 
-# ./run-server.sh &
-# echo "Übungen"
-# mkdir -p build/git-uebungen/aufgaben 
-# cd build/git-uebungen/aufgaben 
-ls
