@@ -11,8 +11,5 @@ echo ">>> Build generated pages (uebungen) and servers."
 
 ./gradlew build
 
-echo ">>> Build website" 
-
-bundle exec jekyll build
 
 

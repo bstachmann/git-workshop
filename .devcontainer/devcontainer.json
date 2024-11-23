@@ -20,9 +20,9 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [ 
-		4000, // Jekyll
-		8040, // Progress monitoring
-		8080 // Workshop website
+		// 4000, // Jekyll
+		// 8040, // Progress monitoring
+		// 8080 // Workshop website
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
