@@ -9,7 +9,7 @@ git submodule update --init revealjs
 
 echo ">>> Build generated pages (uebungen) and servers." 
 
-gradle build
+./gradlew build
 
 echo ">>> Build website" 
 
