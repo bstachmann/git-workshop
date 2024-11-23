@@ -1,4 +1,5 @@
 #!/bin/bash
-echo ">>> Start all servers for a workshop" 
+echo ">>> Start jekyll server for static content" 
 
-echo $$ >_log/jekyll.pid &&  bundle exec jekyll serve -H localhost 2>&1 >_log/server-jekyll.log
+echo $$ >_log/jekyll.pid
+bundle exec jekyll serve -H localhost 2>&1 >_log/server-jekyll.log
