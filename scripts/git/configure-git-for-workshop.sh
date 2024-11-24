@@ -1,7 +1,7 @@
 #!/bin/bash
 echo ">>> Setup default git configs for workshop" 
 
-git config --global pull.rebase false 
-git config --global merge.conflictStyle diff3 
-git config --global init.defaultBranch main  
-git config --global protocol.file.allow always
+sudo git config --system pull.rebase false 
+sudo git config --system merge.conflictStyle diff3 
+sudo git config --system init.defaultBranch main  
+sudo git config --system protocol.file.allow always
