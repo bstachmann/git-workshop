@@ -1,7 +1,7 @@
 #!/bin/bash
 echo ">>> Start all progress monitor" 
 
-sleep 5
 echo $$ >_log/progress-monitor.pid
+sleep 10
 ./gradlew progress 
 
