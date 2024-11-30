@@ -3,8 +3,8 @@
 ## Workshop am 9.12.2024
 
  * [ ] Modularisierung
-    - Vortrag über große Repos und Modularisierung hinzufügen
-    - Demo: Submodules, Subtrees
+    - [x] Vortrag über große Repos und Modularisierung hinzufügen
+    - [x] Demo: Submodules, Subtrees
     - Tabelle Trade-Off Modularisierung
  * [ ] Relases 
     - Release erstellen
