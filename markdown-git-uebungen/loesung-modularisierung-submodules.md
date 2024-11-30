@@ -22,7 +22,7 @@ Untersuche dann die entstandene Verzeichnisstruktur.
 Man sieht, dass die Module als eigenständige Git-Repositorys mit separatem `.git`-Verzeichnis eingebettet wurden.
 
 
-<pre><code>submodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  anton<br><br>mod-b:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  berta<br><br></code></pre>
+<pre><code>submodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  anton<br><br>mod-b:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  berta<br><br></code></pre>
 
 
 Achtung! Die submodule wurden hinzugefügt, aber es fehlt noch ein Commit.
@@ -177,7 +177,7 @@ Jetzt holen wir die Module:
 
 
 
-<pre><code>mysubmodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 242  anton<br><br>mod-b:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 242  berta<br><br></code></pre>
+<pre><code>mysubmodules $ <b>ll mod-a mod-b</b><br><br>mod-a:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 242  anton<br><br>mod-b:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 242  berta<br><br></code></pre>
 
 
 
