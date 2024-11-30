@@ -8,11 +8,10 @@ tasks:
 
   - name: Build exercise files and progress server
     init: gradle build run distuebungenMarkdown
-    command: gradle progress
 
-  - name: Build website & Webserver on 4000
-    init: ./run-website-build.sh
-    command: ./run-server.sh
+  - name: Build website & Start server
+    init: bundle update && bundle install && bundle exec jekyll build
+    command: ./scripts/run-all.sh
 
   - name: Übungen
     command: mkdir -p build/git-uebungen/aufgaben && cd build/git-uebungen/aufgaben && ls

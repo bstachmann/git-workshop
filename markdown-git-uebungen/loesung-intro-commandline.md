@@ -49,7 +49,7 @@ Navigiere dann wieder zurück ins Ursprungsverzeichnis.
 Gib aus, welche Version von Git installiert ist.
 
 
-<pre><code>hallo $ <b>git version</b><br><br>git version 2.42.0<br><br></code></pre>
+<pre><code>hallo $ <b>git version</b><br><br>git version 2.47.0<br><br></code></pre>
 
 
 ## Lösung zu Schritt 3 - Hilfe
@@ -159,7 +159,7 @@ Geben Sie aus, in welchem Arbeitzverzeichnis Sie sich gerade befinden.
 Für Windows-User: Testen sie den Befehl auch mit der Option `-W`.
 
 
-<pre><code>repo $ <b>pwd</b><br><br>/workspace/git-workshop/build/git-uebungen/loesungen/intro-commandline/repo<br><br></code></pre>
+<pre><code>repo $ <b>pwd</b><br><br>/workspaces/git-workshop/build/git-uebungen/loesungen/intro-commandline/repo<br><br></code></pre>
 
 
 ## Lösung zu Schritt 9 - ⭐ Anwendungen öfnen

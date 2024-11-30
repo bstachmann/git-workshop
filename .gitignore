@@ -7,3 +7,5 @@ build/
 git-uebungen/
 _tmp*
 .sass-cache/
+_log/
+nohup.out

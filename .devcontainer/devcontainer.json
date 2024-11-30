@@ -10,7 +10,7 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/gradle-sdkman:2": {
 			"version": "latest",
-			"jdkVersion": "11",
+			"jdkVersion": "21",
 			"jdkDistro": "ms"
 		}
 	},
@@ -19,14 +19,25 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [ 
+		4000, // Jekyll
+		8040, // Progress monitoring
+		8080 // Workshop website
+	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash .devcontainer/postcreate.sh",
+	"initializeCommand": "bash .devcontainer/10-initialize.sh",
+	"onCreateCommand": "bash .devcontainer/20-onCreate.sh",
+	"updateContentCommand": "bash .devcontainer/30-updateContent.sh",
+	"postCreateCommand": "bash .devcontainer/40-postCreate.sh",
+	"postStartCommand": "bash .devcontainer/50-postStart.sh",
+	"postAttachCommand": "bash .devcontainer/60-postAttach.sh",
+
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"vscjava.vscode-gradle"
+				"vscjava.vscode-gradle",
+				"GitHub.vscode-pull-request-github"
 			]
 		}
 	}
