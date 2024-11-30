@@ -1,3 +1,3 @@
 ### Große Projekte
 
-## Große Repos, Monorepos, LFS
+### Große Repos, kleine Repos oder Modularisierung 
