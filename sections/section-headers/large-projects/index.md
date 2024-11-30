@@ -1,5 +1,7 @@
 # Große Projekte
 
+### Monorepo, kleine Repos oder Modularisierung?
+
 ---
 
 ## Lernziel

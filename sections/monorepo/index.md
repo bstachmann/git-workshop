@@ -178,7 +178,7 @@ Jede Dimension birgt ihre eigenen Herausforderungen.
 ![Überblick Probleme](ueberblick-probleme.png)
 
 
----
+===
 
 <!-- .slide: data-background-image="sections/monorepo/viele-dateien.png" -->
 
