@@ -1,3 +1,29 @@
+# To Do
+
+## Workshop am 9.12.2024
+
+ * [ ] Modularisierung
+    - Vortrag über große Repos und Modularisierung hinzufügen
+    - Demo: Submodules, Subtrees
+    - Tabelle Trade-Off Modularisierung
+ * [ ] Relases 
+    - Release erstellen
+    - inkl. Patches auf Release
+ * [ ] Kurz: Pull-Request und Reviews
+ * [ ] Pipelines (PR, main, asynchron)
+ * [ ] Workflow auf einem Branch gemeinsam arbeiten
+    - Achtung: Commits beziehen sich immer auf das ganze Repo
+
+-----
+
+# Allgemein
+
+ * Trade-Off tabellen
+   - Merge vs. Rebase vs. Squash-Merge
+   - Trunk vs. Feature
+   - Cherry-Pick vs. Merge Chains
+   - Add+Commit+Push oder selective Stage and push
+ * Beispiele (insbesondere submodule, subtree) nach fachlichen Beispielen benennen (nicht abstrakt)
  * "Branches sind Zeiger auf Commits" das Bild ist echt doof. (Branchname irreführend)
  * ein paarmal sollte "git branch" durch switch ersetzt werden
  * In der branches fortgeschritten Hinweise auf dff ... und log .. in Tipps
