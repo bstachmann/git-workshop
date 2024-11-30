@@ -1,7 +1,7 @@
-<!-- .slide: data-background-image="sections/large-repos-approaches/monorepo.png" -->
+<!-- .slide: data-background-image="sections/monorepo/monorepo.png" -->
 
 
-# MONOREPO
+# MONOREPO TODO
 
 
 ---
@@ -31,7 +31,7 @@ Lines of Code: Wer hat mehr als 100.000, 1 Mio., 10 Mio., 100 Mio.
 
 # Think Big! <br/><br/><br/><br/>
 
-<!-- .slide: data-background-image="sections/large-repos-approaches/tyranno-watching.png" -->
+<!-- .slide: data-background-image="sections/monorepo/tyranno-watching.png" -->
 
 
 ---
@@ -139,6 +139,44 @@ notes:
 Knifflige Entscheidung, weil \
 kurzfristiger Invest hoch, \
 Nutzen aber in langristigen Aspekten liegt.
+
+
+---
+
+
+<!-- .slide: data-background-image="sections/monorepo/gross.png" -->
+
+
+Wenn Sie Monorepo aufbauen,  
+werden sie ein großes Repo bekommen,
+
+## aber was heißt hier eigentlich
+
+# GROß?
+
+
+---
+
+
+### Dimensionen von "groß"
+
+ * Viele Dateien
+ * Viele Bytes
+ * Viele Leute
+ * Viele Änderungen
+
+
+---
+
+
+Jede Dimension birgt ihre eigenen Herausforderungen.
+
+
+---
+
+
+![Überblick Probleme](ueberblick-probleme.png)
+
 
 
 
