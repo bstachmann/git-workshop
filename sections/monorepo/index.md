@@ -464,6 +464,265 @@ Deshalb:
 <img src="sections/monorepo/ueberblick-viele-bytes.png" width="90%" style="border: 0px; box-shadow: none;">
 
 
+---
 
+
+<!-- .slide: data-background-image="sections/monorepo/viele-leute.png" -->
+
+
+## Viele Leute!<br/><br/>
+
+
+---
+
+
+## Viele Leute - Probleme
+
+ * Push-Reject
+ * Ich will das Zeug nicht sehen
+ * Branch Garbage
+
+
+---
+
+
+### Viele Leute - Push-Reject
+
+
+```
+ ! [rejected]            master -> master (fetch first)
+error: failed to push some refs to 'file:///Users/rene/temp/linux.shallow.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+Git macht keine serverseitigen Merges.
+
+Push-Reject verhindert, dass durch Merges Versionsstände
+im Server-Repo entstehen, die es nie in einem 
+Entwickler-Repo gegeben hat.
+
+notes:
+
+Hier sollte man nicht vergessen, dass Push-Rejects  im Grunde erstmal richtig sind.
+
+
+---
+
+
+#### Viele Leute - Push Reject
+
+### Abhilfe: Branch oder Fork 
+      
+![abb-feature-branches-ueberblick.png](abb-feature-branches-ueberblick.png)
+
+
+---
+
+#### Viele Leute - Push Reject
+
+### Abhilfe: Branch oder Fork 
+      
+
+* Ermöglicht, bis zur Integration unabhängig zu arbeiten
+* Nachteile:
+  - Probleme treten erst bei Integration auf
+  - Langläufer machen CI/CD unmöglich
+
+
+---
+
+
+#### Viele Leute - Push Reject
+
+### Abhilfe: Pull-Requests
+
+Integration über Pull-Requests
+
+<img src="05/abb-feature-branches-pr-mergen.png" width="70%" style="background-color: black;">
+
+
+notes:
+
+Pull-Request bedeutet Server-Seitiges mergen.
+
+Wenn man einfach willenlos auf "Mergen" klickt, umgeht man die Schutzwirkung die von Push-Rejects intendiert ist.
+
+Pull-Request sollten mit Reviews und Buil-Pipeline-Integration genutzt werden.
+
+
+---
+
+
+#### Viele Leute - Zu viele Branches
+
+### Abhilfe: Ordnung schaffen
+
+Präfixe je Module oder Team definieren:  
+`/team-a/feature/4711`
+
+```bash
+git branch -r --list /teams/*
+git branch -r --list */feature/*
+```
+  
+---
+
+
+#### Viele Leute - Zu viele Branches
+
+### Abhilfe: Branches aufräumen
+
+* Automatisches `fetch --prune`
+  
+```bash
+git config fetch.prune true
+```
+
+  * Alte Branches finden
+
+```bash
+git branch -r --no-merged
+
+git log --no-merges -n 1 --format="%ci" <branch>
+```
+
+
+---
+
+![ueberblick-viele-leute.png](ueberblick-viele-leute.png)
+
+
+---
+
+
+<!-- .slide: data-background-image="sections/monorepo/viele-commits.png" -->
+
+## Viele Commits<br/><br/><br/><br/>
+
+
+---
+
+## Linux Kernel
+
+
+Knapp eine Millionen Commits.
+
+Das Logging der letzten **10 Commits** dauert\
+**9 Sekunden**.
+
+```
+time git log --graph --oneline -10
+```
+
+notes:
+
+Das Problem ist der Graph, ohne --graph geht es schnell
+
+https://devblogs.microsoft.com/devops/a-deep-dive-into-git-performance-using-trace2/
+https://git-scm.com/docs/commit-graph
+
+---
+
+<img src="06/log-graph.png" width="90%" style="border: 0px; box-shadow: none;">
+
+---
+
+## Langsame Operationen
+
+ * Historie als Graph anzeigen
+ * Merge-Base ermitteln
+   * Merge, Rebase
+   * Status
+ * Wo ist das Commit enthalten?
+
+```
+git log --graph --oneline -10
+git merge feature/42
+git branch --contains <hash>
+```
+
+notes: 
+
+There are two main costs here:
+
+    1. Decompressing and parsing commits.
+
+    2. Walking the entire graph to satisfy topological order constraints.
+
+---
+
+
+## Commit-Graph
+
+ * Seperater Index für Commits
+   * OID
+   * Parents
+   * Commit Date
+   * Tree OID
+   * Generation Number
+
+```
+# Nur Pack-Files indizieren
+git commit-graph write 
+# Alle Commits indizieren
+git show-ref -s | git commit-graph write --stdin-commits
+# Bei jedem Fetch aktualisieren
+git config fetch.writeCommitGraph true
+```
+
+notes:
+
+Generation Number ist die Anzahl der Commits/Parents bis zur Wurzel
+* Dadurch kann man leicht feststellen ob zwei Commits nicht voreinander liegen
+---
+
+## Linux Kernel mit Commit-Graph
+
+
+Das Logging der letzten 10 Commits des Linux Kernels 
+dauert mit Commit-Graph 0,3 Sekunden.
+
+```
+time git log --graph --oneline -10
+```
+
+
+---
+
+
+![ueberblick-viele-commits.png](ueberblick-viele-commits.png)
+
+
+---
+
+![ueberblick-loesungen.png](ueberblick-loesungen.png)
+
+
+---
+
+
+## ... und wenn **das** nicht reicht?
+
+
+(Git hat Grenzen und skaliert nicht für beliebig große Repos)
+
+
+---
+
+
+## Dann ...
+
+ * ... entwickelt man ein **File-System** speziell für Git-Monorepos (**Microsoft**).
+ * ... erstellt man Plugins für ein **modulares VCS** (Mercurial bei **Facebook**).
+ * ... baut man einfach ein **eigenes VCS** (**Google**).
+
+
+notes:
+ 
+ TODO noch ein paar Speaker notes mit Fakten zu den Drei Varianten hinzufügen.
 
 
