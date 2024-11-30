@@ -287,6 +287,183 @@ git config core.fsmonitor .git/hooks/query-watchman
 ![ueberblick-viele-dateien.png](ueberblick-viele-dateien.png)
 
 
+---
+
+<!-- .slide: data-background-image="sections/monorepo/viele-bytes.png" -->
+
+
+## Viele Bytes!<br/><br/><br/>
+
+
+---
+
+
+## Viele Bytes - Probleme
+
+ * **langsamer Transfer**  
+   `clone` langsam  
+   Bottleneck ist meist das Netz.  
+   Platten sind schnell und billig.
+
+ * **Big Binaries**  
+   `fetch`, `checkout` langsam
+
+notes:
+
+- Typsische Problem:
+  Build-Server muss lange auf clone warten
+
+- Oft sind es die großen Binärdateien die Ursache
+  Dann sind `fetch` und `checkout` auch langsam.
+
+---
+
+#### Viele Bytes - langsamer Transfer
+
+### Abhilfe: Shallow Clone
+
+ ```bash
+ git clone --depth 1 <linux-url>
+ git fetch --deepen 100
+ ```
+* Weniger Commits holen
+
+<br/>
+
+| Linux-Kernel | `depth=1`   | `depth=100`  | Voll     |
+|--------------|-----------|------------|----------|
+|              | 200 MB    | 900 MB     | 2.800 MB |  
+
+notes:
+
+Deepen 100: 885MB (125.000 Commits)
+
+TODO Umgang mit Merge-Parents
+
+---
+
+#### Viele Bytes - langsamer Transfer
+
+### Partial Clone
+
+```
+git clone --filter=blob:none --depth=1 <linux-url>
+```
+
+* z.B. keine Blobs, nur bestimmte Dateitypen, nur bestimmte Verzeichnisse laden. 
+* Transparentes Nachladen beim Checkout
+* __Klappt noch nicht mit allen Servern__
+
+notes:
+
+GitHub und GitLab klappt
+BitBucket nicht
+Ohne --depth=1 1GB nicht verständlich
+
+---
+
+
+#### Viele Bytes - langsamer Transfer
+
+### Abhilfe: Worktree
+
+
+ ```bash
+ git worktree add ../workspace2 feature-a
+ ```
+
+ * Mehrere Workspace auf geteiltem Repo.
+ * Nur ein *Object Store* für alle Worktrees
+ * Fetch ist nur einmal notwendig.
+
+
+---
+
+
+#### Viele Bytes - langsamer Transfer
+
+### Abhilfe: Klonen mit Referenz-Repo
+
+  ```bash
+ git clone --reference <local-repo-url> <repo-url>
+ ```
+
+ * Objekt aus dem Referenz-Repo  
+   müssen nicht übertragen werden
+ * Für Build-Server,  
+   der mit frischem Klon anfangen soll
+
+
+---
+
+
+#### Viele Bytes - Big Binaries
+
+### Abhilfe: Git LFS (Large File System)
+
+
+![abb-lfs-ueberblick.png](abb-lfs-ueberblick.png)
+
+
+notes:
+
+Hilft zwar, ist aber nicht ohne Tücken.
+
+(Mercurial nennt das ein "Feature of last Resort")
+
+
+---
+
+
+#### Viele Bytes - Big Binaries
+
+### Abhilfe: Große Dateien ablehnen
+
+```bash
+git rev-list --objects ${oldref}..${newref} |
+  git cat-file |
+      --batch-check='%(objectname) %(objecttype) %(objectsize) %(rest)' |
+  awk -v maxbytes="$maxbytes" '$3 > maxbytes { print $4 }'
+ ```
+ * [`pre-receive`-Hook](https://github.com/amacneil/git-banish-large-files) lehnt Commits mit großen Dateien ab
+
+
+
+---
+
+
+#### Viele Bytes - Big Binaries
+
+### Abhilfe: Mit BFG Dateien entfernen
+
+
+![BFG.png](BFG.png)
+
+
+```bash
+java -jar bfg.jar --strip-blobs-bigger-than 100M repo.git
+ ```
+
+Mögliche Alternative: Das Pythonscript [filter-repo](https://github.com/newren/git-filter-repo)
+
+notes:
+
+Hinweis:
+
+(Fast) Alle Commits werden neu erstellt und bekommen neue Hashes.
+
+Deshalb:
+
+ 1. Mit BFG Neues Repo erstellen
+ 2. Altes Repo deaktivieren (read-only)
+ 3. Alle Projektmitglieder zum neu Klonen auffordern.
+
+
+---
+
+<img src="sections/monorepo/ueberblick-viele-bytes.png" width="90%" style="border: 0px; box-shadow: none;">
+
+
 
 
 
