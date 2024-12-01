@@ -5,7 +5,7 @@
  * [ ] Modularisierung
     - [x] Vortrag über große Repos und Modularisierung hinzufügen
     - [x] Demo: Submodules, Subtrees
-    - Tabelle Trade-Off Modularisierung
+    - [ ] Tabelle Trade-Off Modularisierung
  * [x] Relases 
     - [x] Release erstellen
     - [x] inkl. Patches auf Release
