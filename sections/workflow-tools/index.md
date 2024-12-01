@@ -1,14 +1,16 @@
 
+## Der Werkzeugkasten
 
-# Werkzeugkasten
+Git gibt keine bestimmte *Arbeitsweise* vor.
 
-## für Workflows
+Es bietet eine Reihe von *Werkzeugen*,
+die unterschiedlich eingesetzt werden.
 
----
+Welche Tools man wann einsetzt,
+bestimmt den *Workflow im Team*.
 
-## Frage
+Die folgenden Werkzeuge sind entscheidend:
 
-Welche Befehle/Operationen sind für Workflows im Team wichtig?
 
 ---
 
@@ -68,6 +70,17 @@ Welche Befehle/Operationen sind für Workflows im Team wichtig?
 * OK, für Features-Branches in geschlossenen Teams.
 * Nicht OK, sonst.
 
+
+---
+
+
+## Tags
+
+![Tags](tags.png)
+
+(Annotated) Tags markieren Commits zu wichtigen Meileinsteinen, z.B. Releases.
+
+
 ---
 
 ## History-Tree
@@ -102,6 +115,7 @@ welche Integrationen das History-Tree zeigt.
 |-----------------------|
 | Branch                |
 | Merge                 |
-| Cherry-Pick           |
 | Rebase                |
-| 1st-Parent-History    |
+| Cherry-Pick           |
+| Tag                   |
+| History tree          |
