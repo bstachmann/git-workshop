@@ -169,13 +169,6 @@ a6d3e59d init UNTER          # kopiert aus "UNTER"
 notes:
 
 
-
----
-
-[Vortrag zur Modularisierung mit Submodules](https://kapitel26.github.io/assets/2010-10-20-submodules-subtrees-lehmanns/Lehmannsvortrag.pdf)
-
-
-
 ---
 
 ### Übung
@@ -195,6 +188,14 @@ notes:
 ### Übung
 
 <h2><a href="markdown-git-uebungen/aufgabe-modularisierung-repositorys-zusammenfuehren.html" target="_blank">Repositorys zusammenführen<a></h2>
+
+
+
+---
+
+Diskussion Vor- und Nachteile verschiedener Modularisierungsstrategien.
+
+[Vortrag zur Modularisierung mit Submodules](https://kapitel26.github.io/assets/2010-10-20-submodules-subtrees-lehmanns/Lehmannsvortrag.pdf)
 
 
 

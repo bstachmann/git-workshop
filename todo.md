@@ -2,17 +2,17 @@
 
 ## Workshop am 9.12.2024
 
- * [ ] Modularisierung
+ * [x] Modularisierung
     - [x] Vortrag über große Repos und Modularisierung hinzufügen
     - [x] Demo: Submodules, Subtrees
-    - [ ] Tabelle Trade-Off Modularisierung
+    - [x] Trade-Off Modularisierung
  * [x] Relases 
     - [x] Release erstellen
     - [x] inkl. Patches auf Release
  * [x] Kurz: Pull-Request und Reviews
  * [x] Pipelines (PR, main, asynchron)
  * [x] Workflow auf einem Branch gemeinsam arbeiten
- * [ ] Achtung: Commits beziehen sich immer auf das ganze Repo
+ * [x] Achtung: Commits beziehen sich immer auf das ganze Repo
 
 -----
 
