@@ -1,4 +1,0 @@
-### Workflows
-
-## Patterns für Workflows
-

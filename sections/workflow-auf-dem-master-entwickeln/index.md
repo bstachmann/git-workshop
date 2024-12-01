@@ -3,7 +3,7 @@
 
 Mehrere Entwickler bearbeiten gemeinsam einen `master`-Branch.
 
-<!-- .slide: data-background-image="workflow-auf-dem-master-entwickeln/trunk-based.png" data-background-opacity="0.4" -->
+<!-- .slide: data-background-image="sections/workflow-auf-dem-master-entwickeln/trunk-based.png" data-background-opacity="0.4" -->
 
 
 ---

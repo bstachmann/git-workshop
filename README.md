@@ -1,25 +1,43 @@
 # Git Workshop Material
 
-## Vorgebaute Übungen entpacken
+## Übungen
 
-    $ unzip build/distributions/git-uebungen.zip
+Die Übungen findet man im Verzeichnis `build/git-uebungen`.
 
-## Übungen frisch bauen lassen
+Zur Hallo-Welt-Übung kommt man beispielsweis mit:
 
-    $ gradle clean assembleDist
-    $ cd git-uebungen/aufgaben
+```bash
+    $ cd build/git-uebungen/aufgaben/intro-hallo-welt
+```
 
+Falls das Übungsverzeichnis noch fehlt, oder nicht aktuell ist:
+
+```bash
+    $ ./gradlew clean assembleDist
+```
     
-## Per GitHub-Action gebautes Zip-File
+## Per GitHub-Action gebautes Zip-File mit den Übungen
 
-Der Workflow [ist hier](https://github.com/bstachmann/git-workshop/actions/workflows/zip-git-uebungen.yml)
+[Download `git-uebungen.zip`](https://github.com/bstachmann/git-workshop/releases/latest/download/git-uebungen.zip)
 
-### Presentation und Website
+Den GitHub Actions Workflow [findet man hier](https://github.com/bstachmann/git-workshop/actions/workflows/zip-git-uebungen.yml).
 
-Hosted on GitHub Pages as https://bstachmann.github.io/git-workshop/. Just push to update.
+### Präsentation als Website auf `github.io`
 
-Preview on http://localhost:4000/git-workshop/ by using [GitPod local Companion](https://www.gitpod.io/blog/local-app) as proxy.
+Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ gehosted.
 
+### Website lokal lokal hosten
+
+ * Port `8080`: Website inklusive dynamischem Content (Teilnehmefortschritt) ([log-File](_log/workshop-website.log))
+ * Port `8040`: Monitoring des Teilnehmerfortschrits (für den Trainer) ([log-File](_log/progress-monitor.log))
+ * Port `4000`: Nur statische Website (identisch zu GitHub-Pages)  ([log-File](_log/jekyll.log))
+
+ Die Server können per Script gestartet werden (im `devcontainer` passiert dies automatisch):
+
+ ```bash
+    $ scripts/run-all.sh
+ ```
+ 
 
 ### Exercies
 
@@ -28,19 +46,6 @@ Exercises can be found in `build/git-uebungen`.
  * `gradle run` to rebuild the exercises
  * `gradle distUebungenMarkdown` to update descriptions for the website. Commit and push.
  * `gradle distUebungenZip` to update descriptions for the website. Commit and push.
-
- ### Progress Server
-
- A little web app to track progress on the exercises.
-
-  * `gradle progress` to run
-  * admin UI on port 8040
-  * user UI on port 8080
-
-
-### Anmerkung
-
-Ich finde Pull-Requests toll.
 
 ## Remotes
 

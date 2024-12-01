@@ -1,4 +1,0 @@
-## Workflows
-
-## Typische Workflows
-
