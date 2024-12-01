@@ -6,13 +6,13 @@
     - [x] Vortrag über große Repos und Modularisierung hinzufügen
     - [x] Demo: Submodules, Subtrees
     - Tabelle Trade-Off Modularisierung
- * [ ] Relases 
-    - Release erstellen
-    - inkl. Patches auf Release
- * [ ] Kurz: Pull-Request und Reviews
+ * [x] Relases 
+    - [x] Release erstellen
+    - [x] inkl. Patches auf Release
+ * [x] Kurz: Pull-Request und Reviews
  * [ ] Pipelines (PR, main, asynchron)
- * [ ] Workflow auf einem Branch gemeinsam arbeiten
-    - Achtung: Commits beziehen sich immer auf das ganze Repo
+ * [x] Workflow auf einem Branch gemeinsam arbeiten
+ * [ ] Achtung: Commits beziehen sich immer auf das ganze Repo
 
 -----
 
