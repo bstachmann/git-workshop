@@ -198,6 +198,12 @@ Wenn sich auf einer Seite des Merges nichts getan hat, macht Git idR. ein *fast-
 
 ---
 
+> L'enfer c'est les autres. 
+
+*Jean-Paul Sartre*
+
+---
+
 
 **Merge-Konflike** können anstrengend sein. Was kann man tun, um sie
 
