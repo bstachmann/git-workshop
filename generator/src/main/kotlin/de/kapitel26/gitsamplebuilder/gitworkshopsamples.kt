@@ -48,6 +48,7 @@ fun buildGitUebungen() {
         }
 
         thema("Weihnachten") {
+            rebasingSandbox()
             gitmas()
         }
      }
