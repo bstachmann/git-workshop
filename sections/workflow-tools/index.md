@@ -98,15 +98,6 @@ welche Integrationen das History-Tree zeigt.
 
 ---
 
-1st-Parent-History
-------------------
-
-![1st-Parent-History](abb-1st-parent-history-2.png)
-
-**1st-Parent** dient als Heuristik für Branch-Zugehörigkeit
-
----
-
 ## Werkzeugkasten
 
 ### für Workflows
