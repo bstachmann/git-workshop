@@ -60,7 +60,22 @@ mit der **gesamten Historie** eines Projekts.
 
 ---
 
+
 ![revision](revision.png)
+
+
+---
+
+
+**Achtung!**
+
+Anders als in vielen klassischen Versionsverwaltungen, 
+ist es nicht möglich,
+ *nur eine einzelne Datei* zu committen.
+
+Auch wenn man nur eine *einzelne Datei ändert*,
+umfasst das Commit ein *volles Tree* mit *allen Dateien* des Projekts.
+
 
 ---
 
