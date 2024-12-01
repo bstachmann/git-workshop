@@ -4,7 +4,11 @@
 
 Die Übungen findet man im Verzeichnis `build/git-uebungen`.
 
-Die Hallo-Welt-Übung ist z.B. in `build/git-uebungen/aufgaben/intro-hallo-welt`
+Zur Hallo-Welt-Übung kommt man beispielsweis mit:
+
+```bash
+    $ cd build/git-uebungen/aufgaben/intro-hallo-welt
+```
 
 Falls das Übungsverzeichnis noch fehlt, oder nicht aktuell ist:
 
