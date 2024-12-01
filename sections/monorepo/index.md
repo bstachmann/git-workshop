@@ -542,7 +542,7 @@ Hier sollte man nicht vergessen, dass Push-Rejects  im Grunde erstmal richtig si
 
 Integration über Pull-Requests
 
-<img src="05/abb-feature-branches-pr-mergen.png" width="70%" style="background-color: black;">
+![abb-feature-branches-pr-mergen.png](abb-feature-branches-pr-mergen.png)
 
 
 notes:
@@ -627,7 +627,9 @@ https://git-scm.com/docs/commit-graph
 
 ---
 
-<img src="06/log-graph.png" width="90%" style="border: 0px; box-shadow: none;">
+
+![log-graph.png](log-graph.png)_
+
 
 ---
 
