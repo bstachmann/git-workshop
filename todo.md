@@ -10,7 +10,7 @@
     - [x] Release erstellen
     - [x] inkl. Patches auf Release
  * [x] Kurz: Pull-Request und Reviews
- * [ ] Pipelines (PR, main, asynchron)
+ * [x] Pipelines (PR, main, asynchron)
  * [x] Workflow auf einem Branch gemeinsam arbeiten
  * [ ] Achtung: Commits beziehen sich immer auf das ganze Repo
 
