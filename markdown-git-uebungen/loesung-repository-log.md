@@ -12,15 +12,15 @@ Welche Dateien gibt es im Workspace? Welche Verzeichnisse?
 Wo liegt das Repository?
 
 
-<pre><code>repo $ <b>ll </b><br><br>total 16K<br>drwxrwxrwx+ 2 vscode vscode 4.0K  foo<br>-rw-rw-rw-  1 vscode vscode   12  hallo-welt<br>-rw-rw-rw-  1 vscode vscode  375  nachher<br>-rw-rw-rw-  1 vscode vscode    0  restaurant<br>-rw-rw-rw-  1 vscode vscode  181  und-tschuess<br><br></code></pre>
+<pre><code>repo $ <b>ll </b><br><br>total 16K<br>drwxr-xr-x 2 vscode vscode 4.0K  foo<br>-rw-r--r-- 1 vscode vscode   12  hallo-welt<br>-rw-r--r-- 1 vscode vscode  375  nachher<br>-rw-r--r-- 1 vscode vscode    0  restaurant<br>-rw-r--r-- 1 vscode vscode  181  und-tschuess<br><br></code></pre>
 
 
 
-<pre><code>repo $ <b>ll foo</b><br><br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 338  bar<br><br></code></pre>
+<pre><code>repo $ <b>ll foo</b><br><br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 338  bar<br><br></code></pre>
 
 
 
-<pre><code>repo $ <b>ll .git</b><br><br>total 44K<br>-rw-rw-rw-   1 vscode vscode   52  COMMIT_EDITMSG<br>-rw-rw-rw-   1 vscode vscode   21  HEAD<br>drwxrwxrwx+  2 vscode vscode 4.0K  branches<br>-rw-rw-rw-   1 vscode vscode   92  config<br>-rw-rw-rw-   1 vscode vscode   73  description<br>drwxrwxrwx+  2 vscode vscode 4.0K  hooks<br>-rw-rw-rw-   1 vscode vscode  477  index<br>drwxrwxrwx+  2 vscode vscode 4.0K  info<br>drwxrwxrwx+  3 vscode vscode 4.0K  logs<br>drwxrwxrwx+ 53 vscode vscode 4.0K  objects<br>drwxrwxrwx+  4 vscode vscode 4.0K  refs<br><br></code></pre>
+<pre><code>repo $ <b>ll .git</b><br><br>total 44K<br>-rw-r--r--  1 vscode vscode   52  COMMIT_EDITMSG<br>-rw-r--r--  1 vscode vscode   21  HEAD<br>drwxr-xr-x  2 vscode vscode 4.0K  branches<br>-rw-r--r--  1 vscode vscode   92  config<br>-rw-r--r--  1 vscode vscode   73  description<br>drwxr-xr-x  2 vscode vscode 4.0K  hooks<br>-rw-r--r--  1 vscode vscode  477  index<br>drwxr-xr-x  2 vscode vscode 4.0K  info<br>drwxr-xr-x  3 vscode vscode 4.0K  logs<br>drwxr-xr-x 53 vscode vscode 4.0K  objects<br>drwxr-xr-x  4 vscode vscode 4.0K  refs<br><br></code></pre>
 
 
 Man sieht: Das Projekt enthält einige Dateien, ein Unterverzeichnis

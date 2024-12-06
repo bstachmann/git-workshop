@@ -58,7 +58,7 @@ Wechsle dann wieder auf `main` zurück.
 Diese Dateien gibt es auf `main`:
 
 
-<pre><code>repo $ <b>ll </b><br><br>total 16K<br>drwxrwxrwx+ 2 vscode vscode 4.0K  foo<br>-rw-rw-rw-  1 vscode vscode   12  hallo-welt<br>-rw-rw-rw-  1 vscode vscode  375  nachher<br>-rw-rw-rw-  1 vscode vscode    0  restaurant<br>-rw-rw-rw-  1 vscode vscode  181  und-tschuess<br><br></code></pre>
+<pre><code>repo $ <b>ll </b><br><br>total 16K<br>drwxr-xr-x 2 vscode vscode 4.0K  foo<br>-rw-r--r-- 1 vscode vscode   12  hallo-welt<br>-rw-r--r-- 1 vscode vscode  375  nachher<br>-rw-r--r-- 1 vscode vscode    0  restaurant<br>-rw-r--r-- 1 vscode vscode  181  und-tschuess<br><br></code></pre>
 
 
 
@@ -76,7 +76,7 @@ Und jetzt holen wir genau diese Version in den Workspace:
 
 
 
-<pre><code>repo $ <b>ll </b><br><br>total 12K<br>drwxrwxrwx+ 2 vscode vscode 4.0K  foo<br>-rw-rw-rw-  1 vscode vscode   12  hallo-welt<br>-rw-rw-rw-  1 vscode vscode  375  nachher<br>-rw-rw-rw-  1 vscode vscode    0  restaurant<br><br></code></pre>
+<pre><code>repo $ <b>ll </b><br><br>total 12K<br>drwxr-xr-x 2 vscode vscode 4.0K  foo<br>-rw-r--r-- 1 vscode vscode   12  hallo-welt<br>-rw-r--r-- 1 vscode vscode  375  nachher<br>-rw-r--r-- 1 vscode vscode    0  restaurant<br><br></code></pre>
 
 
 

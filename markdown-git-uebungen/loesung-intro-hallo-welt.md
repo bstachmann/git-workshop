@@ -88,11 +88,11 @@ Wo liegt wohl das Git-Repository? Was enthält es?
 
 
 
-<pre><code>myrepo $ <b>ll -a</b><br><br>total 16K<br>drwxrwxrwx+ 3 vscode vscode 4.0K  .<br>drwxrwxrwx+ 3 vscode vscode 4.0K  ..<br>drwxrwxrwx+ 8 vscode vscode 4.0K  .git<br>-rw-rw-rw-  1 vscode vscode   10  hallo<br><br></code></pre>
+<pre><code>myrepo $ <b>ll -a</b><br><br>total 16K<br>drwxr-xr-x 3 vscode vscode 4.0K  .<br>drwxr-xr-x 3 vscode vscode 4.0K  ..<br>drwxr-xr-x 8 vscode vscode 4.0K  .git<br>-rw-r--r-- 1 vscode vscode   10  hallo<br><br></code></pre>
 
 
 
-<pre><code>myrepo $ <b>ll -a .git/</b><br><br>total 52K<br>drwxrwxrwx+  8 vscode vscode 4.0K  .<br>drwxrwxrwx+  3 vscode vscode 4.0K  ..<br>-rw-rw-rw-   1 vscode vscode   16  COMMIT_EDITMSG<br>-rw-rw-rw-   1 vscode vscode   21  HEAD<br>drwxrwxrwx+  2 vscode vscode 4.0K  branches<br>-rw-rw-rw-   1 vscode vscode   92  config<br>-rw-rw-rw-   1 vscode vscode   73  description<br>drwxrwxrwx+  2 vscode vscode 4.0K  hooks<br>-rw-rw-rw-   1 vscode vscode  137  index<br>drwxrwxrwx+  2 vscode vscode 4.0K  info<br>drwxrwxrwx+  3 vscode vscode 4.0K  logs<br>drwxrwxrwx+ 10 vscode vscode 4.0K  objects<br>drwxrwxrwx+  4 vscode vscode 4.0K  refs<br><br></code></pre>
+<pre><code>myrepo $ <b>ll -a .git/</b><br><br>total 52K<br>drwxr-xr-x  8 vscode vscode 4.0K  .<br>drwxr-xr-x  3 vscode vscode 4.0K  ..<br>-rw-r--r--  1 vscode vscode   16  COMMIT_EDITMSG<br>-rw-r--r--  1 vscode vscode   21  HEAD<br>drwxr-xr-x  2 vscode vscode 4.0K  branches<br>-rw-r--r--  1 vscode vscode   92  config<br>-rw-r--r--  1 vscode vscode   73  description<br>drwxr-xr-x  2 vscode vscode 4.0K  hooks<br>-rw-r--r--  1 vscode vscode  137  index<br>drwxr-xr-x  2 vscode vscode 4.0K  info<br>drwxr-xr-x  3 vscode vscode 4.0K  logs<br>drwxr-xr-x 10 vscode vscode 4.0K  objects<br>drwxr-xr-x  4 vscode vscode 4.0K  refs<br><br></code></pre>
 
 
 
