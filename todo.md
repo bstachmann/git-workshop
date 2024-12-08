@@ -5,7 +5,6 @@
    - Add+Commit+Push oder selective Stage and push
  * Beispiele (insbesondere submodule, subtree) nach fachlichen Beispielen benennen (nicht abstrakt)
  * "Branches sind Zeiger auf Commits" das Bild ist echt doof. (Branchname irreführend)
- * ein paarmal sollte "git branch" durch switch ersetzt werden
  * In der branches fortgeschritten Hinweise auf dff ... und log .. in Tipps
  * Integration von änderungen: Spezialfälle nach hinten 
  * in uebungsbeschreibung: Anwendungen öfnnen 

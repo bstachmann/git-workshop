@@ -37,7 +37,7 @@ fun CollectionOfSamples.rebasing() {
 
                 editAndCommit("bar", 1, "Neuerung auf dem main")
 
-                git("checkout feature")
+                git("switch feature")
             }
         }
 
