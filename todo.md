@@ -8,7 +8,6 @@
  * In der branches fortgeschritten Hinweise auf dff ... und log .. in Tipps
  * Integration von änderungen: Spezialfälle nach hinten 
  * in uebungsbeschreibung: Anwendungen öfnnen 
- * Übungschrit "Arbeitsverzeichnisse anzeigen" falscher Name
  * Timing: Was ist git big 10:30 Repository bis 12:00
  *repository-log Übung: show HEAD:datei.txt erläutern in Tipps
  * repository-untersuchen: Enthält noch Tipps zur vorigen übung
