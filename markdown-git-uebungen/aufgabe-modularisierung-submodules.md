@@ -42,49 +42,55 @@ tut dies durch ein *top-level*-commit.
 
 ## Setup
 
-Zwei Repositorys `mod-a` und `mod-b` sind vorhanden.
-Diese sollen in das übergeordnete repo `submodules` eingebettet werden.
+Zwei separate Repositorys `frontend` und `backend` sind vorhanden.
+Diese sollen in ein übergeordnetes Repo `application` eingebettet werden.
+
+```
+application/
+|- frontend/
+|- backen/
+```
 
   
 
 
-<pre><code>$ <b>cd submodules</b><br><br><br></code></pre>
+<pre><code>$ <b>cd application</b><br><br><br></code></pre>
 
 
 <!--UEB-Modularisierung mit Submodules--><h2>Schritt 1 - Module als Submodule einbinden</h2>
 
-Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules/submodules`.
+Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules/application`.
 
-Binde die Module `mod-a.git` und `mod-b.git`
+Binde die Module `frontend.git` und `backend.git`
 per `submodule add` ein.
 Untersuche dann die entstandene Verzeichnisstruktur.
 
 
-<pre><code>submodules $ <b>cd ..</b><br><br><br></code></pre>
+<pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-<!--UEB-Modularisierung mit Submodules--><h2>Schritt 2 - Subtree: Änderung aus einem Modul übernehmen</h2>
+<!--UEB-Modularisierung mit Submodules--><h2>Schritt 2 - Änderung aus einem Modul übernehmen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules`.
 
-Gehe in das Repo `mod-b` ändere die Datei `berta`, committe und pushe.
+Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
 Sie Dir das entstandene Commit an (`show --stat`)
-Gehe in das Repo `submodules/mod-b` und hole die Änderungen per `pull` ab.
+Gehe in das Repo `application/backend` und hole die Änderungen per `pull` ab.
 Sieh Dir das übertragene Commit an.
 
 <!--UEB-Modularisierung mit Submodules--><h2>Schritt 3 - Änderung in ein Modul übertragen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules`.
 
-Gehe in `subtrees/mod-a` ändere `anton` und committe.
-Übertrage die Änderung per `push` nach `mod-a.git`.
-Sieh Dir das übertragene Commit in `mod-a.git` an.
+Gehe in `subtrees/frontend` ändere `main.ts` und committe.
+Übertrage die Änderung per `push` nach `frontend.git`.
+Sieh Dir das übertragene Commit in `frontend.git` an.
 
 <!--UEB-Modularisierung mit Submodules--><h2>Schritt 4 - Übergeordnetes Repo klonen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules`.
 
-Klone `submodules` zu `mysubmodules`.
+Klone `application` zu `myapplication`.
 Untersuche die Verzeichnisstruktur.
 Vergiß nicht, ein `submodule update` auszuführen.
 

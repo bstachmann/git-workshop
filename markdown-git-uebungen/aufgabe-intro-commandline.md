@@ -98,7 +98,7 @@ Weil diese nicht in ein Terminalfenster passt,
 wird der `less`-Viewer geöffnet. Schliessen sie ihn.
 Nutzen sie dann `less some-file.txt` um eine Datei im `less`-Modus anzusehen.
 
-<!--UEB-Das `git`-Kommando!--><h2>Schritt 5 - Arbeitsverzeichnis anzeigen</h2>
+<!--UEB-Das `git`-Kommando!--><h2>Schritt 5 - Git konfigurieren</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 

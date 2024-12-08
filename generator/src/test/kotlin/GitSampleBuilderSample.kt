@@ -31,7 +31,7 @@ class GitSampleBuilderSample : StringSpec({
                             git("rebase main")
                         }
 
-                        git("checkout feature")
+                        git("switch feature")
                         editAndCommit("file", 5, "edit again")
                         try {
                             git("merge rebased-feature")
@@ -60,7 +60,7 @@ class GitSampleBuilderSample : StringSpec({
                             git("rebase main")
                         }
 
-                        git("checkout feature")
+                        git("switch feature")
                         git("merge rebased-feature")
                     }
                 }

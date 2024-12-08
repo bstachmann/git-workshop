@@ -147,7 +147,7 @@ fun CollectionOfSamples.commandline() {
             }
 
             createAufgabe(
-                    "Arbeitsverzeichnis anzeigen", """
+                    "Git konfigurieren", """
                     Prüfe die User-Konfiguration:
 
                         $ git config user.name

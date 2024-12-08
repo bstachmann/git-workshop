@@ -98,7 +98,7 @@ Inhalt des UI-Repository in einen lokalen Branch `uimain` holen:
 
 
 
-<pre><code>gesamt $ <b>git checkout -b uimain ui/main</b><br><br>branch 'uimain' set up to track 'ui/main'.<br>Switched to a new branch 'uimain'<br><br></code></pre>
+<pre><code>gesamt $ <b>git switch -c uimain ui/main</b><br><br>branch 'uimain' set up to track 'ui/main'.<br>Switched to a new branch 'uimain'<br><br></code></pre>
 
 
 UI-Dateien in Unterverzeichnis verschieben:
@@ -118,7 +118,7 @@ UI-Dateien in Unterverzeichnis verschieben:
 `uimain` integrieren:
 
 
-<pre><code>gesamt $ <b>git checkout main</b><br><br>Your branch is ahead of 'origin/main' by 1 commit.<br>  (use &quot;git push&quot; to publish your local commits)<br>Switched to branch 'main'<br><br></code></pre>
+<pre><code>gesamt $ <b>git switch main</b><br><br>Your branch is ahead of 'origin/main' by 1 commit.<br>  (use &quot;git push&quot; to publish your local commits)<br>Switched to branch 'main'<br><br></code></pre>
 
 
 

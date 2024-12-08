@@ -79,7 +79,7 @@ Quit with `q`
 
 Quit with `q`
 
-## Lösung zu Schritt 5 - Arbeitsverzeichnis anzeigen
+## Lösung zu Schritt 5 - Git konfigurieren
 
 Prüfe die User-Konfiguration:
 

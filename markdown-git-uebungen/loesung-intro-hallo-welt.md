@@ -92,7 +92,7 @@ Wo liegt wohl das Git-Repository? Was enthält es?
 
 
 
-<pre><code>myrepo $ <b>ll -a .git/</b><br><br>total 52K<br>drwxr-xr-x  8 vscode vscode 4.0K  .<br>drwxr-xr-x  3 vscode vscode 4.0K  ..<br>-rw-r--r--  1 vscode vscode   16  COMMIT_EDITMSG<br>-rw-r--r--  1 vscode vscode   21  HEAD<br>drwxr-xr-x  2 vscode vscode 4.0K  branches<br>-rw-r--r--  1 vscode vscode   92  config<br>-rw-r--r--  1 vscode vscode   73  description<br>drwxr-xr-x  2 vscode vscode 4.0K  hooks<br>-rw-r--r--  1 vscode vscode  137  index<br>drwxr-xr-x  2 vscode vscode 4.0K  info<br>drwxr-xr-x  3 vscode vscode 4.0K  logs<br>drwxr-xr-x 10 vscode vscode 4.0K  objects<br>drwxr-xr-x  4 vscode vscode 4.0K  refs<br><br></code></pre>
+<pre><code>myrepo $ <b>ll -a .git/</b><br><br>total 52K<br>drwxr-xr-x  8 vscode vscode 4.0K  .<br>drwxr-xr-x  3 vscode vscode 4.0K  ..<br>drwxr-xr-x  2 vscode vscode 4.0K  branches<br>-rw-r--r--  1 vscode vscode   16  COMMIT_EDITMSG<br>-rw-r--r--  1 vscode vscode   92  config<br>-rw-r--r--  1 vscode vscode   73  description<br>-rw-r--r--  1 vscode vscode   21  HEAD<br>drwxr-xr-x  2 vscode vscode 4.0K  hooks<br>-rw-r--r--  1 vscode vscode  137  index<br>drwxr-xr-x  2 vscode vscode 4.0K  info<br>drwxr-xr-x  3 vscode vscode 4.0K  logs<br>drwxr-xr-x 10 vscode vscode 4.0K  objects<br>drwxr-xr-x  4 vscode vscode 4.0K  refs<br><br></code></pre>
 
 
 
