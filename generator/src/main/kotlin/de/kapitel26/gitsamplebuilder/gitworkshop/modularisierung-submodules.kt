@@ -43,8 +43,14 @@ fun CollectionOfSamples.submodules() {
 
                 ## Setup
                 
-                Zwei Repositorys `frontend` und `backend` sind vorhanden.
-                Diese sollen in das übergeordnete repo `submodules` eingebettet werden.
+                Zwei separate Repositorys `frontend` und `backend` sind vorhanden.
+                Diese sollen in ein übergeordnetes Repo `application` eingebettet werden.
+
+                ```
+                application/
+                |- frontend/
+                |- backen/
+                ```
       
                   
             """
@@ -53,26 +59,22 @@ fun CollectionOfSamples.submodules() {
             createRepo("backend.git", "--bare") { createClone("../backend") }
 
             inRepo("frontend") {
-                createFileAndCommit("anton")
+                createFileAndCommit("main.ts")
                 git("push")
             }
 
             inRepo("backend") {
-                createFileAndCommit("berta")
+                createFileAndCommit("service.java")
                 git("push")
             }
 
-            createRepo("subtrees") {
-                createFileAndCommit("README")
-            }
-
-            createRepo("submodules") {
+            createRepo("application") {
                 createFileAndCommit("README")
             }
 
         }
 
-        inRepo("submodules") {
+        inRepo("application") {
             createAufgabe(
                     "Module als Submodule einbinden",
                     """
@@ -94,21 +96,21 @@ fun CollectionOfSamples.submodules() {
         }
 
         createAufgabe(
-                "Subtree: Änderung aus einem Modul übernehmen",
+                "Änderung aus einem Modul übernehmen",
                 """
-                    Gehe in das Repo `backend` ändere die Datei `berta`, committe und pushe.
+                    Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
                     Sie Dir das entstandene Commit an (`show --stat`)
-                    Gehe in das Repo `submodules/backend` und hole die Änderungen per `pull` ab.
+                    Gehe in das Repo `application/backend` und hole die Änderungen per `pull` ab.
                     Sieh Dir das übertragene Commit an.
                     """
         ) {
             inRepo("backend") {
-                editAndCommit("berta", 8)
+                editAndCommit("service.java", 8)
                 git("show --stat ")
                 git("push")
             }
 
-            inRepo("submodules") {
+            inRepo("application") {
                 inRepo("backend") {
                     git("pull")
                 }
@@ -120,14 +122,14 @@ fun CollectionOfSamples.submodules() {
         createAufgabe(
                 "Änderung in ein Modul übertragen",
                 """
-                    Gehe in `subtrees/frontend` ändere `anton` und committe.
+                    Gehe in `subtrees/frontend` ändere `main.ts` und committe.
                     Übertrage die Änderung per `push` nach `frontend.git`.
                     Sieh Dir das übertragene Commit in `frontend.git` an.
                     """
         ) {
-            inRepo("submodules") {
+            inRepo("application") {
                 inRepo("frontend") {
-                    editAndCommit("anton", 5)
+                    editAndCommit("main.ts", 5)
                     git("push")
                 }
                 markdown("Nicht vergessen: Änderungen am im übergeordenten Repository committen.")
@@ -143,14 +145,14 @@ fun CollectionOfSamples.submodules() {
         createAufgabe(
                 "Übergeordnetes Repo klonen",
                 """
-                    Klone `submodules` zu `mysubmodules`.
+                    Klone `application` zu `myapplication`.
                     Untersuche die Verzeichnisstruktur.
                     Vergiß nicht, ein `submodule update` auszuführen.
                     """
         ) {
-            git("clone submodules mysubmodules")
+            git("clone application myapplication")
 
-            inRepo("mysubmodules") {
+            inRepo("myapplication") {
                 markdown("Die Modulverzeichnisse sind da aber noch leer:")
                 ll("frontend backend")
                 markdown("Jetzt holen wir die Module:")
