@@ -41,7 +41,7 @@ fun CollectionOfSamples.subtrees() {
 
                 ## Setup
                 
-                Zwei Repositorys `mod-a` und `mod-b` sind vorhanden.
+                Zwei Repositorys `frontend` und `backend` sind vorhanden.
                 Diese sollen 
 
                 ### Verzeichnisse
@@ -52,15 +52,15 @@ fun CollectionOfSamples.subtrees() {
                   
             """
         ) {
-            createRepo("mod-a.git", "--bare") { createClone("../mod-a") }
-            createRepo("mod-b.git", "--bare") { createClone("../mod-b") }
+            createRepo("frontend.git", "--bare") { createClone("../frontend") }
+            createRepo("backend.git", "--bare") { createClone("../backend") }
 
-            inRepo("mod-a") {
+            inRepo("frontend") {
                 createFileAndCommit("anton")
                 git("push")
             }
 
-            inRepo("mod-b") {
+            inRepo("backend") {
                 createFileAndCommit("berta")
                 git("push")
             }
@@ -74,13 +74,13 @@ fun CollectionOfSamples.subtrees() {
             createAufgabe(
                     "Module als Subtree einbinden",
                     """
-                    Binde die Module `mod-a.git` und `mod-b.git`
+                    Binde die Module `frontend.git` und `backend.git`
                     per `subtree add` ein.
                     Untersuche dann die entstandene Verzeichnisstruktur.
                     """
             ) {
-                git("subtree add --prefix=mod-a ../mod-a.git main")
-                git("subtree add --prefix=mod-b ../mod-b.git main")
+                git("subtree add --prefix=frontend ../frontend.git main")
+                git("subtree add --prefix=backend ../backend.git main")
                 git("ls-tree -r HEAD")
             }
         }
@@ -88,20 +88,20 @@ fun CollectionOfSamples.subtrees() {
         createAufgabe(
                 "Änderung aus einem Modul übernehmen",
                 """
-                    Gehe in das Repo `mod-b` ändere die Datei `berta`, committe und pushe.
+                    Gehe in das Repo `backend` ändere die Datei `berta`, committe und pushe.
                     Sie Dir das entstandene Commit an (`show --stat`)
                     Gehe in das Repo `subtrees` und hole die Änderungen per `subtree pull` ab.
                     Sieh Dir das übertragene Commit an.
                     """
         ) {
-            inRepo("mod-b") {
+            inRepo("backend") {
                 editAndCommit("berta", 7)
                 git("show --stat ")
                 git("push")
             }
 
             inRepo("subtrees") {
-                git("subtree pull --prefix=mod-b ../mod-b.git main")
+                git("subtree pull --prefix=backend ../backend.git main")
                 git("show --stat ")
             }
         }
@@ -109,18 +109,18 @@ fun CollectionOfSamples.subtrees() {
         createAufgabe(
                 "Änderung in ein Modul übertragen",
                 """
-                    Gehe in `subtrees` ändere `mod-a/anton` und committe.
-                    Übertrage die Änderung per `subtree push` nach `mod-a.git`.
-                    Sieh Dir das übertragene Commit in `mod-a.git` an.
+                    Gehe in `subtrees` ändere `frontend/anton` und committe.
+                    Übertrage die Änderung per `subtree push` nach `frontend.git`.
+                    Sieh Dir das übertragene Commit in `frontend.git` an.
                     """
         ) {
             inRepo("subtrees") {
 
-                editAndCommit("mod-a/anton", 3)
-                git("subtree push --prefix=mod-a ../mod-a.git main")
+                editAndCommit("frontend/anton", 3)
+                git("subtree push --prefix=frontend ../frontend.git main")
             }
 
-            inRepo("mod-a.git") {
+            inRepo("frontend.git") {
                 git("show --stat ")
             }
         }

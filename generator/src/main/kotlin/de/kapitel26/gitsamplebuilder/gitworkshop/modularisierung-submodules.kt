@@ -43,21 +43,21 @@ fun CollectionOfSamples.submodules() {
 
                 ## Setup
                 
-                Zwei Repositorys `mod-a` und `mod-b` sind vorhanden.
+                Zwei Repositorys `frontend` und `backend` sind vorhanden.
                 Diese sollen in das übergeordnete repo `submodules` eingebettet werden.
       
                   
             """
         ) {
-            createRepo("mod-a.git", "--bare") { createClone("../mod-a") }
-            createRepo("mod-b.git", "--bare") { createClone("../mod-b") }
+            createRepo("frontend.git", "--bare") { createClone("../frontend") }
+            createRepo("backend.git", "--bare") { createClone("../backend") }
 
-            inRepo("mod-a") {
+            inRepo("frontend") {
                 createFileAndCommit("anton")
                 git("push")
             }
 
-            inRepo("mod-b") {
+            inRepo("backend") {
                 createFileAndCommit("berta")
                 git("push")
             }
@@ -76,66 +76,66 @@ fun CollectionOfSamples.submodules() {
             createAufgabe(
                     "Module als Submodule einbinden",
                     """
-                    Binde die Module `mod-a.git` und `mod-b.git`
+                    Binde die Module `frontend.git` und `backend.git`
                     per `submodule add` ein.
                     Untersuche dann die entstandene Verzeichnisstruktur.
                     """
             ) {
-                git("submodule add  ../mod-a.git mod-a")
-                git("submodule add  ../mod-b.git mod-b")
+                git("submodule add  ../frontend.git frontend")
+                git("submodule add  ../backend.git backend")
                 markdown("Man sieht, dass die Module als eigenständige" +
                         " Git-Repositorys mit separatem `.git`-Verzeichnis" +
                         " eingebettet wurden.")
-                ll("mod-a mod-b")
+                ll("frontend backend")
                 markdown("Achtung! Die submodule wurden hinzugefügt, aber es fehlt noch ein Commit.")
                 git("status")
-                git("commit -m 'add mod-a and mod-b'")
+                git("commit -m 'add frontend and backend'")
             }
         }
 
         createAufgabe(
                 "Subtree: Änderung aus einem Modul übernehmen",
                 """
-                    Gehe in das Repo `mod-b` ändere die Datei `berta`, committe und pushe.
+                    Gehe in das Repo `backend` ändere die Datei `berta`, committe und pushe.
                     Sie Dir das entstandene Commit an (`show --stat`)
-                    Gehe in das Repo `submodules/mod-b` und hole die Änderungen per `pull` ab.
+                    Gehe in das Repo `submodules/backend` und hole die Änderungen per `pull` ab.
                     Sieh Dir das übertragene Commit an.
                     """
         ) {
-            inRepo("mod-b") {
+            inRepo("backend") {
                 editAndCommit("berta", 8)
                 git("show --stat ")
                 git("push")
             }
 
             inRepo("submodules") {
-                inRepo("mod-b") {
+                inRepo("backend") {
                     git("pull")
                 }
-                git("add mod-b")
-                git("commit -am 'updated mod-b'")
+                git("add backend")
+                git("commit -am 'updated backend'")
             }
         }
 
         createAufgabe(
                 "Änderung in ein Modul übertragen",
                 """
-                    Gehe in `subtrees/mod-a` ändere `anton` und committe.
-                    Übertrage die Änderung per `push` nach `mod-a.git`.
-                    Sieh Dir das übertragene Commit in `mod-a.git` an.
+                    Gehe in `subtrees/frontend` ändere `anton` und committe.
+                    Übertrage die Änderung per `push` nach `frontend.git`.
+                    Sieh Dir das übertragene Commit in `frontend.git` an.
                     """
         ) {
             inRepo("submodules") {
-                inRepo("mod-a") {
+                inRepo("frontend") {
                     editAndCommit("anton", 5)
                     git("push")
                 }
                 markdown("Nicht vergessen: Änderungen am im übergeordenten Repository committen.")
-                git("add mod-a")
-                git("commit -m 'new version of mod-a'")
+                git("add frontend")
+                git("commit -m 'new version of frontend'")
             }
 
-            inRepo("mod-a.git") {
+            inRepo("frontend.git") {
                 git("show --stat ")
             }
         }
@@ -152,10 +152,10 @@ fun CollectionOfSamples.submodules() {
 
             inRepo("mysubmodules") {
                 markdown("Die Modulverzeichnisse sind da aber noch leer:")
-                ll("mod-a mod-b")
+                ll("frontend backend")
                 markdown("Jetzt holen wir die Module:")
                 git("submodule update --init")
-                ll("mod-a mod-b")
+                ll("frontend backend")
             }
         }
     }
