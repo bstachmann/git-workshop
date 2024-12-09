@@ -33,7 +33,7 @@ git push --set-upstream <repo> <branch>
 
 ```bash
     # Welche branches wurden schon integriert?
-    git checkout master
+    git switch master
     git branch --merged
 
     # Branch löschen

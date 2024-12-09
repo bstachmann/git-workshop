@@ -41,46 +41,46 @@ fun CollectionOfSamples.subtrees() {
 
                 ## Setup
                 
-                Zwei Repositorys `mod-a` und `mod-b` sind vorhanden.
-                Diese sollen 
+                Zwei separate Repositorys `frontend` und `backend` sind vorhanden.
+                Diese sollen in ein übergeordnetes Repo `application` eingebettet werden.
 
-                ### Verzeichnisse
-
-                 * `${rootDir.name}/` Haupverzeichnis für diese Übung 
-                   - `myfirstrepo/` Bereits vorhandenes Repository.
-                  
+                ```
+                application/
+                |- frontend/
+                |- backen/
+                ```
                   
             """
         ) {
-            createRepo("mod-a.git", "--bare") { createClone("../mod-a") }
-            createRepo("mod-b.git", "--bare") { createClone("../mod-b") }
+            createRepo("frontend.git", "--bare") { createClone("../frontend") }
+            createRepo("backend.git", "--bare") { createClone("../backend") }
 
-            inRepo("mod-a") {
-                createFileAndCommit("anton")
+            inRepo("frontend") {
+                createFileAndCommit("main.ts")
                 git("push")
             }
 
-            inRepo("mod-b") {
-                createFileAndCommit("berta")
+            inRepo("backend") {
+                createFileAndCommit("service.java")
                 git("push")
             }
 
-            createRepo("subtrees") {
+            createRepo("application") {
                 createFileAndCommit("README")
             }
         }
 
-        inRepo("subtrees") {
+        inRepo("application") {
             createAufgabe(
                     "Module als Subtree einbinden",
                     """
-                    Binde die Module `mod-a.git` und `mod-b.git`
+                    Binde die Module `frontend.git` und `backend.git`
                     per `subtree add` ein.
                     Untersuche dann die entstandene Verzeichnisstruktur.
                     """
             ) {
-                git("subtree add --prefix=mod-a ../mod-a.git main")
-                git("subtree add --prefix=mod-b ../mod-b.git main")
+                git("subtree add --prefix=frontend ../frontend.git main")
+                git("subtree add --prefix=backend ../backend.git main")
                 git("ls-tree -r HEAD")
             }
         }
@@ -88,20 +88,20 @@ fun CollectionOfSamples.subtrees() {
         createAufgabe(
                 "Änderung aus einem Modul übernehmen",
                 """
-                    Gehe in das Repo `mod-b` ändere die Datei `berta`, committe und pushe.
+                    Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
                     Sie Dir das entstandene Commit an (`show --stat`)
-                    Gehe in das Repo `subtrees` und hole die Änderungen per `subtree pull` ab.
+                    Gehe in das Repo `application` und hole die Änderungen per `subtree pull` ab.
                     Sieh Dir das übertragene Commit an.
                     """
         ) {
-            inRepo("mod-b") {
-                editAndCommit("berta", 7)
+            inRepo("backend") {
+                editAndCommit("service.java", 7)
                 git("show --stat ")
                 git("push")
             }
 
-            inRepo("subtrees") {
-                git("subtree pull --prefix=mod-b ../mod-b.git main")
+            inRepo("application") {
+                git("subtree pull --prefix=backend ../backend.git main")
                 git("show --stat ")
             }
         }
@@ -109,18 +109,18 @@ fun CollectionOfSamples.subtrees() {
         createAufgabe(
                 "Änderung in ein Modul übertragen",
                 """
-                    Gehe in `subtrees` ändere `mod-a/anton` und committe.
-                    Übertrage die Änderung per `subtree push` nach `mod-a.git`.
-                    Sieh Dir das übertragene Commit in `mod-a.git` an.
+                    Gehe in `application` ändere `frontend/main.ts` und committe.
+                    Übertrage die Änderung per `subtree push` nach `frontend.git`.
+                    Sieh Dir das übertragene Commit in `frontend.git` an.
                     """
         ) {
-            inRepo("subtrees") {
+            inRepo("application") {
 
-                editAndCommit("mod-a/anton", 3)
-                git("subtree push --prefix=mod-a ../mod-a.git main")
+                editAndCommit("frontend/main.ts", 3)
+                git("subtree push --prefix=frontend ../frontend.git main")
             }
 
-            inRepo("mod-a.git") {
+            inRepo("frontend.git") {
                 git("show --stat ")
             }
         }
@@ -128,14 +128,14 @@ fun CollectionOfSamples.subtrees() {
         createAufgabe(
                 "Übergeordnetes Repo klonen",
                 """
-                    Klone `subtrees` zu `mysubtrees`.
+                    Klone `application` zu `myapplication`.
                     Untersuche die `HEAD` Verzeichnisstruktur,
                     und den Commit-graphen.
                     """
         ) {
-            git("clone subtrees mysubtrees")
+            git("clone application myapplication")
 
-            inRepo("mysubtrees") {
+            inRepo("myapplication") {
                 markdown("Man sieht, dass die Einbettungen" +
                         " als normale Dateien und Verzeichnisse" +
                         " im `HEAD`-Tree erscheinen")

@@ -1,19 +1,3 @@
-# Zusammenarbeit
-
-
----
-
-> **Donald Knuth** once said that the 
-> ideal team size in software development is one.
-
----
-
-
-### [To Branch or Not to Branch](https://kapitel26.github.io/slides/2019-10-27-to-branch-or-not-to-branch/)
-
-
----
-
 ## Auf einem Branch<br/>gemeinsam entwickeln
 
 <!-- .slide: data-background-image="sections/workflow-collaboration/trunk-based.png" data-background-opacity="0.4" -->

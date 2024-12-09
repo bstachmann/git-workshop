@@ -102,7 +102,7 @@ fun CollectionOfSamples.repositorysZusammenfuehren() {
                 markdown("Inhalt des UI-Repository in einen lokalen Branch `uimain` holen:")
                 git("remote add ui ../ui/")
                 git("fetch ui")
-                git("checkout -b uimain ui/main")
+                git("switch -c uimain ui/main")
 
                 markdown("UI-Dateien in Unterverzeichnis verschieben:")
                 bash("mkdir ui")
@@ -110,7 +110,7 @@ fun CollectionOfSamples.repositorysZusammenfuehren() {
                 git("commit -m 'ui-Verzeichnis angelegt'")
 
                 markdown("`uimain` integrieren:")
-                git("checkout main")
+                git("switch main")
                 git("merge uimain --allow-unrelated-histories")
 
                 markdown("Man sieht ui und backend wurden mitsamt Historie zusammengeführt:")

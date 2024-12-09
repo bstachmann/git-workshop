@@ -9,7 +9,7 @@
  ☐ `git show` 
  ☐ `.git` 
  ☐ Commit
- `git branch`
+ ☐ `git branch`
  ☐ `git switch` 
  ☐ `.gitignore` 
  ☐ Revision-Hash
