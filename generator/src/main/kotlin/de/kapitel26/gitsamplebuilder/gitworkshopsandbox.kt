@@ -11,9 +11,9 @@ fun main() {
         thema("beispiel") {
 
             // halloWelt()
-            // rebasingSandbox()
+            rebasingSandbox()
             //repositoryUntersuchen()
-            reverting()
+            // reverting()
             // commitsErstellen()
             // staging()
             // cloning()
