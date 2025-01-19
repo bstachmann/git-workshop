@@ -102,7 +102,7 @@ Die Datei `beispiel` wurde dreimal bearbeitet.
 Hole den mittleren Stand zurück und erstelle ein Commit.
 
 
-<pre><code>repo $ <b>git log --oneline beispiel</b><br><br>c67dc27 später<br>4222f43 dazwischen<br>dfe79fa dazwischen<br><br></code></pre>
+<pre><code>repo $ <b>git log --oneline beispiel</b><br><br>2e48c2f sp?ter<br>4222f43 dazwischen<br>dfe79fa dazwischen<br><br></code></pre>
 
 
 
@@ -114,7 +114,7 @@ Hole den mittleren Stand zurück und erstelle ein Commit.
 
 
 
-<pre><code>repo $ <b>git commit -am &quot;Mittlerer Stand wiederhergestellt.&quot;</b><br><br>[main 2045b52] Mittlerer Stand wiederhergestellt.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>
+<pre><code>repo $ <b>git commit -am &quot;Mittlerer Stand wiederhergestellt.&quot;</b><br><br>[main 27abb5e] Mittlerer Stand wiederhergestellt.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>
 
 
 ## Lösung zu Schritt 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen
@@ -129,7 +129,7 @@ Tipp: Beim `restore` werden unversionierte Dateien nicht abgeräumt.
 Man kann sie mit dem `stash`-Befehl abräumen.
 
 
-<pre><code>repo $ <b>git log --oneline -- ufer/</b><br><br>b1ef622 Zug 7<br>f4bd978 Zug 6<br>d9717fe Zug 5<br>c3aaf58 Zug 4<br>742e18c Zug 3<br>ea7b14c Zug 2<br>751d90f Zug 1<br>cdc2f48 Starte spiel<br><br></code></pre>
+<pre><code>repo $ <b>git log --oneline -- ufer/</b><br><br>40f54a9 Zug 7<br>a9882a6 Zug 6<br>954d812 Zug 5<br>77f4917 Zug 4<br>e1ee973 Zug 3<br>3fe29e6 Zug 2<br>6d31336 Zug 1<br>cf716f5 Starte spiel<br><br></code></pre>
 
 
 Zug 1
@@ -143,13 +143,13 @@ Zug 1
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br></code></pre>
 
 
 Zug 2
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -157,13 +157,13 @@ Zug 2
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br></code></pre>
 
 
 Zug 3
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -171,13 +171,13 @@ Zug 3
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br><br></code></pre>
 
 
 Zug 4
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -185,13 +185,13 @@ Zug 4
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 5
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -199,13 +199,13 @@ Zug 5
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 6
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -213,13 +213,13 @@ Zug 6
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 7
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -227,7 +227,7 @@ Zug 7
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 8
@@ -241,7 +241,7 @@ Zug 8
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 [Zur Aufgabe](aufgabe-commits-staging.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}

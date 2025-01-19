@@ -49,7 +49,7 @@ Navigiere dann wieder zurück ins Ursprungsverzeichnis.
 Gib aus, welche Version von Git installiert ist.
 
 
-<pre><code>hallo $ <b>git version</b><br><br>git version 2.47.0<br><br></code></pre>
+<pre><code>hallo $ <b>git version</b><br><br>git version 2.47.1<br><br></code></pre>
 
 
 ## Lösung zu Schritt 3 - Hilfe
