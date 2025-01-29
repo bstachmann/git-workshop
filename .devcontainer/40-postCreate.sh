@@ -14,5 +14,7 @@ echo ">>> Build generated pages (uebungen) and servers."
 
 ./gradlew build distUebungenMarkdown
 
+./scripts/copy-git-uebungen-to-workspace.sh
+
 echo "Configuring Shell prompt"
 echo "export PROMPT_DIRTRIM=2 >>~/.bashrc"
