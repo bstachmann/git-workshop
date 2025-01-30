@@ -1,5 +1,6 @@
 # To Do
 
+ * ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
  * intro commandline, Ordner in step 1 fehlt
  * Bash P1 f. GitHub Codespaces anpassen
  * Trade-Off tabellen
