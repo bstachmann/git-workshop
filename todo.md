@@ -1,6 +1,6 @@
 # To Do
 
- * intro commandline, folder in step 1 fehlt
+ * intro commandline, Ordner in step 1 fehlt
  * Bash P1 f. GitHub Codespaces anpassen
  * Trade-Off tabellen
    - Cherry-Pick vs. Merge Chains
