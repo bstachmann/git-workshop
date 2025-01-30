@@ -12,7 +12,22 @@ fun CollectionOfSamples.rebasingSandbox() {
             """
         ) {
             createRepo("repo-rebase") {
-                createFileAndCommit("hello") { content = "hallo welt" }
+                createFileAndCommit("hello") { content = """
+                    def fac(n):
+                        if n == 1:
+                            return 1
+                        else:
+                            return n*fac(n-1)
+
+                    def demo():
+                        print("Demo")
+                        print(f'fac(6) = {fac(6)}')
+
+                    if __name__ == '__main__':
+                        demo()
+
+                """.trimIndent()
+                }
 
                 startBranch("feature") {
                     editAndCommit("hello", "Uppercase hello") { content = "Hallo Welt" }
