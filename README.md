@@ -1,4 +1,5 @@
-# Git Workshop Material
+
+qwerwqer
 
 ## Übungen
 
@@ -38,6 +39,8 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
     $ scripts/run-all.sh
  ```
  
+Hallo WelT!
+
 
 ### Exercies
 
@@ -53,3 +56,4 @@ Exercises can be found in `build/git-uebungen`.
  $ git remote add github https://github.com/bstachmann/git-workshop.git
  $ git remote add gitlab https://gitlab.com/bjoern.stachmann/git-workshop.git
 ```
+`
