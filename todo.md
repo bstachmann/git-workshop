@@ -1,5 +1,6 @@
 # To Do
 
+ * Bash P1 f. GitHub Codespaces anpassen
  * Trade-Off tabellen
    - Cherry-Pick vs. Merge Chains
    - Add+Commit+Push oder selective Stage and push
