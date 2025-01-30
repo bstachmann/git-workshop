@@ -1,5 +1,4 @@
 
-qwerwqer
 
 ## Übungen
 
