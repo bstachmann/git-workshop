@@ -1,32 +1,31 @@
 Linus Torvalds 
+Tree, Blob
 Workspace 
-`--detach` 
-Repository
-`--oneline`
-Ref
-Plumbing
-`main~7` 
-`git show` 
-`.git
-Pull
-Commit
+`git checkout`
 `git branch`
 `git switch` 
-`.gitignore` 
-Revision-Hash
-`git checkout`
-Klon
-Branch
-`--graph`
-Revision
-Porcelain
-Push
-`HEAD`
 dezentral
-`git tag`
-Tree, Blob
-`git diff`
+`main~7` 
+Plumbing
+`.git
 `git show HEAD:README.md`
-`git restore`
+`--oneline`
+Pull
+Revision-Hash
+`.gitignore` 
+`--graph`
+Klon
+`git tag`
+Porcelain
+`git show` 
+Branch
+Revision
+`git diff`
+Repository
+`HEAD`
 Fetch
-
+Commit
+Push
+`git restore`
+`--detach` 
+Ref
