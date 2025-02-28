@@ -194,8 +194,6 @@ Wenn sich auf einer Seite des Merges nichts getan hat, macht Git idR. ein *fast-
 
 <iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-integration-von-aenderungen.html" width="100%" height="600px" ></iframe>
 
-<h2><a href="" target="_blank">Integration von Änderungen<a></h2>
-
 ---
 
 > L'enfer c'est les autres. 
