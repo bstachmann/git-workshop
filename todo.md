@@ -1,8 +1,14 @@
 # To Do
 
- * ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
- * intro commandline, Ordner in step 1 fehlt
- * Bash P1 f. GitHub Codespaces anpassen
+ * Statt workflows use cases:
+   * Parallel entwickeln (Bugfixing/Maintenance, mehrere Entwickler, separierung von Features)
+   * Software ausliefern
+   * Bugfixes
+   * Reviews durchführen
+ * Übungenen als iframe darstellen
+ * Folien zu Git-Operationen
+ * Ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
+ * Intro commandline, Ordner in step 1 fehlt
  * Trade-Off tabellen
    - Cherry-Pick vs. Merge Chains
    - Add+Commit+Push oder selective Stage and push
