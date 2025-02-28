@@ -32,14 +32,12 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
  * Port `8040`: Monitoring des Teilnehmerfortschrits (für den Trainer) ([log-File](_log/progress-monitor.log))
  * Port `4000`: Nur statische Website (identisch zu GitHub-Pages)  ([log-File](_log/jekyll.log))
 
- Die Server können per Script gestartet werden (im `devcontainer` passiert dies automatisch):
+ Die Server können per Script gestartet werden:
 
  ```bash
     $ scripts/run-all.sh
  ```
  
-Hallo WelT!
-
 
 ### Exercies
 

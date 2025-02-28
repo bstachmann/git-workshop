@@ -17,4 +17,4 @@ echo ">>> Build generated pages (uebungen) and servers."
 ./scripts/copy-git-uebungen-to-workspace.sh
 
 echo "Configuring Shell prompt"
-echo "export PROMPT_DIRTRIM=2 >>~/.bashrc"
+echo "export PROMPT_DIRTRIM=2" >>/home/vscode/.bashrc
