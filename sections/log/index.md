@@ -140,9 +140,7 @@ Zeigt, für jede Zeile, in welchem Commit diese zuletzt bearbeitet wurde.
 
 ---
 
+<iframe src="markdown-git-uebungen/aufgabe-repository-log.html" width="100%" height="600px" ></iframe>
 
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-repository-log.html" target="_blank">Repository - Das Log<a></h2>
 
 

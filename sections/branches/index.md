@@ -142,8 +142,7 @@ integriert die Änderungen von `other-branch` in den aktiven Branch und erstellt
 
 ---
 
-### Übung
+<iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-branching.html" width="100%" height="600px" ></iframe>
 
-<h2><a href="markdown-git-uebungen/aufgabe-zusammenarbeit-branching.html" target="_blank">Branches<a></h2>
 
 

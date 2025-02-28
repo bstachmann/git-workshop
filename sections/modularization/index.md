@@ -171,25 +171,16 @@ notes:
 
 ---
 
-### Übung
+<iframe src="markdown-git-uebungen/aufgabe-modularisierung-submodules.html" width="100%" height="600px" ></iframe>
 
-<h2><a href="markdown-git-uebungen/aufgabe-modularisierung-submodules.html" target="_blank">Submodules<a></h2>
+---
+
+<iframe src="markdown-git-uebungen/aufgabe-modularisierung-subtrees.html" width="100%" height="600px" ></iframe>
 
 
 ---
 
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-modularisierung-subtrees.html" target="_blank">Subtrees<a></h2>
-
-
----
-
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-modularisierung-repositorys-zusammenfuehren.html" target="_blank">Repositorys zusammenführen<a></h2>
-
-
+<iframe src="markdown-git-uebungen/aufgabe-modularisierung-repositorys-zusammenfuehren.html" width="100%" height="600px" ></iframe>
 
 ---
 

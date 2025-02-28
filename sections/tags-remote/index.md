@@ -28,6 +28,5 @@ oder Tagnamen mit Timestamp versehen (`success-20231030203501`).
 
 ---
 
-### Übung
+<iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-tags.html" width="100%" height="600px" ></iframe>
 
-<h2><a href="markdown-git-uebungen/aufgabe-zusammenarbeit-tags.html" target="_blank">Tags<a></h2>

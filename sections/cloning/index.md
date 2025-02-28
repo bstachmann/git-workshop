@@ -67,9 +67,7 @@ $ git clone https://<server>/<pfad>/git-training-protocol.git
 
 ---
 
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-repository-klonen.html" target="_blank">Klonen<a></h2>
+<iframe src="arkdown-git-uebungen/aufgabe-repository-klonen.html" width="100%" height="600px" ></iframe>
 
 ---
 

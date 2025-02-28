@@ -46,10 +46,12 @@ git push --set-upstream <repo> <branch>
 
 ---
 
-### Übung
+<iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-branching-fortgeschritten.html" width="100%" height="600px" ></iframe>
 
-<h2><a href="markdown-git-uebungen/aufgabe-zusammenarbeit-branching-fortgeschritten.html" target="_blank">Branches<a></h2>
 
-<h2><a href="markdown-git-uebungen/aufgabe-zusammenarbeit-reverting.html" target="_blank">Reverting of Merges<a></h2>
+
+---
+
+<iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-reverting.html" width="100%" height="600px" ></iframe>
 
 
