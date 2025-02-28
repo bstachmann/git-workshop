@@ -5,7 +5,6 @@
    * Software ausliefern
    * Bugfixes
    * Reviews durchführen
- * Übungenen als iframe darstellen
  * Folien zu Git-Operationen
  * Ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
  * Intro commandline, Ordner in step 1 fehlt
