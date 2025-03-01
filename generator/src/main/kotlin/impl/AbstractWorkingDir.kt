@@ -157,11 +157,17 @@ abstract class AbstractWorkingDir<T>(
         markdown("# Übung - $title")
         markdown(description)
         supressLogging(setup)
+
+        val header = "Schritt 0 - START"
+        solutionCollector.registerSchritt(header)
+        solutionCollector.collectedCommands.add(header to {})        
+        markdown("<!--UEB-${solutionCollector.aufgabenName()}--><h2>${header}</h2>")
     }
+
 
     @Suppress("UNCHECKED_CAST")
     fun createAufgabe(title: String, description: String = "", solution: T.() -> Unit = {}) {
-        val header = "Schritt ${solutionCollector.collectedCommands.size + 1} - $title"
+        val header = "Schritt ${solutionCollector.collectedCommands.size} - $title"
         solutionCollector.registerSchritt(header)
         solutionCollector.collectedCommands.add(
             header to {
