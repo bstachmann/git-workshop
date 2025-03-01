@@ -9,17 +9,20 @@ nav_order: 0
 
 ## Lösung zu Schritt 1 - Navigation in Übungsverzeichnisse
 
-Starte in jenem Verzeichnis, wo `build.zip` entpackt wurde.
+(aus dem entpacken Zip-File)
+
 Navigiere in das Unterverzeichnis `aufgaben/intro-commandline/hallo`
 und sieh Dir den Inhalt der dort liegenden Datei an.
-Navigiere dann wieder zurück ins Ursprungsverzeichnis.
+Nutze die Tab-Completion, um nicht so viel tippen zu müssen.
+Navigiere dann wieder zurück ins übergeordnete 
+Verzeichnis `intro-commandline`.
 
 
-<pre><code>.. $ <b>ls</b><br><br>aufgaben<br>loesungen<br><br></code></pre>
+<pre><code>git-uebungen $ <b>ls</b><br><br>aufgaben  aufgaben.json  loesungen  ueberblick.html  ueberblick.md<br><br></code></pre>
 
 
 
-<pre><code>.. $ <b>cd aufgaben</b><br><br><br></code></pre>
+<pre><code>git-uebungen $ <b>cd aufgaben</b><br><br><br></code></pre>
 
 
 
@@ -38,20 +41,12 @@ Navigiere dann wieder zurück ins Ursprungsverzeichnis.
 <pre><code>hallo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-
-<pre><code>intro-commandline $ <b>cd ..</b><br><br><br></code></pre>
-
-
-
-<pre><code>aufgaben $ <b>cd ..</b><br><br><br></code></pre>
-
-
 ## Lösung zu Schritt 2 - Git-Version prüfen
 
 Gib aus, welche Version von Git installiert ist.
 
 
-<pre><code>hallo $ <b>git version</b><br><br>git version 2.47.0<br><br></code></pre>
+<pre><code>$ <b>git version</b><br><br>git version 2.47.0<br><br></code></pre>
 
 
 ## Lösung zu Schritt 3 - Hilfe
@@ -59,7 +54,7 @@ Gib aus, welche Version von Git installiert ist.
 Zeige die Hilfeseite zum `log`-Befehl an.
 
 
-<pre><code>hallo $ <b>git help log</b><br><br>GIT-LOG(1)                                                        Git Manual                                                        GIT-LOG(1)<br><br>NAME<br>    git-log - Show commit logs<br>...<br><br></code></pre>
+<pre><code>$ <b>git help log</b><br><br>GIT-LOG(1)                                                        Git Manual                                                        GIT-LOG(1)<br><br>NAME<br>    git-log - Show commit logs<br>...<br><br></code></pre>
 
 
 ## Lösung zu Schritt 4 - `less` und lange Ausgaben

@@ -65,8 +65,8 @@ fun CollectionOfSamples.commandline() {
 
         createAufgabe(
             "Navigation in Übungsverzeichnisse", """
-            (aus dem entpacken Zip-File)
-            
+            (aus dem entpackten Zip-File)
+
             Navigiere in das Unterverzeichnis `aufgaben/intro-commandline/hallo`
             und sieh Dir den Inhalt der dort liegenden Datei an.
             Nutze die Tab-Completion, um nicht so viel tippen zu müssen.

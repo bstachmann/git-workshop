@@ -50,42 +50,29 @@ das `git`-Kommando kennenzulernen.
 
 <!--UEB-Das `git`-Kommando!--><h2>Schritt 0 - START</h2>
 
-
-<pre><code>$ <b>cd ../..</b><br><br><br></code></pre>
-
-
 <!--UEB-Das `git`-Kommando!--><h2>Schritt 1 - Navigation in Übungsverzeichnisse</h2>
 
-Starte im Verzeichnis `git-uebungen/aufgaben/<unknown>`.
+Starte im Verzeichnis `git-uebungen`.
 
-Starte in jenem Verzeichnis, wo `build.zip` entpackt wurde.
+(aus dem entpacken Zip-File)
+
 Navigiere in das Unterverzeichnis `aufgaben/intro-commandline/hallo`
 und sieh Dir den Inhalt der dort liegenden Datei an.
-Navigiere dann wieder zurück ins Ursprungsverzeichnis.
-
-
-<pre><code>.. $ <b>cd ..</b><br><br><br></code></pre>
-
-
-
-<pre><code>$ <b>cd hallo</b><br><br><br></code></pre>
-
+Nutze die Tab-Completion, um nicht so viel tippen zu müssen.
+Navigiere dann wieder zurück ins übergeordnete 
+Verzeichnis `intro-commandline`.
 
 <!--UEB-Das `git`-Kommando!--><h2>Schritt 2 - Git-Version prüfen</h2>
 
-Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/hallo`.
+Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline`.
 
 Gib aus, welche Version von Git installiert ist.
 
 <!--UEB-Das `git`-Kommando!--><h2>Schritt 3 - Hilfe</h2>
 
-Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/hallo`.
+Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline`.
 
 Zeige die Hilfeseite zum `log`-Befehl an.
-
-
-<pre><code>hallo $ <b>cd ..</b><br><br><br></code></pre>
-
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
