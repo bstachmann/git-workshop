@@ -61,7 +61,7 @@ task("distUebungenMarkdown", JavaExec::class) {
     description = "Deploy markdown files for exercises, to website dir."
     dependsOn("run")
 
-    mainClass.set("de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToWebsiteKt")
+    mainClass.set("de.kapitel26.gitsamplebuilder.DeployUebungenToWebsiteKt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
@@ -70,7 +70,7 @@ task("distUebungenZip", JavaExec::class) {
     description = "Create a new zip file."
     dependsOn("run")
 
-    mainClass.set("de.kapitel26.gitsamplebuilder.BuildAndDeployUebungenToZipKt")
+    mainClass.set("de.kapitel26.gitsamplebuilder.DeployUebungenToZipKt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
