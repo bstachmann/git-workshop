@@ -28,8 +28,7 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
 
 ### Website lokal lokal hosten
 
- * Port `8080`: Website inklusive dynamischem Content (Teilnehmefortschritt) ([log-File](_log/workshop-website.log))
- * Port `8040`: Monitoring des Teilnehmerfortschrits (für den Trainer) ([log-File](_log/progress-monitor.log))
+ * Port `8000`: [Website](http://localhost:8000) inklusive dynamischem Content (Teilnehmefortschritt) zum [Monitoring des Teilnehmerfortschrits](http://localhost:8000/progress). ([log-File](_log/webserver-with-progresstracking.log))
  * Port `4000`: Nur statische Website (identisch zu GitHub-Pages)  ([log-File](_log/jekyll.log))
 
  Die Server können per Script gestartet werden:

@@ -27,7 +27,7 @@ import kotlin.coroutines.*
 import kotlin.random.*
 
 fun main() {
-    val participantsServer = embeddedServer(Netty, port = 8080) { participantsModule(); progressModule() }
+    val participantsServer = embeddedServer(Netty, port = 8000) { participantsModule(); progressModule() }
     participantsServer.start(wait = true)
 }
 
@@ -208,7 +208,7 @@ fun Route.progressDashboad() {
                     }
                 }
                 h2 { text("Aufgaben") }
-                form(action = "/", method = FormMethod.get) {
+                form(action = "/progress", method = FormMethod.get) {
                     state.aufgaben.map { it.first }.forEach {
                         input(name = "select") {
                             value = it
