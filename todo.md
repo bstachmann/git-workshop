@@ -7,7 +7,6 @@
    * Reviews durchführen
  * Folien zu Git-Operationen
  * Ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
- * Intro commandline, Ordner in step 1 fehlt
  * Trade-Off tabellen
    - Cherry-Pick vs. Merge Chains
    - Add+Commit+Push oder selective Stage and push
@@ -19,7 +18,6 @@
  *repository-log Übung: show HEAD:datei.txt erläutern in Tipps
  * repository-untersuchen: Enthält noch Tipps zur vorigen übung
  * diff slides im nach vorne und zusammen ziehen (nich in refs)
- * checkin/step-0 für den tracker
  * Remote Tracking Branches nach "Push Pull"
    - git branch -a
    - ersten fetch zeigen,
