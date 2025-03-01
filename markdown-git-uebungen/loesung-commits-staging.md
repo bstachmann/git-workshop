@@ -143,7 +143,7 @@ Zug 1
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br></code></pre>
 
 
 Zug 2
@@ -157,7 +157,7 @@ Zug 2
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br></code></pre>
 
 
 Zug 3
@@ -171,7 +171,7 @@ Zug 3
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br><br></code></pre>
 
 
 Zug 4
@@ -185,7 +185,7 @@ Zug 4
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 5
@@ -199,7 +199,7 @@ Zug 5
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 12K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 6
@@ -213,7 +213,7 @@ Zug 6
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 8.0K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>ufer/ost:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br><br>ufer/west:<br>total 8.0K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 7
@@ -227,7 +227,7 @@ Zug 7
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 Zug 8
@@ -241,7 +241,7 @@ Zug 8
 
 
 
-<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-rw-rw- 1 vscode vscode 181  BAUER<br>-rw-rw-rw- 1 vscode vscode 181  KOHL<br>-rw-rw-rw- 1 vscode vscode 181  WOLF<br>-rw-rw-rw- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
+<pre><code>repo $ <b>ll ufer/*</b><br><br>total 16K<br>-rw-r--r-- 1 vscode vscode 181  BAUER<br>-rw-r--r-- 1 vscode vscode 181  KOHL<br>-rw-r--r-- 1 vscode vscode 181  WOLF<br>-rw-r--r-- 1 vscode vscode 181  ZIEGE<br><br></code></pre>
 
 
 [Zur Aufgabe](aufgabe-commits-staging.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
