@@ -12,6 +12,11 @@
 			"version": "latest",
 			"jdkVersion": "21",
 			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-extra/features/kotlin-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "21",
+			"jdkDistro": "ms"
 		}
 	},
 
@@ -37,7 +42,8 @@
 		"vscode": {
 			"extensions": [
 				"vscjava.vscode-gradle",
-				"GitHub.vscode-pull-request-github"
+				"GitHub.vscode-pull-request-github",
+				"fwcd.kotlin"
 			]
 		}
 	}
