@@ -14,14 +14,14 @@ abstract class AbstractWorkingDir<T>(
     solutionCollector: SolutionCollector
 ) : AbstractDir<T>(rootDir, log = log, solutionCollector = solutionCollector) {
 
-    fun inDir(dirName: String, commands: Dir.() -> Unit) =
+    fun inDir(dirName: String, showDirectoryChange: Boolean = true ,commands: Dir.() -> Unit) =
         java.io.File(rootDir, dirName)
             .apply { if (!exists()) throw IllegalStateException("Dir $this is expected to exist!") }
-            .also { log.cd(dirName, currentDirname()) }
+            .also { if(showDirectoryChange) log.cd(dirName, currentDirname()) }
             .run { Dir(this, log = log, solutionCollector = solutionCollector) }
             .run {
                 commands()
-                log.cd("..", currentDirname())
+                if(showDirectoryChange) log.cd("..", currentDirname())
             }
 
     fun clear() {
@@ -166,7 +166,7 @@ abstract class AbstractWorkingDir<T>(
 
 
     @Suppress("UNCHECKED_CAST")
-    fun createAufgabe(title: String, description: String = "", solution: T.() -> Unit = {}) {
+    fun createAufgabe(title: String, description: String = "", startPath: String? = null , solution: T.() -> Unit = {}) {
         val header = "Schritt ${solutionCollector.collectedCommands.size} - $title"
         solutionCollector.registerSchritt(header)
         solutionCollector.collectedCommands.add(
@@ -178,8 +178,9 @@ abstract class AbstractWorkingDir<T>(
         
         val pathInUebungsverzeichnis = "git-uebungen/aufgaben/" + 
             (""".*build/git-uebungen/loesungen/(.*)""".toRegex().matchEntire(rootDir.canonicalPath)?.groups?.get(1)?.value ?: "<unknown>")
+         
         markdown("<!--UEB-${solutionCollector.aufgabenName()}--><h2>${header}</h2>")
-        markdown("Starte im Verzeichnis `${pathInUebungsverzeichnis}`.")
+        markdown("Starte im Verzeichnis `${startPath ?: pathInUebungsverzeichnis}`.")
         markdown(description)
     }
 

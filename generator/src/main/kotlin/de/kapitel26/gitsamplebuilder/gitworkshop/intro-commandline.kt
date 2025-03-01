@@ -63,17 +63,24 @@ fun CollectionOfSamples.commandline() {
             }
         }
 
-        inDir("../..") {
-            createAufgabe(
-                "Navigation in Übungsverzeichnisse", """
-                Starte in jenem Verzeichnis, wo `build.zip` entpackt wurde.
-                Navigiere in das Unterverzeichnis `aufgaben/intro-commandline/hallo`
-                und sieh Dir den Inhalt der dort liegenden Datei an.
-                Navigiere dann wieder zurück ins Ursprungsverzeichnis.
-            """) {
-                bash("ls")
-                inDir("aufgaben") {
-                    inDir("intro-commandline") {
+        createAufgabe(
+            "Navigation in Übungsverzeichnisse", """
+            (aus dem entpacken Zip-File)
+            
+            Navigiere in das Unterverzeichnis `aufgaben/intro-commandline/hallo`
+            und sieh Dir den Inhalt der dort liegenden Datei an.
+            Nutze die Tab-Completion, um nicht so viel tippen zu müssen.
+            Navigiere dann wieder zurück ins übergeordnete 
+            Verzeichnis `intro-commandline`.
+            """,
+            startPath = "git-uebungen"
+        ) {
+            inDir("../..", showDirectoryChange=false) {
+                log.shell("ls", "git-uebungen", listOf("aufgaben  aufgaben.json  loesungen  ueberblick.html  ueberblick.md"), emptyList())
+                log.shell("cd aufgaben", "git-uebungen", emptyList(), emptyList())
+                inDir("aufgaben", showDirectoryChange=false) {
+                    log.shell("cd intro-commandline", "aufgaben", emptyList(), emptyList())
+                    inDir("intro-commandline", showDirectoryChange=false) {
                         inDir("hallo") {
                             bash("ls")
                         }
@@ -81,31 +88,29 @@ fun CollectionOfSamples.commandline() {
                 }
             }
         }
-        
-        inDir("hallo") {
-            createAufgabe(
-                    "Git-Version prüfen", """
-                    Gib aus, welche Version von Git installiert ist.
-            """) {
-                bash("git version")
-            }
 
-            createAufgabe(
-                    "Hilfe", """
-                        Zeige die Hilfeseite zum `log`-Befehl an.
-            """) {
-                val output = """
-                    GIT-LOG(1)                                                        Git Manual                                                        GIT-LOG(1)
-
-                    NAME
-                        git-log - Show commit logs
-                    ...
-                """.trimIndent()
-                log.shell("git help log", rootDir.name, output.lines(), emptyList())
-            }
-
+        createAufgabe(
+            "Git-Version prüfen", """
+            Gib aus, welche Version von Git installiert ist.
+        """) {
+            bash("git version")
         }
 
+        createAufgabe(
+            "Hilfe", """
+                Zeige die Hilfeseite zum `log`-Befehl an.
+        """) {
+            val output = """
+                GIT-LOG(1)                                                        Git Manual                                                        GIT-LOG(1)
+
+                NAME
+                    git-log - Show commit logs
+                ...
+            """.trimIndent()
+            log.shell("git help log", rootDir.name, output.lines(), emptyList())
+        }
+
+        
         inRepo() {
             createAufgabe(
                     "`less` und lange Ausgaben", """
