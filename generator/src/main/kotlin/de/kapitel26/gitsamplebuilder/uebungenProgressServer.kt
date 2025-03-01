@@ -27,9 +27,7 @@ import kotlin.coroutines.*
 import kotlin.random.*
 
 fun main() {
-    val adminServer = embeddedServer(Netty, port = 8040) { adminModule() }
-    adminServer.start(wait = false)
-    val participantsServer = embeddedServer(Netty, port = 8080) { participantsModule() }
+    val participantsServer = embeddedServer(Netty, port = 8080) { participantsModule(); progressModule() }
     participantsServer.start(wait = true)
 }
 
@@ -92,9 +90,9 @@ fun Application.participantsModule() {
     }
 }
 
-fun Application.adminModule() {
+fun Application.progressModule() {
     routing {
-        adminDashboad()
+        progressDashboad()
     }
 }
 
@@ -180,8 +178,8 @@ suspend fun PipelineContext<Unit, ApplicationCall>.getStaticContent(path: String
         .let { url ->   HttpClient().use {  c -> c.request(url) {} } }
 
 
-fun Route.adminDashboad() {
-    get("/") {
+fun Route.progressDashboad() {
+    get("/progress") {
         val selected = call.parameters["select"] ?: "?"
         update(
                 state.copy(

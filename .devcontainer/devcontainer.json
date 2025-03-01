@@ -26,7 +26,6 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [ 
 		4000, // Jekyll
-		8040, // Progress monitoring
 		8080 // Workshop website
 	],
 
