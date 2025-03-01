@@ -36,6 +36,8 @@ Das Merge-Commit ist mit `feature-merge` getagged.
 
 Beide Änderungen sollen zurückgenommen werden.
 
+<!--UEB-Reverting--><h2>Schritt 0 - START</h2>
+
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 

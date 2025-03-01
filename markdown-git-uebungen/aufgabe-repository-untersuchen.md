@@ -30,6 +30,8 @@ Im Verzeichnis `repo` wartet ein Git-Projekt darauf,
 untersucht zu werden. 
 
 
+<!--UEB-Repository untersuchen--><h2>Schritt 0 - START</h2>
+
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 

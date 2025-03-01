@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 0
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Navigation in Übungsverzeichnisse
 
 Starte in jenem Verzeichnis, wo `build.zip` entpackt wurde.

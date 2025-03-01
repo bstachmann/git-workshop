@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 5
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Sparse-Klon durchführen
 
 Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,

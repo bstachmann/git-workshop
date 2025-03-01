@@ -23,6 +23,8 @@ Rebasing ist, neben dem Merging, eine weitere Möglichkeit,
 ## Ausgangssituation
 
 
+<!--UEB-Rebasing--><h2>Schritt 0 - START</h2>
+
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 

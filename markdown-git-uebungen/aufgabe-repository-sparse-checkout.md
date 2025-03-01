@@ -29,6 +29,8 @@ Es enthält Dateien auf dem Top-Level und in zwei Unterverzeichnissen.
    - `repo/` Bereits vorhandenes Repository.
   
 
+<!--UEB-Sparse Checkout--><h2>Schritt 0 - START</h2>
+
 <!--UEB-Sparse Checkout--><h2>Schritt 1 - Sparse-Klon durchführen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-sparse-checkout`.

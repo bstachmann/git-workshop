@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 4
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Klon durchführen
 
 Erstelle einen Klon von `myfirstrepo` mit dem Namen `myfirstclone`.

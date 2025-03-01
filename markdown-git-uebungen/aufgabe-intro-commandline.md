@@ -48,6 +48,8 @@ das `git`-Kommando kennenzulernen.
 
 [Kurze Intro zur Kommandozeile](../installation/kommandozeile)
 
+<!--UEB-Das `git`-Kommando!--><h2>Schritt 0 - START</h2>
+
 
 <pre><code>$ <b>cd ../..</b><br><br><br></code></pre>
 

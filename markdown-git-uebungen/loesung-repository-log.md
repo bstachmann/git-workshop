@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 2
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Verzeichnisstruktur
 
 Untersuche das Projektverzeichnis.

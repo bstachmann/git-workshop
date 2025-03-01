@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 1
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Das erste Repo
 
 Erstellen sie ihr erstes Repository mit den folgenden Befehlen:

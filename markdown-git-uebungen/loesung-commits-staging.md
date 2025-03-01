@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 7
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Staging
 
 Ersetze in der Datei `demo`,

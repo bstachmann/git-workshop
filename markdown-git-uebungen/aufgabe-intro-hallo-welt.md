@@ -21,6 +21,8 @@ Was die Kommandos genau tun, erfahren Sie im Verlauf des Seminars.
 * `git log` zeigt Commits an.
 
 
+<!--UEB-Hallo Git!--><h2>Schritt 0 - START</h2>
+
 <!--UEB-Hallo Git!--><h2>Schritt 1 - Das erste Repo</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-hallo-welt`.

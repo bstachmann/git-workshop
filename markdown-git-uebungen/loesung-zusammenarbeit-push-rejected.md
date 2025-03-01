@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 11
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Lokal Commit(s) erstellen
 
 Bearbeite die Datei `frontend.java` und erstelle (mindestens) ein Commit mit den Änderungen.

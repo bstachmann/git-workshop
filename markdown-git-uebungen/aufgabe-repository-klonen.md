@@ -25,6 +25,8 @@ Es enthält zwei Commits.
    - `myfirstrepo/` Bereits vorhandenes Repository.
   
 
+<!--UEB-Klonen von Repositorys--><h2>Schritt 0 - START</h2>
+
 <!--UEB-Klonen von Repositorys--><h2>Schritt 1 - Klon durchführen</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-klonen`.

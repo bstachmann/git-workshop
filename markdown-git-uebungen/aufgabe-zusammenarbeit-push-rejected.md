@@ -55,6 +55,8 @@ wirst Du einen *Push Reject* erfahren.
    - `anjas-apollo/` Hier arbeitet Anja.  
    - `my-apollo/` **Du arbeitest hier.**
 
+<!--UEB-Umgang mit "Push Reject"--><h2>Schritt 0 - START</h2>
+
 
 <pre><code>$ <b>cd my-apollo</b><br><br><br></code></pre>
 

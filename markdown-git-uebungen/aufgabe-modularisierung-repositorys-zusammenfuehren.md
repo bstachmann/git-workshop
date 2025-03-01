@@ -33,6 +33,8 @@ Zwei Repositorys
 sind bereits vorhanden.
 
 
+<!--UEB-Kleine Projekte zusammenfuehren--><h2>Schritt 0 - START</h2>
+
 <!--UEB-Kleine Projekte zusammenfuehren--><h2>Schritt 1 - Zusammenführen `git subtree`</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-repositorys-zusammenfuehren`.

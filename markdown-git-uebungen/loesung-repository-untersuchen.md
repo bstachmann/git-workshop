@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 3
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Branches zeigen
 
 Zeige an, welche Branches es gibt.

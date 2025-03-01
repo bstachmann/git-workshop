@@ -22,6 +22,8 @@ Lasse Deiner Kreativität freien Lauf, oder folge diesen **Tipps:**
  * Wenn Du scripten kannst, z.B. mit Bash oder Python: ˋforˋ-Schleifen sind nützlich.
 
 
+<!--UEB-Fröhliche Weihnachten!--><h2>Schritt 0 - START</h2>
+
 <!--UEB-Fröhliche Weihnachten!--><h2>Schritt 1 - Und jetzt ein Weihnachtsbaum</h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/weihnachten-gitmas`.
