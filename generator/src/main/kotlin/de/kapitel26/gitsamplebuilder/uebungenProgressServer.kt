@@ -30,12 +30,12 @@ import kotlin.random.*
 import util.openFileInLocalVscode
 
 fun main() {
-    val participantsServer = embeddedServer(Netty, port = 8000) { 
-        participantsModule(); 
+    val server = embeddedServer(Netty, port = 8000) { 
         progressModule();
         localVscodeModule();
+        participantsModule();
     }
-    participantsServer.start(wait = true)
+    server.start(wait = true)
 }
 
 data class Progress(
@@ -45,7 +45,7 @@ data class Progress(
         val achievements: Map<String, Set<String>>
 )
 
-data class UserSession(val userId: String)
+data class UserSession(val userId: String, val isAdmin: Boolean = false)
 
 val progressFile = File("build/git-uebungen/progress.json")
 
@@ -248,12 +248,12 @@ fun Application.localVscodeModule() {
 fun Route.localVscode() {
     get("/localvscode/{path...}") {
         val pathToOpen = call.parameters.getAll("path")?.joinToString("/") ?: ""
-        call.respondHtml {
-            body {
-                try {
-                    openFileInLocalVscode(pathToOpen)
-                    h1 { text("Opened in local VSCode:  {$pathToOpen}") }                
-                } catch(e: RuntimeException) {
+        try {
+            openFileInLocalVscode(pathToOpen)
+            call.respondRedirect(call.request.headers["Referer"] ?: "/")          
+        } catch(e: RuntimeException) {
+            call.respondHtml {
+                body {
                     h1 { text("Couldn't open {$pathToOpen} in local VScode") }
 
                     p { text(StringWriter().let { e.printStackTrace(PrintWriter(it)); it.toString() } ) }
