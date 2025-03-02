@@ -6,7 +6,7 @@
    * Software ausliefern
    * Bugfixes
    * Reviews durchführen
- * Folien zu Git-Operationen
+ * Cheat Sheet zu zu  den wichtigenGit-Operationen
  * Ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
  * Trade-Off tabellen
    - Cherry-Pick vs. Merge Chains

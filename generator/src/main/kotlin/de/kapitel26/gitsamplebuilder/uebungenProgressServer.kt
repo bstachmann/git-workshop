@@ -20,14 +20,21 @@ import io.ktor.server.netty.Netty
 import io.ktor.server.sessions.*
 import io.ktor.server.response.respondRedirect
 import java.io.File
+import java.io.StringWriter
+import java.io.PrintWriter
 import java.net.URL
 import kotlin.math.*
 import kotlinx.html.*
 import kotlin.coroutines.*
 import kotlin.random.*
+import util.openFileInLocalVscode
 
 fun main() {
-    val participantsServer = embeddedServer(Netty, port = 8000) { participantsModule(); progressModule() }
+    val participantsServer = embeddedServer(Netty, port = 8000) { 
+        participantsModule(); 
+        progressModule();
+        localVscodeModule();
+    }
     participantsServer.start(wait = true)
 }
 
@@ -232,3 +239,26 @@ fun Route.progressDashboad() {
     }    
 }
 
+fun Application.localVscodeModule() {
+    routing {
+        localVscode()
+    }
+}
+
+fun Route.localVscode() {
+    get("/localvscode/{path...}") {
+        val pathToOpen = call.parameters.getAll("path")?.joinToString("/") ?: ""
+        call.respondHtml {
+            body {
+                try {
+                    openFileInLocalVscode(pathToOpen)
+                    h1 { text("Opened in local VSCode:  {$pathToOpen}") }                
+                } catch(e: RuntimeException) {
+                    h1 { text("Couldn't open {$pathToOpen} in local VScode") }
+
+                    p { text(StringWriter().let { e.printStackTrace(PrintWriter(it)); it.toString() } ) }
+                }
+            }
+        }
+    }    
+}

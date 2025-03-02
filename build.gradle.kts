@@ -76,8 +76,8 @@ task("distUebungenZip", JavaExec::class) {
 
 task("sandbox", JavaExec::class) {
     group = "Application"
-    description = "Run sandbox samples from gitworkshopsandbox.kt."
-    mainClass.set("de.kapitel26.gitsamplebuilder.gitworkshop.GitworkshopsandboxKt")
+    description = "Run the git-workshow-sandbox form sandbox.kt."
+    mainClass.set("de.kapitel26.gitsamplebuilder.gitworkshop.SandboxKt")
     classpath = sourceSets["main"].runtimeClasspath
 }
 
