@@ -22,6 +22,14 @@ Falls das Übungsverzeichnis noch fehlt, oder nicht aktuell ist:
 
 Den GitHub Actions Workflow [findet man hier](https://github.com/bstachmann/git-workshop/actions/workflows/zip-git-uebungen.yml).
 
+### Exercises
+
+Exercises can be found in `build/git-uebungen`.
+
+ * `gradle run` to rebuild the exercises
+ * `gradle distUebungenMarkdown` to update descriptions for the website. Commit and push.
+ * `gradle distUebungenZip` to update descriptions for the website. Commit and push.
+
 ### Präsentation als Website auf `github.io`
 
 Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ gehosted.
@@ -36,15 +44,16 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
  ```bash
     $ scripts/run-all.sh
  ```
+
+ ### Website von GitHub *codespace* hosten
  
+ Starten per `scripts/run-all.sh`, wie oben.
 
-### Exercies
+ Auf dem Tab **Ports** den Port `8000` auf *public* setzen.
 
-Exercises can be found in `build/git-uebungen`.
+ Dann kann man den Link sharen. Die Teilnehmer müssen den Zugriff bestätigen.
 
- * `gradle run` to rebuild the exercises
- * `gradle distUebungenMarkdown` to update descriptions for the website. Commit and push.
- * `gradle distUebungenZip` to update descriptions for the website. Commit and push.
+ ![GitHub Zugriffsbestätigungsdialog](sections/progress-server/image.png)
 
 ## Remotes
 
