@@ -9,7 +9,7 @@ nav_order: 0
 
 ## Lösung zu Schritt 1 - Navigation in Übungsverzeichnisse
 
-(aus dem entpacken Zip-File)
+(aus dem entpackten Zip-File)
 
 Navigiere in das Unterverzeichnis `aufgaben/intro-commandline/hallo`
 und sieh Dir den Inhalt der dort liegenden Datei an.

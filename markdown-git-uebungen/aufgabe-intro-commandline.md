@@ -54,7 +54,7 @@ das `git`-Kommando kennenzulernen.
 
 Starte im Verzeichnis `git-uebungen`.
 
-(aus dem entpacken Zip-File)
+(aus dem entpackten Zip-File)
 
 Navigiere in das Unterverzeichnis `aufgaben/intro-commandline/hallo`
 und sieh Dir den Inhalt der dort liegenden Datei an.
