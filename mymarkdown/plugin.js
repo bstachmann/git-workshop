@@ -400,8 +400,7 @@ const MyMarkdown = () => {
 				+ `\n<div style="position:absolute;bottom:-40px;right:0px;font-size: 10px;font-family: monospace;">`
 				+ `<a href="https://github.com/bstachmann/git-workshop/blob/main/${sourcePath}" target="_blank">${sectionName}</a><br/>`
 				+ `<div style="font-size: 8px">`
-				+ `<a href="https://github.com/bstachmann/git-workshop/blob/main/${sourcePath}" target="_blank">GitHub</a>`
-				+ ` <a href="/localvscode/${sourcePath}">vscode</a>`
+				+ `<a href="/localvscode/${sourcePath}">vscode</a>`
 				+ `</div></div>`
 			;
 			addAttributes( 	section, section, null, section.getAttribute( 'data-element-attributes' ) ||
