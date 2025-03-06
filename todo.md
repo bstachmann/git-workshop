@@ -1,5 +1,6 @@
 # To Do
 
+ * Staging übung, warum HEAD~9
  * Repository: Beispielrepos zum Untersuchen
  * Statt workflows use cases:
    * Parallel entwickeln (Bugfixing/Maintenance, mehrere Entwickler, separierung von Features)
