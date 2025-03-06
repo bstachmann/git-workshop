@@ -2,6 +2,8 @@
 
 ## Übungen
 
+OBEN
+
 Die Übungen findet man im Verzeichnis `build/git-uebungen`.
 
 Zur Hallo-Welt-Übung kommt man beispielsweis mit:
@@ -62,3 +64,5 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
  $ git remote add gitlab https://gitlab.com/bjoern.stachmann/git-workshop.git
 ```
 `
+
+UNTEN
