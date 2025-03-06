@@ -2,7 +2,7 @@
 
 ## Übungen
 
-TOTAL GUT! Noch was falsches!
+TOTAL GUT! Noch was falsches!!!
 
 Die Übungen sucht man im Verzeichnis `build/git-uebungen`.
 
