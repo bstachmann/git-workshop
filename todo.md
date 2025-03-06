@@ -1,5 +1,7 @@
 # To Do
 
+ * in Branching übung: git switch -c feature HEAd
+   - head weglassen
  * Staging übung, warum HEAD~9
  * Repository: Beispielrepos zum Untersuchen
  * Statt workflows use cases:
