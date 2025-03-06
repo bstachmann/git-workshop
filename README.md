@@ -4,7 +4,7 @@
 
 OBEN
 
-Die Übungen findet man im Verzeichnis `build/git-uebungen`.
+Die Übungen sucht man im Verzeichnis `build/git-uebungen`.
 
 Zur Hallo-Welt-Übung kommt man beispielsweis mit:
 
@@ -66,3 +66,6 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
 `
 
 UNTEN
+
+
+asdfsad
