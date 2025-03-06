@@ -2,9 +2,7 @@
 
 ## Übungen
 
-ZWEI
-
-OBEN
+TOTAL GUT!
 
 Die Übungen sucht man im Verzeichnis `build/git-uebungen`.
 
