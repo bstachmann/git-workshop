@@ -23,6 +23,8 @@ import java.io.File
 import java.io.StringWriter
 import java.io.PrintWriter
 import java.net.URL
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.math.*
 import kotlinx.html.*
@@ -144,7 +146,7 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
         } else {
             val sidParam = call.parameters["sid"]
-            println("userId=$userId, sid=$sidParam")
+            println("userId=$userId, sid='$sidParam'")
             if (sidParam != null) {
                 val completed = call.parameters["completed"].toBoolean()
                 val previousAchievements: Set<String> = state.achievements[sidParam] ?: emptySet()
@@ -153,16 +155,16 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
 
             val response = this.getStaticContent("markdown-git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
-            // <!--UEB-Das `git`-Kommando!--> <h2>Schritt 3 - Hilfe</h2> <p>Starte im Verzeichnis <code class="langua
+            // Schritt 1 - Navigation in Übungsverzeichnisse <!-- UEB/Das `git`-Kommando!/1 --> </h2> 
             val processedContent = response.bodyAsText().replace(
-                """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\>(.+?)<\/h2\>""".toRegex(), 
+                """\<\!\-\- UEB\/(.+?)\/(.+?) \-\-\>""".toRegex(), 
                 { step -> 
-                    val aufgabname = step.groups[1]?.value
-                    val schrittname = step.groups[2]?.value
-                    val schrittSid = abs((aufgabname to schrittname).hashCode()).toString()    
-                    val isCompleted = state.achievements[schrittSid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
-                    print("schrittname '$schrittname'")
-                    """<h2>$schrittname <a href="?sid=$schrittSid&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
+                    val aufgabname = step.groups[1]?.value ?: "unknown"
+                    val schrittnummer = step.groups[2]?.value ?: "missing"
+                    val sid = "${aufgabname}/${schrittnummer}"
+                    val isCompleted = state.achievements[sid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
+                    println("INSERT '${aufgabname}' num='${schrittnummer}' sid=${sid}")
+                    """<a href="?sid=${URLEncoder.encode(sid, StandardCharsets.UTF_8.toString())}&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
                 }
             )
             call.respondText(processedContent, status = response.status, contentType = response.contentType())
@@ -212,10 +214,9 @@ suspend fun ApplicationCall.progressDashboardResponse()  {
             h2 { text("Aktuelle Aufgabe") }
             val totalNum = state.participants.size
             state.aktuelleAufgabe.also { (aufgabe, schritte) ->
-                schritte.forEach { schritt ->
-                    val sid =
-                            abs((state.aktuelleAufgabe.first to schritt).hashCode())
-                                    .toString()
+                schritte.forEachIndexed { schrittnummer, schritt ->
+                    val sid = "${state.aktuelleAufgabe.first}/${schrittnummer}"
+                    println("REPORTING '${state.aktuelleAufgabe.first}' num='${schrittnummer}' sid=${sid}")
                     p { +"$aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }} sid=$sid" }
                 }
             }

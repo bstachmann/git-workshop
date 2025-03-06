@@ -159,15 +159,17 @@ abstract class AbstractWorkingDir<T>(
         supressLogging(setup)
 
         val header = "Schritt 0 - START"
+        val aufgabenNr = solutionCollector.collectedCommands.size
         solutionCollector.registerSchritt(header)
         solutionCollector.collectedCommands.add(header to {})        
-        markdown("<!--UEB-${solutionCollector.aufgabenName()}--><h2>${header}</h2>")
+        markdown("<h2>${header} <!-- UEB/${solutionCollector.aufgabenName()}/${aufgabenNr} --></h2>")
     }
 
 
     @Suppress("UNCHECKED_CAST")
     fun createAufgabe(title: String, description: String = "", startPath: String? = null , solution: T.() -> Unit = {}) {
         val header = "Schritt ${solutionCollector.collectedCommands.size} - $title"
+        val aufgabenNr = solutionCollector.collectedCommands.size
         solutionCollector.registerSchritt(header)
         solutionCollector.collectedCommands.add(
             header to {
@@ -179,7 +181,7 @@ abstract class AbstractWorkingDir<T>(
         val pathInUebungsverzeichnis = "git-uebungen/aufgaben/" + 
             (""".*build/git-uebungen/loesungen/(.*)""".toRegex().matchEntire(rootDir.canonicalPath)?.groups?.get(1)?.value ?: "<unknown>")
          
-        markdown("<!--UEB-${solutionCollector.aufgabenName()}--><h2>${header}</h2>")
+        markdown("<h2>${header} <!-- UEB/${solutionCollector.aufgabenName()}/${aufgabenNr} --></h2>")
         markdown("Starte im Verzeichnis `${startPath ?: pathInUebungsverzeichnis}`.")
         markdown(description)
     }
