@@ -25,15 +25,15 @@ Es enthält zwei Commits.
    - `myfirstrepo/` Bereits vorhandenes Repository.
   
 
-<!--UEB-Klonen von Repositorys--><h2>Schritt 0 - START</h2>
+<h2>Schritt 0 - START <!-- UEB/Klonen von Repositorys/0 --></h2>
 
-<!--UEB-Klonen von Repositorys--><h2>Schritt 1 - Klon durchführen</h2>
+<h2>Schritt 1 - Klon durchführen <!-- UEB/Klonen von Repositorys/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-klonen`.
 
 Erstelle einen Klon von `myfirstrepo` mit dem Namen `myfirstclone`.
 
-<!--UEB-Klonen von Repositorys--><h2>Schritt 2 - Klon untersuchen</h2>
+<h2>Schritt 2 - Klon untersuchen <!-- UEB/Klonen von Repositorys/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-klonen`.
 
@@ -43,7 +43,7 @@ zeige den Origin des Klons `myfirstclone`.
 von dem geklont wurde.
 Zeige dann den Status.
 
-<!--UEB-Klonen von Repositorys--><h2>Schritt 3 - Im Klon arbeiten</h2>
+<h2>Schritt 3 - Im Klon arbeiten <!-- UEB/Klonen von Repositorys/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-klonen`.
 

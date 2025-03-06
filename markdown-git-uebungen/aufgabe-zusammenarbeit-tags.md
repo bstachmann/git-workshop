@@ -31,13 +31,13 @@ nav_order: 10
 ## Setup
                   
 
-<!--UEB-Tags--><h2>Schritt 0 - START</h2>
+<h2>Schritt 0 - START <!-- UEB/Tags/0 --></h2>
 
 
 <pre><code>$ <b>cd mein-klon</b><br><br><br></code></pre>
 
 
-<!--UEB-Tags--><h2>Schritt 1 - Tags erstellen</h2>
+<h2>Schritt 1 - Tags erstellen <!-- UEB/Tags/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
@@ -45,13 +45,13 @@ Erstelle ein einfaches Tag `simple1` auf `HEAD` und
 ein annotated Tag `annotated1` auf `HEAD~1`.
 Sieh zuerst das Log und dann beide Tags einzeln an (`git show an`).
 
-<!--UEB-Tags--><h2>Schritt 2 - Tags holen</h2>
+<h2>Schritt 2 - Tags holen <!-- UEB/Tags/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
 Einfach per pull.
 
-<!--UEB-Tags--><h2>Schritt 3 - Tags pushen</h2>
+<h2>Schritt 3 - Tags pushen <!-- UEB/Tags/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
@@ -59,7 +59,7 @@ Beim einfachen `git push` werden keine Tags übertragen.
 Übertrage zunächste gezielt das Tag `simple1` mit einem Push
 und danach alle weiteren Tags mit einem weiteren Push
 
-<!--UEB-Tags--><h2>Schritt 4 - Manipulieren</h2>
+<h2>Schritt 4 - Manipulieren <!-- UEB/Tags/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 

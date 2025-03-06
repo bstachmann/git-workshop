@@ -23,6 +23,8 @@ import java.io.File
 import java.io.StringWriter
 import java.io.PrintWriter
 import java.net.URL
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.math.*
 import kotlinx.html.*
@@ -106,7 +108,7 @@ val ApplicationCall.userId : String get() =
 
 fun Route.aufgabenFilesLocalJekyll() {
     get("/git-workshop/markdown-git-uebungen/{path...}") {
-        println("Aufgabe request ${call.parameters.getAll("path")}")
+        // println("Aufgabe request ${call.parameters.getAll("path")}")
         val previous = call.sessions.get<UserSession>() 
         val session = 
             if( previous != null && state.participants.containsKey(previous.userId))
@@ -117,7 +119,7 @@ fun Route.aufgabenFilesLocalJekyll() {
                 .let { UserSession(it) }
                 .also { 
                     call.sessions.set(it)
-                    println("Starting new session with userId $it")
+                    // println("Starting new session with userId $it")
                     update(state.copy(
                         participants = state.participants + (it.userId to it.userId),
                         adminId = state.adminId ?: it.userId
@@ -144,7 +146,7 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
         } else {
             val sidParam = call.parameters["sid"]
-            println("userId=$userId, sid=$sidParam")
+            // println("userId=$userId, sid='$sidParam'")
             if (sidParam != null) {
                 val completed = call.parameters["completed"].toBoolean()
                 val previousAchievements: Set<String> = state.achievements[sidParam] ?: emptySet()
@@ -153,15 +155,16 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
 
             val response = this.getStaticContent("markdown-git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
+            // Schritt 1 - Navigation in Übungsverzeichnisse <!-- UEB/Das `git`-Kommando!/1 --> </h2> 
             val processedContent = response.bodyAsText().replace(
-                """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\> (.+?)\ <\/h2\>""".toRegex(), 
+                """\<\!\-\- UEB\/(.+?)\/(.+?) \-\-\>""".toRegex(), 
                 { step -> 
-                    val aufgabname = step.groups[1]?.value
-                    val schrittname = step.groups[2]?.value
-                    val schrittSid = abs((aufgabname to schrittname).hashCode()).toString()    
-                    val isCompleted = state.achievements[schrittSid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
-                    
-                    """<h2>$schrittname <a href="?sid=$schrittSid&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
+                    val aufgabname = step.groups[1]?.value ?: "unknown"
+                    val schrittnummer = step.groups[2]?.value ?: "missing"
+                    val sid = "${aufgabname}/${schrittnummer}"
+                    val isCompleted = state.achievements[sid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
+                    // println("INSERT '${aufgabname}' num='${schrittnummer}' sid=${sid}")
+                    """<a href="?sid=${URLEncoder.encode(sid, StandardCharsets.UTF_8.toString())}&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
                 }
             )
             call.respondText(processedContent, status = response.status, contentType = response.contentType())
@@ -180,7 +183,7 @@ fun Route.workshopSiteFromLocalJekyll() {
 
 suspend fun PipelineContext<Unit, ApplicationCall>.getStaticContent(path: String) : HttpResponse =
     "http://localhost:4000/git-workshop/${path}"
-        .also { println("Requesting: $it") } 
+        // .also { println("Requesting: $it") } 
         .let { url ->   HttpClient().use {  c -> c.request(url) {} } }
 
 
@@ -211,10 +214,9 @@ suspend fun ApplicationCall.progressDashboardResponse()  {
             h2 { text("Aktuelle Aufgabe") }
             val totalNum = state.participants.size
             state.aktuelleAufgabe.also { (aufgabe, schritte) ->
-                schritte.forEach { schritt ->
-                    val sid =
-                            abs((state.aktuelleAufgabe.first to schritt).hashCode())
-                                    .toString()
+                schritte.forEachIndexed { schrittnummer, schritt ->
+                    val sid = "${state.aktuelleAufgabe.first}/${schrittnummer}"
+                    //  println("REPORTING '${state.aktuelleAufgabe.first}' num='${schrittnummer}' sid=${sid}")
                     p { +"$aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }} sid=$sid" }
                 }
             }
