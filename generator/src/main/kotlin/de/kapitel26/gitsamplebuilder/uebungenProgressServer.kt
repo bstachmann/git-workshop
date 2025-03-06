@@ -153,14 +153,15 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
 
             val response = this.getStaticContent("markdown-git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
+            // <!--UEB-Das `git`-Kommando!--> <h2>Schritt 3 - Hilfe</h2> <p>Starte im Verzeichnis <code class="langua
             val processedContent = response.bodyAsText().replace(
-                """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\> (.+?)\ <\/h2\>""".toRegex(), 
+                """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\>(.+?)<\/h2\>""".toRegex(), 
                 { step -> 
                     val aufgabname = step.groups[1]?.value
                     val schrittname = step.groups[2]?.value
                     val schrittSid = abs((aufgabname to schrittname).hashCode()).toString()    
                     val isCompleted = state.achievements[schrittSid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
-                    
+                    print("schrittname '$schrittname'")
                     """<h2>$schrittname <a href="?sid=$schrittSid&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
                 }
             )
