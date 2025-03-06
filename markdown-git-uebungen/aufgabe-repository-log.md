@@ -36,13 +36,13 @@ Im Verzeichnis `repo` wartet ein Git-Projekt darauf,
 untersucht zu werden. 
 
 
-<!--UEB-Repository - Log--><h2>Schritt 0 - START</h2>
+<h2>Schritt 0 - START <!-- UEB/Repository - Log/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<!--UEB-Repository - Log--><h2>Schritt 1 - Verzeichnisstruktur</h2>
+<h2>Schritt 1 - Verzeichnisstruktur <!-- UEB/Repository - Log/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 
@@ -50,28 +50,28 @@ Untersuche das Projektverzeichnis.
 Welche Dateien gibt es im Workspace? Welche Verzeichnisse?
 Wo liegt das Repository?
 
-<!--UEB-Repository - Log--><h2>Schritt 2 - Commits ansehen</h2>
+<h2>Schritt 2 - Commits ansehen <!-- UEB/Repository - Log/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 
 Sieh Dir die Commits. 
 Achte dabei auf die angezeigten Branches und Tags.
 
-<!--UEB-Repository - Log--><h2>Schritt 3 - Head-Commit untersuchen</h2>
+<h2>Schritt 3 - Head-Commit untersuchen <!-- UEB/Repository - Log/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 
 Zeige Details zur aktuellen Version,
 die im Workspace ausgecheckt ist.
 
-<!--UEB-Repository - Log--><h2>Schritt 4 - Vergangene Commits untersuchen</h2>
+<h2>Schritt 4 - Vergangene Commits untersuchen <!-- UEB/Repository - Log/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 
 Zeige Details zum Release1.0,
 und dann zur Vorgängerversion des Releases 1.0
 
-<!--UEB-Repository - Log--><h2>Schritt 5 - ⭐ Inhalte vergangener Versionen untersuchen</h2>
+<h2>Schritt 5 - ⭐ Inhalte vergangener Versionen untersuchen <!-- UEB/Repository - Log/5 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 
@@ -80,7 +80,7 @@ es im vorigen Commit gab.
 
 Gebe den Inhalt der Datei `bar` so aus,  wie er im vorigen Commit war.
 
-<!--UEB-Repository - Log--><h2>Schritt 6 - ⭐ Commits ansehen: Datei-Statistik</h2>
+<h2>Schritt 6 - ⭐ Commits ansehen: Datei-Statistik <!-- UEB/Repository - Log/6 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 
@@ -88,7 +88,7 @@ Sieh Dir die Commits an.
 Lase dir dabei die Statistik anzeigen, 
 d.h. wie viele Zeilen in welcher Datei geändert wurden.
 
-<!--UEB-Repository - Log--><h2>Schritt 7 - ⭐ Herkunft von Zeilen ermitteln</h2>
+<h2>Schritt 7 - ⭐ Herkunft von Zeilen ermitteln <!-- UEB/Repository - Log/7 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-log/repo`.
 

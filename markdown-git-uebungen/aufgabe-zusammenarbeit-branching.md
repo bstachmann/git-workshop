@@ -27,13 +27,13 @@ nav_order: 8
 ## Ausgangssituation
 
 
-<!--UEB-Branching--><h2>Schritt 0 - START</h2>
+<h2>Schritt 0 - START <!-- UEB/Branching/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<!--UEB-Branching--><h2>Schritt 1 - Branch erstellen</h2>
+<h2>Schritt 1 - Branch erstellen <!-- UEB/Branching/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-branching/repo`.
 
@@ -42,7 +42,7 @@ und erstelle ein Commit.
 Wechsle dann zurück auf den `main` und bearbeite dort `bar`.
 Zeige den Commit-Graphen.
 
-<!--UEB-Branching--><h2>Schritt 2 - Branch mergen</h2>
+<h2>Schritt 2 - Branch mergen <!-- UEB/Branching/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-branching/repo`.
 
