@@ -12,4 +12,14 @@ Ich fand das damals *nicht gut*, wusste aber noch nicht,
 dass dieserTag den Beginn einer langen Reise markieren würde.
 
 
+---
+
+# Git verstehen
+
+ * Git-Befehle zu benutzen ist **nicht schwer**.
+ * Zusammenarbeit im Team **ist schwer**.
+ * Git kann helfen, \
+   gut Workflows zu finden, \
+   wenn man die *Konzepte versteht*.
+
 
