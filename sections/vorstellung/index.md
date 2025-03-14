@@ -1,10 +1,6 @@
-### Vorstellung
 
- * **Name**
- * **Woran arbeite ich?**
- * **Als was?**   (Entwickler, Projektmanager, QA Engineer, ...)
- * **Womit?**  (Programmiersprache, Entwickungsumgebung, ...)
- * **Vorkenntnisse** (Subversion, Git, CVS, ..)
- * **Kommandozeile**
+## Vorstellungsrunde
 
-Gerne **kurz fassen**, denn wir wollen gleich mit **Git** loslegen ...
+
+![Vorstellungsrunde](intro.excalidraw.png)
+
