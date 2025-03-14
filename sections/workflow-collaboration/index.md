@@ -47,29 +47,6 @@
  * oft mit *Feature-Toggling*
 
 
----
-
-
-## Feature branching
-
-![Feature Branches](abb-feature-branches.png)
-
-Notes:
-
-Das elementarste Pattern
-
-Wichtig: Verknüpfung mit Issue-Tracker
-
----
-
-### Feature-Branch
-
- * Entkoppelte Entwicklung
-   - weniger Störungen
-   - Basis für Reviews
- * Lebenszyklus je Feature
-   - ermöglich unabhängige Releases
-   - Typisch: Verknüpfung mit Issue-Tracker
 
 
 ---
