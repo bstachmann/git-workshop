@@ -21,9 +21,9 @@ Was die Kommandos genau tun, erfahren Sie im Verlauf des Seminars.
 * `git log` zeigt Commits an.
 
 
-<!--UEB-Hallo Git!--><h2>Schritt 0 - START</h2>
+<h2>Schritt 0 - START <!-- UEB/Hallo Git!/0 --></h2>
 
-<!--UEB-Hallo Git!--><h2>Schritt 1 - Das erste Repo</h2>
+<h2>Schritt 1 - Das erste Repo <!-- UEB/Hallo Git!/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-hallo-welt`.
 
@@ -36,7 +36,7 @@ Erstellen sie ihr erstes Repository mit den folgenden Befehlen:
     $ git commit -m 'Hallo Welt!'
     $ git log
 
-<!--UEB-Hallo Git!--><h2>Schritt 2 - ⭐ Und noch ein Commit</h2>
+<h2>Schritt 2 - ⭐ Und noch ein Commit <!-- UEB/Hallo Git!/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-hallo-welt`.
 
@@ -47,7 +47,7 @@ Schauen Sie dann das log an.
     $ git commit -am 'Es geht weiter!'
     $ git log
 
-<!--UEB-Hallo Git!--><h2>Schritt 3 - ⭐ Wo liegt das Repository</h2>
+<h2>Schritt 3 - ⭐ Wo liegt das Repository <!-- UEB/Hallo Git!/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-hallo-welt`.
 

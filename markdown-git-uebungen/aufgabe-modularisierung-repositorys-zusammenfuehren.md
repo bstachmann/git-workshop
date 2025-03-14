@@ -33,9 +33,9 @@ Zwei Repositorys
 sind bereits vorhanden.
 
 
-<!--UEB-Kleine Projekte zusammenfuehren--><h2>Schritt 0 - START</h2>
+<h2>Schritt 0 - START <!-- UEB/Kleine Projekte zusammenfuehren/0 --></h2>
 
-<!--UEB-Kleine Projekte zusammenfuehren--><h2>Schritt 1 - Zusammenführen `git subtree`</h2>
+<h2>Schritt 1 - Zusammenführen `git subtree` <!-- UEB/Kleine Projekte zusammenfuehren/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-repositorys-zusammenfuehren`.
 
@@ -45,7 +45,7 @@ Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-repositorys-zusamme
 3. Füge `ui.git` in einem Unterverzeichnis `ui` hinzu.
 4. Untersuche Verzeichnissstruktur und Commit-Graphen
 
-<!--UEB-Kleine Projekte zusammenfuehren--><h2>Schritt 2 - Zusammenführen mit `fetch`, `mv` und `merge`</h2>
+<h2>Schritt 2 - Zusammenführen mit `fetch`, `mv` und `merge` <!-- UEB/Kleine Projekte zusammenfuehren/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-repositorys-zusammenfuehren`.
 
