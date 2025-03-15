@@ -1,4 +1,5 @@
 # To Do
+ * Delivery: Tipp: Always provide the revision the product was built from
  * Headerslide f. workflows nach unten gerutscht
  * in Branching übung: git switch -c feature HEAd
    - head weglassen
