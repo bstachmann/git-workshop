@@ -1,7 +1,6 @@
-
 ---
 
-### Klone und Remotes
+### Clones and Remotes
 
-## Authentifizierung
+## Authentication
 

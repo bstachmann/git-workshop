@@ -1,16 +1,14 @@
-# Branches und Tags
-
+# Branches and Tags
 
 ---
 
+## Learning Objectives
 
-## Lernziele
+How can branches be used to organize parallel development streams in Git?
 
-Wie kann man mit Branches parallele Entwicklungsstränge in Git organisieren?
-
-* Branches zeigen auf Commits
-* Wechseln zwischen Branches
-* Merge (einfache Fälle)
+* Branches point to commits
+* Switching between branches
+* Merge (simple cases)
 * Workflow: Feature Branching
-* Versionen mit Tags markieren
+* Mark versions with tags
 

@@ -1,8 +1,6 @@
-
 ---
 
-
-### Branches und Tags
+### Branches and Tags
 
 ## Tags
 

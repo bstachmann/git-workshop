@@ -1,6 +1,5 @@
-
 ---
 
 ### Commits
 
-## Anatomie eines Commits
+## Anatomy of a Commit

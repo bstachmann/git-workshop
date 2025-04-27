@@ -1,12 +1,10 @@
 # Branches
 
-# fortgeschritten
-
+# Advanced
 
 ---
 
-
-## Lernziele
+## Learning Objectives
 
 
 

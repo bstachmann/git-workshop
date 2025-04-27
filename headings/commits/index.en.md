@@ -2,12 +2,12 @@
 
 ---
 
-## Lernziel
+## Learning Objective
 
-Wie versioniert man Software in einem Git-Repository?
+How to version software in a Git repository?
 
- * Commits erstellen
- * Anatomie eines Commits
+ * Creating commits
+ * Anatomy of a commit
  * Staging
- * **Oops!** Falsch committed, was nun?
+ * **Oops!** Committed something wrong, what now?
 
