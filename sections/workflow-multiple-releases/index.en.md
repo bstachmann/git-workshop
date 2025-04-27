@@ -2,7 +2,7 @@
 
 ## Multiple Releases
 
-Mehrere Release-Lines pflegen.
+Maintain multiple release lines.
 
 ---
 
@@ -10,7 +10,7 @@ Mehrere Release-Lines pflegen.
 
 ---
 
-Multiple Releases mit Patterns
+Multiple Releases with Patterns
 ------------------------------
 
 ![Multiple](abb-release-produkte-patterns.png)

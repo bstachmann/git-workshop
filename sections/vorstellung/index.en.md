@@ -1,6 +1,5 @@
+## Introduction Round
 
-## Vorstellungsrunde
 
-
-![Vorstellungsrunde](intro.excalidraw.png)
+![Introduction Round](intro.excalidraw.png)
 

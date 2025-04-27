@@ -1,11 +1,11 @@
 ### Merge vs. Rebase vs. Squash
 
  * **Merge** \
-   Die Änderungen werden als Merge-Commit zusammengeführt
+   Changes are combined as a merge commit.
  * **Rebase** \
-   Die Änderungen werden als Folge von Commits Commits kopiert
+   Changes are copied as a sequence of commits.
  * **Squash-Merge** \
-   Die Änderungen werden in einem Commit *"zusammengedampft"*
+   Changes are "compressed" into a single commit.
 
 
 ---
@@ -13,10 +13,10 @@
 
 | Tradeoff |  Merge  |  Rebase |  Squash |
 |--|---------|---------|---------|
-| Für Einsteiger | + | - | - |
-| Duplikatprobleme<br/>vermeiden | + | - | - |
-| Lineare Historie | - | + | + |
+| For Beginners | + | - | - |
+| Avoid Duplicate Issues | + | - | - |
+| Linear History | - | + | + |
 | Continuous<br/>Integration | - | + | + |
 | Rename Detection | + | + | - |
-| Nachvollziehbarkeit | + | - | - |
+| Traceability | + | - | - |
 

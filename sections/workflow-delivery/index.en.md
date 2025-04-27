@@ -1,45 +1,45 @@
-## Tags markieren ausgelieferte Versionen
+## Tags Mark Delivered Versions
 
 ![Tags](release-tags.png)
 
- * *Annotated Tag* (mit Metadaten)
- * Tag wird an ein Commit geheftet
- * Nur das Commit-Hash identifiziert den Softwarestand eindeutig
- * Oft: [Semantic Versioning](https://semver.org/)
- * GitHub, GitLab, Azure Devops & Co. ermöglichen zusätzliche Beschreibung
+ * *Annotated Tag* (with metadata)
+ * Tag is attached to a commit
+ * Only the commit hash uniquely identifies the software state
+ * Often: [Semantic Versioning](https://semver.org/)
+ * GitHub, GitLab, Azure DevOps & Co. allow additional descriptions
 
 
 ---
 
 
-### Qualitätssicherung vor dem Release
+### Quality Assurance Before Release
 
- * Pull-Requests auf `main` mit automatischen Tests \
-   und obligatorischem Review
- * Automatische Tests bei jedem Commit \
-   + Pair-Programming
- * Manuelle Tests + Reviews vor dem setzen des Tags 
-   (erfordert meist Freeze-Phase)
- * Staging-Branches
-   (separieren die Freeze-Phase)
-
-
----
-
-## Staging-Branches
-
-![Staging-Branches](abb-staging-branches.png)
+ * Pull requests on `main` with automated tests \
+   and mandatory review
+ * Automated tests for every commit \
+   + Pair programming
+ * Manual tests + reviews before setting the tag 
+   (usually requires a freeze phase)
+ * Staging branches
+   (separate the freeze phase)
 
 
 ---
 
+## Staging Branches
 
-## Staging-Branches
+![Staging Branches](abb-staging-branches.png)
 
-Repräsentiere Qualitätsniveaus, z. B.
 
- * `develop`: Build-fähig, darf unfertige Features zeigen.
- * `release`: Fertige Features, noch nicht abgenommen
- * `main`: Abgenommene Version für Kunden
+---
+
+
+## Staging Branches
+
+Represent quality levels, e.g.,
+
+ * `develop`: Buildable, may show unfinished features.
+ * `release`: Finished features, not yet approved
+ * `main`: Approved version for customers
 
 

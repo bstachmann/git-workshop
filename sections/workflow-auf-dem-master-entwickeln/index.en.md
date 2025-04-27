@@ -1,7 +1,7 @@
 # Workflow
-## Auf dem `master` entwickeln
+## Developing on `master`
 
-Mehrere Entwickler bearbeiten gemeinsam einen `master`-Branch.
+Multiple developers work together on a `master` branch.
 
 <!-- .slide: data-background-image="sections/workflow-auf-dem-master-entwickeln/trunk-based.png" data-background-opacity="0.4" -->
 
@@ -13,12 +13,12 @@ Mehrere Entwickler bearbeiten gemeinsam einen `master`-Branch.
 ```bash
     git pull some-repo some-branch
 
-    # Ohne Parameter: Integration mit dem upstream-Branch, z. B. origin/master
+    # Without parameters: Integration with the upstream branch, e.g., origin/master
     git pull
 ```
 
 
-Was wurde reingemerged?
+What was merged in?
 
     log HEAD^2..HEAD
     diff HEAD^2...HEAD
@@ -26,15 +26,15 @@ Was wurde reingemerged?
 
 ---
 
-### Ablauf
+### Process
 
-1. Änderungen Abholen
+1. Fetch changes
         git pull
-1. ggf. Mergekonflikte lösen
-1. Entwickeln
-1. Änderungen senden
+1. Resolve merge conflicts if necessary
+1. Develop
+1. Send changes
        git push
-1. Zurück zu Schritt 1.
+1. Return to step 1.
 
 
 ---
@@ -44,5 +44,5 @@ Was wurde reingemerged?
 
 ![Gitflow trunk](abb-branching-strategie-trunk.png)
 
-* Stabiler Master-Branch. Häufige Releases.
+* Stable master branch. Frequent releases.
 

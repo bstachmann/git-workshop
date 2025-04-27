@@ -1,4 +1,4 @@
-## Auf einem Branch<br/>gemeinsam entwickeln
+## Collaborating on a Branch
 
 <!-- .slide: data-background-image="sections/workflow-collaboration/trunk-based.png" data-background-opacity="0.4" -->
 
@@ -6,45 +6,45 @@
 ---
 
 
-## Kollaborations-Branch
+## Collaboration Branch
 
 
-![Rebase auf Feature-Branch](abb-rebase-auf-feature-branch.png)
+![Rebase on Feature Branch](abb-rebase-auf-feature-branch.png)
 
 
 ---
 
 
-## Kollaborations-Branch
+## Collaboration Branch
 
-### Auf einem Branch zusammenarbeiten
+### Working Together on a Branch
 
- * Mehrere Entwickler, 1 Branch
+ * Multiple developers, 1 branch
  * Push & Pull 
- * Tipp: `pull --rebase` schafft *lineare Historie*.
+ * Tip: `pull --rebase` creates a *linear history*.
 
 
 ---
 
-### Ablauf
+### Process
 
-1. Änderungen Abholen
+1. Fetch changes
         git pull
-1. ggf. Mergekonflikte lösen
-1. Entwickeln
-1. Änderungen senden
+1. Resolve merge conflicts if necessary
+1. Develop
+1. Send changes
        git push
-1. Zurück zu Schritt 1.
+1. Return to step 1.
 
 
 ---
 
 
-[Trunk based development](https://trunkbaseddevelopment.com/)
+[Trunk-based development](https://trunkbaseddevelopment.com/)
 
- * Stabiler Master-Branch
- * Häufige Releases
- * oft mit *Feature-Toggling*
+ * Stable master branch
+ * Frequent releases
+ * Often with *Feature Toggling*
 
 
 

@@ -1,7 +1,6 @@
-
 ---
 
-## Feature-Branching
+## Feature Branching
 
 ### (Workflow)
 
@@ -11,47 +10,47 @@
 ---
 
 
-![Feature-Branching](feature-branch.png)
+![Feature Branching](feature-branch.png)
 
 
 ---
 
 ## Feature Branching
 
- 1. 1 Branch pro Feature
- 2. Entwickle unabhängig
- 3. Integriere, wenn fertig
+ 1. 1 branch per feature
+ 2. Develop independently
+ 3. Integrate when done
 
 
 ---
 
-![Integrations- und Update-Merges](workflow-feature-branching.png)
+![Integration and Update Merges](workflow-feature-branching.png)
 
 ---
 
- * Integrations-Merges
-   - Auf den Hauptbranch, wennn fertig. 
-   - Branch kann gelöscht werden
+ * Integration Merges
+   - To the main branch when done. 
+   - Branch can be deleted
 
- * Update-Merges
-   - Im Feature-Branch, wenn Änderungen auf dem Hauptbranch
+ * Update Merges
+   - In the feature branch when changes are on the main branch
 
- * Vorabintegration
-   - Zwischenergebnisse auf den Hauptbranch
-   - Achtung: Unfertiges deaktivieren oder *feature-togglen*
+ * Pre-integration
+   - Intermediate results to the main branch
+   - Note: Disable unfinished work or use *feature toggling*
 
 
 ---
 
 
-### Achtung Fallstrick!
+### Beware of Pitfalls!
 
-Merges zwischen Features-Branches können problematisch werden:
+Merges between feature branches can become problematic:
 
- * Ein Feature kann nicht mehr ohne das andere ausgeliefert werden
- * Merge-Konflikte komplexer (ggf. drei Parteien beteiligt, Trennung zwischen *theirs* und *ours* verwässert)
+ * One feature can no longer be delivered without the other
+ * Merge conflicts become more complex (possibly involving three parties, distinction between *theirs* and *ours* becomes blurred)
 
-Tipp: Vorabintegrationen sind oft klarer und einfacher zu handhaben.
+Tip: Pre-integrations are often clearer and easier to handle.
 
 
 ---
@@ -59,12 +58,12 @@ Tipp: Vorabintegrationen sind oft klarer und einfacher zu handhaben.
 
 ## Feature Branching
 
- * Entkoppelte Entwicklung
-   - weniger Störungen
-   - Basis für Reviews
- * Lebenszyklus je Feature
-   - ermöglich unabhängige Releases
-   - Typisch: Verknüpfung mit Issue-Tracker
+ * Decoupled development
+   - Fewer disruptions
+   - Basis for reviews
+ * Lifecycle per feature
+   - Enables independent releases
+   - Typically linked to an issue tracker
 
 
 

@@ -1,36 +1,34 @@
+# Oops, a Bug!
 
 
-# Ups, ein Bug!
-
-
-## Was tun?
+## What to Do?
 
 ---
 
 
-Typisch: **Bugfix-Branch**
+Typical: **Bugfix Branch**
 
 ![Bugfix Branch](bugfix-branch.png)
 
- 1. Zur fehlerhaften Version:`git switch <tag>`
- 1. Branch erstellen: `git switch -c <bug-id>`
- 1. Bug fixen, testen reviewen.
- 1. Merge auf Hauptbranch
- 1. Neues Tag: `git tag -a <new-version>`
+ 1. Switch to the faulty version: `git switch <tag>`
+ 1. Create a branch: `git switch -c <bug-id>`
+ 1. Fix the bug, test, review.
+ 1. Merge to the main branch
+ 1. Create a new tag: `git tag -a <new-version>`
 
 
 ---
 
 
-### Git ermöglicht Merge-Ketten
+### Git Enables Merge Chains
 
-![Merge-Ketten](abb-merge-ketten.png)
+![Merge Chains](abb-merge-ketten.png)
 
-Merge-Ketten gehen von älteren (upstream) Branches zu neueren Branches.
+Merge chains go from older (upstream) branches to newer branches.
 
-Durch Merges werden alle Änderungen von einem Branch zum nächsten übertragen.
+Through merges, all changes are transferred from one branch to the next.
 
-#### Preisfrage: Warum geht das nicht andersherum?
+#### Question: Why doesn't it work the other way around?
 
 
 ---
@@ -38,26 +36,26 @@ Durch Merges werden alle Änderungen von einem Branch zum nächsten übertragen.
 
 ## Backporting
 
-In die andere Richtung,
-will man nicht alle Änderungen mitnehmen.
+In the other direction,
+not all changes are to be taken.
 
-Selektive Übernahme einzelner Änderungen mit `git cherry-pick`.
+Selective adoption of individual changes with `git cherry-pick`.
 
-Entkoppelt Releases.
+Decouples releases.
 
-Management erforderlich: Was wurde wo angewandt?
+Management required: What was applied where?
 
 
 ---
 
 
-## Variante: Forward Fixing
+## Variant: Forward Fixing
 
- 1. Fix auf dem Hauptbranch, z.B. `main`
- 1. Dann erneutes Release
+ 1. Fix on the main branch, e.g., `main`
+ 1. Then release again
 
-Oft im Zusammenhang mit *Continuous Delivery*-Workflows
+Often in connection with *Continuous Delivery* workflows
 
- * Vorteil: Nur ein Release-Flow, keine Ausnahmen
- * Nachteil: Alle aktuellen Änderungen werden mit ausgeliefert
+ * Advantage: Only one release flow, no exceptions
+ * Disadvantage: All current changes are delivered
 
