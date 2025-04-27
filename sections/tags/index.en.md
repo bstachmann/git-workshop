@@ -1,39 +1,39 @@
 ## Tags
 
-Tag sind Namen für Commits, wie zum Beispiel
+Tags are names for commits, such as:
 
- * `v1.3.2` als Releaseanme (Semantic Versioning)
- * `tested-2023-10-30-20-12-16` zur Markierung getesteter Versionen
- * `good`, `bad` als temporäre Markierungen zum Debuggen
+ * `v1.3.2` as a release name (Semantic Versioning)
+ * `tested-2023-10-30-20-12-16` to mark tested versions
+ * `good`, `bad` as temporary markers for debugging
 
 ---
 
 ## `git tag`
 
-**Light weight tags** sind einfach Namen für Commits.
+**Lightweight tags** are simply names for commits.
 
 ```bash
     git tag v.1.0
     git tag b7ee6339d12 v0.7
 ```
 
-**Annotated Tags** enthalten zusätzliche Metadaten (Tagger, Datum, Beschreibung und ggf. PGP-Signatur)
+**Annotated Tags** contain additional metadata (tagger, date, description, and optionally PGP signature)
 
 ```bash
-    git tag v.1.1 --annotate -m "Beschreibung"
+    git tag v.1.1 --annotate -m "Description"
     git tag v1.2 --annotate --sign
 ```
 
-**Empfehlung**: Nutze *annotated Tags* für Releases, *light weight Tags* für lokale temporäre Tags, z.B. zum Enwickeln oder Debuggen.
+**Recommendation**: Use *annotated tags* for releases, *lightweight tags* for local temporary tags, e.g., for development or debugging.
 
 ---
 
-## Fallstrick: Tags (besser nicht) ändern
+## Pitfall: Do Not Modify Tags
 
-*Tags* sind sind Git als *feststehende* Namen für Commits konzipiert.
+*Tags* are designed in Git as *fixed* names for commits.
 
-*Veränderliche* Namen für Commits nennt man in Git *Branches*
+*Mutable* names for commits are called *branches* in Git.
 
-Git-Befehle (`tag`, `push`, `pull`) warnen bevor tags überschrieben werden.
-Man dies mit der Option `-f` übergehen (wenn man weiß, was man tut)
+Git commands (`tag`, `push`, `pull`) warn before overwriting tags.
+You can override this with the `-f` option (if you know what you're doing).
 

@@ -1,14 +1,14 @@
-Web-Hoster speichern Repositorys in der Cloud, und bieten oft umfangreiches Tooling für Git
+Web hosts store repositories in the cloud and often offer extensive tooling for Git:
 
  * GitHub
  * GitLab
  * BitBucket
  * Azure DevOps
 
-Anmerkung: Einige davon können auch im eigenen Data-Center (*on-prem*) betrieben werden.
+Note: Some of these can also be operated in your own data center (*on-prem*).
 
 
 ---
 
 
-## Demo: Web-Hoster
+## Demo: Web Hosts

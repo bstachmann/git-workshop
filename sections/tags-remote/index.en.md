@@ -1,26 +1,26 @@
-## Tags pushen
+## Pushing Tags
 
-Tags werden beim Push nicht automatisch übertragen.
-Sie müssen explizit veröffentlicht werden.
+Tags are not automatically transferred during a push.
+They must be explicitly published.
 
 ```bash
-    git push orgin v1.0
+    git push origin v1.0
     git push --tags
 ```
 
-## Tags pullen
+## Pulling Tags
 
-Beim Pull werden nur die Tags zu den Commits die übertragen werden geholt.
-Möchte man alle Tags holen muss man `--tags` angeben.
+When pulling, only the tags for the commits being transferred are fetched.
+To fetch all tags, you must specify `--tags`.
 
 ---
 
-## Tags nicht verändern
+## Do Not Modify Tags
 
-**Empfehlung**: Tags, die man mit anderen geteilt hat, nicht mehr verändern.
-Für Markierungen die aktualisiert werden sollen entweder einfach Branches nutze (`latest-success`)
-oder Tagnamen mit Timestamp versehen (`success-20231030203501`). 
-`describe` kann das jeweils letzte Tag ermitteln:
+**Recommendation**: Do not modify tags that have been shared with others.
+For markers that need to be updated, either use branches (`latest-success`)
+or tag names with timestamps (`success-20231030203501`).
+`describe` can determine the latest tag:
 
 ```bash
     git describe --tags --match="success-*"

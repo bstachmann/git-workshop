@@ -1,4 +1,4 @@
-# Zusammenarbeit
+# Collaboration
 
 
 ---
@@ -14,12 +14,12 @@
 ### Feature vs. Trunk
 
  * **Feature Branching** \
-   Features werden auf Branches separat entwickelt und
-   erst bei Fertigstellung integriert
- * **Trunk Based Development** \
-   Es wird auf einem Branch entwickelt. 
-   Änderungen werden unmittelbar integriert.
-   Oft werden Feautues 
+   Features are developed separately on branches and
+   integrated only upon completion.
+ * **Trunk-Based Development** \
+   Development occurs on a single branch.
+   Changes are integrated immediately.
+   Often, features are...
 
 
 ---
@@ -34,11 +34,11 @@
 
 | Tradeoff |  Feature<br/>Branching | Trunk-based<br/>Development |
 |--|---------|---------|
-| Für Einsteiger | ++ | + |
-| Ungestörtes Arbeiten | + | + |
-| Stabile Basis | + | + |
+| For Beginners | ++ | + |
+| Uninterrupted Work | + | + |
+| Stable Base | + | + |
 | Refactoring | - | ++ |
-| Sprechende Historie | ++ | o |
+| Clear History | ++ | o |
 
 
 ---
@@ -46,8 +46,8 @@
 
 | Tradeoff |  Feature<br/>Branching | Trunk-based<br/>Development |
 |--|---------|---------|
-| Truck-Factor | o | + |
-| Bug-Fixing | + | + |
-| Feature-Picking | x | x |
-| Große Organisationen<br/>Open Source | ++ | + |
+| Truck Factor | o | + |
+| Bug Fixing | + | + |
+| Feature Picking | x | x |
+| Large Organizations<br/>Open Source | ++ | + |
 

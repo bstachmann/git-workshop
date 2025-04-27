@@ -1,12 +1,12 @@
-Viele UIs vereinfachen das Arbeiten mit Git:
+Many UIs simplify working with Git:
 
- * Stand alone
+ * Standalone
    - built-in: `gitk`, `git gui`
    - SourceTree, GitKraken, TortoiseGit, SmartGit, ...
- * in Entwicklungsumgebungen
-   - IntelliJ, 
-   - VScode (GitLens)
-   - eclipse
+ * In development environments
+   - IntelliJ
+   - VSCode (GitLens)
+   - Eclipse
 
 
 ---

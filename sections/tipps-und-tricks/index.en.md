@@ -1,24 +1,24 @@
-# Tipps & Tricks
+# Tips & Tricks
 
 
 ---
 
 
-## Lernziele
+## Learning Goals
 
 ```
     add / reset
 ```
 
- * Mit `.gitignore` Dateien ausblendeb
- * Staging bzw. "der Index"
- * Trouble Shooting.
-   Verschiedene Szenarien.
+ * Use `.gitignore` to exclude files
+ * Staging or "the index"
+ * Troubleshooting.
+   Various scenarios.
 
 
 ---
 
-## Dateien unversioniert lassen
+## Keep Files Untracked
    - `.gitignore` 21
 
 
@@ -28,27 +28,26 @@
 
    - `diff --staged`
    - `reset`
-   - Selektives Staging (Hunks)
+   - Selective Staging (Hunks)
 
 ---
 
-## Commits nachträglich reparieren
+## Fix Commits Retroactively
 
 ```bash
-# Commit-Kommentar ändern
+# Change commit message
 git commit --amend
 
-# Vergessene Datei hinzufühgen
-git add vergessen
-git commit --amend
+# Add forgotten file
+git add forgotten
 
-# Das Commit noch mal versuchen
+# Retry the commit
 git reset HEAD~1
 ```
 
 ---
 
-## Sonstiges
+## Miscellaneous
 
    - `reset --hard HEAD`
    - `reflog` 27
