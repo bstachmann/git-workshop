@@ -1,31 +1,31 @@
-### Zugriff auf andere Repositories
+### Access to Other Repositories
 
-Für `clone`, `fetch`, `pull` und `push` wird Zugriff auf andere Repos benötigt.
-Drei Arten des Zugangs sind üblich:
+For `clone`, `fetch`, `pull`, and `push`, access to other repositories is required.
+Three types of access are common:
 
-| Protokoll | Authentifizierung |
+| Protocol | Authentication |
 |-----------|-------------------|
-| `file:`   | Dateisystem, Berechtigung durch das Betriebssystem |
-| `ssh:`    | Secure Shell, Authentifizierung mit ssh-Zertifikaten, Netzwerkkommunikation verschlüsselt |
-| `https:`  | Secure Web, Authentifizierung per Passwort, Netzwerkkommunikation verschlüsselt |
+| `file:`   | Filesystem, permission through the operating system |
+| `ssh:`    | Secure Shell, authentication with ssh certificates, network communication encrypted |
+| `https:`  | Secure Web, authentication via password, network communication encrypted |
     
 
 ---
 
 
-### `ssh:` Caching von Zugangsdaten
+### `ssh:` Caching Credentials
 
-Auf Linux- und MacOs-Systemen werden private-Keys in der Regel durch den `ssh-agent` von  *OpenSSH* im Speicher gecached. Falls noch nicht aktiv kann ein Agent mit `eval $(ssh-agent)` gestartet werden.
+On Linux and MacOS systems, private keys are usually cached in memory by the `ssh-agent` of *OpenSSH*. If not already active, an agent can be started with `eval $(ssh-agent)`.
 
-Auf Windows-Systemen wird oft [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/) für den SSH-Zugang und zum Cachen private Keys genutzt.
+On Windows systems, [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/) is often used for SSH access and caching private keys.
 
 
 ---
 
 
-### `https:` Caching von Zugangsdaten
+### `https:` Caching Credentials
 
-Per Konfiguration kann Git [das Handling von Passwörten delegieren](https://git-scm.com/docs/gitcredentials), z B.
+Via configuration, Git can [delegate password handling](https://git-scm.com/docs/gitcredentials), e.g.,
 
 ```bash
 $ git config credential.helper 'cache'
@@ -33,7 +33,7 @@ $ git config credential.helper 'cache'
 
 ---
 
- * [`git-credential-store`](https://git-scm.com/docs/git-credential-store) speichert Passwörter unverschlüsselt auf Festplatte. Unsicher falls Volume nicht encrypteds.
- * [`git-credential-cache`](https://git-scm.com/docs/git-credential-cache) speichert Passwörter in Memory.
+ * [`git-credential-store`](https://git-scm.com/docs/git-credential-store) stores passwords unencrypted on disk. Insecure if the volume is not encrypted.
+ * [`git-credential-cache`](https://git-scm.com/docs/git-credential-cache) stores passwords in memory.
  * [`git-credential-manager`](https://github.com/GitCredentialManager/git-credential-manager)
-   - Für Windows: Kann im Standard-Installer von Git ausgewählt werden. 
+   - For Windows: Can be selected in the standard Git installer.

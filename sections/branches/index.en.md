@@ -1,10 +1,10 @@
-### Lernziel (Befehle)
+### Learning Objective (Commands)
 
 ```bash
-    # Branches erstellen
+    # Create branches
     git branch my-new-branch
 
-    # Branch wechseln
+    # Switch branches
     git switch old-branch
     git switch -c my-new-branch
 
@@ -13,55 +13,53 @@
 ---
 
 
-**Branches** ermöglichen es, in **einem Repo**,
+**Branches** allow you to maintain **parallel development lines**
 
-**parallele Entwicklungsstränge** zu pflegen,
+within **a single repository**,
 
-zwischen denen man frei
-
-**hin und her zu wechseln** kann.
+and freely **switch between them**.
 
 Notes:
 
-Genauer: nur einem Klon eines Repos.
+More precisely: only within a clone of a repository.
 
-Man auch mehrere Entwicklungsstränge öffnen,
-indem man in verschieden Verzeichnissen Klone anlegt.
-Dann liegt die Verwaltung der Stränge
-außerhalb von Git.
-Man muss sich merken, welcher Strang wo abgelegt ist.
-Bei Branches gibt man den Strängen Namen und kann sie,
-auflisten, vergleichen und administrieren.
-
-
----
-
-### Branches sind Zeiger auf Commits
-
-![Branch vor dem Commit](abb-branches-beispiel-vorher.png)
-
-#### Ein Branch ist aktiv (hier `release-1.0`)
-
----
-
-#### Neue Commits gehen auf den aktiven Branch
-
-![Branch nach dem Commit](abb-branches-beispiel-nachher.png)
+You can also open multiple development lines
+by creating clones in different directories.
+In this case, the management of the lines
+is outside of Git.
+You have to remember where each line is stored.
+With branches, you give the lines names and can
+list, compare, and manage them.
 
 
 ---
 
-### Branch anlegen
+### Branches are Pointers to Commits
+
+![Branch before the Commit](abb-branches-beispiel-vorher.png)
+
+#### One branch is active (here `release-1.0`)
+
+---
+
+#### New commits go to the active branch
+
+![Branch after the Commit](abb-branches-beispiel-nachher.png)
+
+
+---
+
+### Creating a Branch
 
 ```bash
-    # Ein Branch ist ein Zeiger auf ein Commit
+    # A branch is a pointer to a commit
     git branch new-branch2 38a8efc72
 
-    # Gibt man nichts an, wird HEAD genommen
+    # If nothing is specified, HEAD is taken
     git branch new-branch
 ```
 
-### Branches zeigen
+### Showing Branches
 
 ```bash
     git branch -vv
@@ -70,14 +68,14 @@ auflisten, vergleichen und administrieren.
 
 Notes:
 
-`-v`, `-vv` sorgen dafür, dass mehr Details ausgegeben werden.
+`-v`, `-vv` ensure that more details are displayed.
 
 
 ---
 
-## Branch wechseln
+## Switching Branches
 
-Jedes Repo hat einen **aktiven Branch**.
+Every repository has an **active branch**.
 
 ```
     git switch new-branch
@@ -87,7 +85,7 @@ Jedes Repo hat einen **aktiven Branch**.
     git switch -c new-branch
 ```
 
-Vearaltet, aber weiter nutzbar, `git checkout`
+Deprecated but still usable, `git checkout`
 
 ```
     git checkout -b new-branch
@@ -96,49 +94,49 @@ Vearaltet, aber weiter nutzbar, `git checkout`
 
 Notes:
 
-Bei Verwendung von Worktree, gibt es einen aktiven Branch je Worktree.
+When using worktrees, there is one active branch per worktree.
 
 ---
 
-## Eigenschaften von Branches
+## Properties of Branches
 
- * beweglicher Zeiger auf Commit.
- * (max.) ein Branch ist *aktiv*
-   - checkout wechselt den aktiven Bracnh
- * Beim Commit wird der aktive Branch weiter gesetzt.
- * Branches sind lokal
+ * Movable pointer to a commit.
+ * (At most) one branch is *active*
+   - checkout switches the active branch
+ * When committing, the active branch is advanced.
+ * Branches are local
 
 ---
 
-### `log` und `diff` beim Branching
+### `log` and `diff` in Branching
 
-Diese Befehle erlauben *asymmetrische* Vergleiche:
+These commands allow *asymmetric* comparisons:
 
-Was haben wir geändert? Was die Anderen?
+What have we changed? What have others changed?
 
 ```bash
-$ # Was haben DIE geändert? 
-$ git log <unser-branch>..<deren-branch>    
-$ git diff <unser-branch>...<deren-branch>    
+$ # What have THEY changed? 
+$ git log <our-branch>..<their-branch>    
+$ git diff <our-branch>...<their-branch>    
 
-$ # Was haben WIR geändert? 
-$ git log <deren-branch>..<unser-branch>    
-$ git diff <deren-branch>...<unser-branch>   
+$ # What have WE changed? 
+$ git log <their-branch>..<our-branch>    
+$ git diff <their-branch>...<our-branch>   
 ```
 
 ---
 
-### Befehl: `git merge`
+### Command: `git merge`
 
-Zusammenführen von Änderungen.
+Combine changes.
 
 ```bash
 $ git merge <other-branch>
 ```
 
-integriert die Änderungen von `other-branch` in den aktiven Branch und erstellt ein neues Commit dazu.
+integrates the changes from `other-branch` into the active branch and creates a new commit for it.
 
-*Anmerkung:* Zum Umgang mit Konflikten und Sonderfällen folgt später ein separates Kapiteil über *Merges*.
+*Note:* A separate chapter on *merges* will follow later, covering conflict handling and special cases.
 
 ---
 

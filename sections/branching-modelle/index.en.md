@@ -1,13 +1,13 @@
-## Werkzeugkasten
+## Toolbox
 
-### für Workflows
+### for Workflows
 
-| Werkzeuge             | Patterns              | Workflows             |
+| Tools                | Patterns              | Workflows             |
 |-----------------------|-----------------------|-----------------------|
 | Branch                | Feature-Branch        | Trunk-based Dev.      |
-| Merge                 | Kollaborations-Branch | Feature Branching     |
-| Cherry-Pick           | Integrations-Branch   | Release Staging       |
-| Rebase                | Pull-Request          | Multiple Releases     |
-| 1st-Parent-History    | Staging-Branch        | Continuous Delivery   |
-|                       | Merge-Ketten          | GitFlow               |
+| Merge                 | Collaboration Branch  | Feature Branching     |
+| Cherry-Pick           | Integration Branch    | Release Staging       |
+| Rebase                | Pull Request          | Multiple Releases     |
+| 1st-Parent-History    | Staging Branch        | Continuous Delivery   |
+|                       | Merge Chains          | GitFlow               |
 |                       | Backporting           |                       |

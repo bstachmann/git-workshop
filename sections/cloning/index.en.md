@@ -1,67 +1,67 @@
-### Klonen
+### Cloning
 
-Mit dem clone-Befehl können Repositorys geklont werden.
-Dabei werden alle Objekte (Blobs, Commits, Branches, Tags) kopiert.
-Ein Workspace wird mit dem `HEAD`-Stand initialisiert.
+The clone command allows repositories to be cloned.
+All objects (blobs, commits, branches, tags) are copied.
+A workspace is initialized with the `HEAD` state.
 
 ```
-$ git clone https://<server>/<pfad>/git-training-protocol.git
+$ git clone https://<server>/<path>/git-training-protocol.git
 ```
 
 ---
 
-Warum enthält\
-das geklonte Repository\
-die ganze Historie des Projekts?
+Why does\
+the cloned repository\
+contain the entire history of the project?
 
 ---
 
 ## Repository URLs
 
-Geben an, wo ein Git-Repository liegt.
+Specify where a Git repository is located.
 
 ```
-myrepos/sample                    # Lokaler Pfad zum Repo
-myrepos/sample.git                # Lokaler Pfad zu bare Repo
+myrepos/sample                    # Local path to the repo
+myrepos/sample.git                # Local path to a bare repo
 
-ssh://ich@meinserver/sample.git   # SSH
-ich@meinserver:sample.git         # auch SSH
+ssh://me@myserver/sample.git      # SSH
+me@myserver:sample.git            # also SSH
 
-https://ich@meinserver/sample.git # HTTPS
+https://me@myserver/sample.git    # HTTPS
 ```
 
 
 Notes:
 
-Es gibt noch mehr Möglichkeiten.
+There are more possibilities.
 
 
 
 ---
 
 
-### Klonen
+### Cloning
 
-Mit dem clone-Befehl können Repositorys geklont werden. Dabei werden alle
-Objekte (Blobs, Commits, Branches, Tags) kopiert.
+The clone command allows repositories to be cloned. All
+objects (blobs, commits, branches, tags) are copied.
 
 ```
-$ git clone https://<server>/<pfad>/git-training-protocol.git
+$ git clone https://<server>/<path>/git-training-protocol.git
 ```
 
 ---
 
-### Klonen - Bare Repository
+### Cloning - Bare Repository
 
- * Bare-Repository: `clone --bare` erzeugt ein Repository ohne Workspace
+ * Bare repository: `clone --bare` creates a repository without a workspace
 
 ---
 
 
-### Klonen - Performance
+### Cloning - Performance
 
- * Lokale Klone (schnell)
- * Tipp: `--reference` (Schneller klonen bei großen Repos)
+ * Local clones (fast)
+ * Tip: `--reference` (Faster cloning for large repos)
 
 
 
@@ -73,10 +73,10 @@ $ git clone https://<server>/<pfad>/git-training-protocol.git
 
 ## Remote Repositories
 
-Anzeigen, woher geklont wurde (`origin`)
+Show where the repository was cloned from (`origin`)
 
 ```bash
 git remote -v
 
-git remote add mein-backup /backup/sample-repo.git
+git remote add my-backup /backup/sample-repo.git
 ```

@@ -1,25 +1,24 @@
+Over many years, I used, introduced, maintained, and promoted Subversion.
+But one day:
 
-Über viele Jahre habe ich Subversion genutzt, eingeführt, betreut und propagiert.
-Doch eines Tages:
+> Hey Bjørn, our frontend developers no longer want to use
+> Subversion. 
+> They say that branching and merging are
+> cumbersome there and
+> there's something better...
 
-> Du, Bjørn, unsere Frontend-Entwickler mögen
-> Subversion nicht mehr benutzen. 
-> Sie sagen, das  Branchen und Mergen wäre
-> dort schwerfällig und
-> es gäbe da was Besseres ...
-
-Ich fand das damals *nicht gut*, wusste aber noch nicht,
-dass dieserTag den Beginn einer langen Reise markieren würde.
+At the time, I *didn't like it*, but I didn't yet know
+that this day would mark the beginning of a long journey.
 
 ---
 
 
-# Git verstehen
+# Understanding Git
 
- * Git-Befehle zu benutzen ist **nicht schwer**.
- * Zusammenarbeit im Team **ist schwer**.
- * Git kann helfen, \
-   gute Workflows zu finden, \
-   wenn man die *Konzepte versteht*.
+ * Using Git commands is **not hard**.
+ * Collaboration in a team **is hard**.
+ * Git can help \
+   find good workflows, \
+   if you understand the *concepts*.
 
 

@@ -1,6 +1,4 @@
-
-
-# Warum 
+# Why 
 
 # Branching?
 
@@ -8,39 +6,38 @@
 
 #### Ring ... Rrring ... Rrrrring
 
-*(Team Lead)*: Hallo?
+*(Team Lead)*: Hello?
 
-*(Cheffe)*: Dieser Bug mit dem Encoding. Der muss raus.
+*(Boss)*: This bug with the encoding. It needs to be fixed.
 
-*(Team Lead)*: Wie wär's, wenn Du erstmal "Hallo" sagst?
+*(Team Lead)*: How about saying "Hello" first?
 
-*(Cheffe)*: 15 Uhr, morgen, spätestens!
+*(Boss)*: By 3 PM tomorrow, at the latest!
 
-*(Team Lead)*: Äh, das wird ein wenig knifflig, wir haben schon angefangen, für das nächte Release zu entwickeln ...
+*(Team Lead)*: Uh, that's going to be a bit tricky, we've already started developing for the next release...
 
-*(Cheffe)*: Eins noch: Die Sache mit der Aufzeichnung darf nicht ins Release. Datenschutz. Du weißt
-schon.
+*(Boss)*: One more thing: The recording feature must not be in the release. Privacy concerns, you know.
 
-*(Cheffe legt auf)*
-
----
-
-![Versionen und Varianten](abb-versionen-und-varianten.jpg)
-
-In welchen Versionen ist BUG-4711 gefixed?
+*(Boss hangs up)*
 
 ---
 
-## Continuous Delivery:<br/>Mehrmals täglich releasen.<br/>Ist das nicht<br/>VERDAMMT GEFÄHRLICH?
+![Versions and Variants](abb-versionen-und-varianten.jpg)
+
+In which versions is BUG-4711 fixed?
 
 ---
 
-Wünsche
+## Continuous Delivery:<br/>Releasing multiple times a day.<br/>Isn't that<br/>REALLY DANGEROUS?
+
+---
+
+Wishes
 =======
 
- * Kontrolle über **parallele Entwicklung**<br/>
-   von Features und Bugfixes
- * Bei **mehreren Releases**<br/>
-   Klarheit über Varianten und Bugfixes.
+ * Control over **parallel development**<br/>
+   of features and bug fixes
+ * For **multiple releases**<br/>
+   clarity about variants and bug fixes.
  * **Continuous Delivery**<br/>
-   Sicherheit auch bei häufigen Releases
+   safety even with frequent releases

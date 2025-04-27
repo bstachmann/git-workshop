@@ -1,13 +1,13 @@
-## Upstream configuration
+## Upstream Configuration
 
 ---
 
-Die Befehle `push` und `pull` erwarten\
-zwei Parameter `<repository>` und `<branch>` (bzw. refspec).
+The commands `push` and `pull` expect\
+two parameters `<repository>` and `<branch>` (or refspec).
 
     git pull origin main
 
-Für parameterlosen Aufruf `git pull` kann main ein *upstream configuration* eintragen: 
+For a parameterless call `git pull`, an *upstream configuration* can be set:
 
 ```ini
 [branch "main"]
@@ -17,11 +17,11 @@ Für parameterlosen Aufruf `git pull` kann main ein *upstream configuration* ein
 
 ---
 
-Man muss *upstream configuration* in der Regel nicht eintragen.
+You usually don't need to set *upstream configuration* manually.
 
-Wenn man einen *remote Branch* benutzt, erstellt `git switch <branchname>` diese automatisch.
+When using a *remote branch*, `git switch <branchname>` automatically creates it.
 
-Erstellt man einen neuen Branch, kann dies beim ersten Push forcieren:
+When creating a new branch, this can be enforced during the first push:
 
 ```bash
 git push --set-upstream <repo> <branch>
@@ -29,18 +29,18 @@ git push --set-upstream <repo> <branch>
 
 ---
 
-## Branches verwalten
+## Managing Branches
 
 ```bash
-    # Welche branches wurden schon integriert?
+    # Which branches have already been merged?
     git switch master
     git branch --merged
 
-    # Branch löschen
+    # Delete a branch
     git branch -d some-branch
 ```
 
-[Aufräumen von Branches](https://kapitel26.github.io/git/2014/03/31/alte-branches-archivieren.rb.html)
+[Cleaning up Branches](https://kapitel26.github.io/git/2014/03/31/alte-branches-archivieren.rb.html)
 [Mirroring](https://kapitel26.github.io/git/2014/04/04/branches-aufrauemen.rb.html)
 
 
