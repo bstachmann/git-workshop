@@ -1,5 +1,4 @@
-# Umgang mit großen Repos
-
+# Handling Large Repositories
 
 ---
 

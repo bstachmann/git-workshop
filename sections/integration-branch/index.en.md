@@ -1,16 +1,14 @@
+## Integration Branch
 
-## Integrations-Branch
-
-![Integrations-Branch](abb-integrationsbranch.png)
-
+![Integration Branch](abb-integrationsbranch.png)
 
 ---
 
-### Integrations-Branch
+### Integration Branch
 
- * Integriert nur Änderungen anderer Branches.
- * Keine direkte Entwicklung auf diesem Branch.
- * Enthält nur **Merges**.
- * **1st-Parent-History** zeigt die Folge der  Integrationen<BR/>
-   z. B. "Feature 1", "Bugfix 1", "Feature 2"
+ * Integrates only changes from other branches.
+ * No direct development on this branch.
+ * Contains only **merges**.
+ * **1st-Parent-History** shows the sequence of integrations<BR/>
+   e.g., "Feature 1", "Bugfix 1", "Feature 2"
 

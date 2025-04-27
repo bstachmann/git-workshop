@@ -1,13 +1,10 @@
 <!-- .slide: data-background-image="sections/large-repos-approaches/monorepo.png" -->
 
-
 # MONOREPO
-
 
 ---
 
-
-### Wie viele
+### How many
  
 Dev Teams   
 Files  
@@ -16,16 +13,15 @@ Lines of Code
 
 notes:
 
-Schätzen Sie!
+Estimate!
 
-über ihr **gesamtes Unternehnmen**
+across your **entire company**
 
-Dev Teams: Wer hat mehr als 2, 5, 10, 20, 50, 100, 500 
+Dev Teams: Who has more than 2, 5, 10, 20, 50, 100, 500 
 
-Files: Wer hat mehr als 1000, 10.000, 500.000, 1.000.000
+Files: Who has more than 1,000, 10,000, 500,000, 1,000,000
 
-Lines of Code: Wer hat mehr als 100.000, 1 Mio., 10 Mio., 100 Mio. 
-
+Lines of Code: Who has more than 100,000, 1 million, 10 million, 100 million 
 
 ---
 
@@ -33,79 +29,71 @@ Lines of Code: Wer hat mehr als 100.000, 1 Mio., 10 Mio., 100 Mio.
 
 <!-- .slide: data-background-image="sections/large-repos-approaches/tyranno-watching.png" -->
 
-
 ---
 
-Kleines Gedankenexperiment:
+A small thought experiment:
 
-## Tun Sie all das in
+## Put all of this into
 # **1 Repo**!
 
-
-
 ---
 
-... zu groß 
-... zu träge 
-... bürokratisch
-... ständige Konflikte 
-... und wo bleibt die Teamautonomie   
-... voll unagil
-... was geht mich das Zeug aus den anderen Abteilungen an
-... zentralistisch
-... jedes Klonen dauert ewig
+... too big 
+... too slow 
+... bureaucratic
+... constant conflicts 
+... and where is the team autonomy?   
+... completely unagile
+... why should I care about stuff from other departments?
+... centralized
+... every clone takes forever
 ...
 
-
 ---
 
-aber manche machen das, z .B.
+but some do it, e.g.,
 
  * Google
  * Facebook
  * Microsoft
  * Twitter
 
-### Sind die denn komplett verrückt?
-
+### Are they completely crazy?
 
 ---
 
-
-Ein **Monorepo** unterstützt
+A **Monorepo** supports
 
  * Large Scale **Refactorings**
- * **API** Migrationen
- * **Analysen** \
+ * **API** Migrations
+ * **Analyses** \
    Vulnerability, Defects, Usage, Data Lineage
- * **Aufräumen**
+ * **Cleanup**
 
 notes:
 
- * Umstellen auf Major Releases von C++, PHP
- * Wann kann ich ein API abschalten?
- * Nicht alle Großen machen das: Amazon, Netflix
+ * Switching to major releases of C++, PHP
+ * When can I turn off an API?
+ * Not all big companies do this: Amazon, Netflix
 
 ---
-## Voraussetzungen
+## Requirements
 
- 1. **1** Repo für Alles™
+ 1. **1** Repo for Everything™
  2. Trunk Based Development
- 3. Commitment auf Stabilität von `main`   
- 4. Skalierbare Build-Pipeline 
+ 3. Commitment to the stability of `main`   
+ 4. Scalable build pipeline 
 
-> Google ist versioniert!
-
+> Google is versioned!
 
 notes:
 
-Erfordert:
+Requires:
 
- 1. Technologie, Invest und Team.
- 2. Nur der `main`-Stand ist relevant 
- 3. Erfordert Reife in Governance.
- 3. Tooling (z.B. Bazel).
-
+ 1. Technology, investment, and team.
+ 2. Only the `main` state is relevant 
+ 3. Requires governance maturity.
+ 3. Tooling (e.g., Bazel).
 
 ---
 
@@ -116,13 +104,12 @@ Erfordert:
 
 </div>
 
-Die Riesen dürfen und können das. \
-Sollen wir, die Zwerge, nachziehen?
+The giants can and may do this. \
+Should we, the dwarfs, follow suit?
 
 notes:
 
-Diese Frage lassen wir offen.
-
+We leave this question open.
 
 ---
 
@@ -130,15 +117,15 @@ Diese Frage lassen wir offen.
 
 | **👎**   | **👍**                      |
 |:-------------:|:-------------:|
-| Hoher Invest in<br/>Infrastruktur + Team   | Large Scale Refactoring |
-| Governance Maturity<br/>notwendig   | übergreifende Analysen |
-| Zentrale<br/>Abhängigkeit           | Housekeeping (APIs/Code) |
+| High investment in<br/>infrastructure + team   | Large Scale Refactoring |
+| Governance maturity<br/>required   | Cross-cutting analyses |
+| Central<br/>dependency           | Housekeeping (APIs/Code) |
 
 notes:
 
-Knifflige Entscheidung, weil \
-kurzfristiger Invest hoch, \
-Nutzen aber in langristigen Aspekten liegt.
+A tricky decision because \
+short-term investment is high, \
+but the benefits lie in long-term aspects.
 
 
 

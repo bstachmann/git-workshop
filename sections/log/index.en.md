@@ -1,31 +1,28 @@
+### Revision Hashes
 
-### Revision-Hashes
+The version numbers of Git
 
-Die Versionsnummern von Git
-
-Versionen können in Git über ihre Revision-Hashes
-oder über symbolische Namen (Refs) angesprochen werden.
+Versions in Git can be addressed via their revision hashes
+or via symbolic names (Refs).
 
 ```bash
     # Revision Hashes
     git show f6be3b8913aa0ff3daa2be27bd55032316545545
-    git show f6be3b      # es darf abgekürzt werden
+    git show f6be3b      # can be abbreviated
 
     # Refs
-    git show HEAD        # "aktuelle" Version
-    git show master      # ein Branch
-    git show v1.0.0      # ein Tag
+    git show HEAD        # "current" version
+    git show master      # a branch
+    git show v1.0.0      # a tag
 ```
 
 ---
 
-## Das Log
-
+## The Log
 
 ---
 
-
-### Der `Log`-Befehl zeigt die Commits
+### The `log` command shows the commits
 
 ```bash
     $ git log --oneline
@@ -39,50 +36,45 @@ oder über symbolische Namen (Refs) angesprochen werden.
     330fd73 Fix missing git before command
     ...
 ```
-Erkenntnis: Das von uns geklonte Repository enthält die ganze Historie des Projekts.
-
-
+Insight: The repository we cloned contains the entire project history.
 
 ---
 
-Bis auf das Allererste haben alle Commits einen Parent.
-Die Menge aller Vorfahren eines Commits, z. B. `master,` nennt man **das Log**.
-Es sind also alle Commits, die zur Entstehung des aktuellen Commits beigetragen haben.
+Except for the very first one, all commits have a parent.
+The set of all ancestors of a commit, e.g., `master,` is called **the log**.
+It includes all commits that contributed to the creation of the current commit.
 
 `git log master`
 
-
 ---
 
-
-Der Log-Befeht biete zahlreiche Optionen. Hier ein paar nützliche Beispiele:
+The log command offers numerous options. Here are some useful examples:
 
 ```bash
-    # log zeigt die Historie
+    # log shows the history
     git log HEAD
-    git log HEAD -- README    # Historie einer Datei
+    git log HEAD -- README    # history of a file
     git log --oneline HEAD
     git log --graph HEAD
 
-    git show HEAD~2          # vorvorletztet Commit
+    git show HEAD~2          # second-to-last commit
 ```
 
-Tipp: Mit `~` kann man Vorfahren adressieren.
-
+Tip: With `~` you can address ancestors.
 
 ---
 
-### Der Commit-Graph
+### The Commit Graph
 
-Das Log kann Verzweigungen enthalten und Zusammenführungen (Merges) enthalten,
-z. B. wenn mehrere Entwickler parallel gearbeitet haben.
+The log can contain branches and merges,
+e.g., when multiple developers worked in parallel.
 
 ```
-* | 5c65d40 Notizen zur Wiederholung
-* | 040bb7d Zeitplan für early birds hinzugefügt
+* | 5c65d40 Notes for review
+* | 040bb7d Added schedule for early birds
 |/  
 * b1fae20 Fixup
-* 4137535 Add some aufgaben
+* 4137535 Add some tasks
 * 8f900ba Refactor: Split git intro 
 *   351872f Merge branch 'master' 
 |\  
@@ -94,10 +86,10 @@ z. B. wenn mehrere Entwickler parallel gearbeitet haben.
 
 ---
 
-Die Option `--graph` kann dies darstellen:
+The `--graph` option can represent this:
 
 ```bash
-    git log --graph             # Graphen darstellen
+    git log --graph             # display graphs
     git log --graph --oneline   #  
     git log --graph --all       #
 
@@ -105,38 +97,37 @@ Die Option `--graph` kann dies darstellen:
 
 ---
 
-###  Vergleichen von Commits mit Diff
+### Comparing Commits with Diff
 
-Der diff-Befehl kann die Dateien (Trees) beliebiger Commits vergleichen.
+The diff command can compare the files (trees) of any commits.
 
 ```bash
-    # diff vergleicht zwei Commits
+    # diff compares two commits
     git diff HEAD~4 HEAD
-    git diff 1a8a2 9f5c3 -- inhalt.md   # einzelne Datei
-    git diff 1a8a2 9f5c3 --stat         # Überblick
-    git diff 1a8a2 9f5c3 --word-diff    # Wortweiser Vergleich f. Texte
-    git diff 1a8a2 9f5c3 -b             # Whitespace-Änderunen ausblenden
-    git diff HEAD~3                     # Vergleich mit HEAD
+    git diff 1a8a2 9f5c3 -- content.md   # single file
+    git diff 1a8a2 9f5c3 --stat         # overview
+    git diff 1a8a2 9f5c3 --word-diff    # word-wise comparison for texts
+    git diff 1a8a2 9f5c3 -b             # ignore whitespace changes
+    git diff HEAD~3                     # compare with HEAD
 
-    # externes tool nutzen
+    # use external tool
     git difftool HEAD~4 HEAD
 ```
 
-
 ---
 
-### `git blame`: Wer war's?
+### `git blame`: Who did it?
 
-Zeigt, für jede Zeile, in welchem Commit diese zuletzt bearbeitet wurde.
+Shows, for each line, in which commit it was last edited.
 
 ```
-38da02ef foo (bjoern 2021-04-02 14:54:30 +0000 1) Erste Zeile
-9bb1b769 foo (bjoern 2021-07-29 17:03:01 +0000 2) Zeile zwei
-21c9ad44 foo (bjoern 2021-07-29 17:15:19 +0000 3) Schluss
+38da02ef foo (bjoern 2021-04-02 14:54:30 +0000 1) First line
+9bb1b769 foo (bjoern 2021-07-29 17:03:01 +0000 2) Second line
+21c9ad44 foo (bjoern 2021-07-29 17:15:19 +0000 3) End
 ```
 
- * `-M -C -C -C` Zeigt bei kopierten/verschobenen Zeilen aus anderen Dateien das "Ursprungscommit". 
- * `-w` erkennt Zeilen trotz Whitespace-Änderungen wieder.
+ * `-M -C -C -C` Shows the "origin commit" for copied/moved lines from other files. 
+ * `-w` recognizes lines despite whitespace changes.
 
 ---
 
