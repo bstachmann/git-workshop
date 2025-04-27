@@ -1,47 +1,38 @@
-
-### Die Git Kommandozeile
-
+### The Git Command Line
 
 ---
 
+If not already done:
 
-Falls noch nicht geschehen:
-
-[Git installieren](/git-workshop/installation/git)
-
+[Install Git](/git-workshop/installation/git)
 
 ---
-
 
 ## Terminal/Shell
 
-Für die Übungen wird ein Terminal/Shell-Fenster benötigt
+A terminal/shell window is required for the exercises
 
- * Linux/Mac: "Terminal" öffnen
- * Windows: "Git-Bash" öffnen
+ * Linux/Mac: Open "Terminal"
+ * Windows: Open "Git-Bash"
 
-Tipp: Sie können auch mit anderen Shell arbeiten, z.B PowerShell oder zsh.
-Übungen und Musterlösungen wurden in der Bash-Shell getestest bzw. aufgezeichnet.
-
-
----
-
-
-[Tipps zum Arbeiten mit der Kommandozeile](/git-workshop/installation/kommandozeile)
-
+Tip: You can also use other shells, e.g., PowerShell or zsh.
+Exercises and sample solutions were tested and recorded in the Bash shell.
 
 ---
 
+[Tips for working with the command line](/git-workshop/installation/kommandozeile)
 
-## Git Befehle
+---
+
+## Git Commands
 
 ```
     git <sub-command> <options> <arguments>
 ```
 
-z.B.
+For example:
 ```bash
-    $ git commit -a -m "Hallo Welt!"
+    $ git commit -a -m "Hello World!"
 
     $ git version
     git version 2.37.3
@@ -49,8 +40,7 @@ z.B.
 
 ---
 
-
-## Hilfe und Infos zu Git
+## Help and Information about Git
 
  ```
  $ git
@@ -64,35 +54,33 @@ z.B.
 
 ---
 
-### Befehl: `git config`
+### Command: `git config`
 
 ```bash
-  $ git config user.name               # Konfiguration ausgeben
+  $ git config user.name               # Display configuration
   bjoern
 
-  $ git config --global user.name      # Konfiguration ändern
+  $ git config --global user.name      # Change configuration
 ```
 
-[Git konfigurieren](/git-workshop/installation/konfigurieren)
+[Configure Git](/git-workshop/installation/konfigurieren)
 
 ---
 
-Konfigurationsempfehlungen für diesen Workshop:
+Configuration recommendations for this workshop:
 
 ```bash
-    $ git config --global user.email <Ihre-Email>
-    $ git config --global user.name <Ihr-Name>
+    $ git config --global user.email <Your-Email>
+    $ git config --global user.name <Your-Name>
     $ git config --global pull.rebase false 
     $ git config --global merge.conflictStyle diff3
 ```
 
 ---
 
+[Download and extract exercises](/git-workshop/installation/uebungen)
 
-[Übungen herunterladen und entpacken](/git-workshop/installation/uebungen)
-
-![Entpacktes Build-Verzeichnis](build-verzeichnis.png)
-
+![Extracted Build Directory](build-verzeichnis.png)
 
 ---
 

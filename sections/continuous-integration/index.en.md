@@ -2,89 +2,83 @@
 
 ---
 
-## Lernziel
+## Learning Objective
 
- * **Das Problem** mit den **Merges**
- * **Klassische** Branch- und Release- Modelle
- * Konzept: **Continuous Integration**
- * Die **Herausforderungen** von **CI**
- * Was braucht man für **erfolgreiches CI**?
-
+ * **The problem** with **merges**
+ * **Classic** branching and release models
+ * Concept: **Continuous Integration**
+ * The **challenges** of **CI**
+ * What is needed for **successful CI**?
 
 ---
 
 <!-- .slide: data-background-image="continuous-integration/complicated-merge-resolution.png" -->
 
-## Hölle? Hölle? Hölle?
+## Hell? Hell? Hell?
 
 # `git merge`
 
-
 ---
 
-## Übung: Ein vertrackter Merge
+## Exercise: A Tricky Merge
 
-In der Historie steckt ein kniffliger Merge.
-Wiederhole den Merge und versuche einige der Konflikte aufzulösen?
-Was fällt Dir dabei auf?
+In the history, there is a tricky merge.
+Repeat the merge and try to resolve some of the conflicts.
+What do you notice?
 
 ```bash
-# Vorbereitung
+# Preparation
 git show --stat interesting-merge
 git config --global merge.conflictstyle diff3
 
-# Den Merge nochmal durchführen
+# Perform the merge again
 git checkout interesting-merge^1
 git merge interesting-merge^2
 
-git mergetool  # oder verwende deine IDE
+git mergetool  # or use your IDE
 ```
 
+---
+
+### Where do the problems come from?
+
+ * The same files are edited\
+   (overlapping tasks/responsibilities)
+ * Changes can be merged,\
+   but they don't fit together.
+ * Moves/renames
+   * of files
+   * within files
+ * Whitespace changes
+
+### The longer you wait, the worse it gets!
 
 ---
 
-### Woher kommen die Probleme?
+**Classic branching and release models**\
+can be implemented well with Git, and provide
 
- * Dieselben Dateien bearbeitet\
-   (überlappende Aufgaben/Verantwortlichkeiten)
- * Änderungen können zusammegeführt werden,\
-   passen aber nicht zusammen.
- * Verschiebungen/Umbenennungen
-   * von Dateien
-   * innerhalb der Dateien
- * Whitespaceänderungen
+ * independent feature development
+ * parallel development during the release phase
+ * maintaining multiple releases
+ * distributing patches across multiple releases
 
+(see e.g., [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/))
 
-### Je länger man wartet, desto schlimmer!
+### but nothing comes for free
 
 ---
 
-**Klassische Branching- und Release-Modelle**\
-kann man gut mit Git umsetzen, und bekommt
+You pay for this with **long-lived branches**,\
+which lead to merges between distant changes, often resulting in
 
- * unabhängige Featureenwicklung
- * parallele Weiterentwicklung während der Releasephase
- * mehrere Releases plegen
- * Patches über mehrere Release verteilen
-
-(siehe z. B. [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/))
-
-### aber es gibt nichts geschenkt
-
+ * difficulties in integration
+ * stressful release phases
+ * stagnation due to fear of changes
 
 ---
 
-Man erkauft sich dies mit **langlebigen Branches**,\
-was zu Merges zwischen weit entfernt liegenden Änderungen führt, und erhält oft
-
- * Schwierigkeiten bei der Integration
- * stressige Release-Phasen
- * Zähigkeit durch Angst vor Änderungen
-
-
----
-
-## Doch dann ...
+## But then ...
 
 > ... usually each person integrates at least daily ...
 >
@@ -92,179 +86,170 @@ was zu Merges zwischen weit entfernt liegenden Änderungen führt, und erhält o
 
 https://martinfowler.com/articles/continuousIntegration.html
 
+---
+
+## Frequent Integration
+
+ * Everyone integrates *every day*
+   1. Start on the current `master`
+   1. Develop
+   1. Bring it to `master` (direct `commit`, `merge`, or `rebase`)
+ * The `master` is always kept functional
+ * The `master` is the measure of all things
 
 ---
 
-## häufig Integrieren
+## Advantages of CI
 
- * Jeder integriert *jeden Tag*
-   1. auf dem aktuellen `master` beginnen
-   1. entwickeln
-   1. auf den `master` bringen (direktes `commit` oder `merge`oder `rebase`)
- * Der `master` wird immer lauffähig gehalten
- * Der `master` ist Maß aller Dinge
+ * Makes **problems small** and manageable.
+ * The participants are still **reachable**.
+ * **Refactorings** only need to consider **`master`**.
+ * If necessary, you can **discard and redo everything**.
+ * You can **deliver at any time**.
 
----
+Sounds good, but ...
 
-## Vorteile von CI
-
- * macht die **Probleme klein** und überschaubar.
- * Die Beteiligten sind noch **erreichbar**.
- * **Refactorings** müssen **nur `master`** berücksichtigen.
- * Notfalls, kann man alles **verwerfen und neu machen**.
- * Man kann **jederzeit liefern**.
-
-Klingt gut, aber ...
-
-### es gibt, wie gesagt, nichts geschenkt ...
+### as mentioned, nothing comes for free ...
 
 ---
 
-## ... kann da nicht auch was schiefgehen?
+## ... can't things go wrong?
 
 ---
 
-## Herausforderungen in CI
+## Challenges in CI
 
  * Broken Build
  * Bug
  * Broken Contract
- * Halbfertiges
- * Wenn man alte Versionen braucht
-
+ * Half-finished work
+ * When old versions are needed
 
 ---
 
 ## Broken Build
 
-> Jeder soll jederzeit, ausgehend vom `master`,\
-> einen Feature/ein Bugfix beginnen können.
+> Everyone should be able to start a feature/bugfix\
+> from `master` at any time.
 
- * Automatisiere den Build!
-   * Jedes `master`-Commit löst einen Build-aus
- * Normiere die Build-Umgebung!
-   * Reduziere Abhängigkeiten von lokaler Installation
-   * Gegen: Works on my machine.
-   * Durch Zentralisierung, durch automatisiertes Setup und/oder Container.
- * Repariere den `master` sofort!
-   * Zweithöchste Prio nach **Production Outages**
- * Halte den Build-Prozess schnell! (<< 15 Minuten)
- * Schütze den `master`!
- * Wer zuletzt merged verliert!
+ * Automate the build!
+   * Every `master` commit triggers a build
+ * Standardize the build environment!
+   * Reduce dependencies on local installations
+   * Against: Works on my machine.
+   * Through centralization, automated setup, and/or containers.
+ * Fix the `master` immediately!
+   * Second highest priority after **production outages**
+ * Keep the build process fast! (<< 15 minutes)
+ * Protect the `master`!
+ * Last to merge loses!
 
 ---
 
-## Fehler eingeschleust
+## Errors Introduced
 
-> Der `master` soll jederzeit lauffähig sein.
+> The `master` should always be functional.
 
- * Test mit jedem Build!
-   - Unit-Tests, Integrations-Tests. Ggf. auch Last- und Performance-Tests.
- * Test in einem Klon der Produktionsumgebung!
-   - Jeder Unterschied zwischen PROD und TEST ist ein zusätzliches Risiko.
+ * Test with every build!
+   - Unit tests, integration tests, possibly load and performance tests.
+ * Test in a clone of the production environment!
+   - Every difference between PROD and TEST is an additional risk.
 
-### Wieviel Test ist genug?
+### How much testing is enough?
 
-> Traust Du Dich den `master`/
-> blind nach Production zu releasen?
-
+> Do you dare to release the `master`\
+> blindly to production?
 
 Notes:
 
-Benefit: Man hat immer eine nutzbare Version (Release-Fähigkeit)
-
+Benefit: You always have a usable version (release readiness)
 
 ---
 
 ## Broken API/Contract
 
-> Zwinge Deine Kollegen nicht zu (sofortigen) Änderungen!
+> Don't force your colleagues to (immediate) changes!
 
  * Branch by Abstraction
-   - Sorge dafür, dass bestehender Conde lauffähig bleibt
-   - Nutze hierzu Vererbung, Konfiguration, Feature-Toggles
-   - Nutze Deprecation-Markierungen
-   - Tipp: Teste die alte und die neue Implementierung parallel und vergleiche die Ergebnisse.
-     - evtl. kannst Du die neue Implementierung in PROD parallel mitlaufen lassen, bevor du deren Ergebnisse nutzt.
+   - Ensure existing code remains functional
+   - Use inheritance, configuration, feature toggles
+   - Use deprecation markers
+   - Tip: Test the old and new implementation in parallel and compare results.
+     - Possibly run the new implementation in PROD in parallel before using its results.
 
 Notes:
 
-Beispiel: Umstellung von Double auf Fraction
+Example: Switching from Double to Fraction
 
 ---
 
-## Halbfertiges
+## Half-finished Work
 
-> Der `master` ist jederzeit Releasefähig!
-> Unfertige Features dürfen dies nicht einschränken!
+> The `master` is always release-ready!
+> Unfinished features must not compromise this!
 
- * Strebe erst ein MVP an!
+ * Aim for an MVP first!
    - Minimum Viable Product:\
-     Eine möglichst einfache Implementierug für einen wertwollen Teil des angestrebten Nutzens.
- * Nutze Feature-Toggling!
+     A simple implementation for a valuable part of the intended benefit.
+ * Use feature toggling!
 
 ---
 
-## Wenn man alte Versionen braucht
+## When Old Versions Are Needed
 
- * Bleibe Abwärtskompatibel!
- * Nutze Forward-Fixing!
-   - Vermeide es, Produktionsprobleme durch Rollout alter Versionen zu beheben.
- * Nutze Blue/Green- oder Incremental-Rollouts!
- * Mache es leicht die aktuellste Version zu nutzen und zu integrieren!
+ * Stay backward compatible!
+ * Use forward-fixing!
+   - Avoid fixing production issues by rolling out old versions.
+ * Use blue/green or incremental rollouts!
+ * Make it easy to use and integrate the latest version!
 
 ---
 
-## Exkurs: Trunk Based Development
+## Excursus: Trunk Based Development
 
 https://trunkbaseddevelopment.com/
 
+---
+
+## Excursus: Git and Gradle
+
+[Git and Gradle](https://kapitel26.github.io/git/2014/05/20/git-und-gradle.html)
 
 ---
 
-## Exkurs: Git und Gradle
+### So, What Do We Need? (Part 1)
 
-[Git und Gradle](https://kapitel26.github.io/git/2014/05/20/git-und-gradle.html)
+## Workflow/Rules
 
-
----
-
-### Also, was brauchen wir? (Teil 1)
-
-## Workflow/Regeln
-
- * Häufige Integration auf dem `master` (Workflow)
- * Repariere den `master` sofort!
- * Halte den Build-Prozess schnell!
- * Wer zuletzt merged verliert!
- * Bleibe Abwärtskompatibel!
- * Mache es leicht die aktuellste Version zu nutzen und zu integrieren!
-
+ * Frequent integration on `master` (workflow)
+ * Fix the `master` immediately!
+ * Keep the build process fast!
+ * Last to merge loses!
+ * Stay backward compatible!
+ * Make it easy to use and integrate the latest version!
 
 ---
 
-### Also, was brauchen wir? (Teil 2)
+### So, What Do We Need? (Part 2)
 
 ## Build & Deployment
 
- * Automatisiere den Build!
- * Normiere die Build-Umgebung!
- * Halte den Build-Prozess schnell!
- *  Schütze den `master`
- * Test mit jedem Build!
- * Test in einem Klon der Produktionsumgebung!
- * Nutze Blue/Green- oder Incremental-Rollouts!
-
-
+ * Automate the build!
+ * Standardize the build environment!
+ * Keep the build process fast!
+ * Protect the `master`
+ * Test with every build!
+ * Test in a clone of the production environment!
+ * Use blue/green or incremental rollouts!
 
 ---
 
-### Also, was brauchen wir? (Teil 3)
+### So, What Do We Need? (Part 3)
 
-## Techniken/Skills/Patterns
+## Techniques/Skills/Patterns
 
  * Branch by Abstraction
- * Strebe erst ein MVP an!
- * Nutze Feature-Toggling!
- * Nutze Forward-Fixing!
+ * Aim for an MVP first!
+ * Use feature toggling!
+ * Use forward-fixing!
 

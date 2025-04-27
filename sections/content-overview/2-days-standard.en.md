@@ -1,116 +1,101 @@
-## Was ist Git?
+## What is Git?
 
- * Herkunft
- * Vorteile
- * Besonderheiten
- * Das `git`-Kommando
+ * Origin
+ * Advantages
+ * Features
+ * The `git` command
 
 ---
 
 ## Repository
 
- * Repository und Workspace 
- * Commits und Revision-Hashes
+ * Repository and Workspace 
+ * Commits and Revision Hashes
  * Checkout
- * Das Log
- * Befehle zum Untersuchen der Inhalte
- * UI für das Git-Log
+ * The Log
+ * Commands to Inspect Contents
+ * UI for the Git Log
 
 ---
-
 
 ## Commits
 
- * Commits erstellen
- * Was genau ist eigentlich ein Commit?  
- * Staging/der Index
+ * Creating commits
+ * What exactly is a commit?  
+ * Staging/the Index
  * Tags
- * Commits ändern/rückgängig machen
- * UI zum Erstellen von Commits
-
+ * Modifying/Reverting commits
+ * UI for creating commits
 
 ---
 
+## Clones
 
-## Klone
-
- * Konzept: Dezentralisierung
- * Klonen von Repositorys
- * Repository-URLs
- * Refs, Remote-Refs, `origin`
+ * Concept: Decentralization
+ * Cloning repositories
+ * Repository URLs
+ * Refs, Remote Refs, `origin`
  * Ahead/Behind
- * GitHub/GitLab: Hosting von Repositorys
-
+ * GitHub/GitLab: Hosting repositories
 
 ---
-
 
 ## Push & Pull
 
- * Synchronsiation: Wie funktioniert der Abgleich?
- * `fetch`: Holen
- * `push`: Hochladen
+ * Synchronization: How does syncing work?
+ * `fetch`: Fetching
+ * `push`: Uploading
  * Push rejected!
- * `pull`: Integrieren
- * Konzept: Pull-Request
- * GitHub/GitLab: Pull-Requests
-
+ * `pull`: Integrating
+ * Concept: Pull Request
+ * GitHub/GitLab: Pull Requests
 
 ---
-
 
 ## Branches
 
- * Branches zeigen auf Commits
- * Wechseln zwischen Branches
- * Remote Branches
- * Upstream Branches
-
+ * Branches point to commits
+ * Switching between branches
+ * Remote branches
+ * Upstream branches
 
 ---
 
-
 ## Merges
 
- * Wie enstehen Verzweigungen?
- * Was ist ein Merge?
- * Mergekonflikte
- * Automatische und manuelle Konfliktauflösung
- * 3-Wege-Merge
- * UI: Merge-Tools
-
-
+ * How do branches arise?
+ * What is a merge?
+ * Merge conflicts
+ * Automatic and manual conflict resolution
+ * 3-Way Merge
+ * UI: Merge Tools
 
 ---
 
 ## Rebasing
 
- * Was ist ein Rebase?
- * Wie wende ich es an?
- * Risiken und Nebenwirkungen
- * Ausblick: Interactive Rebasing
-
+ * What is a rebase?
+ * How to apply it?
+ * Risks and side effects
+ * Outlook: Interactive Rebasing
 
 ---
-
 
 ## Workflows
 
- * Grundlegende Patterns
+ * Basic patterns
  * Trunk-based Flow
- * Feature-Branching
- * Ausblick: To branch or not to branch?
- * Fortgeschrittene Workflows
-
+ * Feature Branching
+ * Outlook: To branch or not to branch?
+ * Advanced workflows
 
 ---
 
+## Modularization
 
-## Modularisierung
-
- * Möglichkeiten zur Modularisierung
+ * Options for modularization
  * Subtrees
  * Submodules
- * Ausblick: Große Repositorys
+ * Outlook: Large repositories
 
 

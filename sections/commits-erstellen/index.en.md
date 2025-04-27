@@ -1,16 +1,16 @@
-### Lernziel (Befehle)
+### Learning Objective (Commands)
 
 ```bash
-    # Commits erstellen
+    # Create commits
     git status
     git diff
     git commit
 
-    # Änderungen hinzufügen (Staging,Index)
+    # Add changes (Staging, Index)
     git add
     git commit -a
 
-    # Commits mit Tags markieren
+    # Mark commits with tags
     git tag
 
     # Oops!
@@ -20,46 +20,43 @@
 
 ---
 
+### The Workspace
 
-### Der Workspace
+Includes all files and directories of the project
 
-umfasst alle Dateien und Verzeichnisse des Projekts
-
- * **versionierte Dateien**
-   Dateien, die in der aktuellsten Git-Revision des Projekts,
-   `HEAD` genannt, schon bekannt sind.
- * **unversionierte Dateien**
-   Neue Dateien, die Git "noch nicht kennt".
- * **ignorierte Dateien**
-   Die gar nicht versioniert werden sollen (Stichwort: `.gitignore`)
-
+ * **Versioned files**
+   Files already known in the latest Git revision of the project,
+   called `HEAD`.
+ * **Unversioned files**
+   New files that Git "does not yet know".
+ * **Ignored files**
+   Files that should not be versioned at all (keyword: `.gitignore`)
 
 ---
-
 
 ### `git status`
 
-zeigt, was im Workspace los ist:
+Shows what is happening in the workspace:
 
-  * Welches ist der *aktive Branch*?
-  * Wurden Dateien (bezogen auf `HEAD`)
-    - gelöscht?
-    - bearbeitet?
-    - neu angelegt?
-  * Außerdem: Mergekonflikte, Synchr.-Status
+  * Which is the *active branch*?
+  * Have files (relative to `HEAD`)
+    - been deleted?
+    - been edited?
+    - been newly created?
+  * Additionally: Merge conflicts, sync status
 
 Notes:
 
- * Verzeichnisse werden zusammengefasst
- * Außerdem Änderungen bezogen auf HEAD oder Index
+ * Directories are summarized
+ * Also shows changes relative to HEAD or Index
 
 ---
 
-### Tipp
+### Tip
 
-Vor wichtigen Operationen,
+Before important operations,
 
-immer checken, ob der Status *clean* ist:
+always check if the status is *clean*:
 
 ```bash
     $ git status
@@ -69,53 +66,47 @@ immer checken, ob der Status *clean* ist:
 
 Notes:
 
- * Hinweise auf stash
- * TODO Hinweis auf Prompts
+ * Hints about stash
+ * TODO: Hint about prompts
 
 ---
 
-### Aktiver Branch
+### Active Branch
 
- * Ein Branch ist ein Zeiger auf ein Commit
- * (max.) 1 Branch ist aktiv
+ * A branch is a pointer to a commit
+ * (At most) 1 branch is active
  * Default `master`
- * Neues Commit: Zeiger des aktiven Branches wird aktualisiert.
-
+ * New commit: Pointer of the active branch is updated.
 
 ---
-
 
 ## `git commit`
 
- * Erstellt ein neues Commit
- * Setzt `HEAD` auf den neue Commit
- * Setzt den aktiven Branch auf das neue Commit
-
+ * Creates a new commit
+ * Sets `HEAD` to the new commit
+ * Sets the active branch to the new commit
 
 ---
 
+### Commit - Modified Files
 
-### Commit - geänderte Dateien
-
-Einzelne Datei:
+Single file:
 
     git commit <file>
 
-Alle geänderen Dateien, die bereits versioniert sind.
+All modified files that are already versioned:
 
     git commit -a
 
-Und gleich mit Message:
+And directly with a message:
 
     git commit -am "Edit some files."
 
-
 ---
 
+### Commit - New Files
 
-### Commit - neue Dateien
-
-Neue Dateien werden beim `commit -a` nicht automatisch übernommen. Sie müssen zunächst angemeldet werden.
+New files are not automatically included in `commit -a`. They must first be staged.
 
     git add <file>
 
@@ -123,39 +114,35 @@ Neue Dateien werden beim `commit -a` nicht automatisch übernommen. Sie müssen 
 
     git add .
 
-Dann Commit, wie gehabt.
+Then commit as usual.
 
     git commit
 
-
 ---
 
-### Commit - gelöschte Dateien
+### Commit - Deleted Files
 
-    rm my-file # Oder über file explorer
+    rm my-file # Or via file explorer
 
-Löschungen werden bei `-a` übernommen:
+Deletions are included in `-a`:
 
     git commit -am 'deleted my-file'
 
-Es gibt auch einen Git-Befehl zum Löschen:
+There is also a Git command for deletion:
 
     git rm my-file
     git commit -am 'deleted my-file'
 
-
-
-
 ---
 
-## Verzeichnisse
+## Directories
 
-Verzeichnisse werden in Git nicht explizit versioniert.
+Directories are not explicitly versioned in Git.
 
-Sie werden (im *Tree*) mit abgebildet, wenn Dateien hinzugefügt werden.
+They are (in the *Tree*) represented when files are added.
 
-Ein Verzeichnis muss mindestens eine Datei enthalten.
+A directory must contain at least one file.
 
-Ggf. legt man ein hidden File an, z. B. `.gitkeep`,
-um ein Verzeichnis zu erzwingen.
+If necessary, create a hidden file, e.g., `.gitkeep`,
+to enforce a directory.
 

@@ -1,15 +1,14 @@
-
- * Git
-   * Recap: Git-Repository, Workspace und grundlegende Konzepte.
-   * Was Git im Innersten zusammenhält.
+* Git
+   * Recap: Git repository, workspace, and basic concepts.
+   * What holds Git together at its core.
  * Rebasing
-   * Merging/Mergekonflikte
-   * Rebasing, Cherry-Picking inklusive Nebenwirkungen
-   * (inkl. interactive Rebasing) (1/2 Stunde)
- * Workflows (3/4 Stunde)
+   * Merging/Merge conflicts
+   * Rebasing, cherry-picking including side effects
+   * (including interactive rebasing) (1/2 hour)
+ * Workflows (3/4 hour)
    * Workflows
-   * Pull-Request
+   * Pull Request
    * To branch or not to branch
-* Modularisierung und Große Repos
-   * Submodule und Subtrees (1/2 Stunde) 
-   * Große Repos (1/2 Stunde)
+* Modularization and Large Repositories
+   * Submodules and Subtrees (1/2 hour)
+   * Large Repositories (1/2 hour)

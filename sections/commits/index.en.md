@@ -1,33 +1,28 @@
-
-
-Speicher speichert Versionenstände \
-in **Commits** \
-(auch Revisions genannt)
-
+Git stores version states \
+in **commits** \
+(also called revisions)
 
 ---
 
+A **commit** contains a
 
-Ein **Commit** enthält ein
+**Tree** ("Snapshot" of all project files)
 
-**Tree** ("Snapshot" aller Dateien des Projekts)
+and **Metadata**
 
-und **Metadaten**
-
- * Beschreibung (Commit-Kommentar)
- * Zeitpunkt der Änderung
- * Autor (ggf. auch Commiter)
- * **Parent(s)** - Verweis auf Vorgängerversion(en)
-
+ * Description (commit message)
+ * Timestamp of the change
+ * Author (and possibly committer)
+ * **Parent(s)** - Reference to previous version(s)
 
 ---
 
 ## `git show`
 
-zeigt Informationen zu einem Commit. 
+Displays information about a commit.
 
 ```bash
-$ git show           # zeigt das aktuelle Commit
+$ git show           # Shows the current commit
 
 commit 612a0ee90fedcfcfce170e568ba9607f41655f0c (HEAD -> master)
 Author: bjoern <kapitel26blog@gmail.com>
@@ -43,14 +38,12 @@ index 0000000..36fe753
 
 ```
 
-Zeigt Revision-Hash, **Metadaten** (Autor, Zeitpunt, Kommentar etc.), und listet dann alle Änderungen zum Vorgänger auf (**diff**)
-
-
+Shows revision hash, **metadata** (author, timestamp, message, etc.), and then lists all changes to the predecessor (**diff**).
 
 ---
 
-Mit `--stat` zeigt `git show` nur die Anzahl geänderterter Zeilen je Datei an,
-aber nicht die Inhalte.
+With `--stat`, `git show` only displays the number of changed lines per file,
+but not the contents.
 
 ```bash
 $ git show --stat
@@ -61,61 +54,60 @@ Date:   Thu Jul 29 00:00:00 2021 +0000
     Created file und-tschuess on branch master by bjoern.
 
  und-tschuess | 12 ++++++++++++
- 1 file changed, 12 insertions(+)
+ 1 file changed, 12 insertions
 ```
 
-`--oneline` verkürzt die Metadaten zu einer Zeile:
+`--oneline` shortens the metadata to one line:
 
 ```bash
 $ git show --stat --oneline
 612a0ee (HEAD -> master) Created file und-tschuess on branch master by bjoern.
  und-tschuess | 12 ++++++++++++
- 1 file changed, 12 insertions(+)```
+ 1 file changed, 12 insertions(+)
 ```
 
 ---
 
-**Revision Hash** - die "Versionsnummer" von Git
-   Prüfsumme über alle oben angegebenen Informationen.
+**Revision Hash** - the "version number" in Git
+   Checksum over all the above information.
 
 ---
 
 ### `HEAD`
 
-bezeichnet das aktuelle Commit,/
-ist bei vielen Befehlen Defaultwert für parameter\
-und kann oft weggelassen werden.
+Refers to the current commit,\
+is the default value for many commands\
+and can often be omitted.
 
 ```bash
-    git show HEAD                # Infos zum HEAD-Commit
-    git show                     # ebenso
+    git show HEAD                # Info about the HEAD commit
+    git show                     # Same
+```
 
 ---
 
-## Befehle zum Untersuchen von Commits
+## Commands to Inspect Commits
 
 ```bash
-    git show HEAD:README         # Inhalt einer Datei
-    git show --pretty=raw HEAD   # Was Git in der DB hat
+    git show HEAD:README         # Content of a file
+    git show --pretty=raw HEAD   # What Git has in the DB
 
-    # ls-tree listet Verzeichnisse auf untersuchen
+    # ls-tree lists directories for inspection
     git ls-tree -r HEAD
     git ls-tree --abbrev HEAD src/main/java
 ```
 
-
 ---
 
-## Mit **`~`** Vorfahren adressieren
+## Addressing Ancestors with **`~`**
 
-Jedes Commits (bis auf das erste) hat ein Parent-Commit.
-
+Every commit (except the first) has a parent commit.
 
 ```bash
-$ git show HEAD~    # Parent von HEAD
-$ git show HEAD~2   # Parent des Parent von HEAD
+$ git show HEAD~    # Parent of HEAD
+$ git show HEAD~2   # Parent of the parent of HEAD
 
-$ git show fb3982~2   # Parent des Parent von fb3982
+$ git show fb3982~2   # Parent of the parent of fb3982
 ```
 
 

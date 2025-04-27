@@ -1,33 +1,31 @@
 ## `git diff`
 
-Vergleicht die *Trees* (Datei- und Verzeichnisbäume) zweier Commits,
-und zeigt, welche unterschiede es gibt.
+Compares the *trees* (file and directory structures) of two commits,
+and shows the differences.
 
 ```bash
 $ git diff <commit1> <commit2>           
 ```
 
-Gibt man nur ein Commit an, wird mit dem Workspace verglichen.
+If only one commit is specified, it is compared with the workspace.
 
 ```bash
 $ git diff <commit>             
 ```
 
-Ohne Commit wird der Workspace mit `HEAD` verglichen.
-Lokale Änderungen werden gezeigt.
+Without a commit, the workspace is compared with `HEAD`.
+Local changes are shown.
 
 ```bash
 $ git diff
 ```
 
-
 ---
 
+### `git-diff` Output Format
 
-### `git-diff` Ausgabeformat
-
-Exakte Beschreibung der Unterschiede. Maschinenlesbar.
-Menschenlesbar (einigermaßen).
+Exact description of the differences. Machine-readable.
+Human-readable (to some extent).
 
 ```diff
 diff --git a/average.kts b/average.kts
@@ -47,13 +45,12 @@ index 4cd02bf..7eb87f2 100644
 
 ---
 
+### Alternative Diff Formats
 
-### Alternative diff-Formate
+* With `--word-diff`, changes to texts are displayed more clearly.
 
-* Mit `--word-diff` werden Änderungen an Texten klarer dargestellt.
+* With `--stat`, only the number of changed lines is shown, not the contents.
 
-* Mit `--stat` werden nicht die Inhalte der Änderungen sondern nur die Anzahl geänderter Zeilen gezeigt.
-
-* Mit `git difftool` kann man exteren Diff-Tools (z.B. `kdiff3`) öffnen.
+* With `git difftool`, external diff tools (e.g., `kdiff3`) can be opened.
 
 
