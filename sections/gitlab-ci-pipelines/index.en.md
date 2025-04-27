@@ -1,17 +1,15 @@
-# **GitLab-Pipelines**
+# **GitLab Pipelines**
 
 <!-- .slide: data-background-image="gitlab-ci-pipelines/pipelines.png" data-background-opacity="0.4" -->
 
-
 ---
 
-## Lernziel
+## Learning Goal
 
- * Was ist eine **Pipeline**?
+ * What is a **pipeline**?
  * **Stages**
  * **Caches**
  * **Artifacts**
-
 
 ---
 

@@ -1,15 +1,14 @@
+## Exercise: Hello World!
 
-## Übung: Hallo Welt!
+The goal of this exercise is to develop a first feeling for Git.
 
-Ziel dieser Übung ist es ein erstes Gefühl für Git zu entwickeln.
+The commands are only briefly explained here.
 
-Die Befehle werden hier nur kurz erläutert.
-
-Details folgen im Verlauf des Workshops.
+Details will follow during the workshop.
 
 ---
 
-## Editor einrichten
+## Set up Editor
 
 ```bash
 $ git config --global core.editor vim
@@ -22,9 +21,7 @@ $ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -m
 
 ---
 
-
-Bei GitHub findet man ein [schönes Cheatsheet](https://training.github.com/downloads/de/github-git-cheat-sheet/) zu den wichtigsten Git-Befehlen.
-
+On GitHub, you can find a [nice cheat sheet](https://training.github.com/downloads/de/github-git-cheat-sheet/) for the most important Git commands.
 
 ---
 

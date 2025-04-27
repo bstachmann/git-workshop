@@ -2,27 +2,26 @@
 
 ---
 
-## Lernziel
+## Learning Goal
 
  * `.gitlab-ci.yml`
- * Was ist ein GitLab-Job?
- * Wie konfiguriert man einen Job?
+ * What is a GitLab job?
+ * How to configure a job?
 
 ---
 
 ### ` .gitlab-ci.yml`
 
- * beschreibt die Pipeline.
- * besteht aus Jobs,\
-   die das Projekt bauen, testen, deployen etc.
- * Sobald ein Commit ankommt*\
-   führt GitLab die Pipeline aus.
- * [Einsteigertipps zur YAML-Syntax](https://github.com/Animosity/CraftIRC/wiki/Complete-idiot's-introduction-to-yaml)
+ * Describes the pipeline.
+ * Consists of jobs\
+   that build, test, deploy the project, etc.
+ * As soon as a commit arrives*\
+   GitLab executes the pipeline.
+ * [Beginner tips for YAML syntax](https://github.com/Animosity/CraftIRC/wiki/Complete-idiot's-introduction-to-yaml)
 
 Notes:
 
-*: Andere Startbedingungen können konfiguriert werden.
-
+*: Other start conditions can be configured.
 
 ---
 
@@ -32,22 +31,21 @@ Notes:
 
 ## Job
 
-Ein Job führt seine Arbeit in Form von Kommandozeilenbefehlen aus:
+A job performs its work in the form of command-line commands:
 
 https://gitlab.com/gitlab-ci-samples/basic-job
 
-
 ---
 
-## Job - Optionen und Umgebung
+## Job - Options and Environment
 
-Es gibt zahlreiche Möglichkeiten zu steuern, ob, wann, wo und wie die Kommandos ausgeführt werden.
+There are numerous ways to control whether, when, where, and how the commands are executed.
 
- * [Doku zu `.gitlab-ci.yml`](https://docs.gitlab.com/ee/ci/yaml/)
+ * [Documentation for `.gitlab-ci.yml`](https://docs.gitlab.com/ee/ci/yaml/)
 
  * https://gitlab.com/gitlab-ci-samples/job-options
 
-Zahlreiche vordefinierte Variablen geben Zugriff auf den Kontext:
+Numerous predefined variables provide access to the context:
 
 https://docs.gitlab.com/ee/ci/variables/
 

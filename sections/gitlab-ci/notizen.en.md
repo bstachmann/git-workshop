@@ -1,41 +1,38 @@
-
-
-# Continuous Integration mit GitLab
+# Continuous Integration with GitLab
 
 # Agenda
 
-## Block1 Grundlagen CI/CD
+## Block1 Basics of CI/CD
 
  * CI
    * Git-Flow
    * Merge Hell
- * Workflow: Gemeinsam auf dem master entwickeln
+ * Workflow: Developing together on the master
 
  * CI/CD
 
-## Block2 Using Gitlab for CI/CD
-
+## Block2 Using GitLab for CI/CD
 
 ## Block3 Building Workflows for CI/CD
 
 # Material
 
-Ich demonstriere anhand einiger Beispiele, wie CI/CD mit GitLab implementiert werden kann. Ich berichte von CI/CD-Lösungen, die ich aus der Praxis kenne. Dann diskutieren Strategien, wie das bei Rohde und Schwarz umgesetzt werden kann. Im praktischen Teil werden die Beispiele angepasst und erweitert.
+I demonstrate with some examples how CI/CD can be implemented with GitLab. I report on CI/CD solutions I know from practice. Then we discuss strategies on how this can be implemented at Rohde and Schwarz. In the practical part, the examples are adapted and extended.
 
-## Warum?
- * Matzes 70 Schritte auf 1
+## Why?
+ * Matze's 70 steps to 1
 
  * Cycle Times -- Dave Farley
    * Flow:
-     - Weniger Unterbrechungen f, Entwickler
-     - kein Q/A Bottleneck
-   * Schnelleres Feedback, Experimente
- * Kleinere
-   * Einfachere Konflikte (horror of Release)
-   * Schnellere Fehlersuche
+     - Fewer interruptions for developers
+     - No Q/A bottleneck
+   * Faster feedback, experiments
+ * Smaller
+   * Easier conflicts (horror of Release)
+   * Faster troubleshooting
  * Code Quality/One Version
 
-## Was?
+## What?
 
  * CI
     * Master
@@ -43,33 +40,31 @@ Ich demonstriere anhand einiger Beispiele, wie CI/CD mit GitLab implementiert we
     * Build Pipeline
     * Reviews Quality Curve
 
-lead time, deployment frequency, mean time to restore (MTTR), and change fail percentage.
+Lead time, deployment frequency, mean time to restore (MTTR), and change fail percentage.
 
  * CD
     * Deployment
     * Monitoring
- * Artefaktrepository
-   * oder Docker image registry
- * Gitlab Runner
- * Gitlab Job + yml
+ * Artifact repository
+   * Or Docker image registry
+ * GitLab Runner
+ * GitLab Job + yml
  * Feature Toggling
 
-## Wie?
+## How?
 
- * Trunk based Development
-   - worst way to use branches
-   - zeromq way
+ * Trunk-based Development
+   - Worst way to use branches
+   - ZeroMQ way
  * When to merge
- * Auto Devops
- * Tests Unit/Modul/Integrationstests
-   - Geschwindigkeit/Parallelisierung
- * Abhängigkeiten/Modularisierung
+ * Auto DevOps
+ * Tests Unit/Module/Integration tests
+   - Speed/Parallelization
+ * Dependencies/Modularization
 
+## Where to next?
 
-
-## Wohin noch?
-
- * Release-Doku
+ * Release documentation
  * Infrastructure as Code
  * Kubernetes
- * monorepo
+ * Monorepo

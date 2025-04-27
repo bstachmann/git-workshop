@@ -1,6 +1,6 @@
-# Nützliche Features
+# Useful Features
 
-# für CI mit GitLab
+# for CI with GitLab
 
 ---
 
