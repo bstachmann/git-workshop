@@ -17,13 +17,13 @@
    - Possibilities and limitations
  * Object Database
    - Performance Aspects
- * Concept: Porcelaine & Plumbing
+ * Concept: Porcelain & Plumbing
 
 
 ---
 
 
-### Lerning goals (Commands)
+### Learning goals (Commands)
 
 ```bash
     git show 798062ffa

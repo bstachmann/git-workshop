@@ -11,9 +11,7 @@ How does Git work?
  * How does it handle redundancy?
  * A graph of commits?
 
-
 ---
-
 
 ## Just a minimal commit
 
@@ -24,9 +22,7 @@ $ git add hello
 $ git commit -m "A minimal commit"
 ```
 
-
 ---
-
 
 ## Let's have a closer look
 
@@ -38,20 +34,16 @@ $ git commit -m "A minimal commit"
     git ls-tree --abbrev HEAD src/main/java
 ```
 
-
 ---
-
 
 ### Everything has a hash!
 
-
 ---
-
 
 ### Inspect the Object Store
 
  * `.git/objects`
- * Content is compressed wit zlib
+ * Content is compressed with zlib
  
    ```bash
     $ cat 752c104f5f515c0f3b93bd21351f9e1add7e6a | pigz -d
@@ -64,21 +56,15 @@ $ git commit -m "A minimal commit"
     $ git cat-file -p HEAD   # print
     ``` 
 
-
 ---
-
 
 ### Add Another Commit
 
-
 ---
-
 
 ### Add a Merge
 
-
 ---
-
 
 ### The commit graph
 
@@ -86,27 +72,19 @@ $ git commit -m "A minimal commit"
  * First-Parent-History
  * Simplify-by-decoration
 
-
 ---
-
 
 ### Duplicate the file
 
-
 ---
-
 
 ### Identical content will be stored only once
 
-
 ---
-
 
 ### Add a Directory
 
-
 ---
-
 
 ### Important Types of Objects
 
@@ -114,9 +92,7 @@ $ git commit -m "A minimal commit"
  * `tree`
  * `commit`
 
-
 ---
-
 
 ### Writing to the object store
 
@@ -126,27 +102,22 @@ $ echo 'test content' | git hash-object -w --stdin
 
 ---
 
-
 ## A problem
 
- 1. Take large file
+ 1. Take a large file
  1. Add a line
- 1. Commt
+ 1. Commit
  1. Repeat often
  
 -> You get a huge repository  
 
-
 ---
 
- 
 ### Pack Files
 
  * https://git-scm.com/book/en/v2/Git-Internals-Packfiles
  * https://git-scm.com/docs/pack-format
 
-
 ---
-
 
 ### Git Garbage Collection

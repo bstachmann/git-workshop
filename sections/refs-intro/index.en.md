@@ -1,15 +1,11 @@
 # Refs
 
-
 ---
-
 
 > Branches and tags, \
 > how do they work?
 
-
 ---
-
 
 ## Learning Goals
 
@@ -18,11 +14,9 @@
  * Remote Tracking Branches
  * Upstream Branches!
 
-
 ---
 
-
-### Lerning goals (Commands)
+### Learning goals (Commands)
 
 ```bash
     git for-each-ref

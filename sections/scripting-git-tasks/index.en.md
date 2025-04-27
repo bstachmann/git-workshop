@@ -1,4 +1,3 @@
-
 # Scripting
 
  * Environment Variables
@@ -6,13 +5,13 @@
  * `git`-Options
    - `-C`
    - `--git-dir`
- * Git-Configuration
+ * Git Configuration
    - `git -c`
  * Git output
    - `--no-color`
  * `xargs`
  * for-each-ref
- * Reference-Clones
+ * Reference Clones
 
 
 ---
@@ -23,4 +22,3 @@
 ```bash
 git for-each-ref --shell --format="%(refname)" refs/heads/tmp/* | xargs git branch -d 
 ```
- 

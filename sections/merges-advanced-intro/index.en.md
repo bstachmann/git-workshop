@@ -2,12 +2,9 @@
 
 ---
 
-
 > Sometimes it's difficult!
 
-
 ---
-
 
 ## Learning Goals
 
@@ -15,14 +12,12 @@
  * Strategies for resolving merges
  * About workflows with merges
  * Interpreting merge history
- * reverting merges
- * subtree merges
-
+ * Reverting merges
+ * Subtree merges
 
 ---
 
-
-### Lerning goals (Commands)
+### Learning goals (Commands)
 
 ```bash
     git merge

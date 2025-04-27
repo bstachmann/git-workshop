@@ -21,7 +21,7 @@
 ---
 
 
-### Lerning goals (Commands)
+### Learning goals (Commands)
 
 ```bash
     git submodule add

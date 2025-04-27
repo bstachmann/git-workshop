@@ -24,7 +24,7 @@
 ---
 
 
-### Lerning goals (Commands)
+### Learning Goals (Commands)
 
 ```bash
     git add worktree my-new-worktree
