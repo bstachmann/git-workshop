@@ -1,41 +1,40 @@
-
-## Der *Stage*-Bereich 
+## The *Stage* Area 
 
 (aka *Index*)
 
-Git sammelt Änderungen im Stage-Bereich.
-`git add` "parkt" sie dort,
-bis sie in einem Commit verwendet werden.
+Git collects changes in the Stage area.
+`git add` "parks" them there
+until they are used in a commit.
 
     Workspace   -add->   Stage   -commit->   Repository
 
-d.h. wenn ändert man Dateien nach dem `add`,
-werden diese beim Commit noch nicht übernommen.
+This means if you change files after `add`,
+these changes will not be included in the commit.
 
 
 Notes:
 
-Im "Grundzustand" enspricht die Stage dem HEAD-Stand
+In the "default state," the Stage corresponds to the HEAD state.
 
 
 ---
 
 
-### Tipps zum Staging
+### Tips for Staging
 
-Unterschied zwischen Workspace und Stage:
+Difference between Workspace and Stage:
 
     git diff
 
-Unterschied zwischen Stage und `HEAD`:
+Difference between Stage and `HEAD`:
 
     git diff --staged
 
-Setzt Stage auf den `HEAD`-Stand zurück:
+Reset Stage to the `HEAD` state:
 
     git restore --staged <file>
 
-Setzt Workspace auf den Stage-Stand zurück:
+Reset Workspace to the Stage state:
 
     git restore <file>
 

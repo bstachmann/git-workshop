@@ -1,21 +1,21 @@
-**Hallo liebe Git-Workshop-Teilnehmer,**
+**Hello dear Git workshop participants,**
 
-es ist eine gute Idee, Eure Arbeitsumgebung schon vor dem Workshop vorzubereiten, damit wir zu Beginn nicht so viel Zeit für Setup-Themen benötigen und schneller in die wirklich spannenden Inhalte eintauchen können. Ich habe hier ein paar Schritte zusammengefasst, die ihr vorab ausführen könnt.
+It is a good idea to prepare your working environment before the workshop so that we don't spend too much time on setup topics at the beginning and can dive into the really exciting content faster. I have summarized a few steps here that you can carry out in advance.
 
-> Meldet Euch gerne per Email oder Teams bei mir, falls ihr beim Einrichten auf Probleme stoßt.
-> Aber: Keine Panik! Notfalls kriegen wir das auch noch am ersten Vormittag hin.
+> Feel free to contact me via email or Teams if you encounter problems during setup.
+> But: Don't panic! If necessary, we can still manage it on the first morning.
 
-### 1. Git installieren
+### 1. Install Git
 
-Zunächst einmal brauchen wir natürlich Git. Installiert es (https://git-scm.com/downloads), oder lasst es installieren (falls euer Rechner fremdverwaltet ist). Falls ihr auf Windows installiert, wird der Installer Euch mehrfach Optionen zur Auswahl anbieten. Nehmt einfach die Vorausgewählten Optionen, falls ihr keine besonderen Wünsche an die Installation habt.
+First of all, we need Git, of course. Install it (https://git-scm.com/downloads), or have it installed (if your computer is managed by someone else). If you are installing on Windows, the installer will offer you several options to choose from. Just take the default options unless you have specific requirements for the installation.
 
-### 1b. (nur Windows) Git-Bash öffnen
+### 1b. (Windows only) Open Git-Bash
 
-Drückt kurz die Windows-Taste und gebt dann `Git-Bash` ein (oder klickt auf das Icon welches der Installer dafür hinterlassen hat). Dann sollte sich ein Terminal der Git-Bash öffnen. *Info*: Wir führen die (Kommandozeilen-) Beispiele für diesen Workshop mit `bash` aus, weil dies sowohl auf Windows also auch  Linux und Mac Os gut funktioniert. Erfahrene User können natürlich gerne ihr Lieblings-Shell nutzen, z. B. `zsh` oder `powershell`.
+Press the Windows key and then type `Git-Bash` (or click on the icon left by the installer). A terminal for Git-Bash should open. *Info*: We will use `bash` for the (command line) examples in this workshop because it works well on Windows, Linux, and Mac OS. Experienced users are, of course, welcome to use their favorite shell, e.g., `zsh` or `powershell`.
 
-### 2. Git Version checken
+### 2. Check Git version
 
-Öffnet ein Terminal und gebt `git version` ein. Falls Git bei Euch eine andere Versionsnummer ausgibt, kein Problem: Hauptsache Git ist da.
+Open a terminal and type `git version`. If Git outputs a different version number for you, no problem: The main thing is that Git is there.
 
 
 ```bash 
@@ -24,35 +24,35 @@ Drückt kurz die Windows-Taste und gebt dann `Git-Bash` ein (oder klickt auf das
 ```
 
 
-### 3. Arbeitsverzeichnis einrichten
+### 3. Set up a working directory
 
-Richtet jetzt ein Verzeichnis ein, in dem ihr während des Workshops arbeiten könnt:
+Now set up a directory where you can work during the workshop:
 
 ```bash
     $ mkdir gitworkshop
     $ cd gitworkshop
 ```
 
-Tipp für Windows-User: Mit  `start .` könnt ihr zusätzlich ein File-Exporer-Fenster auf diesem Verzeichnis öffen.
+Tip for Windows users: With `start .` you can also open a File Explorer window for this directory.
 
-### 4. Übungen herunterladen und entpacken
+### 4. Download and unpack exercises
 
-Die Übungen könnt ihr als ZIP-File (https://github.com/bstachmann/git-workshop/releases/latest/download/git-uebungen.zip) herunterladen, in das oben gennante Verzeichnis legen und dort entpacken. Es sollte dann ein Ordner `git-uebungen` mit Unterordner für `aufgaben` und `loesungen` vorliegen:
+You can download the exercises as a ZIP file (https://github.com/bstachmann/git-workshop/releases/latest/download/git-uebungen.zip), place it in the directory mentioned above, and unpack it there. There should then be a folder `git-uebungen` with subfolders for `aufgaben` and `loesungen`:
 
     $ ls -1 git-uebungen
     aufgaben
     index.html
     loesungen
 
-### 5. Ein Git-Projekt klonen
+### 5. Clone a Git project
 
-Probiert, ob ihr das Workshop-Projekt klonen könnt:
+Try cloning the workshop project:
 
     $ git clone https://github.com/bstachmann/git-workshop.git
 
-Hinweis: Hier kann es manchmal zu Firewall- oder anderen Netzwerk-Problemen kommen, falls ihr in einem Unternehmensnetwerk seid.
+Note: Sometimes there can be firewall or other network problems if you are in a corporate network.
 
-Viele Grüße
+Best regards,
 
 Bjørn Stachmann
 
@@ -62,4 +62,3 @@ Bjørn Stachmann
 
 
 
-    
