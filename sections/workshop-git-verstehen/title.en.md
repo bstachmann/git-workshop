@@ -1,7 +1,7 @@
-# Git verstehen
+# Understanding Git
 
-Ein Workshop basierend auf dem Buch
+A workshop based on the book
 
 <img src="sections/workshop-git-buch/git-buch.jpg" width="15%"/>
 
-von René Preißel und Bjørn Stachmann
+by René Preißel and Bjørn Stachmann

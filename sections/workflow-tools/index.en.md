@@ -1,15 +1,14 @@
+## The Toolbox
 
-## Der Werkzeugkasten
+Git does not prescribe a specific *workflow*.
 
-Git gibt keine bestimmte *Arbeitsweise* vor.
+It offers a range of *tools*,
+which can be used in different ways.
 
-Es bietet eine Reihe von *Werkzeugen*,
-die unterschiedlich eingesetzt werden.
+Which tools are used and when
+determines the *team workflow*.
 
-Welche Tools man wann einsetzt,
-bestimmt den *Workflow im Team*.
-
-Die folgenden Werkzeuge sind entscheidend:
+The following tools are crucial:
 
 
 ---
@@ -17,7 +16,7 @@ Die folgenden Werkzeuge sind entscheidend:
 
 ## Branch
 
- ![Branch Nachher](abb-branches-beispiel-nachher.png)
+ ![Branch After](abb-branches-beispiel-nachher.png)
 
 ---
 
@@ -25,50 +24,49 @@ Die folgenden Werkzeuge sind entscheidend:
 
 ![Branch Merge](abb-branches-beispiel-merge.png)
 
-* Erzeugt neues Commit
-* Zwei Parents
+* Creates a new commit
+* Two parents
 
 
 ---
 
-## Cherry-Pick (Vorher)
+## Cherry-Pick (Before)
 
-![Branch Nachher](abb-branches-beispiel-nachher.png)
-
----
-
-## Cherry-Pick (Nachher)
-
- ![Rebase nachher](abb-branches-beispiel-cherry-pick.png)
-
-  * Kopiert Commits
-  * Kein struktureller Zusammenhang zwischen kopierten Commits.
+![Branch After](abb-branches-beispiel-nachher.png)
 
 ---
 
-## Rebase (vorher)
+## Cherry-Pick (After)
 
-  ![Rebase vorher](abb-branches-beispiel-rebase-vorher.png)
+ ![Rebase After](abb-branches-beispiel-cherry-pick.png)
 
----
-
-## Rebase (nachher)
-
-  ![Rebase nachher](abb-branches-beispiel-rebase-nachher.png)
-
- * Kopiert Commits
- * Sieht dann nachher so aus,<br/>
-   als wären die Commits verschoben.
-
+  * Copies commits
+  * No structural connection between copied commits.
 
 ---
 
+## Rebase (Before)
 
-### Achtung! -  Rebase verändert die Historie.
+  ![Rebase Before](abb-branches-beispiel-rebase-vorher.png)
 
-* OK, für lokale Änderungen.
-* OK, für Features-Branches in geschlossenen Teams.
-* Nicht OK, sonst.
+---
+
+## Rebase (After)
+
+  ![Rebase After](abb-branches-beispiel-rebase-nachher.png)
+
+ * Copies commits
+ * Appears as if the commits were moved.
+
+
+---
+
+
+### Warning! -  Rebase changes history.
+
+* OK for local changes.
+* OK for feature branches in closed teams.
+* Not OK otherwise.
 
 
 ---
@@ -78,35 +76,35 @@ Die folgenden Werkzeuge sind entscheidend:
 
 ![Tags](tags.png)
 
-(Annotated) Tags markieren Commits zu wichtigen Meileinsteinen, z.B. Releases.
+(Annotated) Tags mark commits for important milestones, e.g., releases.
 
 
 ---
 
-## History-Tree
+## History Tree
 
-![History-Tree](abb-1st-parent-history-0.png)
+![History Tree](abb-1st-parent-history-0.png)
 
 ---
 
-**Merges** zeigen Integrationen, <BR/>
-**Rebases** und **Cherry-Picks** verbergen sie.
+**Merges** show integrations, <BR/>
+**Rebases** and **Cherry-Picks** hide them.
 <BR/>
 
-Mit der Wahl der Werkzeuge bestimmt man,<BR/>
-welche Integrationen das History-Tree zeigt.
+The choice of tools determines,<BR/>
+which integrations the history tree shows.
 
 ---
 
-## Werkzeugkasten
+## Toolbox
 
-### für Workflows
+### for Workflows
 
-| Werkzeuge             |
-|-----------------------|
-| Branch                |
-| Merge                 |
-| Rebase                |
-| Cherry-Pick           |
-| Tag                   |
-| History tree          |
+| Tools                |
+|----------------------|
+| Branch               |
+| Merge                |
+| Rebase               |
+| Cherry-Pick          |
+| Tag                  |
+| History tree         |

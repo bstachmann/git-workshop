@@ -1,13 +1,13 @@
 <font size="4">
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.
-  Sie dürfen diese Präsentation gerne nutzen um Git zu lernen, oder um es ihren Freunden und Kollegen beizubringen.
-  Wenn sie damit jedoch kommerzielle Seminare anbieten, oder es als Schulungmaterial publizieren wollen,
-  dann nehmen sie bitte <a href="mailto:git@etosqaure.de">Kontakt mit uns auf.</a>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution - NonCommercial - NoDerivatives 4.0 International License</a>.
+  You are welcome to use this presentation to learn Git or to teach it to your friends and colleagues.
+  However, if you want to offer commercial seminars or publish it as training material,
+  please <a href="mailto:git@etosqaure.de">contact us</a>.
   <br/>
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img   alt="Creative Commons Lizenzvertrag" style="border-width:0" src="sections/workshop-git-license/cc-by-nc-nd.png" /></a>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img   alt="Creative Commons License" style="border-width:0" src="sections/workshop-git-license/cc-by-nc-nd.png" /></a>
 </font>
 <p/>
 <font size="4">
-  Sie könne dies Präsentation auch  <a href="?print-pdf">ausdrucken</a>.
+  You can also <a href="?print-pdf">print this presentation</a>.
 </font>
 

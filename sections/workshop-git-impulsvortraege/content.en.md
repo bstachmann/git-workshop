@@ -1,4 +1,4 @@
-* Rebasing (inkl. interactive Rebasing)
-* Submodule und Subtrees
-* Überblick Workflows
-* Große Repos
+* Rebasing (including interactive rebasing)
+* Submodules and Subtrees
+* Overview of workflows
+* Large repositories

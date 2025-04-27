@@ -1,23 +1,23 @@
-* Intro. **Was ist Git?**\
-  Über Herkunft, Entstehung und vor allem die
-  Vorteile von Git
+* Intro. **What is Git?**\
+  About the origin, development, and especially the
+  advantages of Git
 * **Repository**\
-  Was genau ist ein Git-Repo? Was enthält es und was nicht?\
-  Revision-Hashes und das Git-Log.
+  What exactly is a Git repository? What does it contain and what not?\
+  Revision hashes and the Git log.
 * **Commits**\
-  Erstellen von Commits\
-  `diff`: Sehen, was sich geändert hat.
-* **Klone**\
-  Das Klonen\
-  Umgang mit Remote-Repositories
+  Creating commits\
+  `diff`: Viewing changes.
+* **Clones**\
+  Cloning\
+  Working with remote repositories
 * **Push & Pull**\
-  Dezentralität. Austausch von Commits per Push und Pull\
-  GitHub Pull-Requests (oder GitLab Merge-Requests)
+  Decentralization. Exchanging commits via push and pull\
+  GitHub pull requests (or GitLab merge requests)
 * **Merges**\
-  Auflösen von Mergekonflikten\
-  Strategien zum Umgang mit und zur Vermeidung von Merge-Konflikten
+  Resolving merge conflicts\
+  Strategies for handling and avoiding merge conflicts
 * **Branches**\
   Branching in Git
-* **Kurzer Ausblick**
-  Was gibt es noch?\
-  Z.B. Rebasing, Modularisierung, LFS, Workflows.
+* **Brief Outlook**
+  What else is there?\
+  E.g., rebasing, modularization, LFS, workflows.

@@ -1,5 +1,5 @@
 # Git
 
-## Impulsvorträge
+## Lightning Talks
 
-von René Preißel und Bjørn Stachmann
+by René Preißel and Bjørn Stachmann

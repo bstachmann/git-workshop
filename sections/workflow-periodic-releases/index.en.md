@@ -1,11 +1,11 @@
 # Workflow
 
-## Release-Staging
+## Release Staging
 
-Releases vorbereiten.
+Prepare releases.
 
 
 ---
 
 
-![Release durchführen](workflow-periodic-releases.png)
+![Perform Release](workflow-periodic-releases.png)

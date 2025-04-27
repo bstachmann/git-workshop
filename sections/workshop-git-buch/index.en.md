@@ -1,8 +1,7 @@
-
-Der Workshop basiert auf unserem Buch:
+The workshop is based on our book:
 
 <img src="sections/workshop-git-buch/git-buch.jpg" width="20%"/>
 
-Mehr über Git erfahren Sie in unserem Blog
+Learn more about Git on our blog
 [Kapitel 26](http://kapitel26.github.io).
 

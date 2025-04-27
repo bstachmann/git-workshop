@@ -1,25 +1,24 @@
+## Pull Request
 
-## Pull-Request
+![Pull Request](abb-pull-request.png)
 
-![Pull-Request](abb-pull-request.png)
-
-(Auch Merge-Request genannt.)
+(Also called Merge Request.)
 
 ---
 
-## Pull-Request
+## Pull Request
 
- * separarierte Entwicklung
- * Jemand anderes (Maintainer/Kollege) integriert
- * Quality-Gate: Review, autom. Checks
- * dokumentierte Integration
+ * Separate development
+ * Someone else (maintainer/colleague) integrates
+ * Quality gate: Review, automated checks
+ * Documented integration
 
 ![Feature Branches](abb-jenkins-pull-requests-stash-config.png)
 
 ---
 
 
-## Pull-Request Demo
+## Pull Request Demo
 
 
 
