@@ -1,6 +1,5 @@
-
 ---
 
 ### Push & Pull
 
-## Auf einem Branch<br/>gemeinsam arbeiten
+## Collaborating on a Branch

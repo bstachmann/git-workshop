@@ -1,8 +1,7 @@
-
 ---
 
 ### Repository
 
 ## Refs 
 
-(Branches, Tags und `HEAD`)
+(Branches, Tags, and `HEAD`)

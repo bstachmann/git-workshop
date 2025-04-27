@@ -1,8 +1,7 @@
-
 ---
 
 ### Push & Pull
 
 ### Workflow
 
-## Validieren
+## Validation

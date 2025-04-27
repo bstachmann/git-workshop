@@ -1,6 +1,5 @@
-
 ---
 
 ### Repository
 
-## Commits und das Log
+## Commits and the Log
