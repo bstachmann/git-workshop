@@ -1,15 +1,15 @@
-# Große Projekte
+# Large Projects
 
-### Monorepo, kleine Repos oder Modularisierung?
+### Monorepo, Small Repos, or Modularization?
 
 ---
 
-## Lernziel
+## Learning Objective
 
- * Wo liegen die Grenzen?
- * Strategien für den Umgang mit großen Projekten
+ * Where are the limits?
+ * Strategies for handling large projects
  * LFS (Git large file system)
- * Modularisierung
-   - Submodule
+ * Modularization
+   - Submodules
    - Subtree
- * Umstrukturierung
+ * Restructuring

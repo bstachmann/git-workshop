@@ -1,6 +1,5 @@
-
 ---
 
-### Große Projekte
+### Large Projects
 
-## Kleine Repositories
+## Small Repositories

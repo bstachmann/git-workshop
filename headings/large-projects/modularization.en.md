@@ -1,6 +1,5 @@
-
 ---
 
-### Große Projekte
+### Large Projects
 
-## Modularisierung
+## Modularization

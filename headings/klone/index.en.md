@@ -1,10 +1,10 @@
-# Klone und Remotes
+# Clones and Remotes
 
 ---
 
-## Lernziele
+## Learning Objectives
 
- * Dezentralität
- * Klonen
+ * Decentralization
+ * Cloning
  * Remote Refs
 

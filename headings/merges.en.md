@@ -2,13 +2,13 @@
 
 ---
 
-## Lernziel
+## Learning Objective
 
-Verstehen, was Merges sind,wie Git Änderungen zusammenführt,wie man Mergekonflikte auflöst und wie man Probleme durch Merges vemeidet.
+Understand what merges are, how Git combines changes, how to resolve merge conflicts, and how to avoid problems caused by merges.
 
-* Wie enstehen Verzweigungen?
-* 3-Wege-Merge
-* Konfliktauflösung
-* Konfliktanalyse
-* Fast-Forwards
+* How do branches arise?
+* 3-way merge
+* Conflict resolution
+* Conflict analysis
+* Fast-forwards
 

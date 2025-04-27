@@ -1,9 +1,8 @@
-
 ---
 
-### Große Projekte
+### Large Projects
 
 ### Monorepo
 
- Basierend diesem Vortrag [zu großen Git-Repos](https://kapitel26.github.io/slides/2018-11-15-size-does-matter/)
+ Based on this talk [on large Git repos](https://kapitel26.github.io/slides/2018-11-15-size-does-matter/)
 

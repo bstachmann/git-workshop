@@ -1,6 +1,5 @@
-
 ---
 
-### Klone und Remotes
+### Clones and Remotes
 
-## Klonen
+## Cloning
