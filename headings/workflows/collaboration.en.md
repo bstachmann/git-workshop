@@ -1,16 +1,13 @@
-
 ---
 
 ### Workflows
 
-## Zusammenarbeit
-
+## Collaboration
 
 ---
 
+## Learning Objectives
 
-## Lernziele
-
- * Auf einem Branch gemeinsam Entwickeln
- * In Feature-Branches entwickeln
- * Pull-Requests
+ * Developing together on a branch
+ * Developing in feature branches
+ * Pull requests

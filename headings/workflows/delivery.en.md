@@ -1,15 +1,14 @@
-
 ---
 
 ### Workflows
 
-## Software ausliefern
+## Software Delivery
 
 ---
 
-## Lernziele
+## Learning Objectives
 
- * Release-Tags
+ * Release tags
  * Staging
  * Continuous Delivery
- * (Release-Branches, Multi-Releases)
+ * (Release branches, multi-releases)

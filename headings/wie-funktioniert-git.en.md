@@ -1,4 +1,4 @@
-## Was Git im innersten zusammenhält
+## What holds Git together at its core
 
 <!-- .slide: data-background-image="section-headers/faustus.png" data-background-opacity="0.3" data-background-size="90%"-->
 
@@ -7,19 +7,19 @@
 
 ---
 
-> Drum hab' ich **mich der Magie ergeben**,\
-> Ob mir durch Geistes Kraft und Mund\
-> Nicht manch Geheimnis würde kund;\
-> Dass ich nicht mehr mit sauerm Schweiß\
-> Zu sagen brauche, was ich nicht weiß;\
-> **Dass ich erkenne, was die Welt**\
-> **Im Innersten zusammenhält**,\
-> Schau' alle Wirkenskraft und Samen,\
-> Und tu' nicht mehr in Worten kramen.
+> Thus I have given myself to **magic**,\
+> To see if through spirit's power and speech\
+> I might uncover many a secret;\
+> That I no longer need to say, with bitter sweat,\
+> What I do not know;\
+> **That I may perceive what holds the world**\
+> **Together at its core**,\
+> See all the workings and seeds of life,\
+> And no longer deal in empty words.
 >
 > *- Johann Wolfgang von Goethe -*
 > 
 
 ---
 
-Was Git im innersten zusammenhält, lässt sich glücklicherweise auch ohne schwarze Magie erkunden.
+What holds Git together at its core can fortunately be explored without black magic.

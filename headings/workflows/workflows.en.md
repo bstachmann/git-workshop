@@ -1,12 +1,11 @@
-
 ---
 
 ## Workflows
 
-## Typische Workflows
+## Typical Workflows
 
 ---
 
-[Demo Pipeline im Git-Workshop-Repo](https://github.com/bstachmann/git-workshop/actions)
+[Demo pipeline in the Git workshop repository](https://github.com/bstachmann/git-workshop/actions)
 
 

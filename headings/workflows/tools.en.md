@@ -1,24 +1,20 @@
-
 ---
 
 ### Workflows
 
-## Baukastem für Workflows
+## Toolbox for Workflows
 
 ---
 
+# Tools
 
-# Werkzeuge
-
-## für Workflows
-
+## for Workflows
 
 ---
 
+## Learning Objectives
 
-## Lernziele
-
-| Werkzeuge             |
+| Tools                |
 |-----------------------|
 | Branch                |
 | Merge                 |

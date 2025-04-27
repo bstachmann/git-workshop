@@ -1,4 +1,3 @@
-
 ---
 
 ### Workflows
@@ -7,9 +6,9 @@
 
 ---
 
-## Lernziele
+## Learning Objectives
 
- * Bugfix-branches
- * Merge-Ketten
+ * Bugfix branches
+ * Merge chains
  * Backporting
  * Forward Fixing

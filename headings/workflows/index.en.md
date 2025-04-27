@@ -1,16 +1,14 @@
-
 # Workflows
 
 ---
 
+## Learning Objectives
 
-## Lernziele
-
- * Die große Frage: To Branch or not to Branch
- * Werkzeugkasten
-   - Branching, Forking, Merging, Rebasing, Cherry-Picking und der Commit-Graph
+ * The big question: To branch or not to branch
+ * Toolbox
+   - Branching, forking, merging, rebasing, cherry-picking, and the commit graph
  * Patterns 
-   - Feature-, Kollaborations-, Integrations-, Staging- und Release-Branches, Backports und Merge-Ketten
+   - Feature, collaboration, integration, staging, and release branches, backports, and merge chains
  * Workflows
-   - typische und interessante Beispiele
+   - Typical and interesting examples
    - Gitflow
