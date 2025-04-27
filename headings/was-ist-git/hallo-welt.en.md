@@ -1,8 +1,7 @@
-
 ---
 
-### Was ist Git?
+### What is Git?
 
-## Hallo Welt!
+## Hello World!
 
 

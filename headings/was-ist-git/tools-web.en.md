@@ -1,9 +1,8 @@
-
 ---
 
-### Was ist Git?
+### What is Git?
 
 ## Tools - Web
 
-GitHub, GitLab, BitBucket und Co.
+GitHub, GitLab, BitBucket, and others.
 

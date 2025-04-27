@@ -1,9 +1,8 @@
-
 ---
 
-### Was ist Git?
+### What is Git?
 
 ## Tools - GUI
 
-Grafische Benutzeroberflächen
+Graphical User Interfaces
 

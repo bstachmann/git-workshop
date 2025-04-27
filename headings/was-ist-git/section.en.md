@@ -1,15 +1,15 @@
-# Was ist Git?
+# What is Git?
 
 ---
 
-## Lernziel
+## Learning Objective
 
-Ein Überblick in die Git-Landschaft
+An overview of the Git landscape
 
  * Git Tools
-   - Kommandozeile
-   - grafische User-Interfaces
+   - Command Line
+   - Graphical User Interfaces
    - Web
- * Arbeite mit dem Git-Kommando 
- * Wie ist Git entstanden? Welche Eigenschaften zeichnen es aus? Warum ist es so verbreitet?
+ * Work with the Git command
+ * How did Git originate? What characteristics define it? Why is it so widespread?
 

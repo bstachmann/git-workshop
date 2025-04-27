@@ -1,7 +1,6 @@
-
 ---
 
-### Was ist Git?
+### What is Git?
 
-## Tools - Kommandozeile
+## Tools - Command Line
 

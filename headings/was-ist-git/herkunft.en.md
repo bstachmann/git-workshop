@@ -1,8 +1,7 @@
-
 ---
 
-### Was ist Git?
+### What is Git?
 
-## Herkunft und Eigenschaften
+## Origin and Characteristics
 
 
