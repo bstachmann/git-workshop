@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 13
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Branch erstellen
 
 Erstelle einen Branch `feature-a`, bearbeite die Datei `foo`

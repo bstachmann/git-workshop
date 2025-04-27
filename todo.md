@@ -1,8 +1,19 @@
 # To Do
-
- * ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
- * intro commandline, Ordner in step 1 fehlt
- * Bash P1 f. GitHub Codespaces anpassen
+ * Workflow validieren
+   - Varianten: Pair programming, asynchronous testing, Quality tags
+ * Delivery: Tipp: Always provide the revision the product was built from
+ * Headerslide f. workflows nach unten gerutscht
+ * in Branching übung: git switch -c feature HEAd
+   - head weglassen
+ * Staging übung, warum HEAD~9
+ * Repository: Beispielrepos zum Untersuchen
+ * Statt workflows use cases:
+   * Parallel entwickeln (Bugfixing/Maintenance, mehrere Entwickler, separierung von Features)
+   * Software ausliefern
+   * Bugfixes
+   * Reviews durchführen
+ * Cheat Sheet zu zu  den wichtigenGit-Operationen
+ * Ein beispieltag im intro einbauen, damit man das in der repo untersuchen schon mal gesehen hat.
  * Trade-Off tabellen
    - Cherry-Pick vs. Merge Chains
    - Add+Commit+Push oder selective Stage and push
@@ -14,7 +25,6 @@
  *repository-log Übung: show HEAD:datei.txt erläutern in Tipps
  * repository-untersuchen: Enthält noch Tipps zur vorigen übung
  * diff slides im nach vorne und zusammen ziehen (nich in refs)
- * checkin/step-0 für den tracker
  * Remote Tracking Branches nach "Push Pull"
    - git branch -a
    - ersten fetch zeigen,

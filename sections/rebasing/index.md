@@ -77,13 +77,7 @@ Ohne Parameter: Upstream Branch.
 
 ---
 
-
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-zusammenarbeit-rebasing.html" target="_blank">Rebasing<a></h2>
-
-
-
+<iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-rebasing.html" width="100%" height="600px" ></iframe>
 
 
 ---

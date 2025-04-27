@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 19
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Und jetzt ein Weihnachtsbaum
 
 Branche und Merge so, dass ˋgit log --graph --onelineˋ

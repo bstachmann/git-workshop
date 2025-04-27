@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 14
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Einzelnes Commit rückgängig machen.
 
 In der Historie wurde die Datei `README.md` in `liesmich`

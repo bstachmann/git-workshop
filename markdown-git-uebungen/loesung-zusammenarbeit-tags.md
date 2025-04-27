@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 10
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Tags erstellen
 
 Erstelle ein einfaches Tag `simple1` auf `HEAD` und

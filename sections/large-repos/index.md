@@ -3,25 +3,9 @@
 
 ---
 
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-repository-sparse-checkout.html" target="_blank">Sparse Checkout<a></h2>
-
-
+<iframe src="markdown-git-uebungen/aufgabe-repository-sparse-checkout.html" width="100%" height="600px" ></iframe>
 
 ---
-### Übung
-
-## Git LFS
-
-<h2><a href="markdown-git-uebungen/aufgabe-modularisierung-lfs.html" target="_blank">Git LFS<a></h2>
-
-
----
-
-### Sparce Checkout
-
-<h2><a href="markdown-git-uebungen/aufgabe-repository-sparse-checkout.html" target="_blank">Sparse Checkout<a></h2>
 
 
 

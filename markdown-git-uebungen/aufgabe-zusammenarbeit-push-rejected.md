@@ -55,24 +55,26 @@ wirst Du einen *Push Reject* erfahren.
    - `anjas-apollo/` Hier arbeitet Anja.  
    - `my-apollo/` **Du arbeitest hier.**
 
+<h2>Schritt 0 - START <!-- UEB/Umgang mit "Push Reject"/0 --></h2>
+
 
 <pre><code>$ <b>cd my-apollo</b><br><br><br></code></pre>
 
 
-<!--UEB-Umgang mit "Push Reject"--><h2>Schritt 1 - Lokal Commit(s) erstellen</h2>
+<h2>Schritt 1 - Lokal Commit(s) erstellen <!-- UEB/Umgang mit "Push Reject"/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
 Bearbeite die Datei `frontend.java` und erstelle (mindestens) ein Commit mit den Änderungen.
 Überprüfe danach mit `git status`, ob der Workspace sauber ist.
 
-<!--UEB-Umgang mit "Push Reject"--><h2>Schritt 2 - Push versuchen</h2>
+<h2>Schritt 2 - Push versuchen <!-- UEB/Umgang mit "Push Reject"/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
 Versuche jetzt Deine Änderungen zu pushen.
 
-<!--UEB-Umgang mit "Push Reject"--><h2>Schritt 3 - (optional) Problem analysieren</h2>
+<h2>Schritt 3 - (optional) Problem analysieren <!-- UEB/Umgang mit "Push Reject"/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
@@ -83,13 +85,13 @@ und lasse Dir die Änderungen von *Anja* zeigen.
  * Welche Unterschiede gibt es zweichen deiner und Anjas Version (symmetrisches `diff`)?
  * Welche Änderungen hat Anja gemacht (asymmetrisches `diff`)?
 
-<!--UEB-Umgang mit "Push Reject"--><h2>Schritt 4 - Fremde Änderungen integrieren</h2>
+<h2>Schritt 4 - Fremde Änderungen integrieren <!-- UEB/Umgang mit "Push Reject"/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
 Integriere die Änderungen mit Pull und sieh Dir dann den Commit-Graphen an.
 
-<!--UEB-Umgang mit "Push Reject"--><h2>Schritt 5 - Erneut pushen</h2>
+<h2>Schritt 5 - Erneut pushen <!-- UEB/Umgang mit "Push Reject"/5 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 

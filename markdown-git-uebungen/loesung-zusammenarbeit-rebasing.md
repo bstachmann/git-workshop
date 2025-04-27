@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 15
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Feature-Branch per Rebase aktualiseren.
 
 Auf dem main gibt es Neuerungen.

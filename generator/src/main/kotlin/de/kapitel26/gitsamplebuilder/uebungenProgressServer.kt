@@ -20,24 +20,32 @@ import io.ktor.server.netty.Netty
 import io.ktor.server.sessions.*
 import io.ktor.server.response.respondRedirect
 import java.io.File
+import java.io.StringWriter
+import java.io.PrintWriter
 import java.net.URL
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.atomic.AtomicInteger
 import kotlin.math.*
 import kotlinx.html.*
 import kotlin.coroutines.*
 import kotlin.random.*
+import util.openFileInLocalVscode
 
 fun main() {
-    val adminServer = embeddedServer(Netty, port = 8040) { adminModule() }
-    adminServer.start(wait = false)
-    val participantsServer = embeddedServer(Netty, port = 8080) { participantsModule() }
-    participantsServer.start(wait = true)
+    val server = embeddedServer(Netty, port = 8000) { 
+        localVscodeModule();
+        participantsModule();
+    }
+    server.start(wait = true)
 }
 
 data class Progress(
         val aufgaben: List<Pair<String, List<String>>>,
         val aktuelleAufgabe: Pair<String, List<String>>,
-        val participants: Map<String, String>,
-        val achievements: Map<String, Set<String>>
+        val participants: Map<String, String>, // id to alias
+        val achievements: Map<String, Set<String>>,
+        val adminId: String? = null
 )
 
 data class UserSession(val userId: String)
@@ -88,13 +96,8 @@ fun Application.participantsModule() {
     routing {
         aufgabenFilesLocalJekyll()
         workshopSiteFromLocalJekyll()
+        progressDashboad()
         get("/") { call.respondRedirect("/git-workshop") }
-    }
-}
-
-fun Application.adminModule() {
-    routing {
-        adminDashboad()
     }
 }
 
@@ -105,7 +108,7 @@ val ApplicationCall.userId : String get() =
 
 fun Route.aufgabenFilesLocalJekyll() {
     get("/git-workshop/markdown-git-uebungen/{path...}") {
-        println("Aufgabe request ${call.parameters.getAll("path")}")
+        // println("Aufgabe request ${call.parameters.getAll("path")}")
         val previous = call.sessions.get<UserSession>() 
         val session = 
             if( previous != null && state.participants.containsKey(previous.userId))
@@ -116,8 +119,11 @@ fun Route.aufgabenFilesLocalJekyll() {
                 .let { UserSession(it) }
                 .also { 
                     call.sessions.set(it)
-                    println("Starting new session with userId $it")
-                    update(state.copy(participants = state.participants + (it.userId to it.userId)))
+                    // println("Starting new session with userId $it")
+                    update(state.copy(
+                        participants = state.participants + (it.userId to it.userId),
+                        adminId = state.adminId ?: it.userId
+                    ))
                 }
         val userId = session.userId
 
@@ -140,7 +146,7 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
         } else {
             val sidParam = call.parameters["sid"]
-            println("userId=$userId, sid=$sidParam")
+            // println("userId=$userId, sid='$sidParam'")
             if (sidParam != null) {
                 val completed = call.parameters["completed"].toBoolean()
                 val previousAchievements: Set<String> = state.achievements[sidParam] ?: emptySet()
@@ -149,15 +155,16 @@ fun Route.aufgabenFilesLocalJekyll() {
             }
 
             val response = this.getStaticContent("markdown-git-uebungen/" + (call.parameters.getAll("path")?.joinToString("/") ?: ""))
+            // Schritt 1 - Navigation in Übungsverzeichnisse <!-- UEB/Das `git`-Kommando!/1 --> </h2> 
             val processedContent = response.bodyAsText().replace(
-                """\<\!\-\-UEB\-(.+?)\-\-\> \<h2\> (.+?)\ <\/h2\>""".toRegex(), 
+                """\<\!\-\- UEB\/(.+?)\/(.+?) \-\-\>""".toRegex(), 
                 { step -> 
-                    val aufgabname = step.groups[1]?.value
-                    val schrittname = step.groups[2]?.value
-                    val schrittSid = abs((aufgabname to schrittname).hashCode()).toString()    
-                    val isCompleted = state.achievements[schrittSid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
-                    
-                    """<h2>$schrittname <a href="?sid=$schrittSid&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
+                    val aufgabname = step.groups[1]?.value ?: "unknown"
+                    val schrittnummer = step.groups[2]?.value ?: "missing"
+                    val sid = "${aufgabname}/${schrittnummer}"
+                    val isCompleted = state.achievements[sid]?.contains(call.sessions.get<UserSession>()?.userId) ?: false
+                    // println("INSERT '${aufgabname}' num='${schrittnummer}' sid=${sid}")
+                    """<a href="?sid=${URLEncoder.encode(sid, StandardCharsets.UTF_8.toString())}&completed=${!isCompleted}">${ if(isCompleted) "erledigt" else "offen"} </a></h2>"""
                 }
             )
             call.respondText(processedContent, status = response.status, contentType = response.contentType())
@@ -176,61 +183,99 @@ fun Route.workshopSiteFromLocalJekyll() {
 
 suspend fun PipelineContext<Unit, ApplicationCall>.getStaticContent(path: String) : HttpResponse =
     "http://localhost:4000/git-workshop/${path}"
-        .also { println("Requesting: $it") } 
+        // .also { println("Requesting: $it") } 
         .let { url ->   HttpClient().use {  c -> c.request(url) {} } }
 
 
-fun Route.adminDashboad() {
-    get("/") {
-        val selected = call.parameters["select"] ?: "?"
-        update(
-                state.copy(
-                        aktuelleAufgabe = state.aufgaben.find { it.first == selected }
-                                        ?: state.aufgaben.first()
-                )
-        )
-        call.respondHtml {
-            head { 
-                // meta() { 
-                //     httpEquiv="refresh"
-                //     content="2 0" 
-                // }
-            }
-
-            body {
-                h1 { text("Git Workshop - Progress Monitor") }
-                h2 { text("Aktuelle Aufgabe") }
-                val totalNum = state.participants.size
-                state.aktuelleAufgabe.also { (aufgabe, schritte) ->
-                    schritte.forEach { schritt ->
-                        val sid =
-                                abs((state.aktuelleAufgabe.first to schritt).hashCode())
-                                        .toString()
-                        p { +"$aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }} sid=$sid" }
-                    }
-                }
-                h2 { text("Aufgaben") }
-                form(action = "/", method = FormMethod.get) {
-                    state.aufgaben.map { it.first }.forEach {
-                        input(name = "select") {
-                            value = it
-                            type = InputType.radio
-                            checked = it == state.aktuelleAufgabe.first
-                            onChange = "this.form.submit()"
-                            text(it)
-                        }
-                        br {}
-                    }
-                }
-                h2 { text("Teilnehmer") }
-                p {
-                    state.participants.forEach { (userId, alias) ->
-                        a(href="/?id=$userId") { +"$alias $userId" }
-                        br {}
-                    }
-                }
-            }
-        }
+fun Route.progressDashboad() {
+    get("/progress") {
+        if(call.sessions.get<UserSession>()?.userId ?: -1 == state.adminId)
+            call.progressDashboardResponse()
+        else 
+            call.progressDashboardForbiddenResponse()
     }    
 }
 
+suspend fun ApplicationCall.progressDashboardForbiddenResponse()  {
+    respond(HttpStatusCode.Forbidden, "Forbidden for user: ${sessions.get<UserSession>()}")
+}
+
+suspend fun ApplicationCall.progressDashboardResponse()  {
+    val selected = parameters["select"] ?: "?"
+    update(
+            state.copy(
+                    aktuelleAufgabe = state.aufgaben.find { it.first == selected }
+                                    ?: state.aufgaben.first()
+            )
+    )
+    respondHtml {
+        body {
+            h1 { text("Git Workshop - Progress Monitor") }
+            h2 { text("Aktuelle Aufgabe") }
+            val totalNum = state.participants.size
+            state.aktuelleAufgabe.also { (aufgabe, schritte) ->
+                schritte.forEachIndexed { schrittnummer, schritt ->
+                    val sid = "${state.aktuelleAufgabe.first}/${schrittnummer}"
+                    //  println("REPORTING '${state.aktuelleAufgabe.first}' num='${schrittnummer}' sid=${sid}")
+                    p { +"$aufgabe/$schritt ${state.achievements[sid]?.size}/$totalNum ${state.achievements[sid]?.map { state.participants[it] }} sid=$sid" }
+                }
+            }
+            h2 { text("Aufgaben") }
+            form(action = "/progress", method = FormMethod.get) {
+                state.aufgaben.map { it.first }.forEach {
+                    input(name = "select") {
+                        value = it
+                        type = InputType.radio
+                        checked = it == state.aktuelleAufgabe.first
+                        onChange = "this.form.submit()"
+                        text(it)
+                    }
+                    br {}
+                }
+            }
+            h2 { text("Teilnehmer") }
+            p {
+                state.participants.forEach { (userId, alias) ->
+                    a(href="/?id=$userId") { +"$alias $userId" }
+                    br {}
+                }
+            }
+        }
+    }
+}
+
+
+fun Application.localVscodeModule() {
+    routing {
+        localVscode()
+    }
+}
+
+fun Route.localVscode() {
+    get("/localvscode/{path...}") {
+        if(call.sessions.get<UserSession>()?.userId ?: -1 == state.adminId)
+            call.localVscodeResponse()
+        else
+            call.localVscodeForbidden()
+    }    
+}
+
+suspend fun ApplicationCall.localVscodeForbidden()  {
+    respond(HttpStatusCode.Forbidden, "Forbidden for user: ${sessions.get<UserSession>()}")
+}
+
+suspend fun ApplicationCall.localVscodeResponse()  {
+    val pathToOpen = parameters.getAll("path")?.joinToString("/") ?: ""
+    try {
+        openFileInLocalVscode(pathToOpen)
+        respondRedirect(request.headers["Referer"] ?: "/")          
+    } catch(e: RuntimeException) {
+        respondHtml {
+            body {
+                h1 { text("Couldn't open {$pathToOpen} in local VScode") }
+
+                p { text(StringWriter().let { e.printStackTrace(PrintWriter(it)); it.toString() } ) }
+            }
+        }
+    }
+}

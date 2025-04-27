@@ -16,6 +16,8 @@ gem "sdbm"
 gem "net-telnet"
 gem "csv"
 gem "base64"
+gem "logger"
+gem "sass-embedded", "~>1.78.0" # Workaround https://github.com/just-the-docs/just-the-docs/issues/1541
 
 
 # To upgrade, run `bundle update github-pages`.

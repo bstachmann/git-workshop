@@ -27,11 +27,13 @@ nav_order: 13
 ## Ausgangssituation
 
 
+<h2>Schritt 0 - START <!-- UEB/Branching (fortgeschritten)/0 --></h2>
+
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<!--UEB-Branching (fortgeschritten)--><h2>Schritt 1 - Branch erstellen</h2>
+<h2>Schritt 1 - Branch erstellen <!-- UEB/Branching (fortgeschritten)/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
@@ -40,14 +42,14 @@ und erstelle ein Commit.
 Wechsle dann zurück auf den `main` und bearbeite dort `bar`.
 Zeige den Commit-Graphen.
 
-<!--UEB-Branching (fortgeschritten)--><h2>Schritt 2 - Branch mergen</h2>
+<h2>Schritt 2 - Branch mergen <!-- UEB/Branching (fortgeschritten)/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
 Merge `feature-a` auf den `main`und
 zeige den Commit-Graphen.
 
-<!--UEB-Branching (fortgeschritten)--><h2>Schritt 3 - ⭐ Merge analysieren</h2>
+<h2>Schritt 3 - ⭐ Merge analysieren <!-- UEB/Branching (fortgeschritten)/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
@@ -55,7 +57,7 @@ Zeige, welche Commits vom `main` im Merge hinzugekommen sind.
 Zeige, welche Commits von `feature-a` im Merge hinzugekommen sind.
 Zeige ebenfalls die Änderungen (Diffs) für beide Seiten.
 
-<!--UEB-Branching (fortgeschritten)--><h2>Schritt 4 - ⭐ Merge analysieren</h2>
+<h2>Schritt 4 - ⭐ Merge analysieren <!-- UEB/Branching (fortgeschritten)/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
@@ -63,7 +65,7 @@ Zeige, welche Commits vom `main` im Merge hinzugekommen sind.
 Zeige, welche Commits von `feature-a` im Merge hinzugekommen sind.
 Zeige ebenfalls die Änderungen (Diffs) für beide Seiten.
 
-<!--UEB-Branching (fortgeschritten)--><h2>Schritt 5 - Remote Branches untersuchen</h2>
+<h2>Schritt 5 - Remote Branches untersuchen <!-- UEB/Branching (fortgeschritten)/5 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 

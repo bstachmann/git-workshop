@@ -53,11 +53,13 @@ application/
 
   
 
+<h2>Schritt 0 - START <!-- UEB/Modularisierung mit Submodules/0 --></h2>
+
 
 <pre><code>$ <b>cd application</b><br><br><br></code></pre>
 
 
-<!--UEB-Modularisierung mit Submodules--><h2>Schritt 1 - Module als Submodule einbinden</h2>
+<h2>Schritt 1 - Module als Submodule einbinden <!-- UEB/Modularisierung mit Submodules/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules/application`.
 
@@ -69,7 +71,7 @@ Untersuche dann die entstandene Verzeichnisstruktur.
 <pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-<!--UEB-Modularisierung mit Submodules--><h2>Schritt 2 - Änderung aus einem Modul übernehmen</h2>
+<h2>Schritt 2 - Änderung aus einem Modul übernehmen <!-- UEB/Modularisierung mit Submodules/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules`.
 
@@ -78,7 +80,7 @@ Sie Dir das entstandene Commit an (`show --stat`)
 Gehe in das Repo `application/backend` und hole die Änderungen per `pull` ab.
 Sieh Dir das übertragene Commit an.
 
-<!--UEB-Modularisierung mit Submodules--><h2>Schritt 3 - Änderung in ein Modul übertragen</h2>
+<h2>Schritt 3 - Änderung in ein Modul übertragen <!-- UEB/Modularisierung mit Submodules/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules`.
 
@@ -86,7 +88,7 @@ Gehe in `subtrees/frontend` ändere `main.ts` und committe.
 Übertrage die Änderung per `push` nach `frontend.git`.
 Sieh Dir das übertragene Commit in `frontend.git` an.
 
-<!--UEB-Modularisierung mit Submodules--><h2>Schritt 4 - Übergeordnetes Repo klonen</h2>
+<h2>Schritt 4 - Übergeordnetes Repo klonen <!-- UEB/Modularisierung mit Submodules/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/modularisierung-submodules`.
 

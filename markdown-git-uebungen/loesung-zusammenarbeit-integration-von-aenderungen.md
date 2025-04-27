@@ -5,6 +5,8 @@ parent: Lösungen
 
 nav_order: 12
 ---
+## Lösung zu Schritt 0 - START
+
 ## Lösung zu Schritt 1 - Fast-Forward beim Pull
 
 Im einfachste Fall haben wir selber gar nichts gemacht,

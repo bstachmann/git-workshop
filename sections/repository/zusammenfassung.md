@@ -1,10 +1,5 @@
 
 
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-repository-untersuchen.html" target="_blank">Repository untersuchen<a></h2>
-
-
 ---
 
 

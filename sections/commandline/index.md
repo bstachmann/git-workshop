@@ -96,10 +96,4 @@ Konfigurationsempfehlungen für diesen Workshop:
 
 ---
 
-
-### Übung
-
-<h2><a href="markdown-git-uebungen/aufgabe-intro-commandline.html" target="_blank">Das Git-Kommando<a></h2>
-
-
-
+<iframe src="markdown-git-uebungen/aufgabe-intro-commandline.html" width="100%" height="600px" ></iframe>

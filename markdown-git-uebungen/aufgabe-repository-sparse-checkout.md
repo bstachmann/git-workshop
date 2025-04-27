@@ -29,14 +29,16 @@ Es enthält Dateien auf dem Top-Level und in zwei Unterverzeichnissen.
    - `repo/` Bereits vorhandenes Repository.
   
 
-<!--UEB-Sparse Checkout--><h2>Schritt 1 - Sparse-Klon durchführen</h2>
+<h2>Schritt 0 - START <!-- UEB/Sparse Checkout/0 --></h2>
+
+<h2>Schritt 1 - Sparse-Klon durchführen <!-- UEB/Sparse Checkout/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-sparse-checkout`.
 
 Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
 überprüfe, dass nur Top-Level-Dateien in den Workspace geholt wurden.
 
-<!--UEB-Sparse Checkout--><h2>Schritt 2 - Verzeichnis hinzufügen</h2>
+<h2>Schritt 2 - Verzeichnis hinzufügen <!-- UEB/Sparse Checkout/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-sparse-checkout`.
 
@@ -44,14 +46,14 @@ Füge das Verzeichnis `component-a` hinzu .
 Überprüfe die neue Konfiguration.
 Validiere, dass `component-a` jetzt da ist.
 
-<!--UEB-Sparse Checkout--><h2>Schritt 3 - Sparse Checkout deaktivieren</h2>
+<h2>Schritt 3 - Sparse Checkout deaktivieren <!-- UEB/Sparse Checkout/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-sparse-checkout`.
 
 | Deaktiviere Sparse-Checkout und führe erneut ein Checkout durch.
 | Validiere, dass jetzt alle Dateien da sind.
 
-<!--UEB-Sparse Checkout--><h2>Schritt 4 - Klonen und auschecken</h2>
+<h2>Schritt 4 - Klonen und auschecken <!-- UEB/Sparse Checkout/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-sparse-checkout`.
 

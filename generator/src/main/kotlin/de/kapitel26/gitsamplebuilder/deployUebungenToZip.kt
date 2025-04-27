@@ -1,6 +1,5 @@
 package de.kapitel26.gitsamplebuilder
 
-import de.kapitel26.gitsamplebuilder.gitworkshop.buildGitUebungen
 import java.io.File
 import java.lang.ProcessBuilder.Redirect.INHERIT
 import java.lang.ProcessBuilder.Redirect.PIPE
