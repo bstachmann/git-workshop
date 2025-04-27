@@ -2,27 +2,27 @@
 
 ---
 
-## Lernziele
+## Learning Goals
 
 ```
     rebase / rebase --interactive
 ```
 
- * Rebasing **dupliziert Commits**
- * **Risiken** und Nebenwirkungen
- * **Interaktives Rebasing**
+ * Rebasing **duplicates commits**
+ * **Risks** and side effects
+ * **Interactive Rebasing**
 
 ---
 
-Merge und Rebase sind enge Verwandte:
+Merge and Rebase are closely related:
 
 ---
 
-![zwei Branches](rebase-01.png)
+![Two Branches](rebase-01.png)
 
 ---
 
-![Mergen](rebase-02.png)
+![Merging](rebase-02.png)
 
 ---
 
@@ -30,47 +30,44 @@ Merge und Rebase sind enge Verwandte:
 
 ---
 
-![Vorgänger vergessen](rebase-04.png)
+![Forgetting Predecessors](rebase-04.png)
 
 ---
 
-![Ein rebase](rebase-05.png)
+![A Rebase](rebase-05.png)
 
 ---
 
-### Rebase Beispiel 1
+### Rebase Example 1
 
-![Rebasing Beispiel vorher](abb-branches-beispiel-rebase-vorher.png)
-
-
----
-
-### Rebase Beispiel 2
-
-![Rebasing Beispiel nachher](abb-branches-beispiel-rebase-nachher.png)
-
+![Rebasing Example Before](abb-branches-beispiel-rebase-vorher.png)
 
 ---
 
-### Rebase - Anwendung
+### Rebase Example 2
+
+![Rebasing Example After](abb-branches-beispiel-rebase-nachher.png)
+
+---
+
+### Rebase - Application
 
     git rebase newbase
 
-Welche Commits? Wohin?
+Which commits? Where to?
 
- * Die neuen Commits entstehen auf `newbase`
- * Dupliziert werden
+ * The new commits are created on `newbase`
+ * Duplicated are:
    - HEAD..newbase
-   - Alle Commits in HEAD, die noch
-     nicht in newbase enthalten sind
+   - All commits in HEAD that are not yet in newbase
 
-Ohne Parameter: Upstream Branch.
+Without parameters: Upstream Branch.
 
     git rebase
 
 ---
 
-### Rebase - Konflikte
+### Rebase - Conflicts
 
  * theirs vs. ours
 
@@ -83,11 +80,11 @@ Ohne Parameter: Upstream Branch.
 ---
 
 
-## Risiken und Nebenwirkungen
+## Risks and Side Effects
 
-### Probleme mit duplizierten Commits
+### Problems with Duplicated Commits
 
-### (Un-)sichtbarkeit von Integrationen
+### (In-)Visibility of Integrations
 
 
 ---
@@ -99,37 +96,37 @@ Ohne Parameter: Upstream Branch.
 Code-Reviews
 ============
 
-Hat man nur ein Quality-Gate und geht sofort in Produktion, <BR>
-dann sind gute Code-Reviews wichtig.
+If you have only one quality gate and go directly into production, <BR>
+then good code reviews are important.
 
 ---
 
-#### Das Problem
+#### The Problem
 
-Bei Feature-Branches entstehen oft so viele Änderungen, dass das Review am Ende sehr komplex wird.
-
-
-#### Lösungsansatz
-
-Nicht "das Diff" am Ende des Branches reviewen<br/>
-sondern jedes Commit einzeln.
-
----
-
-#### Das Problem dabei
-
-Zu viele Commits. Oft zu unstrukturiert.
-
-#### Lösung dazu
-
-*Interactive Rebasing* schafft eine lesbare Historie.
+With feature branches, so many changes often occur that the review at the end becomes very complex.
 
 
+#### Approach
+
+Do not review "the diff" at the end of the branch<br/>
+but each commit individually.
 
 ---
 
+#### The Problem with That
 
-### Verwandte Befehle
+Too many commits. Often unstructured.
+
+#### Solution
+
+*Interactive Rebasing* creates a readable history.
+
+
+
+---
+
+
+### Related Commands
 
  * `commit --amend`
  * `reset HEAD~1`

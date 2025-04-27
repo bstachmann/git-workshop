@@ -1,40 +1,35 @@
+### Reminder: Ref - Pointer to a Commit
 
-### Erinnerung: Ref - Zeiger auf ein Commit
-
-Branches sind Zeiger auf Commits, z. B. `myfeature`, `master`
-
+Branches are pointers to commits, e.g., `myfeature`, `master`.
 
 ---
 
 ### Remote Refs
 
-#### Wissen was in anderen Klonen los ist
+#### Knowing what's happening in other clones
 
-*Remote Refs* repräsentieren den Stand der *Refs* 
-in anderen Repos. 
+*Remote Refs* represent the state of *Refs* in other repositories.
 
 ```bash
-git show master               # lokaler Stand
-git show origin/master        # origin nach letztem Synch
+git show master               # local state
+git show origin/master        # origin after last sync
 ```
 
-*Remote Refs* werden bei ˋcloneˋ, ˋfetchˋ und ˋpullˋ aktualisiert.
+*Remote Refs* are updated during `clone`, `fetch`, and `pull`.
 
-Sind mehrere Remotes deklariert (nicht nur ˋoriginˋ), 
-dann gibt es auch mehrere Sätze von *Remote Refs*.
-
+If multiple remotes are declared (not just `origin`), there are also multiple sets of *Remote Refs*.
 
 ---
 
 ### Remote Refs - Ahead/Behind
 
-*Remote Refs* ermöglichen, lokale Stände mit fernen Repository zu vergleichen.
+*Remote Refs* allow comparing local states with remote repositories.
 
 ```bash
     $ git status
 
     On branch master
-    Your branch is ahead of 'origin/master' by 1 commits.
+    Your branch is ahead of 'origin/master' by 1 commit.
 
     $ git diff master origin/master
 

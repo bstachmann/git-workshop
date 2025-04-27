@@ -1,48 +1,26 @@
-
-
-Git kann Verschiebungen von Dateien erkennen (*Rename Detection*).
-
-Wie geht das?
-
+# Rename Detection
 
 ---
 
-Wenn in einem Commit,
+## What is Rename Detection?
 
- * eine Datei gelöscht wurde,
- * und eine neue Datei hinzugekommen ist, und
- * die Inhalte (fast) gleich sind,
- 
-geht Git davon aus, dass eine Datei verschoben wurde.
-
-Die Option `--follow` am `log`-Befehl forciert die *rename detection*.
-
+Git's data model does not inherently track renames, but it can detect them when needed.
 
 ---
 
+## Commands for Rename Detection
 
-### Commit - Verschieben von Dateien
+```bash
+    git log --find-renames=90% -- some-files
+    git log -M -- some-file
+    git log -M99% -- some-file
 
+    git log --find-copies=90% -- some-files
+    git log -C -- some-files
+    git log -C --find-copies-harder
+
+    git annotate -C -M some-file
+    git merge
 ```
-   mv hallo hello       
-   git add .
-   git commit -m "hallo -> hello"
-```
-
-Die Historie von `hello`:
-
-   git log --follow -- hello
-   
-   
-
----
-
-
-###  Tipp: Separate move from change
-
- 1. Move
- 1. Commit
- 1. Change
- 1. Commit
 
 
