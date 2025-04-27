@@ -113,7 +113,7 @@ Schaue ins Log, um zu überprüfen, dass das Tag aktualisiert wurde.
 
 
 
-<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: annotated1) Initial edit before cloning<br><br></code></pre>
+<pre><code>anderer-klon $ <b>git log --oneline --decorate</b><br><br>06d348f (HEAD -&gt; main, origin/main, origin/HEAD) : Do something<br>27e367e (tag: v1.0) : Improve even more<br>ccb6eea : Improve it<br>b9ffddc (tag: v0.3) : First edit after cloning<br>af500f3 (tag: simple1) : Just editing<br>d4d7875 (tag: v0.2, tag: annotated1) Initial edit before cloning<br><br></code></pre>
 
 
 

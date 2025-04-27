@@ -112,7 +112,7 @@ Zeige ebenfalls die Änderungen (Diffs) für beide Seiten.
 
 
 
-<pre><code>repo $ <b>git branch -r -vv</b><br><br>  origin/feature-x b04a371 : Edit file datei-x at line 3 on branch feature-x by bjoern.<br>  origin/feature-y 3181804 Created file datei-y on branch feature-y by bjoern.<br>  origin/main      6014eb9 Initial edit before cloning<br><br></code></pre>
+<pre><code>repo $ <b>git branch -r -vv</b><br><br>  origin/HEAD      -&gt; origin/main<br>  origin/feature-x b04a371 : Edit file datei-x at line 3 on branch feature-x by bjoern.<br>  origin/feature-y 3181804 Created file datei-y on branch feature-y by bjoern.<br>  origin/main      6014eb9 Initial edit before cloning<br><br></code></pre>
 
 
 

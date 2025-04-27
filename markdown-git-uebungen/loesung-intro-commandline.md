@@ -46,7 +46,7 @@ Verzeichnis `intro-commandline`.
 Gib aus, welche Version von Git installiert ist.
 
 
-<pre><code>$ <b>git version</b><br><br>git version 2.47.1<br><br></code></pre>
+<pre><code>$ <b>git version</b><br><br>git version 2.49.0<br><br></code></pre>
 
 
 ## Lösung zu Schritt 3 - Hilfe
