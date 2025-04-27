@@ -1,38 +1,38 @@
-# Module
+# Modules
 
 <!-- .slide: data-background-image="sections/modularization/modules.png" data-background-opacity="0.6" -->
 
 ---
 
-## Lernziele
+## Learning Goals
 
 ```
     init / subtree / submodule
 ```
 
- * Überblick Modularisierungsszenarien.
-   - Monorepo / Many Repos + ext. Dependendency Management / Submodules / Subtrees
+ * Overview of modularization scenarios.
+   - Monorepo / Many Repos + external dependency management / Submodules / Subtrees
  * Submodules
-   - extrahieren eines Unterverzeichnisses als Submodule-Rep
-   - arbeiten mit dem Submodule
+   - Extracting a subdirectory as a submodule repo
+   - Working with the submodule
  * Subtrees
-   - extrahieren eines Unterverzeichnisses in  Subtree-Repo
-   - arbeiten mit dem Subtree
- * Integrieren eines anderen Repos (z. B. subtree/submodule) als Unterverzeichnis.
+   - Extracting a subdirectory into a subtree repo
+   - Working with the subtree
+ * Integrating another repo (e.g., subtree/submodule) as a subdirectory.
 
 ---
 
 <!-- .slide: data-background-image="07/modules.png" -->
 
-### Aber es gibt doch auch...
+### But there is also...
 
-### ... **`git submodule`** ... und
-### **`git subtree`** ... gibt es doch auch.
-### **Hilft das?**
+### ... **`git submodule`** ... and
+### **`git subtree`** ... as well.
+### **Does it help?**
 
 ---
 
-### Git unterstützt zwei Arten der Modularisierung
+### Git supports two types of modularization
 
  * Submodules
    
@@ -44,21 +44,21 @@
 
 notes:
 
-Beispiel: Data Scientisten nutzen Untility-Module
+Example: Data scientists use utility modules
 
 
 ---
 
 
-### Beispiel
+### Example
 
-Das `UNTER` soll als Modul in `OBER` genutzt werden.
+The `UNDER` should be used as a module in `OVER`.
 
 ```bash
-   OBER/
-   |-- foo              # Datei auf Top-Level
-   |-- UNTER/
-       |-- bar          # Datei aus "UNTER"    
+   OVER/
+   |-- foo              # File at top level
+   |-- UNDER/
+       |-- bar          # File from "UNDER"    
 ```
 
 
@@ -67,44 +67,44 @@ Das `UNTER` soll als Modul in `OBER` genutzt werden.
 
 ### Submodules
 
-> wie Soft-Links
+> like soft links
 
-Das übergeordnete Repo kennt nur die **URL** und ein **Commit-Hash** 
-aus dem Untergeordneten.
+The parent repo only knows the **URL** and a **commit hash** 
+of the subordinate.
 
 ```bash
-   OBER/
+   OVER/
    |-- .git/
-   |   |-- ...Git-Kram...
+   |   |-- ...Git stuff...
    |-- foo
-   |-- UNTER/                  # OBER kennt URL + Commit-Hash
-       |-- .git/               # Separates Repo
-       |   |-- ...Git-Kram...
-       |-- bar                 # Nicht im log von "OBER"
+   |-- UNDER/                  # OVER knows URL + commit hash
+       |-- .git/               # Separate repo
+       |   |-- ...Git stuff...
+       |-- bar                 # Not in the log of "OVER"
 ```
 
 
 ---
 
-### Separate Historien bei Submodules
+### Separate histories with submodules
 
-Log von `UNTER`:
+Log of `UNDER`:
 
 ```bash
 3a0aff17 edit bar again
 8e1508df edit bar
 f05e91fa create bar
-fe6cf6d7 init UNTER
+fe6cf6d7 init UNDER
 ```
 
 
-Log von `OBER`:
+Log of `OVER`:
 
 ```bash
-8952f352 update module UNTER to 3a0aff17
-8952f352 add module UNTER at 8e1508df
+8952f352 update module UNDER to 3a0aff17
+8952f352 add module UNDER at 8e1508df
 3a0aff17 create foo
-8e1508df init OBER
+8e1508df init OVER
 ```
 
 ---
@@ -112,59 +112,59 @@ Log von `OBER`:
 
 ### Subtrees
 
-> Commits kopieren
+> Copy commits
 
-Commits werden vom untergeordenten Repo in das Übergeordnete kopiert,
-wobei die Inhalte um eine Verzeichnisebene verschoben werden.
+Commits are copied from the subordinate repo into the parent repo,
+shifting the contents by one directory level.
 
 ```bash
-   OBER/
+   OVER/
    |-- .git/
-   |   |-- ...Git-Kram...
+   |   |-- ...Git stuff...
    |-- foo
-   |-- UNTER/       # "UNTER/bar" ist Datei in "OBER"          
-       |-- bar      # Commits, die "bar" modifizieren
-                    # wurden kopiert.
+   |-- UNDER/       # "UNDER/bar" is a file in "OVER"          
+       |-- bar      # Commits modifying "bar"
+                    # were copied.
 ```
 
 
 ---
 
-### Kopierte Commits bei Subtrees
+### Copied commits with subtrees
 
 
-Log von `UNTER`:
+Log of `UNDER`:
 
 ```bash
 3a0aff17 edit bar again
 8e1508df edit bar
 f05e91fa create bar
-fe6cf6d7 init UNTER
+fe6cf6d7 init UNDER
 ```
 
-Log von `OBER`:
+Log of `OVER`:
 
 ```bash
-79e91afa edit bar again      # kopiert aus "UNTER"
-9b31c60f edit bar            # kopiert aus "UNTER"
-ce889e8e create bar          # kopiert aus "UNTER"
-a6d3e59d init UNTER          # kopiert aus "UNTER"
+79e91afa edit bar again      # copied from "UNDER"
+9b31c60f edit bar            # copied from "UNDER"
+ce889e8e create bar          # copied from "UNDER"
+a6d3e59d init UNDER          # copied from "UNDER"
 3a0aff17 create foo
-8e1508df init OBER
+8e1508df init OVER
 ```
 
 ---
 
 
-### Submodule und Subtree binden weitere Repos in Unterverzeichnisse ein.
+### Submodules and Subtrees integrate other repos into subdirectories.
 
- * *Vorteile*
-   - großes Repo zum Integrieren
-   - kleine Repos zum Arbeiten
+ * *Advantages*
+   - Large repo for integration
+   - Small repos for work
  
- * *Nachteile*
-   - hohe Komplexität, Fehleranfälligkeit
-   - aufwändige Synchronisation
+ * *Disadvantages*
+   - High complexity, error-prone
+   - Labor-intensive synchronization
 
 notes:
 
@@ -184,9 +184,9 @@ notes:
 
 ---
 
-Diskussion Vor- und Nachteile verschiedener Modularisierungsstrategien.
+Discussion of the advantages and disadvantages of various modularization strategies.
 
-[Vortrag zur Modularisierung mit Submodules](https://kapitel26.github.io/assets/2010-10-20-submodules-subtrees-lehmanns/Lehmannsvortrag.pdf)
+[Lecture on modularization with submodules](https://kapitel26.github.io/assets/2010-10-20-submodules-subtrees-lehmanns/Lehmannsvortrag.pdf)
 
 
 

@@ -1,6 +1,6 @@
-### Oops - Unterbrechung!
+### Oops - Interruption!
 
-Angefangene Änderungen kann man jederzeit mit `stash` wegsichern.
+Unfinished changes can be saved at any time with `stash`.
 
     git stash
     git stash -u
@@ -11,7 +11,7 @@ Angefangene Änderungen kann man jederzeit mit `stash` wegsichern.
 
 ---
 
-### Oops - fehlerhaftes Commit
+### Oops - Faulty Commit
 
 
     git revert  HEAD~3
@@ -20,19 +20,19 @@ Angefangene Änderungen kann man jederzeit mit `stash` wegsichern.
 ---
 
 
-### Oops - versehentlich geändert
+### Oops - Accidentally Changed
 
-Vorsicht: Dateien werden überschrieben!
+Caution: Files will be overwritten!
 
-Datei versehentlich geändert
+File accidentally changed
 
     git restore foo
 
-Alte Version einer Datei wieder herstellen
+Restore an old version of a file
 
     git restore -s HEAD~3 -- foo
 
-Ganzen Workspace zurücksetzen
+Reset the entire workspace
 
     git stash -u
 

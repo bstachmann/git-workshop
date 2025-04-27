@@ -7,7 +7,7 @@
 ---
 
 
-### Wie viele
+### How many
  
 Dev Teams   
 Files  
@@ -16,15 +16,15 @@ Lines of Code
 
 notes:
 
-Schätzen Sie!
+Estimate!
 
-über ihr **gesamtes Unternehnmen**
+across your **entire company**
 
-Dev Teams: Wer hat mehr als 2, 5, 10, 20, 50, 100, 500 
+Dev Teams: Who has more than 2, 5, 10, 20, 50, 100, 500 
 
-Files: Wer hat mehr als 1000, 10.000, 500.000, 1.000.000
+Files: Who has more than 1,000, 10,000, 500,000, 1,000,000
 
-Lines of Code: Wer hat mehr als 100.000, 1 Mio., 10 Mio., 100 Mio. 
+Lines of Code: Who has more than 100,000, 1 million, 10 million, 100 million 
 
 
 ---
@@ -36,75 +36,75 @@ Lines of Code: Wer hat mehr als 100.000, 1 Mio., 10 Mio., 100 Mio.
 
 ---
 
-Kleines Gedankenexperiment:
+A small thought experiment:
 
-## Tun Sie all das in
+## Put all of this into
 # **1 Repo**!
 
 
 
 ---
 
-... zu groß 
-... zu träge 
-... bürokratisch
-... ständige Konflikte 
-... und wo bleibt die Teamautonomie   
-... voll unagil
-... was geht mich das Zeug aus den anderen Abteilungen an
-... zentralistisch
-... jedes Klonen dauert ewig
+... too big 
+... too slow 
+... bureaucratic
+... constant conflicts 
+... and where is the team autonomy   
+... completely unagile
+... why should I care about stuff from other departments
+... centralistic
+... every clone takes forever
 ...
 
 
 ---
 
-aber manche machen das, z .B.
+but some do it, e.g.
 
  * Google
  * Facebook
  * Microsoft
  * Twitter
 
-### Sind die denn komplett verrückt?
+### Are they completely crazy?
 
 
 ---
 
 
-Ein **Monorepo** unterstützt
+A **Monorepo** supports
 
  * Large Scale **Refactorings**
- * **API** Migrationen
- * **Analysen** \
+ * **API** Migrations
+ * **Analyses** \
    Vulnerability, Defects, Usage, Data Lineage
- * **Aufräumen**
+ * **Cleaning up**
 
 notes:
 
- * Umstellen auf Major Releases von C++, PHP
- * Wann kann ich ein API abschalten?
- * Nicht alle Großen machen das: Amazon, Netflix
+ * Switching to major releases of C++, PHP
+ * When can I turn off an API?
+ * Not all big ones do it: Amazon, Netflix
 
 ---
-## Voraussetzungen
+## Prerequisites
 
- 1. **1** Repo für Alles™
+ 1. **1** Repo for Everything™
  2. Trunk Based Development
- 3. Commitment auf Stabilität von `main`   
- 4. Skalierbare Build-Pipeline 
+ 3. Commitment to stability of `main`   
+ 4. Scalable build pipeline 
 
-> Google ist versioniert!
+> Google is versioned!
 
 
 notes:
 
-Erfordert:
+Requires:
 
- 1. Technologie, Invest und Team.
- 2. Nur der `main`-Stand ist relevant 
- 3. Erfordert Reife in Governance.
- 3. Tooling (z.B. Bazel).
+ 1. Technology, investment, and team.
+ 2. Only the `main` state is relevant 
+ 3. Requires maturity in governance.
+ 3. Tooling (e.g., Bazel).
 
 
 ---
@@ -116,12 +116,12 @@ Erfordert:
 
 </div>
 
-Die Riesen dürfen und können das. \
-Sollen wir, die Zwerge, nachziehen?
+The giants may and can do it. \
+Should we, the dwarfs, follow suit?
 
 notes:
 
-Diese Frage lassen wir offen.
+We leave this question open.
 
 
 ---
@@ -130,15 +130,15 @@ Diese Frage lassen wir offen.
 
 | **👎**   | **👍**                      |
 |:-------------:|:-------------:|
-| Hoher Invest in<br/>Infrastruktur + Team   | Large Scale Refactoring |
-| Governance Maturity<br/>notwendig   | übergreifende Analysen |
-| Zentrale<br/>Abhängigkeit           | Housekeeping (APIs/Code) |
+| High investment in<br/>infrastructure + team   | Large scale refactoring |
+| Governance maturity<br/>required   | Cross-cutting analyses |
+| Central<br/>dependency           | Housekeeping (APIs/Code) |
 
 notes:
 
-Knifflige Entscheidung, weil \
-kurzfristiger Invest hoch, \
-Nutzen aber in langristigen Aspekten liegt.
+Tricky decision, because \
+short-term investment is high, \
+benefits lie in long-term aspects.
 
 
 ---
@@ -147,98 +147,100 @@ Nutzen aber in langristigen Aspekten liegt.
 <!-- .slide: data-background-image="sections/monorepo/gross.png" -->
 
 
-Wenn Sie Monorepo aufbauen,  
-werden sie ein großes Repo bekommen,
+If you build a monorepo,  
+you will get a large repo,
 
-## aber was heißt hier eigentlich
+## but what does
 
-# GROß?
+# LARGE
 
-
----
-
-
-### Dimensionen von "groß"
-
- * Viele Dateien
- * Viele Bytes
- * Viele Leute
- * Viele Änderungen
+actually mean?
 
 
 ---
 
 
-Jede Dimension birgt ihre eigenen Herausforderungen.
+### Dimensions of "large"
+
+ * Many files
+ * Many bytes
+ * Many people
+ * Many changes
 
 
 ---
 
 
-![Überblick Probleme](ueberblick-probleme.png)
+Each dimension has its own challenges.
+
+
+---
+
+
+![Overview of Problems](ueberblick-probleme.png)
 
 
 ===
 
 <!-- .slide: data-background-image="sections/monorepo/viele-dateien.png" -->
 
-## Viele Dateien!<br/><br/><br/>
+## Many Files!<br/><br/><br/>
 
 
 ---
 
 
-## Viele Dateien - Probleme
+## Many Files - Problems
 
 
- * `checkout` langsam!
- * IDE glüht!
- * `status` langsam!
+ * `checkout` slow!
+ * IDE overheats!
+ * `status` slow!
 
 
 notes:
 
- * Performance des Filesystems beim initialen Auschecken und Branch wechseln
-   - `checkout` und andere Befehle, die den Workspace manipulieren.
- * Performance der IDE bei vielen offenen Projekten
- * Performance von Git beim Status-Befehl
+ * Filesystem performance during initial checkout and branch switching
+   - `checkout` and other commands that manipulate the workspace.
+ * IDE performance with many open projects
+ * Git performance with the status command
 
 
 ---
 
 
-#### Viele Dateien - `checkout` langsam!
+#### Many Files - `checkout` slow!
 
-### Abhilfe: Sparse Checkout
+### Solution: Sparse Checkout
 
-Filtern, welche Dateien\
-in den Workspace geholt werden.
+Filter which files\
+are fetched into the workspace.
 
 notes:
 
- * `git clone` mit  `--sparse` \
-   [aktiviert Sparse Checkout](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---sparse)
+ * `git clone` with  `--sparse` \
+   [enables sparse checkout](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---sparse)
  * `git sparse-checkout add/list/set/...` \
-   [bearbeitet](https://git-scm.com/docs/git-sparse-checkout) die [Konfiguration](https://git-scm.com/docs/git-sparse-checkout#_sparse_checkout) in \
+   [edits](https://git-scm.com/docs/git-sparse-checkout) the [configuration](https://git-scm.com/docs/git-sparse-checkout#_sparse_checkout) in \
    `$GIT_DIR/info/sparse-checkout`.
 
 
 ---
 
 
-#### Viele Dateien - `checkout` langsam!
+#### Many Files - `checkout` slow!
 
-### Abhilfe: Sparse Checkout
+### Solution: Sparse Checkout
 
 ```bash
-# Sparse Checkout einrichten
+# Set up sparse checkout
 git clone --sparse repo myclone
 cd myclone
 git sparse-checkout init --cone
 git sparse-checkout add component-a
 git checkout
 
-# Sparse Checkout abschalten
+# Disable sparse checkout
 git sparse-checkout disable
 ```
 
@@ -246,35 +248,35 @@ git sparse-checkout disable
 notes:
 
 
-TODO Anmerkungen zu Usage von Sparse-Checkout
+TODO Notes on sparse checkout usage
 
 
 ---
 
 
-#### Viele Dateien - IDE glüht!
+#### Many Files - IDE overheats!
 
-### Abhilfe
+### Solution
 
- * *Sparse Checkout* hilft oft auch hier
+ * *Sparse Checkout* often helps here too
 
  * Monorepo `!=` Monolith
 
-   Modulverzeichnise können/sollten  
-   separate IDE-Projekte sein.
+   Module directories can/should  
+   be separate IDE projects.
 
 
 ---
 
-#### Viele Dateien - `status` langsam!
+#### Many Files - `status` slow!
 
-### Abhilfe: Watchman
+### Solution: Watchman
 
- * [Watchman](https://facebook.github.io/watchman/) von Facebook
-   lauscht auf File-System-Events und hält einen Cache.
- * Über [Hook](https://github.com/git/git/blob/master/templates/hooks--fsmonitor-watchman.sample) in Git integrieren
- * Erster `status`-Aufruf startet Daemon,  
-   Nachfolgende nutzen den Watchman-Cache.
+ * [Watchman](https://facebook.github.io/watchman/) by Facebook
+   listens to file system events and maintains a cache.
+ * Integrate via [hook](https://github.com/git/git/blob/master/templates/hooks--fsmonitor-watchman.sample) in Git
+ * First `status` call starts the daemon,  
+   subsequent calls use the Watchman cache.
 
 
 ```bash
@@ -284,7 +286,7 @@ git config core.fsmonitor .git/hooks/query-watchman
 ---
 
 
-![ueberblick-viele-dateien.png](ueberblick-viele-dateien.png)
+![Overview - Many Files](ueberblick-viele-dateien.png)
 
 
 ---
@@ -292,57 +294,57 @@ git config core.fsmonitor .git/hooks/query-watchman
 <!-- .slide: data-background-image="sections/monorepo/viele-bytes.png" -->
 
 
-## Viele Bytes!<br/><br/><br/>
+## Many Bytes!<br/><br/><br/>
 
 
 ---
 
 
-## Viele Bytes - Probleme
+## Many Bytes - Problems
 
- * **langsamer Transfer**  
-   `clone` langsam  
-   Bottleneck ist meist das Netz.  
-   Platten sind schnell und billig.
+ * **Slow transfer**  
+   `clone` slow  
+   Bottleneck is usually the network.  
+   Disks are fast and cheap.
 
- * **Big Binaries**  
-   `fetch`, `checkout` langsam
+ * **Big binaries**  
+   `fetch`, `checkout` slow
 
 notes:
 
-- Typsische Problem:
-  Build-Server muss lange auf clone warten
+- Typical problem:
+  Build server has to wait a long time for clone
 
-- Oft sind es die großen Binärdateien die Ursache
-  Dann sind `fetch` und `checkout` auch langsam.
+- Often caused by large binary files
+  Then `fetch` and `checkout` are also slow.
 
 ---
 
-#### Viele Bytes - langsamer Transfer
+#### Many Bytes - Slow Transfer
 
-### Abhilfe: Shallow Clone
+### Solution: Shallow Clone
 
  ```bash
  git clone --depth 1 <linux-url>
  git fetch --deepen 100
  ```
-* Weniger Commits holen
+* Fetch fewer commits
 
 <br/>
 
-| Linux-Kernel | `depth=1`   | `depth=100`  | Voll     |
+| Linux Kernel | `depth=1`   | `depth=100`  | Full     |
 |--------------|-----------|------------|----------|
-|              | 200 MB    | 900 MB     | 2.800 MB |  
+|              | 200 MB    | 900 MB     | 2,800 MB |  
 
 notes:
 
-Deepen 100: 885MB (125.000 Commits)
+Deepen 100: 885MB (125,000 commits)
 
-TODO Umgang mit Merge-Parents
+TODO Handling merge parents
 
 ---
 
-#### Viele Bytes - langsamer Transfer
+#### Many Bytes - Slow Transfer
 
 ### Partial Clone
 
@@ -350,74 +352,74 @@ TODO Umgang mit Merge-Parents
 git clone --filter=blob:none --depth=1 <linux-url>
 ```
 
-* z.B. keine Blobs, nur bestimmte Dateitypen, nur bestimmte Verzeichnisse laden. 
-* Transparentes Nachladen beim Checkout
-* __Klappt noch nicht mit allen Servern__
+* e.g., no blobs, only certain file types, only certain directories loaded. 
+* Transparent on-demand loading during checkout
+* __Does not yet work with all servers__
 
 notes:
 
-GitHub und GitLab klappt
-BitBucket nicht
-Ohne --depth=1 1GB nicht verständlich
+GitHub and GitLab work
+BitBucket does not
+Without --depth=1 1GB not understandable
 
 ---
 
 
-#### Viele Bytes - langsamer Transfer
+#### Many Bytes - Slow Transfer
 
-### Abhilfe: Worktree
+### Solution: Worktree
 
 
  ```bash
  git worktree add ../workspace2 feature-a
  ```
 
- * Mehrere Workspace auf geteiltem Repo.
- * Nur ein *Object Store* für alle Worktrees
- * Fetch ist nur einmal notwendig.
+ * Multiple workspaces on a shared repo.
+ * Only one *object store* for all worktrees
+ * Fetch is only necessary once.
 
 
 ---
 
 
-#### Viele Bytes - langsamer Transfer
+#### Many Bytes - Slow Transfer
 
-### Abhilfe: Klonen mit Referenz-Repo
+### Solution: Clone with Reference Repo
 
   ```bash
  git clone --reference <local-repo-url> <repo-url>
  ```
 
- * Objekt aus dem Referenz-Repo  
-   müssen nicht übertragen werden
- * Für Build-Server,  
-   der mit frischem Klon anfangen soll
+ * Objects from the reference repo  
+   do not need to be transferred
+ * For build servers,  
+   starting with a fresh clone
 
 
 ---
 
 
-#### Viele Bytes - Big Binaries
+#### Many Bytes - Big Binaries
 
-### Abhilfe: Git LFS (Large File System)
+### Solution: Git LFS (Large File System)
 
 
-![abb-lfs-ueberblick.png](abb-lfs-ueberblick.png)
+![Overview LFS](abb-lfs-ueberblick.png)
 
 
 notes:
 
-Hilft zwar, ist aber nicht ohne Tücken.
+Helps, but not without pitfalls.
 
-(Mercurial nennt das ein "Feature of last Resort")
+(Mercurial calls it a "feature of last resort")
 
 
 ---
 
 
-#### Viele Bytes - Big Binaries
+#### Many Bytes - Big Binaries
 
-### Abhilfe: Große Dateien ablehnen
+### Solution: Reject Large Files
 
 ```bash
 git rev-list --objects ${oldref}..${newref} |
@@ -425,38 +427,38 @@ git rev-list --objects ${oldref}..${newref} |
       --batch-check='%(objectname) %(objecttype) %(objectsize) %(rest)' |
   awk -v maxbytes="$maxbytes" '$3 > maxbytes { print $4 }'
  ```
- * [`pre-receive`-Hook](https://github.com/amacneil/git-banish-large-files) lehnt Commits mit großen Dateien ab
+ * [`pre-receive` hook](https://github.com/amacneil/git-banish-large-files) rejects commits with large files
 
 
 
 ---
 
 
-#### Viele Bytes - Big Binaries
+#### Many Bytes - Big Binaries
 
-### Abhilfe: Mit BFG Dateien entfernen
+### Solution: Remove Files with BFG
 
 
-![BFG.png](BFG.png)
+![BFG](BFG.png)
 
 
 ```bash
 java -jar bfg.jar --strip-blobs-bigger-than 100M repo.git
  ```
 
-Mögliche Alternative: Das Pythonscript [filter-repo](https://github.com/newren/git-filter-repo)
+Possible alternative: The Python script [filter-repo](https://github.com/newren/git-filter-repo)
 
 notes:
 
-Hinweis:
+Note:
 
-(Fast) Alle Commits werden neu erstellt und bekommen neue Hashes.
+(Almost) all commits are recreated and get new hashes.
 
-Deshalb:
+Therefore:
 
- 1. Mit BFG Neues Repo erstellen
- 2. Altes Repo deaktivieren (read-only)
- 3. Alle Projektmitglieder zum neu Klonen auffordern.
+ 1. Create a new repo with BFG
+ 2. Deactivate the old repo (read-only)
+ 3. Ask all project members to reclone.
 
 
 ---
@@ -470,23 +472,23 @@ Deshalb:
 <!-- .slide: data-background-image="sections/monorepo/viele-leute.png" -->
 
 
-## Viele Leute!<br/><br/>
+## Many People!<br/><br/>
 
 
 ---
 
 
-## Viele Leute - Probleme
+## Many People - Problems
 
- * Push-Reject
- * Ich will das Zeug nicht sehen
- * Branch Garbage
+ * Push reject
+ * I don't want to see that stuff
+ * Branch garbage
 
 
 ---
 
 
-### Viele Leute - Push-Reject
+### Many People - Push Reject
 
 
 ```
@@ -499,69 +501,69 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-Git macht keine serverseitigen Merges.
+Git does not perform server-side merges.
 
-Push-Reject verhindert, dass durch Merges Versionsstände
-im Server-Repo entstehen, die es nie in einem 
-Entwickler-Repo gegeben hat.
-
-notes:
-
-Hier sollte man nicht vergessen, dass Push-Rejects  im Grunde erstmal richtig sind.
-
-
----
-
-
-#### Viele Leute - Push Reject
-
-### Abhilfe: Branch oder Fork 
-      
-![abb-feature-branches-ueberblick.png](abb-feature-branches-ueberblick.png)
-
-
----
-
-#### Viele Leute - Push Reject
-
-### Abhilfe: Branch oder Fork 
-      
-
-* Ermöglicht, bis zur Integration unabhängig zu arbeiten
-* Nachteile:
-  - Probleme treten erst bei Integration auf
-  - Langläufer machen CI/CD unmöglich
-
-
----
-
-
-#### Viele Leute - Push Reject
-
-### Abhilfe: Pull-Requests
-
-Integration über Pull-Requests
-
-![abb-feature-branches-pr-mergen.png](abb-feature-branches-pr-mergen.png)
-
+Push reject prevents versions
+from being created in the server repo
+that never existed in a developer repo.
 
 notes:
 
-Pull-Request bedeutet Server-Seitiges mergen.
-
-Wenn man einfach willenlos auf "Mergen" klickt, umgeht man die Schutzwirkung die von Push-Rejects intendiert ist.
-
-Pull-Request sollten mit Reviews und Buil-Pipeline-Integration genutzt werden.
+Remember that push rejects are fundamentally correct.
 
 
 ---
 
 
-#### Viele Leute - Zu viele Branches
+#### Many People - Push Reject
 
-### Abhilfe: Ordnung schaffen
+### Solution: Branch or Fork 
+      
+![Overview Feature Branches](abb-feature-branches-ueberblick.png)
 
-Präfixe je Module oder Team definieren:  
+
+---
+
+#### Many People - Push Reject
+
+### Solution: Branch or Fork 
+      
+
+* Allows independent work until integration
+* Disadvantages:
+  - Problems only arise during integration
+  - Long-running branches make CI/CD impossible
+
+
+---
+
+
+#### Many People - Push Reject
+
+### Solution: Pull Requests
+
+Integration via pull requests
+
+![Overview Feature Branches PR Merge](abb-feature-branches-pr-mergen.png)
+
+
+notes:
+
+Pull request means server-side merging.
+
+If you just click "merge" recklessly, you bypass the protective effect intended by push rejects.
+
+Pull requests should be used with reviews and build pipeline integration.
+
+
+---
+
+
+#### Many People - Too Many Branches
+
+### Solution: Create Order
+
+Define prefixes per module or team:  
 `/team-a/feature/4711`
 
 ```bash
@@ -572,17 +574,17 @@ git branch -r --list */feature/*
 ---
 
 
-#### Viele Leute - Zu viele Branches
+#### Many People - Too Many Branches
 
-### Abhilfe: Branches aufräumen
+### Solution: Clean Up Branches
 
-* Automatisches `fetch --prune`
+* Automatic `fetch --prune`
   
 ```bash
 git config fetch.prune true
 ```
 
-  * Alte Branches finden
+  * Find old branches
 
 ```bash
 git branch -r --no-merged
@@ -593,7 +595,7 @@ git log --no-merges -n 1 --format="%ci" <branch>
 
 ---
 
-![ueberblick-viele-leute.png](ueberblick-viele-leute.png)
+![Overview Many People](ueberblick-viele-leute.png)
 
 
 ---
@@ -601,7 +603,7 @@ git log --no-merges -n 1 --format="%ci" <branch>
 
 <!-- .slide: data-background-image="sections/monorepo/viele-commits.png" -->
 
-## Viele Commits<br/><br/><br/><br/>
+## Many Commits<br/><br/><br/><br/>
 
 
 ---
@@ -609,10 +611,10 @@ git log --no-merges -n 1 --format="%ci" <branch>
 ## Linux Kernel
 
 
-Knapp eine Millionen Commits.
+Nearly a million commits.
 
-Das Logging der letzten **10 Commits** dauert\
-**9 Sekunden**.
+Logging the last **10 commits** takes\
+**9 seconds**.
 
 ```
 time git log --graph --oneline -10
@@ -620,7 +622,7 @@ time git log --graph --oneline -10
 
 notes:
 
-Das Problem ist der Graph, ohne --graph geht es schnell
+The problem is the graph; without --graph, it is fast
 
 https://devblogs.microsoft.com/devops/a-deep-dive-into-git-performance-using-trace2/
 https://git-scm.com/docs/commit-graph
@@ -628,18 +630,18 @@ https://git-scm.com/docs/commit-graph
 ---
 
 
-![log-graph.png](log-graph.png)_
+![Log Graph](log-graph.png)_
 
 
 ---
 
-## Langsame Operationen
+## Slow Operations
 
- * Historie als Graph anzeigen
- * Merge-Base ermitteln
+ * History as a graph
+ * Determine merge base
    * Merge, Rebase
    * Status
- * Wo ist das Commit enthalten?
+ * Where is the commit included?
 
 ```
 git log --graph --oneline -10
@@ -658,9 +660,9 @@ There are two main costs here:
 ---
 
 
-## Commit-Graph
+## Commit Graph
 
- * Seperater Index für Commits
+ * Separate index for commits
    * OID
    * Parents
    * Commit Date
@@ -668,25 +670,25 @@ There are two main costs here:
    * Generation Number
 
 ```
-# Nur Pack-Files indizieren
+# Index only pack files
 git commit-graph write 
-# Alle Commits indizieren
+# Index all commits
 git show-ref -s | git commit-graph write --stdin-commits
-# Bei jedem Fetch aktualisieren
+# Update with every fetch
 git config fetch.writeCommitGraph true
 ```
 
 notes:
 
-Generation Number ist die Anzahl der Commits/Parents bis zur Wurzel
-* Dadurch kann man leicht feststellen ob zwei Commits nicht voreinander liegen
+Generation number is the number of commits/parents to the root
+* This makes it easy to determine if two commits are not ancestors of each other
 ---
 
-## Linux Kernel mit Commit-Graph
+## Linux Kernel with Commit Graph
 
 
-Das Logging der letzten 10 Commits des Linux Kernels 
-dauert mit Commit-Graph 0,3 Sekunden.
+Logging the last 10 commits of the Linux kernel 
+takes 0.3 seconds with a commit graph.
 
 ```
 time git log --graph --oneline -10
@@ -696,35 +698,35 @@ time git log --graph --oneline -10
 ---
 
 
-![ueberblick-viele-commits.png](ueberblick-viele-commits.png)
+![Overview Many Commits](ueberblick-viele-commits.png)
 
 
 ---
 
-![ueberblick-loesungen.png](ueberblick-loesungen.png)
-
-
----
-
-
-## ... und wenn **das** nicht reicht?
-
-
-(Git hat Grenzen und skaliert nicht für beliebig große Repos)
+![Overview Solutions](ueberblick-loesungen.png)
 
 
 ---
 
 
-## Dann ...
+## ... and if **that** is not enough?
 
- * ... entwickelt man ein **File-System** speziell für Git-Monorepos (**Microsoft**).
- * ... erstellt man Plugins für ein **modulares VCS** (Mercurial bei **Facebook**).
- * ... baut man einfach ein **eigenes VCS** (**Google**).
+
+(Git has limits and does not scale for arbitrarily large repos)
+
+
+---
+
+
+## Then ...
+
+ * ... you develop a **file system** specifically for Git monorepos (**Microsoft**).
+ * ... you create plugins for a **modular VCS** (Mercurial at **Facebook**).
+ * ... you simply build your own **VCS** (**Google**).
 
 
 notes:
  
- TODO noch ein paar Speaker notes mit Fakten zu den Drei Varianten hinzufügen.
+ TODO Add some speaker notes with facts about the three variants.
 
 

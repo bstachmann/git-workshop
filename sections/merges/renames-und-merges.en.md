@@ -1,7 +1,6 @@
+## What happens in Git with conflicting renames
 
-## Was passiert in Git bei widersprüchlichen Umbenennungen
-
-Git meldet sich beim Merge, wenn die beiden Zweigen eine widersprüchliche Umbenennung oder Verschiebung enthalten. 
+Git reports during a merge if the two branches contain conflicting renames or moves. 
 
     $ git merge rename-and-edit2
     CONFLICT (rename/rename): 
@@ -9,7 +8,7 @@ Git meldet sich beim Merge, wenn die beiden Zweigen eine widersprüchliche Umben
     rename "a.md"->"a2e.md" in "rename-and-edit2"
     Automatic merge failed; fix conflicts and then commit the result.
     
-Auch der `status`-Befehl zeigt, was Sache ist:
+The `status` command also shows the situation:
         
     $ git status
       ...
@@ -21,23 +20,23 @@ Auch der `status`-Befehl zeigt, was Sache ist:
     	added by them:   a2e.md
       ...
 
-Git lässt beide Varianten stehen.
+Git leaves both variants.
 
     $ ll
     -rw-r--r-- 1 bjoern bjoern   96 Aug 24 20:12 a1e.md
     -rw-r--r-- 1 bjoern bjoern   95 Aug 24 20:12 a2e.md
 
 
-Zur Sicherheit sollte man noch prüfen, 
-ob sich die beiden Dateien inhaltlich unterscheiden 
-und die Änderungen ggf. mit einem Editor in jener Datei,
-die übrig bleiben soll, zusammenführen.
+To be safe, you should check 
+whether the two files differ in content 
+and merge the changes, if necessary, with an editor into the file
+that should remain.
 
 
     git diff --no-index a1e.md a2e.md
 
-Man entscheidet dann, welche Variante man und registriert diese mit `add`. 
-Die Andere und die Vorige werden mit `rm` abgemeldet.
+You then decide which variant to keep and register it with `add`. 
+The other and the previous one are deregistered with `rm`.
 
     $ git add a1e.md
 
@@ -49,8 +48,8 @@ Die Andere und die Vorige werden mit `rm` abgemeldet.
     a2e.md: needs merge
     rm 'a2e.md'
     
-Anmerkung: Obwohl die `needs merge`-Meldung ein wenig nach Fehlermeldung aussieht. 
-Werden auch die Löschungen in die Stage Übernommen. Der Merge kann abgeschlossem werden
+Note: Although the `needs merge` message looks a bit like an error message, 
+the deletions are also staged. The merge can be completed.
 
     $ git commit
-    
+

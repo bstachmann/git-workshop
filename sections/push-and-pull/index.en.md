@@ -1,4 +1,4 @@
-### Lernziel (Befehle)
+### Learning Goals (Commands)
 
 ```bash
     git fetch
@@ -6,144 +6,123 @@
     git push
 ```
 
-
 ---
 
-
-### Synchronisation
+### Synchronization
 
 ```bash
-    git fetch      # remote -> lokal
-    git push       # lokal -> remote
+    git fetch      # remote -> local
+    git push       # local -> remote
 ```
 
+Delta transfer
 
-Delta-Übertragung
-
-   1. Vergleicht Remote-Ref mit aktuellem Stand
-   1. Ermittelt fehlende Commits, Trees und Blobs und überträgt diese Objekte
-   1. Aktualisiert Remote-Refs
+   1. Compares remote ref with the current state
+   1. Determines missing commits, trees, and blobs and transfers these objects
+   1. Updates remote refs
 
 Notes:
 
-Man kann auch mit unrelated Repos synchen.
-
-
----
-
-
-Wie funktioniert die Synchronisation?
-
+You can also sync with unrelated repositories.
 
 ---
 
+How does synchronization work?
 
-Nach dem Klone ist alles gleich.
+---
+
+After cloning, everything is the same.
 
 ![After Clone](repo-push-1.png)
 
-
 ---
 
-Neue Commits sollen per `push` übertragen werden.
+New commits should be transferred via `push`.
 
 ![Before push](repo-push-2.png)
 
-
 ---
 
-Commits wurden übertragen und Refs aktualisiert.
+Commits have been transferred and refs updated.
 
 ![After push](repo-push-3.png)
-
 
 ---
 
 ### Push
 
-#### Übertragt vom *aktiven Branch* zum Remote Repository.
+#### Transfers from the *active branch* to the remote repository.
 
 ```bash
 git push
 ```
 
-Oder genauer:
+Or more specifically:
 
 ```bash
 git push origin master
 ```
 
-Achtung: `origin master` (Remote + lokaler branch) nicht `origin/master`
+Note: `origin master` (remote + local branch) not `origin/master`
 
 ---
 
 ### Fetch
 
-#### Holt *alle Branches* vom Remote Repository.
+#### Fetches *all branches* from the remote repository.
 
-Synchronisiert und aktualisiert Remote-Refs.
+Synchronizes and updates remote refs.
 
-Workspace und aktiver Branch bleiben unverändert.
+Workspace and active branch remain unchanged.
 
 ```bash
     git fetch
     git fetch origin
 ```
 
-
 ---
 
 ### Pull
 
-Ein Kombi-Befehl
+A combination command
 
 ```bash
 git pull
 ```
 
- 1. Änderungen holen (`git fetch`)
- 1. Änderungen im aktuellen Branch übernehmen \
-    (`git merge`, nächstes Kapitel).
-
-
+ 1. Fetch changes (`git fetch`)
+ 1. Apply changes to the current branch \
+    (`git merge`, next chapter).
 
 ---
 
 <iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-push-fetch-pull.html" width="100%" height="600px" ></iframe>
 
-
 ---
 
 ### Push rejected
 
-
 ---
-
 
 ![Push reject 1](push-reject-1.png)
 
 [Push Reject](repo-push-rejected.svg)
 
-
 ---
 
-
 ![Push reject 2](push-reject-2.png)
-
 
 ---
 
 ### Push rejected
 
+> Rule of thumb: Never destroy history!
 
-> Grundregel: Nie Historie vernichten!
+All commits that were previously in the branch's history must still be there afterward.
 
-Alle Commits, die vorher in der Historie des Branches waren, müssen es nachher auch noch sein.
+Technically: When pushing, the new commit must be a descendant of the previous one!
 
-Technisch: Beim Push muss das neue Commit Nachfahre des Vorherigen sein!
-
--> Der Konflikt muss jetzt lokal aufgelöst werden!
-
+-> The conflict must now be resolved locally!
 
 ---
 

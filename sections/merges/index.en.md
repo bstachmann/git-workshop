@@ -1,19 +1,19 @@
-## Wie entstehen Verzweigungen?
+## How do branches arise?
 
 ---
 
-### Wie entstehen Verzweigungen im Commit-Graphen?
+### How do branches arise in the commit graph?
 
- 1. Zwei Entwickler A und B klonen ein Repository
- 1. Beide erstellen ein Commit
-    (mit dem selben Vorgänger)
- 1. B pushed zuerst (und gewinnt!)
- 1. A versucht zu pushen, aber ...
+ 1. Two developers A and B clone a repository
+ 1. Both create a commit
+    (with the same predecessor)
+ 1. B pushes first (and wins!)
+ 1. A tries to push, but ...
 
 ---
 
 
-![Verzweigungen bim Push](push-pull-diverging.png)
+![Branches during Push](push-pull-diverging.png)
 
 
 ---
@@ -26,13 +26,13 @@
 
 ---
 
-## 3-Wege-Merge
+## 3-Way Merge
 
 
 ---
 
 
-![2-Wege-Merge](3-wege-merge-1.png)
+![2-Way Merge](3-wege-merge-1.png)
 
 
 ---
@@ -50,37 +50,37 @@
 ---
 
 
-![3-Wege-Merge](3-wege-merge-4.png)
+![3-Way Merge](3-wege-merge-4.png)
 
 
 
 ---
 
-### Eigenschaften des Merge
+### Properties of Merge
 
-Aus dem Merge entsteht idR. ein Commit:
+A merge usually results in a commit:
 
- * Commit hat 2 Parents (mind.)
- * 3-Wege-Merge
-   * Alle Änderungen seit dem Common-Ancestor werden zusammengeführt
-   * Textabschnitte (Hunks) werden hinzugefügt, geändert oder gelöscht.
-   * Keinerlei Garantie, dass Änderungen zusammenpassen!
- * Das Merge Commit kann frei bearbeitet werden (`--no-commit`, dann manuelles commit)
+ * Commit has 2 parents (at least)
+ * 3-Way Merge
+   * All changes since the common ancestor are merged
+   * Text sections (hunks) are added, changed, or deleted.
+   * No guarantee that changes fit together!
+ * The merge commit can be freely edited (`--no-commit`, then manual commit)
 
 
 ---
 
 
-## Änderungen 
+## Changes 
 
-### automatisch zusammengeführt
+### Automatically merged
  
- * verschiedene Dateien
- * verschiedene Zeilenbereichen einer Datei
+ * Different files
+ * Different line ranges within a file
 
-### als Konflikt gemeldet
+### Reported as conflict
 
- * verschiedene Zeilenbereichen einer Datei
+ * Same line ranges within a file
 
 
 ---
@@ -89,7 +89,7 @@ Aus dem Merge entsteht idR. ein Commit:
 ```bash
    $ git status
 ``` 
-zeigt, um welche Dateien es geht.
+shows which files are affected.
 
 ```
   Unmerged paths:
@@ -100,8 +100,7 @@ zeigt, um welche Dateien es geht.
 ---
 
 
-In den betroffenen Dateien stehen dann
-Konfliktmarker.
+In the affected files, conflict markers are present.
 
 
 ```
@@ -113,21 +112,21 @@ Konfliktmarker.
   val s = args.map{ it.toDouble() }.sum()
   >>>>>>> 04781863ba5f6ffe3303c84d463546043a932e5
 ```
-*(Ausnahme: Binärdateien)*
+*(Exception: Binary files)*
 
 ---
 
-## Konflikt auflösen
+## Resolving Conflicts
 
-1. `git status` zeigt Konfliktdateien
-1. Für jede Konfliktdatei
-   1. Datei öffnen, Konfliktmarker sucehn
-   1. Zeilen manuell zusammenführen
-   1. Konfliktmarker löschen
-   1. `git add <file>` zum Bestätigen
-1. Mit `git commit` abschließen
+1. `git status` shows conflict files
+1. For each conflict file
+   1. Open the file, locate conflict markers
+   1. Manually merge lines
+   1. Remove conflict markers
+   1. Confirm with `git add <file>`
+1. Complete with `git commit`
 
-## Alternativ
+## Alternative
 
 ```bash
  $ git mergetool
@@ -135,21 +134,21 @@ Konfliktmarker.
 
 ---
 
-### Merge und Diff
+### Merge and Diff
 
-Die "Stimmgabel"
+The "Tuning Fork"
 
     git diff HEAD^1
     git diff HEAD^2
 
-Welches Diff ich sehe, hängt davon ab, von wo ich schaue.
+Which diff I see depends on where I look.
 
 
 
 ### Merge - Fast Forward
 
 
-Wenn sich auf einer Seite des Merges nichts getan hat, macht Git idR. ein *fast-forward*:
+If nothing has changed on one side of the merge, Git usually performs a *fast-forward*:
 
 ---
 
@@ -178,10 +177,10 @@ Wenn sich auf einer Seite des Merges nichts getan hat, macht Git idR. ein *fast-
 
 ---
 
-### Merge - Konflikt
+### Merge - Conflict
 
        - `config --global merge.conflictStyle diff3`
-       - Konflikte 41
+       - Conflicts 41
        - `checkout` 38
        - `--ours`, `--theirs` 32
        - `merge --abort`
@@ -203,43 +202,43 @@ Wenn sich auf einer Seite des Merges nichts getan hat, macht Git idR. ein *fast-
 ---
 
 
-**Merge-Konflike** können anstrengend sein. Was kann man tun, um sie
+**Merge Conflicts** can be exhausting. What can be done to
 
-### zu vermeiden?
+### avoid them?
 
-### weniger schlimm zu machen?
+### make them less severe?
 
-### leichter lösen zu können?
-
-
----
-
-
- * klare Modularsierung, Architektur
- * Abstimmung (Wer macht was?)
- * häufige Integration
- * Schritt zurück, Änderungen analysieren, Intention erkennen
- * Kommunikation vorab, oder Autoren fragen
- * Commit-Kommentare
- * schrittweises Mergen
- * fein granulare Commits
- * gute Merge-Tools
-
-
----
-
-![Merges mildern](merges-mildern.jpg)
+### resolve them more easily?
 
 
 ---
 
 
-[Renames und Merges](renames-und-merges.md)
+ * Clear modularization, architecture
+ * Coordination (Who does what?)
+ * Frequent integration
+ * Step back, analyze changes, recognize intent
+ * Communication in advance, or ask authors
+ * Commit comments
+ * Gradual merging
+ * Fine-grained commits
+ * Good merge tools
 
 
 ---
 
-### Zusammenfassung (Befehle)
+![Mitigating Merges](merges-mildern.jpg)
+
+
+---
+
+
+[Renames and Merges](renames-und-merges.md)
+
+
+---
+
+### Summary (Commands)
 
 ```bash
   git log --all --graph

@@ -1,12 +1,10 @@
-# Pull-Requests
-
+# Pull Requests
 
 ---
 
+## Learning Goals
 
-## Lernziel
-
- * Integration von Qalitätssichernden Maßnahmen
- * Pull-Request-Ablauf
+ * Integration of quality assurance measures
+ * Pull request workflow
  * Demo in GitHub, GitLab & Co.
 

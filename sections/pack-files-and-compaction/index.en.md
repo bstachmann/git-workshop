@@ -1,8 +1,8 @@
 ## A problem
 
-1. Take large file
+1. Take a large file
 1. Add a line
-1. Commt
+1. Commit
 1. Repeat often
 
 -> You get a huge repository
