@@ -1,35 +1,25 @@
-
-
----
-
-
-### Zusammenfassung (Begriffe)
-
-   * Repository
-   * Workspace
-   * Klon
-   * Commit, Revision, Revision-Hash
-   * Tree
-   * Ref, Branch, Tag
+# Repository Summary
 
 ---
 
-### Zusammenfassung (Befehle)
+## Key Concepts
+
+ * A repository is a version-controlled directory.
+ * Commits are snapshots of the project.
+ * Branches are pointers to commits.
+ * Tags are named pointers to specific commits.
+ * Remotes link to other repositories.
+
+---
+
+## Commands
 
 ```bash
-    # Commit-Graph
-    git log
-    git show
-    git diff
-
-    # Refs
-    git branch -v
+    git init
+    git clone <url>
+    git remote -v
+    git branch
     git tag
-
-    # Workspace
-    git switch
-    git restore
-    (git checkout)
 ```
 
 
