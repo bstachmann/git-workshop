@@ -1,158 +1,167 @@
-# Merges
+## Wie entstehen Verzweigungen?
+
+---
+
+### Wie entstehen Verzweigungen im Commit-Graphen?
+
+ 1. Zwei Entwickler A und B klonen ein Repository
+ 1. Beide erstellen ein Commit
+    (mit dem selben Vorgänger)
+ 1. B pushed zuerst (und gewinnt!)
+ 1. A versucht zu pushen, aber ...
 
 ---
 
 
-## Learning Goals
-
-
- * Commit-Graph
-   - `master` vs. `origin/master`
- * 3-Wege-Merge
- * Merge conflicts
-   - `HEAD` | `MERGE_HEAD`
- * Fast-Forwards
-
----
-
-
-### Lerning Goals (Commands)
-
-
-```bash
-  git log --all --graph
-
-  git merge
-
-  git mergetool
-
-  git log branchA..branchB
-  git log HEAD^1..HEAD^2
-```
+![Verzweigungen bim Push](push-pull-diverging.png)
 
 
 ---
-
-### Branches just happen
-
- 1. Two developers A and B clone a repository
- 1. Both create a commit
-    (with the same parent)
- 1. B pushes first (and wins!)
- 1. A tries to push, but ...
-
----
-
-
-![Push on diverged branch](push-pull-diverging.png)
-
-
---------------------------------------------------
-
-
-### Push rejected
-
-
-> 1. Rule of pushing: \
-> Don't destroy history!
-
-All commits, that were part of the history before,
-shall be part of the history after.
-
-Technically this implies, that the previous head of
-the branch, must be an ancestor of the upcoming head.
-
-You will have to resolve the conflicts locally, 
-before pushing successfully.
-
-
----
-
-
-> A commit is needed, \
-> that has both histories \
-> in its ancestry.
-
-
----
-
 
 ### Merge
 
-```bash
     git fetch
 
     git merge origin/master
+
+---
+
+## 3-Wege-Merge
+
+
+---
+
+
+![2-Wege-Merge](3-wege-merge-1.png)
+
+
+---
+
+
+![Common Ancestor](3-wege-merge-2.png)
+
+
+---
+
+
+![Delta](3-wege-merge-3.png)
+
+
+---
+
+
+![3-Wege-Merge](3-wege-merge-4.png)
+
+
+
+---
+
+### Eigenschaften des Merge
+
+Aus dem Merge entsteht idR. ein Commit:
+
+ * Commit hat 2 Parents (mind.)
+ * 3-Wege-Merge
+   * Alle Änderungen seit dem Common-Ancestor werden zusammengeführt
+   * Textabschnitte (Hunks) werden hinzugefügt, geändert oder gelöscht.
+   * Keinerlei Garantie, dass Änderungen zusammenpassen!
+ * Das Merge Commit kann frei bearbeitet werden (`--no-commit`, dann manuelles commit)
+
+
+---
+
+
+## Änderungen 
+
+### automatisch zusammengeführt
+ 
+ * verschiedene Dateien
+ * verschiedene Zeilenbereichen einer Datei
+
+### als Konflikt gemeldet
+
+ * verschiedene Zeilenbereichen einer Datei
+
+
+---
+
+
+```bash
+   $ git status
+``` 
+zeigt, um welche Dateien es geht.
+
+```
+  Unmerged paths:
+    (use "git add <file>..." to mark resolution)
+          both modified:   average.kts
 ```
 
 ---
 
 
-### 3 Way Merge
-
-![3 Way Merge](3-wege-merge.jpg)
-
-
----
+In den betroffenen Dateien stehen dann
+Konfliktmarker.
 
 
-## 3-Way-Merge
-
- * Both parents will bei compared to the *latest common ancestor*, aka
-`merge-base`.
- * Text snippets that differ from the merge-base are called *Hunks*.
- * Git will try to apply all Hunks to create a merged version.
- * If Hunks overlap, git will signal a conflict.
-
----
-
-
-### More about the merge
-
- * (at least) 2 parents
- * The merge commit can be edited freely (use `--no-commit` and commit later)
- * There is absolutely no guarantee that the merged version is consistent!
-
+```
+  <<<<<<< HEAD
+  val summe = args.map{ it.toInt() }.sum()
+  ||||||| d19e196
+  val s = args.map{ it.toInt() }.sum()
+  =======
+  val s = args.map{ it.toDouble() }.sum()
+  >>>>>>> 04781863ba5f6ffe3303c84d463546043a932e5
+```
+*(Ausnahme: Binärdateien)*
 
 ---
 
+## Konflikt auflösen
 
-### Merge and Diff
+1. `git status` zeigt Konfliktdateien
+1. Für jede Konfliktdatei
+   1. Datei öffnen, Konfliktmarker sucehn
+   1. Zeilen manuell zusammenführen
+   1. Konfliktmarker löschen
+   1. `git add <file>` zum Bestätigen
+1. Mit `git commit` abschließen
 
-The "Fork"
+## Alternativ
+
+```bash
+ $ git mergetool
+```
+
+---
+
+### Merge und Diff
+
+Die "Stimmgabel"
 
     git diff HEAD^1
     git diff HEAD^2
 
-> Which diff i see, \
-> depends on where i stand.
+Welches Diff ich sehe, hängt davon ab, von wo ich schaue.
 
----
+
 
 ### Merge - Fast Forward
 
 
-If only the other side has changes,
-no merge commit is created,
-and the current branch will be set to the merged commit.
-
-This is called **fast forward**.
-
+Wenn sich auf einer Seite des Merges nichts getan hat, macht Git idR. ein *fast-forward*:
 
 ---
-
 
 ![Fast-Forward 1](abb-branches-beispiel-ff-vorher.png)
 
 
 ---
 
-
 ![Fast-Forward 2](abb-branches-beispiel-ff-nachher.png)
 
 
 ---
-
 
 ![Fast-Forward 3](fast-forward.jpg)
 
@@ -169,7 +178,7 @@ This is called **fast forward**.
 
 ---
 
-### Merge Conflict
+### Merge - Konflikt
 
        - `config --global merge.conflictStyle diff3`
        - Konflikte 41
@@ -183,13 +192,70 @@ This is called **fast forward**.
 
 ---
 
+<iframe src="markdown-git-uebungen/aufgabe-zusammenarbeit-integration-von-aenderungen.html" width="100%" height="600px" ></iframe>
 
-![Stragegies to prevent interesting merges](merges-mildern.jpg)
+---
+
+> L'enfer c'est les autres. 
+
+*Jean-Paul Sartre*
+
+---
+
+
+**Merge-Konflike** können anstrengend sein. Was kann man tun, um sie
+
+### zu vermeiden?
+
+### weniger schlimm zu machen?
+
+### leichter lösen zu können?
+
+
+---
+
+
+ * klare Modularsierung, Architektur
+ * Abstimmung (Wer macht was?)
+ * häufige Integration
+ * Schritt zurück, Änderungen analysieren, Intention erkennen
+ * Kommunikation vorab, oder Autoren fragen
+ * Commit-Kommentare
+ * schrittweises Mergen
+ * fein granulare Commits
+ * gute Merge-Tools
+
+
+---
+
+![Merges mildern](merges-mildern.jpg)
 
 
 ---
 
 
 [Renames und Merges](renames-und-merges.md)
+
+
+---
+
+### Zusammenfassung (Befehle)
+
+```bash
+  git log --all --graph
+
+  git merge
+
+  git mergetool
+
+  git log branchA..branchB
+  git log HEAD^1..HEAD^2
+```
+
+
+
+
+
+
 
 

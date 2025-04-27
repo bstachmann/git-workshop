@@ -1,86 +1,92 @@
 
-# Refs
+## Branches, Tags und HEAD
+
+---
+
+Die Commits in einem Repository, bilden zusammen den **Commit-Graphen**, 
+der die *Historie der Inhalte vollständig abbildet*
+
+*Wer* hat *wann* *welche* Dateien erstellt oder bearbeit?
+
+**Commit-Hashes** identifizieren die Koten in diesem Graphen
 
 
 ---
 
 
-## What is a branch really?
+Menschen fällt es schwer sich Commit-Hashes zu merken,
+daher ist es sinnvoll **symbolische Namen** vergeben zu können:
 
-
-```
-$ less .git/refs/heads/advanced-git-en 
-```
-
-
----
-
-
-## A branch 
-
-
- * just a pointer to a commit hash
- * when a new commit is created
-   this pointer will be set to its commit hash
- * the commit itself has no knowledge of the branch
-   on which it was created
-
+ * **Branches**: \
+   Was ist der aktuelle Entwicklungsstand von `feature-4711`?
+ * **Tags**: \
+   Was genau ist als Version `v1.0.8` ausgeliefert worden?
+ * `HEAD`: \
+   Welche Version wird in meinem Workspace gerade bearbeitet?
 
 ---
 
+### Ref - Ein Name für ein Commit
 
-## Ref
-
-The concept of pointers to a node in the commit graph
-is used a lot in git.
-
- * branches
- * remote branches
- * technical references: HEAD, MERGE_HEAD, ..*
- * tags (light weigt vs. heavy weight)
-
-
----
-
-
-When Git transfers data from one repo to another,
-a mapping of refs is required:
-
- * This happens mostly by conventions, e.g.
-    `refs/heads/master <-> refs/remotes/origin/master
- * Can be specified as **refspec**
-   ```$ git help push section about refspecs```
- * Basic Syntax `<src>:<dst>`
-   - Prefix `+` to *force* the update
- * Refs may sometimes, but not always,
-   be abbreviated, e.g. `origin/master` instead of `refs/remotes/origin/master`.
-
-
----
-
-
-Hint: Use the full names, when automating things (e.g. Build-Server-Scripts)
-   
-
----
-
-
-## Reflog
+Ein *Ref* ist ein Zeiger auf ein Commit.
+Der Log-Befehl zeigt die Refs idR. mit an, d. h. `--decorate` kann weggelassen werden.
 
 ```bash
-$ git reflog
-$ git log --walk-reflog
-$ less .git/logs/refs/heads/master
+git log --decorate --oneline
+
+1d8425c (HEAD -> master, tag: testtag) Add content to commits chapter.
+bb00978 (origin/master) Add content to repository chapter.
 ```
+
+---
+
+TODO Bild zu "Post-It"-Metapher.
+
+---
+
+### Beispiele für Refs
+
+ * `HEAD`
+ * `master` (Branch)
+ * `feature-a` (Branch)
+ * `v1.0.0` (Branch)
+
+Mit der Option `--all` zeig `log` nicht nur die Historie des `HEAD`,
+sonder aller Tags und Branches.
+
+```bash
+    git log --all --graph
+```
+
+---
+
+## Branches und Tags anzeigen
+
+```bash
+git branch
+
+git tag
+```
+
+---
+
+### `git switch`
+ 
+
+ * `HEAD` wird auf eine Zielversion gesetzt
+ * Alle (versionierten) Dateien im Workspace werden auf den Stand gebracht.
+ * `git switch <branch>` wechselt auf einen Branch. `<branch>` ist dann aktiver Branch
+ * `git switch --detach <commit>` wechselt auf beliebiege Versionen. Danach ist kein Branch aktiv.
+ * *uncommitted Changes* werden mitgenommen
 
 
 ---
 
 
-## Other things
+### (veraltet)Checkout
+ 
 
- * ` git push --delete`
- * `git push --set-upstream`
- * Mirroring
- 
- 
+Der Befehl `checkout`kann sowohl Branches wechseln Versionen wechseln, als auch Datei- und Versionsinhalte austauschen.
+Leichter verständlich und weniger fehleranfällig sind jedoch die neueren
+Befehle `switch` und `restore`.
+

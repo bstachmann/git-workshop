@@ -1,10 +1,12 @@
-# Workshop
+## Workshop
 
-## Advanced Git
+# Git 
+## Basics und Best Practices
 
 von René Preißel und Bjørn Stachmann
 
 ---
+
 
 
 <font size="4">
@@ -20,6 +22,19 @@ von René Preißel und Bjørn Stachmann
 ---
 
 
+### Inhalte
+
+ * Stichworte für den Trainer
+ * Whiteboardskizzen
+ * Beispiele für typische Git-Kommandoaufrufe
+
+Dies ist jedoch keine durchängig lesbare Anleitung für Git, ...
+
+---
+
+... eine solche finden Sie zum Beispiel in unserem Buch.
+
+
 <img src="workshop-git-intro/git-buch.png" width="20%"/>
 
 Weitere Informationen finden Sie in unserem Blog [Kapitel 26](http://kapitel26.github.io).
@@ -28,26 +43,35 @@ Weitere Informationen finden Sie in unserem Blog [Kapitel 26](http://kapitel26.g
 
 ## Zeiten
 
-| 1. Tag               |
-|----------------------|
-| 9:00 - 10:15         |
-| 10:30 - 11:30        |
-| 11:45 - 12:45        |
+| 1. Tag              |
+|---------------------|
+|  9:00 - 10:00       |
+| 10:15 - 11:15       |
+| 11:30 - 12:30       |
+|     Mittag          |
+| 13:15 - 14:15       |
+| 14:30 - 15:30       |
+| 15:45 - 17:00       |
 
 
 ---
 
 
-## Inhalte
+# Inhalte
 
- * Rebasing-Workflows
- * Interactive Rebasing und Review-Workflows
- * Modularisierung mit submodules und subtree
- * LFS - das Large File System
- * Tipps für den Umgang mit großen Repos
- * Workflows: Release durchführen
- * Workflow: Mehrere Releases pflegen
+   * Über Git-Repositorys
+   * Commits
+   * Dezentralität, Klone
+   * Merges
+   * Branches
+   * Typische Workflows
+   * Tipps & Tricks
+
+
+---
+
+
+# Inhalte
 
 (ESC-Taste drücken)
-
 

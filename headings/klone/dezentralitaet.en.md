@@ -1,0 +1,7 @@
+
+---
+
+### Klone und Remotes
+
+## Dezentralität
+
