@@ -6,13 +6,13 @@
 ---
 
 
-## Wie macht man Software erweiterbar?
+## How to Make Software Extensible?
 
 
 ---
 
 
-Git setzt auf [Porcelaine & Plumbing](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain), statt auf Plugins.
+Git relies on [Porcelain & Plumbing](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain), instead of plugins.
 
 
 
@@ -20,14 +20,14 @@ Git setzt auf [Porcelaine & Plumbing](https://git-scm.com/book/en/v2/Git-Interna
 
 
 * `plumbing`
-  - elementar
-  - Datenstrukturen auslesen/bearbeiten
-* `porcelaine`
-  - komfortabel, leistungsfähige
-  - z. B. `log`, `commit`, `merge`, ... 
-  - basieren auf `plumbing`
-* auch `plumbing` ist 
-  - standardisiert
-  - ermöglicht Erweiterungen
+  - fundamental
+  - read/edit data structures
+* `porcelain`
+  - user-friendly, powerful
+  - e.g., `log`, `commit`, `merge`, ... 
+  - based on `plumbing`
+* even `plumbing` is 
+  - standardized
+  - enables extensions
 
 

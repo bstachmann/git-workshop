@@ -1,4 +1,4 @@
-# Anatomie eines Commits
+# Anatomy of a Commit
 
 ---
 
@@ -7,7 +7,7 @@
 $ git init
 $ vim README
 $ git add README
-$ git commit -m "Neues Repo"
+$ git commit -m "New Repo"
 ```
 
 ---
@@ -22,7 +22,7 @@ $ git commit -m "Neues Repo"
 $ mkdir foo
 $ vim foo/bar
 $ git add foo/bar
-$ git commit -m "Jetzt foo"
+$ git commit -m "Now foo"
 ```
 
 ---
@@ -33,7 +33,7 @@ $ git commit -m "Jetzt foo"
 
 ---
 
-Wie speichert Git Commits?
+How does Git store commits?
 
 ---
 
@@ -41,7 +41,7 @@ Wie speichert Git Commits?
 $ git init
 $ vim README
 $ git add README
-$ git commit -m "Neues Repo"
+$ git commit -m "New Repo"
 
 $ git show HEAD
 $ git show HEAD:hello         
@@ -52,16 +52,16 @@ $ git ls-tree -r HEAD
 ---
 
 
-### Alles hat einen (SHA1-) Hash!
+### Everything has a (SHA1-) Hash!
 
 
 ---
 
 
-## Git hat eine Datenbank:
+## Git has a database:
 
 
-## Den Object Store
+## The Object Store
 
 ---
 
@@ -70,16 +70,16 @@ $ git ls-tree -r HEAD
 
 ---
 
-Das Herz von Git ist der sogenannte **Object Store**,
-eine Datenbank, in der
+The heart of Git is the so-called **Object Store**,
+a database where
 
-* Inhalte von Dateien (**Blob**)
-* Verzeichnisse (**Tree**)\
-  Auflistungen von Dateien
+* Contents of files (**Blob**)
+* Directories (**Tree**)\
+  Listings of files
 * **Commits**\
-  mitsamt Metadaten
+  including metadata
 
-gespeichert werden.
+are stored.
 
 
 ---
@@ -88,12 +88,12 @@ gespeichert werden.
 ### Inspect the Object Store
 
 * `.git/objects`
-* Schlüssel sind SHA1-Hashes
-* Inhalte zlib-komprimiert
+* Keys are SHA1 hashes
+* Contents are zlib-compressed
   ```bash
    $ cat 752c104f5f515c0f3b93bd21351f9e1add7e6a | pigz -d
   ```
-* Git Plumbing-Kommandos:
+* Git plumbing commands:
 
    ```bash
    $ git cat-file -t HEAD   # type
@@ -103,20 +103,20 @@ gespeichert werden.
 
 ---
 
-### Wichtige Objekttypen
+### Important Object Types
 
 * `blob`
 * `tree`
 * `commit`
 
 
-Identische Inhalte werden nur einmal abgelegt.
+Identical contents are stored only once.
 
 
 ---
 
 
-### In den Object Store schreiben
+### Writing to the Object Store
 
 ```bash
 $ echo 'test content' | git hash-object -w --stdin
@@ -124,11 +124,11 @@ $ echo 'test content' | git hash-object -w --stdin
 
 ---
 
-Was genau ist in einem Commit enthalten?
+What exactly is contained in a commit?
 
     git log --pretty=raw
 
-Insbesondere sind die (Posix) Permissions enthalten, nicht aber die Timestamps.
+In particular, (Posix) permissions are included, but not timestamps.
 
 
 

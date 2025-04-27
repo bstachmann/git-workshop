@@ -5,7 +5,7 @@
 ---
 
 
-## Kann Software eine Meinung haben?
+## Can Software Have an Opinion?
 
 
 ---
@@ -13,8 +13,8 @@
 
 ## Git 
 
- * ist nicht *opinionated*,
- * bietet eine Viefalt an Befehlen,
- * ermöglicht unterschiedliche Workflows und Arbeitsweisen.
+ * is not *opinionated*,
+ * offers a variety of commands,
+ * enables different workflows and ways of working.
 
 

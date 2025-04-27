@@ -1,31 +1,29 @@
-
-
-## Achitektur von Git
-
-
----
-
-Zentral
-
-![Zentral](../decentral/zentral-dezentral-1.png)
+## Architecture of Git
 
 
 ---
 
+Centralized
 
-Dezentral
-
-![Dezentraler Austausch](../decentral/zentral-dezentral-3.png)
-
-Git kann Deltas zwischen Repos übertragen (`push`/`pull`/`fetch`).
+![Centralized](../decentral/zentral-dezentral-1.png)
 
 
 ---
 
 
-Dezentral, mit *blessed repo*.
+Decentralized
 
-![Dezentral](../decentral/zentral-dezentral-2.png)
+![Decentralized Exchange](../decentral/zentral-dezentral-3.png)
+
+Git can transfer deltas between repositories (`push`/`pull`/`fetch`).
+
+
+---
+
+
+Decentralized, with a *blessed repo*.
+
+![Decentralized](../decentral/zentral-dezentral-2.png)
 
 
 ---
@@ -33,9 +31,9 @@ Dezentral, mit *blessed repo*.
 
 ### Git
 
- * hat *keine* Client/Server-Architektur,
- * besteht aus Kommandozeilenbefehlen (*CLI*),
- * speichert Daten in Dateien und Verzeichnissen
+ * has *no* client/server architecture,
+ * consists of command-line commands (*CLI*),
+ * stores data in files and directories
    (*Object Store*).
 
 
@@ -43,13 +41,13 @@ Dezentral, mit *blessed repo*.
 ---
 
 
-## Wie macht man Software erweiterbar?
+## How to Make Software Extensible?
 
 
 ---
 
 
-Git setzt auf [Porcelaine & Plumbing](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain), statt auf Plugins.
+Git relies on [Porcelain & Plumbing](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain), instead of plugins.
 
 
 
@@ -57,21 +55,21 @@ Git setzt auf [Porcelaine & Plumbing](https://git-scm.com/book/en/v2/Git-Interna
 
 
 * `plumbing`
-  - elementar
-  - Datenstrukturen auslesen/bearbeiten
-* `porcelaine`
-  - komfortabel, leistungsfähige
-  - z. B. `log`, `commit`, `merge`, ... 
-  - basieren auf `plumbing`
-* auch `plumbing` ist 
-  - standardisiert
-  - ermöglicht Erweiterungen
+  - fundamental
+  - read/edit data structures
+* `porcelain`
+  - user-friendly, powerful
+  - e.g., `log`, `commit`, `merge`, ... 
+  - based on `plumbing`
+* even `plumbing` is 
+  - standardized
+  - enables extensions
 
 
 ---
 
 
-## Kann Software eine Meinung haben?
+## Can Software Have an Opinion?
 
 
 ---
@@ -79,34 +77,34 @@ Git setzt auf [Porcelaine & Plumbing](https://git-scm.com/book/en/v2/Git-Interna
 
 ## Git 
 
- * ist nicht *opinionated*,
- * bietet eine Viefalt an Befehlen,
- * ermöglicht unterschiedliche Workflows und Arbeitsweisen.
+ * is not *opinionated*,
+ * offers a variety of commands,
+ * enables different workflows and ways of working.
 
 
 ---
 
 
-## Abwärtskompatibilität
+## Backward Compatibility
 
-Die Git-Community legt starken Wert auf **abwärtskompatibilität**.
+The Git community places great emphasis on **backward compatibility**.
 
-Dies erleichtert einerseits Scripting/Automatisierung.
+This facilitates scripting/automation on the one hand.
 
-Andererseits können *alte Zöpfe* nicht abgeschnitten werden.
+On the other hand, *old baggage* cannot be discarded.
 
 
 ---
 
 
- * **dezentral** \
-   Kein Server/Service/Dämon. \
-   Nur Kommandos, die mit Dateien arbeiten.
- * **CLI** + Dateistrukturen
- * **"Porcelaine & Plumbing"**
-   - Plumbing: "Rohe" Befehle, Dateiformate
-   - Porcelaine: Komfortable End-User-Befehle
- * nicht **opinionated** \
-   unterstützt unterschiedlichste Workflows \
-   ohne Präferenz für *richtigen Workflow*
- * **Abwärtskompatibilität**
+ * **decentralized** \
+   No server/service/daemon. \
+   Only commands that work with files.
+ * **CLI** + file structures
+ * **"Porcelain & Plumbing"**
+   - Plumbing: "Raw" commands, file formats
+   - Porcelain: User-friendly end-user commands
+ * not **opinionated** \
+   supports various workflows \
+   without preference for the *right workflow*
+ * **Backward Compatibility**

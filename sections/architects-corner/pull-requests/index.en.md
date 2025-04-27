@@ -1,35 +1,35 @@
 #### Architects Corner
 
-## Pull-Requests
+## Pull Requests
 
 
 ---
 
 
-2005 gab es zur Versionsverwaltung
+In 2005, for version control, there were
 
- * erfolgreiche kommerzielle Produkte
- * etablierte Open-Source-Lösungen
+ * successful commercial products
+ * established open-source solutions
 
- oft mit tollen UIs und mehr Features.
+ often with great UIs and more features.
 
-## Also, warum Git?
+## So, why Git?
 
-Was war das "Killer-Feature"?
+What was the "killer feature"?
 
 
 ---
 
 
-Der **Pull-Request**
-erleichtert es, Änderungen dezentral zu erstellen und
-später anderen zur Integration anzubieten.
+The **Pull Request**
+makes it easier to create changes decentrally and
+later offer them to others for integration.
 
-*Ironie dabei: Das Killer-Feature von Git ist gar kein Feature von Git:*
+*Irony: The killer feature of Git is not even a feature of Git:*
 
-Git-Hoster **GitHub* *(und *GitLab*, *BitBucket*, ...) haben dies als Webanwendungen angeboten und populär gemacht.
+Git hosts like **GitHub** (and *GitLab*, *BitBucket*, ...) offered this as web applications and made it popular.
 
-**Git erleichtert Open-Source-Contributions!**
+**Git facilitates open-source contributions!**
 
 
 

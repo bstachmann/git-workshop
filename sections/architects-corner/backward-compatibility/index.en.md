@@ -1,18 +1,18 @@
 #### Architects Corner
 
 
-## Backward compatibility
+## Backward Compatibility
 
 
 ---
 
 
-## Abwärtskompatibilität
+## Backward Compatibility
 
-Die Git-Community legt starken Wert auf **abwärtskompatibilität**.
+The Git community places great emphasis on **backward compatibility**.
 
-Dies erleichtert einerseits Scripting/Automatisierung.
+This facilitates scripting/automation on the one hand.
 
-Andererseits können *alte Zöpfe* nicht abgeschnitten werden.
+On the other hand, *old baggage* cannot be discarded.
 
 

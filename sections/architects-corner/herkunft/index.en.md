@@ -1,30 +1,30 @@
 #### Architects Corner
 
-## Herkunft
+## Origin
 
 ---
 
 
-Der **Linux-Kernel wurde** lange Zeit händisch versioniert (*Tarballs & Patches*),
-durch **Linus Torvalds**.
+The **Linux kernel** was manually versioned for a long time (*Tarballs & Patches*),
+by **Linus Torvalds**.
 
-Später wurde eine kommerzielle Versionsverwaltung Namens Bitkeeper genutzt.
+Later, a commercial version control system called Bitkeeper was used.
 
-*Aus Gründen* musste Torvalds ab 2005 eine Alternative dazu finden.
+*For reasons*, Torvalds had to find an alternative starting in 2005.
 
 
 ---
 
 
-Es sollte open-Source sein. Aber **CSV** und
-**Subversion** sagten ihm nicht so zu.
+It had to be open-source. But **CSV** and
+**Subversion** did not appeal to him.
 
 > Subversion used to say it is CVS done right:
 > with that slogan there is nowhere you can go.
 >
 > There is no way to do CVS right.
 
-(Linus Torvalds, Mai 2007)
+(Linus Torvalds, May 2007)
 
 
 ---
@@ -40,55 +40,54 @@ Es sollte open-Source sein. Aber **CSV** und
 ---
 
 
-... und so entstand Git:
+... and so Git was born:
 
-### Die Entwickler
+### The Developers
 
  * Junio C. Hamano
  * Shawn O. Pearce
  * Linus Torvalds
- * uvm.
+ * and others.
 
-*Quelle: [Git auf de.wikipedia.org](https://de.wikipedia.org/wiki/Git)*
-
-
----
-
-
-Die Anforderungen an ein Sourcecode-Repository ergaben sich  
-aus Bedürfnissen der Kernel-Community:
-
- * **Parallele Entwicklung** (1.000+ Contributors)
- * **Sicherheit und Herkunftsnachweise**
- * **Linux Style** für Kernel-Entwickler
+*Source: [Git on de.wikipedia.org](https://de.wikipedia.org/wiki/Git)*
 
 
 ---
 
-### Parallele Entwicklung
+
+The requirements for a source code repository arose from the needs of the kernel community:
+
+ * **Parallel development** (1,000+ contributors)
+ * **Security and traceability**
+ * **Linux style** for kernel developers
+
+
+---
+
+### Parallel Development
 
 <table>
   <tr>
-    <th>Herausforderung</th>
-    <th>Lösungsansatz</th>
+    <th>Challenge</th>
+    <th>Solution</th>
   </tr>
   <tr>
     <td>
       <ul>
-        <li>kleinst Patches und große Features,</li>
-        <li>viele Entwickler (1.000+),</li>
-        <li>wenig Koordination</li>
-        <li>schwer zentral zu managen</li>
+        <li>Small patches and large features,</li>
+        <li>many developers (1,000+),</li>
+        <li>little coordination</li>
+        <li>hard to manage centrally</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Klone: Dezentrales Arbeiten<br/>
-      auf unabhängigen Repository-Kopien</li>
-        <li>Push/Pull-Operationen<br/>
-        ermitteln und übertragen Unterschiede
-        nachträglich<br/>
-        von Klon zu Klon</li>
+        <li>Clones: Decentralized work<br/>
+      on independent repository copies</li>
+        <li>Push/Pull operations<br/>
+        identify and transfer differences
+        retroactively<br/>
+        from clone to clone</li>
       </ul>
     </td>
   </tr>
@@ -98,31 +97,31 @@ aus Bedürfnissen der Kernel-Community:
 ---
 
 
-### Sicherheit
+### Security
 
 <table>
   <tr>
-    <th>Herausforderung</th>
-    <th>Lösungsansatz</th>
+    <th>Challenge</th>
+    <th>Solution</th>
   </tr>
   <tr>
     <td>
-        Wer darf Änderungen vornehmen?
+        Who is allowed to make changes?
     </td>
     <td>
-      Schreibrecht nur für Maintainer.<br/>
-      Enwickler arbeiten auf Klonen,<br/>
-      bieten Änderungen zum Abholen an.<br/>
-      ➔ Pull-Request
+      Write access only for maintainers.<br/>
+      Developers work on clones,<br/>
+      offer changes for retrieval.<br/>
+      ➔ Pull Request
     </td>
   </tr>
   <tr>
     <td>
-        Nachvollziehbarkeit
+        Traceability
     </td>
     <td>
-      SHA1-Prüfsumme auf allen Inhalten<br/>
-      Digitale Signiermöglichkeit
+      SHA1 checksum on all content<br/>
+      Digital signing capability
     </td>
   </tr>
 </table>
@@ -130,33 +129,33 @@ aus Bedürfnissen der Kernel-Community:
 ---
 
 
-### *Linux Style* für Kernel-Entwickler
+### *Linux Style* for Kernel Developers
 
- * Wenig Abängigkeiten, "überall" installierbar
- * Hoch performant* 
-   filesystem-optimiert (Write-once)
- * Stabile Kommandozeilenbefehle erleichtern Automatisierung
+ * Few dependencies, "installable everywhere"
+ * Highly performant* 
+   filesystem-optimized (Write-once)
+ * Stable command-line commands facilitate automation
 
-\* *für Projekte aus vielen Quelltextdateien*
+\* *for projects with many source code files*
 
 
 ---
 
 # Git
 
-  * Dezentral: Klone, Push und Pull
-  * Robustes und einfaches Branching und Merging
-  * Performant, auch bei sehr vielen Quelltexten
-  * Sehr flexibler Workflow
-  * Austausch zwischen Repos (Push/Pull)
-  * Open-Source
-  * Quasi-Standard  
+  * Decentralized: Clones, Push, and Pull
+  * Robust and simple branching and merging
+  * Performs well, even with a lot of source code
+  * Very flexible workflow
+  * Exchange between repositories (Push/Pull)
+  * Open-source
+  * Quasi-standard  
 
 
 ---
 
 
-Offensichtlich war Git nicht für für die Kernelentwicklung eine gute Sache. Sonder auch für andere interessant:
+Obviously, Git was not only a good thing for kernel development but also interesting for others:
 
 ![Microsoft buys GitHub](microsoft-buys-github.png)
 

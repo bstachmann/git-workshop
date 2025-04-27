@@ -1,25 +1,24 @@
-
 ![Torvalds Git Talk](torvalds-tech-talk-on-git.png)
 
 [Watch it on YouTube](https://www.youtube.com/watch?v=4XpnKHJAok8)
 
 ---
 
-### Die Entwickler von Git
+### The Developers of Git
 
  * Junio C. Hamano
  * Shawn O. Pearce
  * Linus Torvalds
- * uvm.
+ * and others.
 
 
 ---
 
 
-Der Linux-Kernel wurde lange Zeit händisch versioniert (Tarballs & Patches).
+The Linux kernel was versioned manually for a long time (Tarballs & Patches).
 
-Später wurde eine kommerzielle Versionsverwaltung Namens Bitkeeper genutzt.
-Aus Lizenzgründen wurde ab 2005 eine Alternative dazu gesucht.
+Later, a commercial version control system called Bitkeeper was used.
+Due to licensing reasons, an alternative was sought starting in 2005.
 
 
 ---
@@ -30,55 +29,55 @@ Aus Lizenzgründen wurde ab 2005 eine Alternative dazu gesucht.
 >
 > There is no way to do CVS right.
 
-(Linus Torvalds, Mai 2007)
+(Linus Torvalds, May 2007)
 
 
 ---
 
-### Herausforderungen der Kernel-Community
+### Challenges of the Kernel Community
 
- * Viele sehr unabhängige Entwickler
- * Parallele Entwicklung
- * Kleine Patches und große Features
- * Nachweis der Herkunft von Code
-
-
----
-
-2005 gab es zur Versionsverwaltung
-
- * erfolgreiche kommerzielle Produkte
- * etablierte Open-Source-Lösungen
-
- oft mit tollen UIs und mehr Features.
-
-## Also, warum Git?
-
-Was war das "Killer-Feature"?
-
----
-
-
-Der **Pull-Request**
-erleichtert es, Änderungen dezentral zu erstellen und
-später anderen zur Integration anzubieten.
-
-*Ironie dabei: Das Killer-Feature von Git ist gar kein Feature von Git:*
-
-Git-Hoster **GitHub* *(und *GitLab*, *BitBucket*, ...) haben dies als Webanwendungen angeboten und populär gemacht.
-
-**Git erleichtert Open-Source-Contributions!**
+ * Many very independent developers
+ * Parallel development
+ * Small patches and large features
+ * Proof of code origin
 
 
 ---
 
+In 2005, for version control, there were
 
-  * Robustes und einfaches Branching und Merging
-  * Performant, auch bei sehr vielen Quelltexten
-  * Sehr flexibler Workflow
-  * Austausch zwischen Repos (Forking/Dezentralität)
-  * Open-Source
-  * Quasi-Standard  
-  * und ...
+ * successful commercial products
+ * established open-source solutions
+
+ often with great UIs and more features.
+
+## So, why Git?
+
+What was the "killer feature"?
+
+---
+
+
+The **Pull Request**
+makes it easier to create changes decentrally and
+later offer them to others for integration.
+
+*Irony: The killer feature of Git is not even a feature of Git:*
+
+Git hosts like **GitHub** (and *GitLab*, *BitBucket*, ...) offered this as web applications and made it popular.
+
+**Git facilitates open-source contributions!**
+
+
+---
+
+
+  * Robust and simple branching and merging
+  * Performs well, even with a lot of source code
+  * Very flexible workflow
+  * Exchange between repositories (Forking/Decentralization)
+  * Open-source
+  * Quasi-standard  
+  * and more...
 
 

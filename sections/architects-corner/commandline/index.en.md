@@ -1,48 +1,48 @@
 #### Architects Corner
 
 
-## Die Kommandozeile
+## The Command Line
 
 
 ---
 
 
-### Git ist kein Client-Server-System
+### Git is not a Client-Server System
 
-Klassische Versionsverwaltungen:
+Traditional version control systems:
 
  1. Server
-    * Verwaltet Archiv Versionhistorie auf dem Server
-    * laufender Prozess/Dämon
- 1. Client (evtl. mehrere)
-    * Verwalten den Workspace (die Arbeitsdateien) auf dem Client
- 1. kontinuierliche Kommunikation zwischen Client und Server
+    * Manages the archive version history on the server
+    * Running process/daemon
+ 1. Client (possibly multiple)
+    * Manages the workspace (working files) on the client
+ 1. Continuous communication between client and server
 
 
 ---
 
 
-### Git ist ein Kommandozeilentool
+### Git is a Command-Line Tool
 
-Ein **Repository** in Git besteht aus Dateien,
-die in einem Verzeichnis (meist: `.git`) gespeichert sind. 
+A **repository** in Git consists of files
+stored in a directory (usually `.git`). 
 
-Git besteht aus mehr 100 Kommandozeilenbefehlen* mit denen dieses Repository manipuliert und abgefragt werden kann.
+Git consists of more than 100 command-line commands* that can manipulate and query this repository.
 
-Git ist passiv: Es gibt keinen dauerhaft laufenden Prozess (Dämon).
+Git is passive: There is no continuously running process (daemon).
 
-*Don't Panic: Im Alltag braucht man <10*
+*Don't Panic: In everyday use, you need <10*
 
 
 ---
 
-**Bedeutet dass denn, ich muss ab jetzt mit per Kommandozeile arbeiten?**
+**Does this mean I have to work with the command line from now on?**
 
-Nein, es gibt zahlreiche grafische Benuzeroberflächen für den Desktop und das Web. Trotzdem sollte man die Kommandozeile von Git kennen:
+No, there are numerous graphical user interfaces for desktop and web. Nevertheless, you should know Git's command line:
 
- * **Alle** Git-Funktionalitäten sind so erreichbar
- * Manches geht sehr **effizient**
- * **Tipps und Anleitungen** zeigen meist Kommandos
- * Mit Kommandos lassen sich Vorgänge leicht **automatisieren**.
+ * **All** Git functionalities are accessible this way
+ * Some tasks are very **efficient**
+ * **Tips and guides** usually show commands
+ * Commands make it easy to **automate** processes.
 
-Erfahrene Git-User nutzen meist beides.
+Experienced Git users often use both.
