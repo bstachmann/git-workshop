@@ -15,7 +15,7 @@ Git has established itself as the standard for version control in software devel
 
 We focus on those commands and workflows that are most commonly used in everyday project work. You'll learn how to create commits, synchronize changes with push and pull, resolve conflicts, and handle feature branches as well as pull requests.
 
-### Implementing Branching Strategies Practically
+### Branching Strategies
 
 The seminar focuses on typical processes in everyday project work. In addition to important commands and technical fundamentals, the most widespread workflows are put at the center.
 An important part of the seminar is dedicated to various branching strategies. You'll learn how to apply these strategies in your projects to establish an effective workflow for development in your team.
