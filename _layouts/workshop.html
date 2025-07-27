@@ -6,21 +6,29 @@ layout: page
 
 <h1>Workshop: {{ page.title }}</h1>
 
+
 <p>
     <i>
         {{ page.description }}
     </i>
 </p>
 
+{% assign pageIdDollar = page.id | append: "$" %}
+{% if pageIdDollar contains ".en$" %}
+<p>
+    To the <a href="presentation-{{ page.id }}.html">presentation</a>,
+    to the <a href="presentation-{{ page.id }}.html#/{{ page.agenda_slide_nr }}">agenda</a>,
+    to <a href="presentation-{{ page.id }}.html?print-pdf">print</a>
+</p>
+
+{% else %}
 <p>
     Zur <a href="presentation-{{ page.id }}.html">Präsentation</a>,
     zur <a href="presentation-{{ page.id }}.html#/{{ page.agenda_slide_nr }}">Agenda</a>,
     zum <a href="presentation-{{ page.id }}.html?print-pdf">Ausdrucken</a>
 </p>
+{% endif %}
 
-<h2>
-Inhalte
-</h2>
 
 {{ content }}
 

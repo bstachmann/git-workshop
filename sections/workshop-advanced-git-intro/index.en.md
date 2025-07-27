@@ -2,7 +2,7 @@
 
 ## Advanced Git
 
-René Preißel und Bjørn Stachmann
+by René Preißel and Bjørn Stachmann
 
 ---
 
@@ -13,7 +13,7 @@ René Preißel und Bjørn Stachmann
 </font>
 <p/>
 <font size="4">
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img   alt="Creative Commons Lizenzvertrag" style="border-width:0" src="workshop-git-intro/cc-by-nc-nd.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img   alt="Creative Commons License" style="border-width:0" src="workshop-git-intro/cc-by-nc-nd.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution - NonCommercial - NoDerivatives 4.0 International License
   </a>.
 </font>
 
@@ -22,48 +22,32 @@ René Preißel und Bjørn Stachmann
 
 <img src="workshop-git-intro/git-buch.png" width="20%"/>
 
-Visit our Blog at [Kapitel 26](http://kapitel26.github.io).
+Find more information on our blog [Kapitel 26](http://kapitel26.github.io).
+
+---
+
+## Schedule
+
+| Day 1               |
+|---------------------|
+| 9:00 - 10:15        |
+| 10:30 - 11:30       |
+| 11:45 - 12:45       |
+
 
 ---
 
 
-| Thursday             | Friday            |
-|----------------------|----------------------|
-|  9:00 - 10:00        |  9:00 - 10:00        |
-| 10:15 - 11:15        | 10:15 - 11:15        |
-| 11:30 - 12:30        | 11:30 - 12:30        |
-|      ---             |      ---             |
-| 13:15 - 14:30        | 13:15 - 14:30        |
-| 14:45 - 16:00        | 14:45 - 16:00        |
-| 16:15 - 17:30        |                      |
+## Topics
 
+ * Rebasing workflows
+ * Interactive rebasing and review workflows
+ * Modularization with submodules and subtree
+ * LFS - the Large File System
+ * Tips for handling large repositories
+ * Workflows: Performing releases
+ * Workflow: Maintaining multiple releases
 
----
-
-
-## Content (1)
-
- * Understand How Git Works
-    * Commit-Graph and Object Store
-    * Refs
-    * Synchronization
- * Tips & Tricks
-    * Power of Stashes
-    * Staging/The Index
-    * Worktrees
-    * Use Git to help debugging
-
----
-
-## Content (2)
-
- * Deep Dive - Merging
- * Deep Dive - Rebasing
- * Structuring Projects
-   - Submodules
-   - Subtrees
- 
- 
-(press ESC for overview)
+(Press ESC key)
 
 

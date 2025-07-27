@@ -2,12 +2,9 @@
 
 ---
 
-
 > Feels like a time machine
 
-
 ---
-
 
 ## Learning Goals
 
@@ -18,17 +15,15 @@
  * Interactive rebasing
  * Special cases
 
-
 ---
 
-
-### Lerning goals (Commands)
+### Learning goals (Commands)
 
 ```bash
     git rebase
     git rebase --interactive
     
-    git cherry-pic
+    git cherry-pick
     git filter-branch
 ```
 

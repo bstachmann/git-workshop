@@ -25,4 +25,6 @@ Nach diesem zweitägigen Seminar bist du sicher im Umgang mit den zentralen Funk
  
 Du wirst eigene Repositorys verwalten können, tauschst Commits mit Push und Pull aus, kannst mit Feature-Branches und Pull-Requests umgehen und hast verschiedene Branching-Strategien kennengelernt.
 
+## Inhalte
+
 {% include_relative sections/workshop-git-verstehen/content.md %}

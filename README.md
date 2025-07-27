@@ -42,12 +42,12 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
  Die Server können per Script gestartet werden:
 
  ```bash
-    $ scripts/run-all.sh
+    $ scripts/start-all.sh
  ```
 
  ### Website von GitHub *codespace* hosten
  
- Starten per `scripts/run-all.sh`, wie oben.
+ Starten per `scripts/start-all.sh`, wie oben.
 
  Auf dem Tab **Ports** den Port `8000` auf *public* setzen.
 

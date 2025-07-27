@@ -1,9 +1,6 @@
-
 ## What happens when merging contradicting renames?
 
-
 ---
-
 
     $ git merge rename-and-edit2
     CONFLICT (rename/rename): 
@@ -25,9 +22,7 @@
     	added by them:   a2e.md
       ...
 
-
 ---
-
 
 Git keeps both variants in the worktree:
 
@@ -35,17 +30,13 @@ Git keeps both variants in the worktree:
     -rw-r--r-- 1 bjoern bjoern   96 Aug 24 20:12 a1e.md
     -rw-r--r-- 1 bjoern bjoern   95 Aug 24 20:12 a2e.md
 
-
 ---
-
 
 Double check for changes in content:
 
     git diff --no-index a1e.md a2e.md
 
-
 ---
-
 
 Decide what to keep and what to remove:
 
@@ -61,10 +52,9 @@ Decide what to keep and what to remove:
 
     $ git commit
 
-
 Notes:
     
-Anmerkung: Obwohl die `needs merge`-Meldung ein wenig nach Fehlermeldung aussieht. 
-Werden auch die Löschungen in die Stage Übernommen. Der Merge kann abgeschlossem werden
+Note: Although the `needs merge` message looks a bit like an error message, 
+the deletions are also staged. The merge can be completed.
 
-    
+
