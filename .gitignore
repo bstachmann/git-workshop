@@ -9,4 +9,4 @@ _tmp*
 .sass-cache/
 _log/
 nohup.out
-.ve
+.venv

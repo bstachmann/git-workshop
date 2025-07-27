@@ -68,8 +68,8 @@ $ git show --stat --oneline
 
 ---
 
-**Revision Hash** - the "version number" in Git
-   Checksum over all the above information.
+**Revision Hash** - the "version number" in Git \
+Checksum over all the above information.
 
 ---
 
