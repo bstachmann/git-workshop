@@ -26,4 +26,6 @@ After this two-day seminar, you'll be confident in using Git's central functions
 
 You'll be able to manage your own repositories, exchange commits with push and pull, handle feature branches and pull requests, and will have learned about various branching strategies.
 
+## Contents
+
 {% include_relative sections/workshop-git-verstehen/content.en.md %}
