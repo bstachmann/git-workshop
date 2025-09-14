@@ -1,12 +1,12 @@
 package de.kapitel26.gitsamplebuilder.gitworkshop
 
 import de.kapitel26.gitsamplebuilder.createCollectionOfSamples
+import impl.BuildParameters
 import impl.LogBuilderOptions
 import impl.LogOutputFormat
+import impl.en
 import kotlin.coroutines.AbstractCoroutineContextElement
 import kotlin.coroutines.CoroutineContext
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 
 class LanguageContext(val language: String) : AbstractCoroutineContextElement(Key) {
     companion object Key : CoroutineContext.Key<LanguageContext>
@@ -19,52 +19,6 @@ fun main() {
     // performInLocalBash("ls -lah README.md")
     // openFileInLocalVscode("README.md")
     // openFileInLocalVscode("/root/README.md")
-
-    // Infixing().testInfix()
-}
-
-class Infixing {
-
-    var target_language = "de"
-
-    fun testInfix() {
-        runBlocking {
-            withContext(LanguageContext("de")) {
-                var result = "Hallo Welt" fake_en "Hello World"
-                println(result)
-            }
-            withContext(LanguageContext("en")) {
-                var result = "Hallo Welt" fake_en "Hello World"
-                println(result)
-            }
-            withContext(LanguageContext("de")) {
-                var result = "Hallo Welt" fake_en "Hello World"
-                println(result)
-            }
-        }
-    }
-}
-
-infix suspend fun String.fake_en(en_text: String): String {
-    val lang = kotlin.coroutines.coroutineContext[LanguageContext]?.language ?: "de"
-    return if (lang == "en") en_text else this
-}
-
-object BuildParameters {
-    private var _target_language = ThreadLocal<String>().apply { set("de") }
-
-    var language: String
-        get() = _target_language.get() ?: "de"
-        set(name) {
-            _target_language.set(name)
-        }
-
-    val language_suffix: String
-        get() = if (language == "de") "" else "-$language"
-}
-
-infix fun String.en(en_text: String): String {
-    return if (BuildParameters.language == "en") en_text else this
 }
 
 fun buildSomeUebungen() {
