@@ -51,26 +51,34 @@ infix suspend fun String.fake_en(en_text: String): String {
 }
 
 object BuildParameters {
-    var target_language = ThreadLocal<String>().apply { set("de") }
+    private var _target_language = ThreadLocal<String>().apply { set("de") }
+
+    var language: String
+        get() = _target_language.get() ?: "de"
+        set(name) {
+            _target_language.set(name)
+        }
+
+    val language_suffix: String
+        get() = if (language == "de") "" else "-$language"
 }
 
 infix fun String.en(en_text: String): String {
-    val lang = BuildParameters.target_language.get() ?: "de"
-    return if (lang == "en") en_text else this
+    return if (BuildParameters.language == "en") en_text else this
 }
 
 fun buildSomeUebungen() {
 
     for (language in listOf("de", "en")) {
-        BuildParameters.target_language.set(language)
+        BuildParameters.language = language
         println("Building samples in language: $language")
 
         createCollectionOfSamples(
-                "gitworkshop-sandbox $language",
+                "gitworkshop-sandbox${BuildParameters.language_suffix}",
                 LogBuilderOptions(outputFormat = LogOutputFormat.HTML)
         ) {
             thema("sandkasten" en "sandbox") {
-                createAufgabenFolge("moin" en ("hello")) {
+                createAufgabenFolge("moin" en "hello") {
                     createIntro("MOIN" en "HELLO", "MOIN MOIN" en "HELLO HELLO")
                     createAufgabe("Aufgabe" en "Task", "tu was" en "do something") {
                         markdown("und hier details" en "and here details")
