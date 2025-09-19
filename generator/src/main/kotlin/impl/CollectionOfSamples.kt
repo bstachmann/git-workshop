@@ -52,7 +52,7 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
         logTo("ueberblick.md") {
             aufgabenNamen.forEach { name ->
                 markdown(
-                        " * [$name](loesungen/$name/aufgabe-$name.html) [Lösung](loesungen/$name/loesung-$name.html)"
+                        " * [$name](loesungen/$name/aufgabe-$name.html) [${"Lösung" en "Solution"}](loesungen/$name/loesung-$name.html)"
                 )
             }
         }
