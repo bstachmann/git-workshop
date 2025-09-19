@@ -3,16 +3,21 @@ package de.kapitel26.gitsamplebuilder
 import java.io.File
 
 fun main() {
-    val srcDir = File("build/git-uebungen/loesungen")
     val targetDir = File("markdown-git-uebungen")
+
     targetDir.deleteRecursively()
-    copy(srcDir, targetDir)
+    for (lang_suffix in listOf("", "-en")) {
+        val srcDir = File("build/git-uebungen$lang_suffix/loesungen")
+        copy(srcDir, targetDir)
+    }
 }
 
 fun copy(src: File, targetDir: File) {
-    if(src.isFile && src.name.matches("(aufgabe|loesung)-.*\\.md".toRegex())) {
+    println("Checking $src to $targetDir ... ")
+    if (src.isFile && src.name.matches("(aufgabe|loesung)-.*\\.md".toRegex())) {
+        println("Copying $src to $targetDir ... ")
         src.copyTo(File(targetDir, src.name), overwrite = false)
-    } else if(src.isDirectory) {
-        src.listFiles().forEach { copy(it,targetDir ) }
+    } else if (src.isDirectory) {
+        src.listFiles().forEach { copy(it, targetDir) }
     }
 }
