@@ -306,7 +306,7 @@ abstract class AbstractWorkingDir<T>(
         fun applyLoesungen(fullName: String) =
                 logTo("loesung-${fullName}.md") {
                         solutionCollector.collectedCommands.forEach { (header, command) ->
-                                markdown("##" + ("Lösung" en "Solution") + " zu $header")
+                                markdown("## " + ("Lösung" en "Solution") + " zu $header")
                                 command()
                         }
                         markdown(
