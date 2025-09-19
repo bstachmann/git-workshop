@@ -304,18 +304,18 @@ abstract class AbstractWorkingDir<T>(
         fun currentUser(): String = getLocalGitConfig("user.name") ?: "bjoern"
 
         fun applyLoesungen(fullName: String) =
-                logTo("loesung-${fullName}.md") {
+                logTo("loesung-${fullName}${BuildParameters.language_suffix}.md") {
                         solutionCollector.collectedCommands.forEach { (header, command) ->
                                 markdown("## " + ("Lösung" en "Solution") + " zu $header")
                                 command()
                         }
                         markdown(
                                 ("[Zur Aufgabe]" en "[To the exercise]") +
-                                        "(aufgabe-$fullName.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
+                                        "(aufgabe-$fullName${BuildParameters.language_suffix}.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
                         )
                         markdown(
                                 ("[Zum Überblick]" en "[To the overview]") +
-                                        "(../../ueberblick.html){:style=\"visibility: hidden\"}"
+                                        "(../../ueberblick${BuildParameters.language_suffix}.html){:style=\"visibility: hidden\"}"
                         )
                 }
 }

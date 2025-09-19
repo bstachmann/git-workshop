@@ -23,38 +23,33 @@ fun main() {
 
 fun buildSomeUebungen() {
 
-    for (language in listOf("de", "en")) {
-        BuildParameters.language = language
-        println("Building samples in language: $language")
-
-        createCollectionOfSamples(
-                "gitworkshop-sandbox${BuildParameters.language_suffix}",
-                LogBuilderOptions(outputFormat = LogOutputFormat.HTML)
-        ) {
-            thema("sandkasten" en "sandbox") {
-                createAufgabenFolge("moin" en "hello") {
-                    createIntro("MOIN" en "HELLO", "MOIN MOIN" en "HELLO HELLO")
-                    createAufgabe("Aufgabe" en "Task", "tu was" en "do something") {
-                        markdown("und hier details" en "and here details")
-                    }
+    createCollectionOfSamples(
+            "gitworkshop-sandbox${BuildParameters.language_suffix}",
+            LogBuilderOptions(outputFormat = LogOutputFormat.HTML)
+    ) {
+        thema("sandkasten" en "sandbox") {
+            createAufgabenFolge("moin" en "hello") {
+                createIntro("MOIN" en "HELLO", "MOIN MOIN" en "HELLO HELLO")
+                createAufgabe("Aufgabe" en "Task", "tu was" en "do something") {
+                    markdown("und hier details" en "and here details")
                 }
             }
-
-            // halloWelt()
-            // rebasingSandbox()
-            // repositoryUntersuchen()
-            // reverting()
-            // commitsErstellen()
-            // staging()
-            // cloning()
-            // fetchAndPull()
-            // pushRejected()
-            // integrationOfChanges()
-            // rebasing()
-            // branching()
-            // modules()
-            // repositorysZusammenfuehren()
-            // sparseCeckouts()
         }
+
+        // halloWelt()
+        // rebasingSandbox()
+        // repositoryUntersuchen()
+        // reverting()
+        // commitsErstellen()
+        // staging()
+        // cloning()
+        // fetchAndPull()
+        // pushRejected()
+        // integrationOfChanges()
+        // rebasing()
+        // branching()
+        // modules()
+        // repositorysZusammenfuehren()
+        // sparseCeckouts()
     }
 }
