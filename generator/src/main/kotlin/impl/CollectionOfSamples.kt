@@ -21,13 +21,14 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
 
     fun createAufgabenFolge(name: String, commands: Dir.() -> Unit) {
         val fullName = thema?.let { "${it.lowercase()}-$name" } ?: "$name"
-        log.nav_order.put("aufgabe-$fullName.md", aufgabenNamen.size)
-        log.nav_order.put("loesung-$fullName.md", aufgabenNamen.size)
+        val lang_suffix = BuildParameters.language_suffix
+        log.nav_order.put("aufgabe-$fullName$lang_suffix.md", aufgabenNamen.size)
+        log.nav_order.put("loesung-$fullName$lang_suffix.md", aufgabenNamen.size)
         aufgabenNamen.add(fullName)
 
         createSample("loesungen/$fullName") {
             inDir(".") {
-                logTo("aufgabe-$fullName${BuildParameters.language_suffix}.md") {
+                logTo("aufgabe-$fullName$lang_suffix.md") {
                     commands()
                     markdown(
                             ("[Zur Lösung]" en "To the exercise") +

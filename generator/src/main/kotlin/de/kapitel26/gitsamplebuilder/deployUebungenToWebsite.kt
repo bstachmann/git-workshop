@@ -13,9 +13,7 @@ fun main() {
 }
 
 fun copy(src: File, targetDir: File) {
-    println("Checking $src to $targetDir ... ")
     if (src.isFile && src.name.matches("(aufgabe|loesung)-.*\\.md".toRegex())) {
-        println("Copying $src to $targetDir ... ")
         src.copyTo(File(targetDir, src.name), overwrite = false)
     } else if (src.isDirectory) {
         src.listFiles().forEach { copy(it, targetDir) }
