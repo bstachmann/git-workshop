@@ -27,7 +27,7 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
 
         createSample("loesungen/$fullName") {
             inDir(".") {
-                logTo("aufgabe-$fullName.md") {
+                logTo("aufgabe-$fullName${BuildParameters.language_suffix}.md") {
                     commands()
                     markdown(
                             ("[Zur Lösung]" en "To the exercise") +
