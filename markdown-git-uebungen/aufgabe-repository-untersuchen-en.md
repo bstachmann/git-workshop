@@ -5,81 +5,81 @@ parent: Exercises
 
 nav_order: 3
 ---
-# Exercise - Repository untersuchen
+# Exercise - Investigating the repository
 
-Hier geht es darum, herauszufinden, was in einem Repository enthalten ist.
+This is about finding out what is in a repository.
 
-## Tipps
+## Tips
 
-* `git log` zeigt alles Commits, die im aktuellen Branch enthalten sind.
-  - `--oneline` macht die Ausgabe kompakter.
-* `git show <some-commit>` zeigt Details zu einem Commit
-* Mit `~` Adressiert man Vorgänger eines Commits, 
-  z. B. ist `HEAD~2` der Vorvorgänger von `HEAD`.
-* `git branch` und `git tag` listen vorhandene Branches und Tags auf.
-* Mit `git switch <branch-name>` kann man auf andere Branches wechseln.
-* Mit `git switch --detach <commit>` kann man auf beliebige Versionen wechseln.
-* Mit `git restore -s <commit> -- <datei-oder-pfad>` kann man *Inhalte* beliebiger Versionen 
-  von Dateien/Pfaden in den Workspace holten. Es wird dabei nicht auf das angegebenen Commit
-  gewechselt, sondern nur Dateiinhalte in den Workspace geholt. Die betroffenen Dateien 
-  werden als `modified` angezeigt und können Commited werden.
+* `git log` shows all commits that are in the current branch.
+  - `--oneline` makes the output more compact.
+* `git show <some-commit>` shows details about a commit
+* With `~` you can address predecessors of a commit,
+  e.g. `HEAD~2` is the predecessor of the predecessor of `HEAD`.
+* `git branch` and `git tag` list existing branches and tags.
+* With `git switch <branch-name>` you can switch to other branches.
+* With `git switch --detach <commit>` you can switch to any version.
+* With `git restore -s <commit> -- <file-or-path>` you can get *contents* of any version
+  of files/paths into the workspace. It does not switch to the specified commit,
+  but only fetches file contents into the workspace. The affected files
+  are displayed as `modified` and can be committed.
    
 # Setup
 
-Im Verzeichnis `repo` wartet ein Git-Projekt darauf,
-untersucht zu werden. 
+In the `repo` directory, a Git project is waiting
+to be examined.
 
 
-<h2>Step 0 - START <!-- UEB/Repository untersuchen/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Investigating the repository/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Branches zeigen <!-- UEB/Repository untersuchen/1 --></h2>
+<h2>Step 1 - Show branches <!-- UEB/Investigating the repository/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Zeige an, welche Branches es gibt.
-Zeige jetzt den Commit-Graphen über alle Branches an.
+Show which branches exist.
+Now show the commit graph across all branches.
 
-<h2>Step 2 - Branch wechseln <!-- UEB/Repository untersuchen/2 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Wechsle auf den Branch `feature-a`.
-Sieh Dir den Inhalt der Datei `bar` im Verzeichnis `foo` an.
-Wechsle zurück auf `main`.
-
-<h2>Step 3 - Tags zeigen <!-- UEB/Repository untersuchen/3 --></h2>
+<h2>Step 2 - Switch branch <!-- UEB/Investigating the repository/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Zeige alle Tags an.
+Switch to the `feature-a` branch.
+Look at the content of the `bar` file in the `foo` directory.
+Switch back to `main`.
 
-<h2>Step 4 - ⭐ Inhalte vergangener Versionen untersuchen <!-- UEB/Repository untersuchen/4 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Lasse dir anzeigen, welche Dateien es im Workspace gibt.
-Lasse Dir anzeigen welche Dateien es in vorigen Commit gab.            
-Wechsle zum vorigen Commit, und untersuche, wie der Workspace dannn aussieht.
-
-Wechsle dann wieder auf `main` zurück.
-
-<h2>Step 5 - ⭐ Hole alten Stand einer einzelnen Datei zurück. <!-- UEB/Repository untersuchen/5 --></h2>
+<h2>Step 3 - Show tags <!-- UEB/Investigating the repository/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Die Datei `hallo-welt` wurde nach dem `release1.0` bearbeitet.
-Dem Kunden gefällt das nicht. Stelle den alten Zustand mit
-einem neuen Commit wieder her. 
+Show all tags.
+
+<h2>Step 4 - ⭐ Investigate contents of past versions <!-- UEB/Investigating the repository/4 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Show which files exist in the workspace.
+Show which files existed in the previous commit.
+Switch to the previous commit and examine what the workspace looks like then.
+
+Then switch back to `main`.
+
+<h2>Step 5 - ⭐ Restore old state of a single file. <!-- UEB/Investigating the repository/5 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+The file `hallo-welt` was edited after `release1.0`.
+The customer does not like it. Restore the old state with
+a new commit.
 
 
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-repository-untersuchen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-repository-untersuchen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

@@ -7,10 +7,10 @@ nav_order: 5
 ---
 ## Solution to Step 0 - START
 
-## Solution to Step 1 - Sparse-Klon durchführen
+## Solution to Step 1 - Perform sparse clone
 
-Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
-überprüfe, dass nur Top-Level-Dateien in den Workspace geholt wurden.
+Create a sparse clone of `repo` named `myrepo`,
+verify that only top-level files have been fetched into the workspace.
 
 
 <pre><code>$ <b>git clone --sparse repo myrepo</b><br><br>Cloning into 'myrepo'...<br>done.<br><br></code></pre>
@@ -28,11 +28,11 @@ Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution to Step 2 - Verzeichnis hinzufügen
+## Solution to Step 2 - Add directory
 
-Füge das Verzeichnis `component-a` hinzu .
-Überprüfe die neue Konfiguration.
-Validiere, dass `component-a` jetzt da ist.
+Add the directory `component-a`.
+Check the new configuration.
+Validate that `component-a` is now present.
 
 
 <pre><code>$ <b>cd myrepo</b><br><br><br></code></pre>
@@ -58,10 +58,10 @@ Validiere, dass `component-a` jetzt da ist.
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution to Step 3 - Sparse Checkout deaktivieren
+## Solution to Step 3 - Disable sparse checkout
 
-| Deaktiviere Sparse-Checkout und führe erneut ein Checkout durch.
-| Validiere, dass jetzt alle Dateien da sind.
+| Disable sparse-checkout and perform a checkout again.
+| Validate that all files are now present.
 
 
 <pre><code>$ <b>cd myrepo</b><br><br><br></code></pre>
@@ -83,10 +83,10 @@ Validiere, dass `component-a` jetzt da ist.
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution to Step 4 - Klonen und auschecken
+## Solution to Step 4 - Clone and checkout
 
-Klone `myrepo`, schränke auf `component-a` ein
-und mache ein Checkout. Nutze die `--cone`-Option.
+Clone `myrepo`, restrict to `component-a`
+and do a checkout. Use the `--cone` option.
 
 
 <pre><code>$ <b>git clone --sparse repo myclone</b><br><br>Cloning into 'myclone'...<br>done.<br><br></code></pre>

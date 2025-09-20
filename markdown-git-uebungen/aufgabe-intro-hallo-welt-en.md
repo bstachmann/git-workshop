@@ -55,7 +55,7 @@ Where is the Git repository located? What does it contain?
     $ ll -a
     $ ll .git/
 
-[To the exercise](loesung-intro-hallo-welt-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-intro-hallo-welt-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

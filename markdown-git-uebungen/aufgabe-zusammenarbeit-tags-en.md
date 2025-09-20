@@ -72,7 +72,7 @@ Schaue ins Log, um zu überprüfen, dass das Tag aktualisiert wurde.
 <pre><code>mein-klon $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-zusammenarbeit-tags-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-zusammenarbeit-tags-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

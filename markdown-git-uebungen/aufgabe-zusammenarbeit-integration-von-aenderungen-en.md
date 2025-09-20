@@ -140,7 +140,7 @@ den wir aulösen müssen.
 <pre><code>changes-in-same-files $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-zusammenarbeit-integration-von-aenderungen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-zusammenarbeit-integration-von-aenderungen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

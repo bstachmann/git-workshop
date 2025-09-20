@@ -90,7 +90,7 @@ Make sure that the *Rename Detection* does not recognize this.
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-commits-erstellen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-commits-erstellen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

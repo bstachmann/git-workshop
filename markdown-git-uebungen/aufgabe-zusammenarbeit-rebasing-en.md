@@ -45,7 +45,7 @@ Lasse Dir den Commit-Graphen über alle Branches zeigen.
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-zusammenarbeit-rebasing-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-zusammenarbeit-rebasing-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

@@ -96,7 +96,7 @@ Clone `application` to `myapplication`.
 Examine the directory structure.
 Don't forget to run `submodule update`.
 
-[To the exercise](loesung-modularisierung-submodules-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-modularisierung-submodules-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

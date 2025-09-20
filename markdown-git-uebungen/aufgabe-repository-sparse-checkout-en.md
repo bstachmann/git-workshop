@@ -8,59 +8,59 @@ nav_order: 5
 # Exercise - Sparse Checkout
 
 
-## Tipps
+## Tips
 
- * `git clone --sparse`: Klont ein Repository, ohne den Workspace zu füllen.
- * `git sparse-checkout init --cone`: Konfiguriert den cone-Modus für bessere Performance.
- * `git sparse-checkout add fileDirOrPattern`: Dateien bzw. Verzeichnisse hinzufügen,
-    die beim nächsten Checkout geladen werden sollen.
-    Beim nächsten Checkout wird alles geholt.
- * `git sparse-checkout list`: Aktuelle Sparse-Checkout-Konfiguration ansehen.
- * `git sparse-checkout disable`: Sparse-Checkout wieder abschalten.
+ * `git clone --sparse`: Clones a repository without populating the workspace.
+ * `git sparse-checkout init --cone`: Configures cone mode for better performance.
+ * `git sparse-checkout add fileDirOrPattern`: Add files or directories
+    to be loaded on the next checkout.
+    Everything will be fetched on the next checkout.
+ * `git sparse-checkout list`: View the current sparse-checkout configuration.
+ * `git sparse-checkout disable`: Disable sparse-checkout again.
 
 ## Setup
 
-Ein Git-Repository namens `repo` wurde bereits erstellt.
-Es enthält Dateien auf dem Top-Level und in zwei Unterverzeichnissen.
+A Git repository named `repo` has already been created.
+It contains files at the top level and in two subdirectories.
 
-### Verzeichnisse
+### Directories
 
- * `./` Haupverzeichnis für diese Übung 
-   - `repo/` Bereits vorhandenes Repository.
+ * `./` Main directory for this exercise
+   - `repo/` Existing repository.
   
 
 <h2>Step 0 - START <!-- UEB/Sparse Checkout/0 --></h2>
 
-<h2>Step 1 - Sparse-Klon durchführen <!-- UEB/Sparse Checkout/1 --></h2>
+<h2>Step 1 - Perform sparse clone <!-- UEB/Sparse Checkout/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
-überprüfe, dass nur Top-Level-Dateien in den Workspace geholt wurden.
+Create a sparse clone of `repo` named `myrepo`,
+verify that only top-level files have been fetched into the workspace.
 
-<h2>Step 2 - Verzeichnis hinzufügen <!-- UEB/Sparse Checkout/2 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Füge das Verzeichnis `component-a` hinzu .
-Überprüfe die neue Konfiguration.
-Validiere, dass `component-a` jetzt da ist.
-
-<h2>Step 3 - Sparse Checkout deaktivieren <!-- UEB/Sparse Checkout/3 --></h2>
+<h2>Step 2 - Add directory <!-- UEB/Sparse Checkout/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-| Deaktiviere Sparse-Checkout und führe erneut ein Checkout durch.
-| Validiere, dass jetzt alle Dateien da sind.
+Add the directory `component-a`.
+Check the new configuration.
+Validate that `component-a` is now present.
 
-<h2>Step 4 - Klonen und auschecken <!-- UEB/Sparse Checkout/4 --></h2>
+<h2>Step 3 - Disable sparse checkout <!-- UEB/Sparse Checkout/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Klone `myrepo`, schränke auf `component-a` ein
-und mache ein Checkout. Nutze die `--cone`-Option.
+| Disable sparse-checkout and perform a checkout again.
+| Validate that all files are now present.
 
-[To the exercise](loesung-repository-sparse-checkout-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+<h2>Step 4 - Clone and checkout <!-- UEB/Sparse Checkout/4 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Clone `myrepo`, restrict to `component-a`
+and do a checkout. Use the `--cone` option.
+
+[To the solution](loesung-repository-sparse-checkout-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

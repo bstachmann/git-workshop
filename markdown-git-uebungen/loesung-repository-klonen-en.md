@@ -7,21 +7,21 @@ nav_order: 4
 ---
 ## Solution to Step 0 - START
 
-## Solution to Step 1 - Klon durchführen
+## Solution to Step 1 - Perform clone
 
-Erstelle einen Klon von `myfirstrepo` mit dem Namen `myfirstclone`.
+Create a clone of `myfirstrepo` named `myfirstclone`.
 
 
 <pre><code>$ <b>git clone myfirstrepo myfirstclone</b><br><br>Cloning into 'myfirstclone'...<br>done.<br><br></code></pre>
 
 
-## Solution to Step 2 - Klon untersuchen
+## Solution to Step 2 - Examine clone
 
-Schaue die Commits an und
-zeige den Origin des Klons `myfirstclone`.
-`origin` steht in der Regel für jenes Repository,
-von dem geklont wurde.
-Zeige dann den Status.
+Look at the commits and
+show the origin of the clone `myfirstclone`.
+`origin` usually stands for the repository
+from which it was cloned.
+Then show the status.
 
 
 <pre><code>$ <b>cd myfirstclone</b><br><br><br></code></pre>
@@ -39,9 +39,9 @@ Zeige dann den Status.
 <pre><code>myfirstclone $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution to Step 3 - Im Klon arbeiten
+## Solution to Step 3 - Work in the clone
 
-Erstelle ein Commit und zeige dann den Status.
+Create a commit and then show the status.
 
 
 <pre><code>$ <b>cd myfirstclone</b><br><br><br></code></pre>

@@ -5,51 +5,51 @@ parent: Exercises
 
 nav_order: 4
 ---
-# Exercise - Klonen von Repositorys
+# Exercise - Cloning Repositories
 
 
-## Tipps
+## Tips
 
- * `git clone <original> <kopie>`: Klont ein Repository.
- * `git remote -v`: Zeigt auf, welchen anderen Klone bekannt sind,
-   insbesondere `origin`.
+ * `git clone <original> <copy>`: Clones a repository.
+ * `git remote -v`: Shows which other clones are known,
+   especially `origin`.
 
 ## Setup
 
-Ein Git-Repository namens `myfirstrepo` wurde bereits erstellt.
-Es enthält zwei Commits.
+A Git repository named `myfirstrepo` has already been created.
+It contains two commits.
 
-### Verzeichnisse
+### Directories
 
- * `./` Haupverzeichnis für diese Übung 
-   - `myfirstrepo/` Bereits vorhandenes Repository.
+ * `./` Main directory for this exercise
+   - `myfirstrepo/` Existing repository.
   
 
-<h2>Step 0 - START <!-- UEB/Klonen von Repositorys/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Cloning Repositories/0 --></h2>
 
-<h2>Step 1 - Klon durchführen <!-- UEB/Klonen von Repositorys/1 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Erstelle einen Klon von `myfirstrepo` mit dem Namen `myfirstclone`.
-
-<h2>Step 2 - Klon untersuchen <!-- UEB/Klonen von Repositorys/2 --></h2>
+<h2>Step 1 - Perform clone <!-- UEB/Cloning Repositories/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Schaue die Commits an und
-zeige den Origin des Klons `myfirstclone`.
-`origin` steht in der Regel für jenes Repository,
-von dem geklont wurde.
-Zeige dann den Status.
+Create a clone of `myfirstrepo` named `myfirstclone`.
 
-<h2>Step 3 - Im Klon arbeiten <!-- UEB/Klonen von Repositorys/3 --></h2>
+<h2>Step 2 - Examine clone <!-- UEB/Cloning Repositories/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Erstelle ein Commit und zeige dann den Status.
+Look at the commits and
+show the origin of the clone `myfirstclone`.
+`origin` usually stands for the repository
+from which it was cloned.
+Then show the status.
 
-[To the exercise](loesung-repository-klonen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+<h2>Step 3 - Work in the clone <!-- UEB/Cloning Repositories/3 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Create a commit and then show the status.
+
+[To the solution](loesung-repository-klonen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

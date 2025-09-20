@@ -149,7 +149,7 @@ Open a file explorer in the current working directory.
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-intro-commandline-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-intro-commandline-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

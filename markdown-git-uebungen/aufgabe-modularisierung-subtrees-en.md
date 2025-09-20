@@ -93,7 +93,7 @@ Clone `application` to `myapplication`.
 Examine the `HEAD` directory structure,
 and the commit graph.
 
-[To the exercise](loesung-modularisierung-subtrees-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-modularisierung-subtrees-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

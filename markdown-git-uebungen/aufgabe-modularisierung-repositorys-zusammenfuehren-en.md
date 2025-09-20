@@ -53,7 +53,7 @@ UI and backend should be merged in a new clone `gesamt`.
 Follow the instructions in the chapter *"Merging small projects"*.
 Then examine the directory structure and commit graph.
 
-[To the exercise](loesung-modularisierung-repositorys-zusammenfuehren-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-modularisierung-repositorys-zusammenfuehren-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

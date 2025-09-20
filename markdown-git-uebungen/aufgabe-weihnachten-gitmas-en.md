@@ -30,7 +30,7 @@ Start in directory `git-uebungen/aufgaben/<unknown>`.
 Branch and merge so that ˋgit log --graph --onelineˋ
 outputs a Christmas tree.
 
-[To the exercise](loesung-weihnachten-gitmas-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the solution](loesung-weihnachten-gitmas-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
 [To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 
