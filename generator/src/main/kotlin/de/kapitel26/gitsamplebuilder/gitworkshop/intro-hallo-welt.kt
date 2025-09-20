@@ -1,6 +1,7 @@
 package de.kapitel26.gitsamplebuilder.gitworkshop
 
 import impl.CollectionOfSamples
+import impl.en
 
 fun CollectionOfSamples.halloWelt() {
 
