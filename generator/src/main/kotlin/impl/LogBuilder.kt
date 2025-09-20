@@ -102,9 +102,6 @@ class LogBuilder(
                                             ?.groupValues
                                             ?.get(2)
                                             ?: logName
-                            println("$name: $name, title: $title\n")
-                            println("LOOK ${nav_order.get(name)}")
-                            println("First 5 keys in name2writer: ${name2writer.keys.take(5)}")
                             BufferedWriter(FileWriter(File(rootDir, logName))).also {
                                 it.write(
                                         """

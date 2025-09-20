@@ -31,11 +31,11 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
                 logTo("aufgabe-$fullName$lang_suffix.md") {
                     commands()
                     markdown(
-                            ("[Zur Lösung]" en "To the exercise") +
+                            ("[Zur Lösung]" en "[To the exercise]") +
                                     "(loesung-$fullName.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
                     )
                     markdown(
-                            ("[Zum Überblick]" en "To the overview") +
+                            ("[Zum Überblick]" en "[To the overview]") +
                                     "(../../ueberblick.html){:style=\"visibility: hidden\"}"
                     )
                 }
