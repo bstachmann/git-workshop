@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>zusammenarbeit-reverting-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 14
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>modularisierung-repositorys-zusammenfuehren-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 18
 ---

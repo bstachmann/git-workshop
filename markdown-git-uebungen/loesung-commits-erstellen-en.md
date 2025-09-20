@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>commits-erstellen-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 6
 ---

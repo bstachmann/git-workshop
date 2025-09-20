@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>weihnachten-gitmas-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 19
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>repository-klonen-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 4
 ---

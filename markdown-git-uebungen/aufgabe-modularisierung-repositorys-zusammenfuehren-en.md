@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>modularisierung-repositorys-zusammenfuehren-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 18
 ---

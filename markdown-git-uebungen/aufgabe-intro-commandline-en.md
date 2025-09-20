@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>intro-commandline-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 0
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>modularisierung-submodules-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 16
 ---

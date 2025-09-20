@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>repository-untersuchen-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 3
 ---

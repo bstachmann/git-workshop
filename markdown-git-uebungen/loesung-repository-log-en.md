@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>repository-log-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 2
 ---

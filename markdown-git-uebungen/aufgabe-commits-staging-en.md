@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>commits-staging-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 7
 ---

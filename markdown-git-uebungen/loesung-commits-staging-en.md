@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>commits-staging-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 7
 ---

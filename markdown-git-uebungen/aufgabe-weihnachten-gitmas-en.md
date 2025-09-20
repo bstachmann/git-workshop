@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>weihnachten-gitmas-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 19
 ---

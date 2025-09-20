@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>zusammenarbeit-tags-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 10
 ---

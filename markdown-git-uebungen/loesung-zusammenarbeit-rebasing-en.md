@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>zusammenarbeit-rebasing-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 15
 ---

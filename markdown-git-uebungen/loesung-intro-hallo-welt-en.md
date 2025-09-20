@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>intro-hallo-welt-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 1
 ---

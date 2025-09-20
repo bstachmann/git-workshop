@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>zusammenarbeit-push-rejected-en</code>
-parent: Lösungen
+parent: Solutions
 
 nav_order: 11
 ---

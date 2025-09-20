@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>zusammenarbeit-push-fetch-pull-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 9
 ---

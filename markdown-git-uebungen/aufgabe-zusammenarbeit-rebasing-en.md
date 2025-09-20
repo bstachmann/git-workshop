@@ -1,7 +1,7 @@
 ---
 layout: page
 title: <code>zusammenarbeit-rebasing-en</code>
-parent: Aufgaben
+parent: Exercises
 
 nav_order: 15
 ---
