@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 12
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Fast-Forward beim Pull
+## Solution to Step 1 - Fast-Forward beim Pull
 
 Im einfachste Fall haben wir selber gar nichts gemacht,
 und wollen nur die Änderungen von Anja übernehmen.
@@ -28,7 +28,7 @@ Der Graph zeigt, dass keine Verzweigung entstanden ist und kein Merge notwendig 
 <pre><code>fast-forward $ <b>git log --graph --oneline --decorate</b><br><br>* 8598867 (HEAD -&gt; main, origin/main, origin/HEAD) Verwende double Werte statt int<br>* 47053b2 Created file average.kts on branch main by anja .<br>* 75dfc35 Created file README.md on branch main by anja .<br><br></code></pre>
 
 
-## Solution zu Step 2 - Merge erzwingen beim Pull
+## Solution to Step 2 - Merge erzwingen beim Pull
 
 Auch dieses haben wir nichtnichts gemacht,
 und wollen nur die Änderungen von Anja übernehmen.
@@ -49,7 +49,7 @@ Der Graph zeigt, dass ein Merge enstanden ist.
 <pre><code>no-ff $ <b>git log --graph --oneline --decorate</b><br><br>*   be3b61b (HEAD -&gt; main) Merge branch 'main' of ../origin-for-merge-samples<br>|\  <br>| * 8598867 (origin/main, origin/HEAD) Verwende double Werte statt int<br>|/  <br>* 47053b2 Created file average.kts on branch main by anja .<br>* 75dfc35 Created file README.md on branch main by anja .<br><br></code></pre>
 
 
-## Solution zu Step 3 - Integration bei Änderungen in verschiedenen Dateien
+## Solution to Step 3 - Integration bei Änderungen in verschiedenen Dateien
 
 1. Bearbeite die Datei `README.md`.
    - Erstelle ein Commit dazu.
@@ -107,7 +107,7 @@ Und jetzt können wir erneut ein Push versuchen.
 <pre><code>changes-in-different-files $ <b>git push</b><br><br>To ../origin-for-merge-samples.git<br>   8598867..ad227b4  main -&gt; main<br><br></code></pre>
 
 
-## Solution zu Step 4 - Integration bei Änderungen in derselben Datei
+## Solution to Step 4 - Integration bei Änderungen in derselben Datei
 
 In diesem Fall bearbeiten wir dieselbe Datei,
 die auch Anja bearbeitet hat.

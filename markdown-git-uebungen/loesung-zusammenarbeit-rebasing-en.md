@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 15
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Feature-Branch per Rebase aktualiseren.
+## Solution to Step 1 - Feature-Branch per Rebase aktualiseren.
 
 Auf dem main gibt es Neuerungen.
 

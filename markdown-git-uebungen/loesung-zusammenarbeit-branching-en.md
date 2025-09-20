@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 8
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Branch erstellen
+## Solution to Step 1 - Branch erstellen
 
 Erstelle einen Branch `feature-a`, bearbeite die Datei `foo`
 und erstelle ein Commit.
@@ -42,7 +42,7 @@ Zeige den Commit-Graphen.
 <pre><code>repo $ <b>git log --all --oneline --graph --decorate</b><br><br>* 300f5e9 (feature-a) : Edit file foo at line 7 on branch feature-a by bjoern.<br>| * b5cd7e9 (HEAD -&gt; main) : Edit file bar at line 3 on branch main by bjoern.<br>|/  <br>* 6014eb9 (origin/main) Initial edit before cloning<br>* de06cfe Initial edit before cloning<br><br></code></pre>
 
 
-## Solution zu Step 2 - Branch mergen
+## Solution to Step 2 - Branch mergen
 
 Merge `feature-a` auf den `main`und
 zeige den Commit-Graphen.

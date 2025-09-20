@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 9
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Änderungen holen
+## Solution to Step 1 - Änderungen holen
 
 Hole die beiden neuen Commits vom `origin`-Repository,
 ohne den lokalen `main` zu verändern.
@@ -22,7 +22,7 @@ Die Ausgabe zeigt, dass Änderungen auf dem Branch `main` geholt wurden.
 <pre><code>mein-klon $ <b>git status</b><br><br>On branch main<br>Your branch and 'origin/main' have diverged,<br>and have 1 and 2 different commits each, respectively.<br>  (use &quot;git pull&quot; if you want to integrate the remote branch with yours)<br><br>nothing to commit, working tree clean<br><br></code></pre>
 
 
-## Solution zu Step 2 - Änderungen untersuchen
+## Solution to Step 2 - Änderungen untersuchen
 
 Lasse dir den Status zeigen,
 und untersuche dann,
@@ -46,7 +46,7 @@ die in `origing/main` aber noch nicht in `main` enthalten sind.
 Etwas kürzer hätte man hier auch auch `git log ..origin/main` schreiben
 könne, da wir `main` ja gerade `HEAD` ist.
 
-## Solution zu Step 3 - Änderungen integrieren
+## Solution to Step 3 - Änderungen integrieren
 
 Integriere die neuesten Commits vom `origin`-Repository
 in den lokalen `main`.

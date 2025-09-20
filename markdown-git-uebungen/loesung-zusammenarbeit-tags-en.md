@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 10
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Tags erstellen
+## Solution to Step 1 - Tags erstellen
 
 Erstelle ein einfaches Tag `simple1` auf `HEAD` und
 ein annotated Tag `annotated1` auf `HEAD~1`.
@@ -35,7 +35,7 @@ Beim *annotated Tag* werden zusätzlich Beschreibung und Metadaten angezeigt:
 <pre><code>mein-klon $ <b>git show annotated1 --no-patch</b><br><br>tag annotated1<br>Tagger: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>Mit Beschreibung<br><br>commit d4d7875a179ac89a40ed04b1e6cf33a5111fcedf<br>Author: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>    Initial edit before cloning<br><br></code></pre>
 
 
-## Solution zu Step 2 - Tags holen
+## Solution to Step 2 - Tags holen
 
 Einfach per pull.
 
@@ -43,7 +43,7 @@ Einfach per pull.
 <pre><code>mein-klon $ <b>git pull</b><br><br>Updating af500f3..06d348f<br>Fast-forward<br> foobar | 8 ++++----<br> 1 file changed, 4 insertions(+), 4 deletions(-)<br>From ../blessed<br>   af500f3..06d348f  main       -&gt; origin/main<br> * [new tag]         v0.2       -&gt; v0.2<br> * [new tag]         v0.3       -&gt; v0.3<br> * [new tag]         v1.0       -&gt; v1.0<br><br></code></pre>
 
 
-## Solution zu Step 3 - Tags pushen
+## Solution to Step 3 - Tags pushen
 
 Beim einfachen `git push` werden keine Tags übertragen.
 Übertrage zunächste gezielt das Tag `simple1` mit einem Push
@@ -61,7 +61,7 @@ und danach alle weiteren Tags mit einem weiteren Push
 <pre><code>mein-klon $ <b>git push --tags</b><br><br>To ../blessed.git<br> * [new tag]         annotated1 -&gt; annotated1<br><br></code></pre>
 
 
-## Solution zu Step 4 - Manipulieren
+## Solution to Step 4 - Manipulieren
 
 Überschreibe das Tag `v0.1`, so dass es auf den`HEAD` zeigt.
 Pushe das Tag.

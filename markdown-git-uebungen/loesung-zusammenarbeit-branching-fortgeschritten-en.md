@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 13
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Branch erstellen
+## Solution to Step 1 - Branch erstellen
 
 Erstelle einen Branch `feature-a`, bearbeite die Datei `foo`
 und erstelle ein Commit.
@@ -42,7 +42,7 @@ Zeige den Commit-Graphen.
 <pre><code>repo $ <b>git log --all --oneline --graph --decorate</b><br><br>* 300f5e9 (feature-a) : Edit file foo at line 7 on branch feature-a by bjoern.<br>| * b5cd7e9 (HEAD -&gt; main) : Edit file bar at line 3 on branch main by bjoern.<br>|/  <br>* 6014eb9 (origin/main) Initial edit before cloning<br>* de06cfe Initial edit before cloning<br><br></code></pre>
 
 
-## Solution zu Step 2 - Branch mergen
+## Solution to Step 2 - Branch mergen
 
 Merge `feature-a` auf den `main`und
 zeige den Commit-Graphen.
@@ -55,7 +55,7 @@ zeige den Commit-Graphen.
 <pre><code>repo $ <b>git log --all --oneline --graph --decorate</b><br><br>*   c00b978 (HEAD -&gt; main) Merge branch 'feature-a'<br>|\  <br>| * 300f5e9 (feature-a) : Edit file foo at line 7 on branch feature-a by bjoern.<br>* | b5cd7e9 : Edit file bar at line 3 on branch main by bjoern.<br>|/  <br>* 6014eb9 (origin/main) Initial edit before cloning<br>* de06cfe Initial edit before cloning<br><br></code></pre>
 
 
-## Solution zu Step 3 - ⭐ Merge analysieren
+## Solution to Step 3 - ⭐ Merge analysieren
 
 Zeige, welche Commits vom `main` im Merge hinzugekommen sind.
 Zeige, welche Commits von `feature-a` im Merge hinzugekommen sind.
@@ -77,7 +77,7 @@ Zeige ebenfalls die Änderungen (Diffs) für beide Seiten.
 <pre><code>repo $ <b>git diff HEAD^1...HEAD^2</b><br><br>diff --git a/foo b/foo<br>index 36fe753..f719df0 100644<br>--- a/foo<br>+++ b/foo<br>@@ -5,7 +5,7 @@ line 3 created<br> line 4 created<br> line 5 created<br> line 6 created<br>-line 7 created<br>+line 7 Edit file foo at line 7 on branch feature-a by bjoern. / line 7 created<br> line 8 created<br> line 9 created<br> line 10 created<br><br></code></pre>
 
 
-## Solution zu Step 4 - ⭐ Merge analysieren
+## Solution to Step 4 - ⭐ Merge analysieren
 
 Zeige, welche Commits vom `main` im Merge hinzugekommen sind.
 Zeige, welche Commits von `feature-a` im Merge hinzugekommen sind.
@@ -99,7 +99,7 @@ Zeige ebenfalls die Änderungen (Diffs) für beide Seiten.
 <pre><code>repo $ <b>git diff HEAD^1...HEAD^2</b><br><br>diff --git a/foo b/foo<br>index 36fe753..f719df0 100644<br>--- a/foo<br>+++ b/foo<br>@@ -5,7 +5,7 @@ line 3 created<br> line 4 created<br> line 5 created<br> line 6 created<br>-line 7 created<br>+line 7 Edit file foo at line 7 on branch feature-a by bjoern. / line 7 created<br> line 8 created<br> line 9 created<br> line 10 created<br><br></code></pre>
 
 
-## Solution zu Step 5 - Remote Branches untersuchen
+## Solution to Step 5 - Remote Branches untersuchen
 
 
 

@@ -5,13 +5,13 @@ parent: Solutions
 
 nav_order: 17
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Module als Subtree einbinden
+## Solution to Step 1 - Integrating modules as subtrees
 
-Binde die Module `frontend.git` und `backend.git`
-per `subtree add` ein.
-Untersuche dann die entstandene Verzeichnisstruktur.
+Integrate the modules `frontend.git` and `backend.git`
+using `subtree add`.
+Then examine the resulting directory structure.
 
 
 <pre><code>application $ <b>git subtree add --prefix=frontend ../frontend.git main</b><br><br>git fetch ../frontend.git main<br>From ../frontend<br> * branch            main       -&gt; FETCH_HEAD<br>Added dir 'frontend'<br><br></code></pre>
@@ -25,12 +25,12 @@ Untersuche dann die entstandene Verzeichnisstruktur.
 <pre><code>application $ <b>git ls-tree -r HEAD</b><br><br>100644 blob 36fe7538890f39b90ff7dee1d1f97ba3e3a9350c	README<br>100644 blob 36fe7538890f39b90ff7dee1d1f97ba3e3a9350c	backend/service.java<br>100644 blob 36fe7538890f39b90ff7dee1d1f97ba3e3a9350c	frontend/main.ts<br><br></code></pre>
 
 
-## Solution zu Step 2 - Änderung aus einem Modul übernehmen
+## Solution to Step 2 - Adopting changes from a module
 
-Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
-Sie Dir das entstandene Commit an (`show --stat`)
-Gehe in das Repo `application` und hole die Änderungen per `subtree pull` ab.
-Sieh Dir das übertragene Commit an.
+Go to the `backend` repo, change the `service.java` file, commit and push.
+Look at the resulting commit (`show --stat`)
+Go to the `application` repo and fetch the changes using `subtree pull`.
+Look at the transferred commit.
 
 
 <pre><code>$ <b>cd backend</b><br><br><br></code></pre>
@@ -72,11 +72,11 @@ Sieh Dir das übertragene Commit an.
 <pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 3 - Änderung in ein Modul übertragen
+## Solution to Step 3 - Transferring changes to a module
 
-Gehe in `application` ändere `frontend/main.ts` und committe.
-Übertrage die Änderung per `subtree push` nach `frontend.git`.
-Sieh Dir das übertragene Commit in `frontend.git` an.
+Go to `application`, change `frontend/main.ts` and commit.
+Transfer the change to `frontend.git` using `subtree push`.
+Look at the transferred commit in `frontend.git`.
 
 
 <pre><code>$ <b>cd application</b><br><br><br></code></pre>
@@ -110,11 +110,11 @@ Sieh Dir das übertragene Commit in `frontend.git` an.
 <pre><code>frontend.git $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 4 - Übergeordnetes Repo klonen
+## Solution to Step 4 - Cloning the parent repo
 
-Klone `application` zu `myapplication`.
-Untersuche die `HEAD` Verzeichnisstruktur,
-und den Commit-graphen.
+Clone `application` to `myapplication`.
+Examine the `HEAD` directory structure,
+and the commit graph.
 
 
 <pre><code>$ <b>git clone application myapplication</b><br><br>Cloning into 'myapplication'...<br>done.<br><br></code></pre>
@@ -124,13 +124,13 @@ und den Commit-graphen.
 <pre><code>$ <b>cd myapplication</b><br><br><br></code></pre>
 
 
-Man sieht, dass die Einbettungen als normale Dateien und Verzeichnisse im `HEAD`-Tree erscheinen
+You can see that the embeddings appear as normal files and directories in the `HEAD` tree
 
 
 <pre><code>myapplication $ <b>git ls-tree -r HEAD .</b><br><br>100644 blob 36fe7538890f39b90ff7dee1d1f97ba3e3a9350c	README<br>100644 blob 6429de2def6cf09854047acb14ee781e65462881	backend/service.java<br>100644 blob ab09e17b67ee7ec9f019c779211387d58e69f214	frontend/main.ts<br><br></code></pre>
 
 
-Im Commit-Graphen sieht man, woher die Daten kommen.
+In the commit graph you can see, where the data comes from.
 
 
 <pre><code>myapplication $ <b>git log --graph --oneline --stat</b><br><br>* ec22756 : Edit file frontend/main.ts at line 3 on branch main by bjoern.<br>|  frontend/main.ts | 2 +-<br>|  1 file changed, 1 insertion(+), 1 deletion(-)<br>*   5212dee Merge commit '45a3d1300877eb63e155cc2d9e48c0e9c6dd9d40'<br>|\  <br>| * 45a3d13 : Edit file service.java at line 7 on branch main by bjoern.<br>| |  service.java | 2 +-<br>| |  1 file changed, 1 insertion(+), 1 deletion(-)<br>* | 8453b78 Add 'backend/' from commit '005d8aaf310fef036b86d5f6cae09f9ac8477669'<br>|\| <br>| * 005d8aa Created file service.java on branch main by bjoern.<br>|    service.java | 12 ++++++++++++<br>|    1 file changed, 12 insertions(+)<br>*   3c353b4 Add 'frontend/' from commit '03baf805ce0819e534d14835f60a2267a465bc98'<br>|\  <br>| * 03baf80 Created file main.ts on branch main by bjoern.<br>|    main.ts | 12 ++++++++++++<br>|    1 file changed, 12 insertions(+)<br>* 74f11b3 Created file README on branch main by bjoern.<br>   README | 12 ++++++++++++<br>   1 file changed, 12 insertions(+)<br><br></code></pre>

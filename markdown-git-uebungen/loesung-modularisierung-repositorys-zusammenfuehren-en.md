@@ -5,15 +5,15 @@ parent: Solutions
 
 nav_order: 18
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Zusammenführen `git subtree`
+## Solution to Step 1 - Merge `git subtree`
 
 
-1. Erstelle ein Repo `application` mit einem Commit.
-2. Füge `backend.git` in einem Unterverzeichnis `backend` hinzu.
-3. Füge `ui.git` in einem Unterverzeichnis `ui` hinzu.
-4. Untersuche Verzeichnissstruktur und Commit-Graphen
+1. Create a repo `application` with one commit.
+2. Add `backend.git` in a subdirectory `backend`.
+3. Add `ui.git` in a subdirectory `ui`.
+4. Examine the directory structure and commit graph
 
 
 <pre><code>$ <b>git init -b main application </b><br><br>Initialized empty Git repository in /workspaces/git-workshop/build/git-uebungen-en/loesungen/modularisierung-repositorys-zusammenfuehren/application/.git/<br><br></code></pre>
@@ -23,7 +23,7 @@ nav_order: 18
 <pre><code>$ <b>cd application</b><br><br><br></code></pre>
 
 
-Wir erzeugen ein erstes Commmit, damit der `subtree`-Befehl ausgeführt werden kann.
+We create a first commit so that the `subtree` command can be executed.
 
 
 <pre><code>application $ <b># created file 'README'</b><br><br><br></code></pre>
@@ -37,7 +37,7 @@ Wir erzeugen ein erstes Commmit, damit der `subtree`-Befehl ausgeführt werden k
 <pre><code>application $ <b>git commit -am &quot;Created file README on branch main by bjoern. &quot;</b><br><br>[main (root-commit) 74f11b3] Created file README on branch main by bjoern.<br> 1 file changed, 12 insertions(+)<br> create mode 100644 README<br><br></code></pre>
 
 
-Dann fügen wir die Repos mit `subtree` hinzu:
+Then we add the repos with `subtree`:
 
 
 <pre><code>application $ <b>git subtree add --prefix=backend ../backend.git main</b><br><br>git fetch ../backend.git main<br>From ../backend<br> * branch            main       -&gt; FETCH_HEAD<br>Added dir 'backend'<br><br></code></pre>
@@ -47,7 +47,7 @@ Dann fügen wir die Repos mit `subtree` hinzu:
 <pre><code>application $ <b>git subtree add --prefix=ui ../ui.git main</b><br><br>git fetch ../ui.git main<br>From ../ui<br> * branch            main       -&gt; FETCH_HEAD<br>Added dir 'ui'<br><br></code></pre>
 
 
-Man sieht ui und backend wurden mitsamt Historie zusammengeführt:
+You can see that ui and backend have been merged including their history:
 
 
 <pre><code>application $ <b>git ls-tree -r --name-only HEAD</b><br><br>README<br>backend/src/Backend.java<br>backend/test/BackendTest.java<br>ui/src/UI.java<br>ui/test/UITest.java<br><br></code></pre>
@@ -61,11 +61,11 @@ Man sieht ui und backend wurden mitsamt Historie zusammengeführt:
 <pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 2 - Zusammenführen mit `fetch`, `mv` und `merge`
+## Solution to Step 2 - Merge with `fetch`, `mv` and `merge`
 
-UI und Backend sollen in einem neuen Klon `gesamt` zusammengeführt werden.
-Folge den Anweisungen im Kapitel *"Kleine Projekte zusammenführen"*.
-Untersuche dann Verzeichnissstruktur und Commit-Graphen
+UI and backend should be merged in a new clone `gesamt`.
+Follow the instructions in the chapter *"Merging small projects"*.
+Then examine the directory structure and commit graph.
 
 
 <pre><code>$ <b>git clone backend gesamt</b><br><br>Cloning into 'gesamt'...<br>done.<br><br></code></pre>
@@ -75,7 +75,7 @@ Untersuche dann Verzeichnissstruktur und Commit-Graphen
 <pre><code>$ <b>cd gesamt</b><br><br><br></code></pre>
 
 
-Backend-Dateien in Unterverzeichnis verschieben:
+Move backend files to subdirectory:
 
 
 <pre><code>gesamt $ <b>mkdir backend</b><br><br><br></code></pre>
@@ -89,7 +89,7 @@ Backend-Dateien in Unterverzeichnis verschieben:
 <pre><code>gesamt $ <b>git commit -m 'backend-Verzeichnis angelegt'</b><br><br>[main 0487992] backend-Verzeichnis angelegt<br> 2 files changed, 0 insertions(+), 0 deletions(-)<br> rename {src =&gt; backend/src}/Backend.java (100%)<br> rename {test =&gt; backend/test}/BackendTest.java (100%)<br><br></code></pre>
 
 
-Inhalt des UI-Repository in einen lokalen Branch `uimain` holen:
+Fetch content of the UI repository into a local branch `uimain`:
 
 
 <pre><code>gesamt $ <b>git remote add ui ../ui/</b><br><br><br></code></pre>
@@ -103,7 +103,7 @@ Inhalt des UI-Repository in einen lokalen Branch `uimain` holen:
 <pre><code>gesamt $ <b>git switch -c uimain ui/main</b><br><br>branch 'uimain' set up to track 'ui/main'.<br>Switched to a new branch 'uimain'<br><br></code></pre>
 
 
-UI-Dateien in Unterverzeichnis verschieben:
+Move UI files to subdirectory:
 
 
 <pre><code>gesamt $ <b>mkdir ui</b><br><br><br></code></pre>
@@ -117,7 +117,7 @@ UI-Dateien in Unterverzeichnis verschieben:
 <pre><code>gesamt $ <b>git commit -m 'ui-Verzeichnis angelegt'</b><br><br>[uimain 43e14db] ui-Verzeichnis angelegt<br> 2 files changed, 0 insertions(+), 0 deletions(-)<br> rename {src =&gt; ui/src}/UI.java (100%)<br> rename {test =&gt; ui/test}/UITest.java (100%)<br><br></code></pre>
 
 
-`uimain` integrieren:
+Integrate `uimain`:
 
 
 <pre><code>gesamt $ <b>git switch main</b><br><br>Your branch is ahead of 'origin/main' by 1 commit.<br>  (use &quot;git push&quot; to publish your local commits)<br>Switched to branch 'main'<br><br></code></pre>
@@ -127,7 +127,7 @@ UI-Dateien in Unterverzeichnis verschieben:
 <pre><code>gesamt $ <b>git merge uimain --allow-unrelated-histories</b><br><br>Merge made by the 'ort' strategy.<br> ui/src/UI.java      | 12 ++++++++++++<br> ui/test/UITest.java | 12 ++++++++++++<br> 2 files changed, 24 insertions(+)<br> create mode 100644 ui/src/UI.java<br> create mode 100644 ui/test/UITest.java<br><br></code></pre>
 
 
-Man sieht ui und backend wurden mitsamt Historie zusammengeführt:
+You can see that ui and backend have been merged including their history:
 
 
 <pre><code>gesamt $ <b>git ls-tree -r --name-only HEAD</b><br><br>backend/src/Backend.java<br>backend/test/BackendTest.java<br>ui/src/UI.java<br>ui/test/UITest.java<br><br></code></pre>

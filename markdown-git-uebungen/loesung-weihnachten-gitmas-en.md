@@ -5,12 +5,12 @@ parent: Solutions
 
 nav_order: 19
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Und jetzt ein Weihnachtsbaum
+## Solution to Step 1 - And now a Christmas tree
 
-Branche und Merge so, dass ˋgit log --graph --onelineˋ
-einen Weihnachtsbaum ausgibt.
+Branch and merge so that ˋgit log --graph --onelineˋ
+outputs a Christmas tree.
 
 
 <pre><code>$ <b>git init -b main myrepo </b><br><br>Initialized empty Git repository in /workspaces/git-workshop/build/git-uebungen-en/loesungen/weihnachten-gitmas/myrepo/.git/<br><br></code></pre>

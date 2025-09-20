@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 5
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Sparse-Klon durchführen
+## Solution to Step 1 - Sparse-Klon durchführen
 
 Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
 überprüfe, dass nur Top-Level-Dateien in den Workspace geholt wurden.
@@ -28,7 +28,7 @@ Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 2 - Verzeichnis hinzufügen
+## Solution to Step 2 - Verzeichnis hinzufügen
 
 Füge das Verzeichnis `component-a` hinzu .
 Überprüfe die neue Konfiguration.
@@ -58,7 +58,7 @@ Validiere, dass `component-a` jetzt da ist.
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 3 - Sparse Checkout deaktivieren
+## Solution to Step 3 - Sparse Checkout deaktivieren
 
 | Deaktiviere Sparse-Checkout und führe erneut ein Checkout durch.
 | Validiere, dass jetzt alle Dateien da sind.
@@ -83,7 +83,7 @@ Validiere, dass `component-a` jetzt da ist.
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 4 - Klonen und auschecken
+## Solution to Step 4 - Klonen und auschecken
 
 Klone `myrepo`, schränke auf `component-a` ein
 und mache ein Checkout. Nutze die `--cone`-Option.

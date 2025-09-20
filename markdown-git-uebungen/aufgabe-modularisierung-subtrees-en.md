@@ -5,93 +5,93 @@ parent: Exercises
 
 nav_order: 17
 ---
-# Exercise - Modularisierung mit Subtrees
+# Exercise - Modularization with Subtrees
 
 
-Es geht darum, wie man in Git ein übergreifendes
-Repository erstellt, dass Inhalte aus mehreren
-anderen Repository einbettet.
+This is about how to create a comprehensive
+repository in Git that embeds content from several
+other repositories.
 
-Git bietet dazu zwei unterschiedliche Ansätze:
-Einer ist `git subtree`.
-Wir werden hier beide für folgende Anwendungsfälle erprobe:
+Git offers two different approaches for this:
+One is `git subtree`.
+We will try both here for the following use cases:
 
-* Module als Subtree einbinden
-* Änderung aus einem Modul übernehmen
-* Änderung in ein Modul übertragen
-* Übergeordnetes Repo klonen
+* Integrating modules as subtrees
+* Adopting changes from a module
+* Transferring changes to a module
+* Cloning the parent repo
 
 ### Subtrees
 
-Bei diesem Ansatz werden Commits aus dem aus dem untergeordeten
-Repository übertragen und per `merge` integriert, 
-ganz ähnlich wie beim normalen `pull`.
-Die Besonderheit ist, dass Zur Integraion 
-dabei eine sogenanntes `subtree`-Merge erfolgt, 
-bei dem die Dateien in eine vorgegebenes Zielverzeichnis (`prefix`) verschoben werden.
+In this approach, commits from the subordinate
+repository are transferred and integrated via `merge`,
+very similar to a normal `pull`.
+The special feature is that for integration,
+a so-called `subtree` merge takes place,
+in which the files are moved to a specified target directory (`prefix`).
 
- * `subtree add --prefix=<Zielverzeichnis> <Quellrepository>`: Initales einbetten.
- * `subtree pull --prefix=<Zielverzeichnis> <Quellrepository>`: Aktualisieren aus dem Quellrepository.
- * `subtree push--prefix=<Zielverzeichnis> <Quellrepository>`: Übertragen ins Quellrepository.
+ * `subtree add --prefix=<target-directory> <source-repository>`: Initial embedding.
+ * `subtree pull --prefix=<target-directory> <source-repository>`: Update from the source repository.
+ * `subtree push--prefix=<target-directory> <source-repository>`: Transfer to the source repository.
 
-Tipp: Wer nicht mag,
-dass Subtree alle Commit aus dem Quellrepository holt,
-kann die Option `--squash` nutzen.
+Tip: If you don't like
+that subtree fetches all commits from the source repository,
+you can use the `--squash` option.
 
 ## Setup
 
-Zwei separate Repositorys `frontend` und `backend` sind vorhanden.
-Diese sollen in ein übergeordnetes Repo `application` eingebettet werden.
+Two separate repositories `frontend` and `backend` are available.
+These are to be embedded in a parent repo `application`.
 
 ```
 application/
 |- frontend/
-|- backen/
+|- backend/
 ```
   
 
-<h2>Step 0 - START <!-- UEB/Modularisierung mit Subtrees/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Modularization with Subtrees/0 --></h2>
 
 
 <pre><code>$ <b>cd application</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Module als Subtree einbinden <!-- UEB/Modularisierung mit Subtrees/1 --></h2>
+<h2>Step 1 - Integrating modules as subtrees <!-- UEB/Modularization with Subtrees/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Binde die Module `frontend.git` und `backend.git`
-per `subtree add` ein.
-Untersuche dann die entstandene Verzeichnisstruktur.
+Integrate the modules `frontend.git` and `backend.git`
+using `subtree add`.
+Then examine the resulting directory structure.
 
 
 <pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-<h2>Step 2 - Änderung aus einem Modul übernehmen <!-- UEB/Modularisierung mit Subtrees/2 --></h2>
+<h2>Step 2 - Adopting changes from a module <!-- UEB/Modularization with Subtrees/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
-Sie Dir das entstandene Commit an (`show --stat`)
-Gehe in das Repo `application` und hole die Änderungen per `subtree pull` ab.
-Sieh Dir das übertragene Commit an.
+Go to the `backend` repo, change the `service.java` file, commit and push.
+Look at the resulting commit (`show --stat`)
+Go to the `application` repo and fetch the changes using `subtree pull`.
+Look at the transferred commit.
 
-<h2>Step 3 - Änderung in ein Modul übertragen <!-- UEB/Modularisierung mit Subtrees/3 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Gehe in `application` ändere `frontend/main.ts` und committe.
-Übertrage die Änderung per `subtree push` nach `frontend.git`.
-Sieh Dir das übertragene Commit in `frontend.git` an.
-
-<h2>Step 4 - Übergeordnetes Repo klonen <!-- UEB/Modularisierung mit Subtrees/4 --></h2>
+<h2>Step 3 - Transferring changes to a module <!-- UEB/Modularization with Subtrees/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Klone `application` zu `myapplication`.
-Untersuche die `HEAD` Verzeichnisstruktur,
-und den Commit-graphen.
+Go to `application`, change `frontend/main.ts` and commit.
+Transfer the change to `frontend.git` using `subtree push`.
+Look at the transferred commit in `frontend.git`.
+
+<h2>Step 4 - Cloning the parent repo <!-- UEB/Modularization with Subtrees/4 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Clone `application` to `myapplication`.
+Examine the `HEAD` directory structure,
+and the commit graph.
 
 [To the exercise](loesung-modularisierung-subtrees-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 

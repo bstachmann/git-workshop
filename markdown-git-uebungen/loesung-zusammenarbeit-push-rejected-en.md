@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 11
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Lokal Commit(s) erstellen
+## Solution to Step 1 - Lokal Commit(s) erstellen
 
 Bearbeite die Datei `frontend.java` und erstelle (mindestens) ein Commit mit den Änderungen.
 Überprüfe danach mit `git status`, ob der Workspace sauber ist.
@@ -26,7 +26,7 @@ Und jetzt noch eben prüfen, ob `working tree clean` ist.
 <pre><code>my-apollo $ <b>git status</b><br><br>On branch main<br>Your branch is ahead of 'origin/main' by 1 commit.<br>  (use &quot;git push&quot; to publish your local commits)<br><br>nothing to commit, working tree clean<br><br></code></pre>
 
 
-## Solution zu Step 2 - Push versuchen
+## Solution to Step 2 - Push versuchen
 
 Versuche jetzt Deine Änderungen zu pushen.
 
@@ -38,7 +38,7 @@ Wie Du siehst, der Push wurde verweigert.
 Anscheinend war Anja schneller,
 und hat ihre Änderungen zuerst nach `blessed-apollo.git` gepushed.
 
-## Solution zu Step 3 - (optional) Problem analysieren
+## Solution to Step 3 - (optional) Problem analysieren
 
 Hole zunächt die Änderungen, ohne zu integrieren (`fetch`),
 und lasse Dir die Änderungen von *Anja* zeigen.
@@ -76,7 +76,7 @@ die Anja gemacht hat
 <pre><code>my-apollo $ <b>git diff --stat HEAD...origin/main</b><br><br> backend.java | 6 ++++--<br> 1 file changed, 4 insertions(+), 2 deletions(-)<br><br></code></pre>
 
 
-## Solution zu Step 4 - Fremde Änderungen integrieren
+## Solution to Step 4 - Fremde Änderungen integrieren
 
 Integriere die Änderungen mit Pull und sieh Dir dann den Commit-Graphen an.
 
@@ -98,7 +98,7 @@ welches die Stränge zusammenführt.
 ... wenn beide Seiten dieselben Stellen bearbeitet haben.
 Das Auflösen von Merge-Konflikten ist Thema eines folgenden Kapitels.
 
-## Solution zu Step 5 - Erneut pushen
+## Solution to Step 5 - Erneut pushen
 
                     
 

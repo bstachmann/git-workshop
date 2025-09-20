@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 4
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Klon durchführen
+## Solution to Step 1 - Klon durchführen
 
 Erstelle einen Klon von `myfirstrepo` mit dem Namen `myfirstclone`.
 
@@ -15,7 +15,7 @@ Erstelle einen Klon von `myfirstrepo` mit dem Namen `myfirstclone`.
 <pre><code>$ <b>git clone myfirstrepo myfirstclone</b><br><br>Cloning into 'myfirstclone'...<br>done.<br><br></code></pre>
 
 
-## Solution zu Step 2 - Klon untersuchen
+## Solution to Step 2 - Klon untersuchen
 
 Schaue die Commits an und
 zeige den Origin des Klons `myfirstclone`.
@@ -39,7 +39,7 @@ Zeige dann den Status.
 <pre><code>myfirstclone $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 3 - Im Klon arbeiten
+## Solution to Step 3 - Im Klon arbeiten
 
 Erstelle ein Commit und zeige dann den Status.
 

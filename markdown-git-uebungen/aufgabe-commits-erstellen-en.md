@@ -5,86 +5,86 @@ parent: Exercises
 
 nav_order: 6
 ---
-# Exercise - Commits erstellen
+# Exercise - Creating Commits
 
 
-## Tipps
+## Tips
 
-* `git add <datei/verzeichnis>` 
-   Vor einem Commit müssen Änderungen mit `add` im Staging-Bereich 
-   (auch Index genannt) registriert werden
-* Als Verzeichnisname darf auch `.` (steht für *aktuelles Verzeichnis*) angegeben werden.
-  Dann wird der Befehl auf alle Dateien im aktuellen Verzeichnis und auch Unterverzeichnissen angewandt/
-* `git commit -m 'Mein Senf'` Erstellt ein Commit mit allen 
-   im Staging-Bereich registrierten Änderungen.
-* `git commit -a` Registriert alle Änderungen an bereits in Git versionierten 
-  Dateien im Staging-Bereich, so dass man sich den separaten
-  `add`-Aufruf sparen kann.
-* Die optionen `-a` und `-m` dürfen auch kombiniert werden: `git commit -am "Kommentar"`
+* `git add <file/directory>`
+   Before a commit, changes must be registered with `add` in the staging area
+   (also called the index).
+* The directory name `.` (which stands for *current directory*) can also be specified.
+  The command is then applied to all files in the current directory and also subdirectories.
+* `git commit -m 'My two cents'` Creates a commit with all
+   changes registered in the staging area.
+* `git commit -a` Registers all changes to files already versioned in Git
+  in the staging area, so you can save the separate
+  `add` call.
+* The options `-a` and `-m` can also be combined: `git commit -am "Comment"`
 * `git log --follow -- <file-name>`
-   Zeigt die Historie einer Datei auch über Umbenennungen hinweg.
+   Shows the history of a file, even across renames.
 
 # Setup
 
-Im Verzeichnis `repo` wartet ein Git-Projekt darauf,
-bearbeitet zu werden. 
+In the `repo` directory, a Git project is waiting
+to be edited.
 
 
-<h2>Step 0 - START <!-- UEB/Commits erstellen/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Creating Commits/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Commit - mit Staging <!-- UEB/Commits erstellen/1 --></h2>
+<h2>Step 1 - Commit - with Staging <!-- UEB/Creating Commits/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Bearbeite die Datei `hallo-welt`,
-füge sie mit `git add` zum Index hinzu (Staging)
-und erstelle ein Commit mit diesen Änderungen.
+Edit the file `hallo-welt`,
+add it to the index with `git add` (staging)
+and create a commit with these changes.
 
-<h2>Step 2 - Commit - automatisches Staging <!-- UEB/Commits erstellen/2 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Bearbeite die Datei `hallo-welt` erneut
-und erstelle wieder ein Commit,
-dieses mal mal aber mit `-a`.
-
-<h2>Step 3 - Commit - neue Datei <!-- UEB/Commits erstellen/3 --></h2>
+<h2>Step 2 - Commit - automatic staging <!-- UEB/Creating Commits/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Erstelle `new-world` und bestätige sie mit einem Commit.
+Edit the file `hallo-welt` again
+and create another commit,
+but this time with `-a`.
 
-<h2>Step 4 - Commit - Datei löschen <!-- UEB/Commits erstellen/4 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Lösche `hallo-welt` und bestätige dies per Commit.
-
-<h2>Step 5 - ⭐ Add - Dateien rekursiv hinzufügen <!-- UEB/Commits erstellen/5 --></h2>
+<h2>Step 3 - Commit - new file <!-- UEB/Creating Commits/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Lege eine Datei `superneu` und eine Verzeichnis `sub`mit einer
-Datei `auchneu` an füge beide mit *einem* Add-Aufruf hinzu und erstelle
-dann ein Commit.
+Create `new-world` and confirm it with a commit.
 
-<h2>Step 6 - ⭐ Commit - Datei verschieben/umbenennen <!-- UEB/Commits erstellen/6 --></h2>
+<h2>Step 4 - Commit - delete file <!-- UEB/Creating Commits/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Benenne die Datei `hello-world` in `renamed-world` um
-und bestätige dies durch ein Commit.
+Delete `hallo-welt` and confirm this with a commit.
 
-<h2>Step 7 - ⭐ Rename detection <!-- UEB/Commits erstellen/7 --></h2>
+<h2>Step 5 - ⭐ Add - recursively add files <!-- UEB/Creating Commits/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Benenne die Datei `datei1` in `datei2` mit `git mv` um. 
-Sorge dafür, dass die *Rename Detection* dies nicht erkennt.
+Create a file `superneu` and a directory `sub` with a
+file `auchneu`, add both with *one* add call and then create
+a commit.
+
+<h2>Step 6 - ⭐ Commit - move/rename file <!-- UEB/Creating Commits/6 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Rename the file `hello-world` to `renamed-world`
+and confirm this with a commit.
+
+<h2>Step 7 - ⭐ Rename detection <!-- UEB/Creating Commits/7 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Rename the file `datei1` to `datei2` with `git mv`.
+Make sure that the *Rename Detection* does not recognize this.
 
 
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>

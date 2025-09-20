@@ -7,31 +7,31 @@ nav_order: 7
 ---
 # Exercise - Staging
 
-Es geht um den *Stage-Bereich* (auch Index genannt).
-Jede Änderung (bearbeitete, neue oder gelöschte Dateien) 
-wird muss als "Snapshot" im Stage-Bereich registriert werden
-(z.B. mit `git add`),
-bevor Sie in ein Commit übernommen werden kann.
+This is about the *stage area* (also called the index).
+Every change (edited, new, or deleted files)
+must be registered as a "snapshot" in the stage area
+(e.g., with `git add`),
+before it can be included in a commit.
 
-## Tipps
+## Tips
 
-* `git add <datei/verzeichnis>` 
-   überträgt den aktuellen Stand einer Datei in den Stage-Bereich.
-*  Ändert man eine Datei nach dem `add`, hat sie
-   im Workspace einen anderen Stand als in der Stage.
-* `git status`, `git diff` und `git diff --staged` zeigen dies.
-* `git restore --staged <file>` nimmt ein Staging zurück.
-* `git restore <file>` stellt eine Datei im Workspace wieder her.
-   **Achtung**: Die lokale Änderungen werden dabei überschreiben!
-* mit `-s <revision>` können auch beliebige andere Stände von Dateien und Verzeichnisse
-  geholt werden.
-* `git stash -u` entfernt alle Änderungen (und unversioniert Dateien)
-  aus dem Workspace (und sichert diese im Stash).
+* `git add <file/directory>`
+   transfers the current state of a file to the stage area.
+* If you change a file after `add`, it has
+   a different state in the workspace than in the stage.
+* `git status`, `git diff`, and `git diff --staged` show this.
+* `git restore --staged <file>` undoes a staging.
+* `git restore <file>` restores a file in the workspace.
+   **Attention**: The local changes will be overwritten!
+* With `-s <revision>`, any other states of files and directories
+  can be fetched.
+* `git stash -u` removes all changes (and untracked files)
+  from the workspace (and saves them in the stash).
         
 # Setup
 
-Im Verzeichnis `repo` wartet ein Git-Projekt darauf,
-bearbeitet zu werden. 
+In the `repo` directory, a Git project is waiting
+to be edited.
 
 
 <h2>Step 0 - START <!-- UEB/Staging/0 --></h2>
@@ -44,46 +44,46 @@ bearbeitet zu werden.
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Ersetze in der Datei `demo`,
-`Fit` durch `Git`.
-Füge sie dann zum Stage-Bereich hinzu.
-Ersetze dann `doof` durch `toll`.
-Lasse dir den Status und die Diffs
-für Workspace und Stage zeigen.
+In the file `demo`, replace
+`Fit` with `Git`.
+Then add it to the stage area.
+Then replace `doof` with `toll`.
+Show the status and diffs
+for the workspace and stage.
 
 <h2>Step 2 - Restore - Staging zurücknehmen <!-- UEB/Staging/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Die letzte Änderung soll doch noch nicht in das nächste Commit übernommen werden,
-nehme sie zurück. 
+The last change should not be included in the next commit yet,
+so undo it.
 
 <h2>Step 3 - Restore - Änderung ganz zurücknehmen <!-- UEB/Staging/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Die Änderungen an `demo` sollen ganz zurückgenommen werden.
-Lasse Dir nachher Status und Diffs anzeigen.
+The changes to `demo` should be completely undone.
+Show the status and diffs afterwards.
 
 <h2>Step 4 - ⭐ Restore - Älteren Inhalt einer Datei zurückholen <!-- UEB/Staging/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Die Datei `beispiel` wurde dreimal bearbeitet.
-Hole den mittleren Stand zurück und erstelle ein Commit.
+The file `beispiel` was edited three times.
+Restore the middle state and create a commit.
 
 <h2>Step 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen <!-- UEB/Staging/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Im Folder `ufer` wurde ein Spiel gespielt.
-Stelle die Spielstände nach, 
-indem Du `restore` auf das `ufer`-Verzeichnis anwendest.
+A game was played in the `ufer` folder.
+Recreate the game states
+by applying `restore` to the `ufer` directory.
 
-Tipp: `ll ufer/*` zeigt die Verzeichnisse des Spiels.
+Tip: `ll ufer/*` shows the directories of the game.
 
-Tipp: Beim `restore` werden unversionierte Dateien nicht abgeräumt.
-Man kann sie mit dem `stash`-Befehl abräumen.
+Tip: When using `restore`, untracked files are not removed.
+You can remove them with the `stash` command.
 
 
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>

@@ -5,13 +5,13 @@ parent: Solutions
 
 nav_order: 16
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Module als Submodule einbinden
+## Solution to Step 1 - Integrating modules as submodules
 
-Binde die Module `frontend.git` und `backend.git`
-per `submodule add` ein.
-Untersuche dann die entstandene Verzeichnisstruktur.
+Integrate the modules `frontend.git` and `backend.git`
+using `submodule add`.
+Then examine the resulting directory structure.
 
 
 <pre><code>application $ <b>git submodule add  ../frontend.git frontend</b><br><br>Cloning into '/workspaces/git-workshop/build/git-uebungen-en/loesungen/modularisierung-submodules/application/frontend'...<br>done.<br><br></code></pre>
@@ -21,13 +21,13 @@ Untersuche dann die entstandene Verzeichnisstruktur.
 <pre><code>application $ <b>git submodule add  ../backend.git backend</b><br><br>Cloning into '/workspaces/git-workshop/build/git-uebungen-en/loesungen/modularisierung-submodules/application/backend'...<br>done.<br><br></code></pre>
 
 
-Man sieht, dass die Module als eigenständige Git-Repositorys mit separatem `.git`-Verzeichnis eingebettet wurden.
+You can see that the modules are embedded as independent Git repositories with a separate `.git` directory.
 
 
 <pre><code>application $ <b>ll frontend backend</b><br><br>backend:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  service.java<br><br>frontend:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  main.ts<br><br></code></pre>
 
 
-Achtung! Die submodule wurden hinzugefügt, aber es fehlt noch ein Commit.
+Attention! The submodules have been added, but a commit is still missing.
 
 
 <pre><code>application $ <b>git status</b><br><br>On branch main<br>Changes to be committed:<br>  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)<br>	new file:   .gitmodules<br>	new file:   backend<br>	new file:   frontend<br><br><br></code></pre>
@@ -37,12 +37,12 @@ Achtung! Die submodule wurden hinzugefügt, aber es fehlt noch ein Commit.
 <pre><code>application $ <b>git commit -m 'add frontend and backend'</b><br><br>[main f5a4fc3] add frontend and backend<br> 3 files changed, 8 insertions(+)<br> create mode 100644 .gitmodules<br> create mode 160000 backend<br> create mode 160000 frontend<br><br></code></pre>
 
 
-## Solution zu Step 2 - Änderung aus einem Modul übernehmen
+## Solution to Step 2 - Adopting changes from a module
 
-Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
-Sie Dir das entstandene Commit an (`show --stat`)
-Gehe in das Repo `application/backend` und hole die Änderungen per `pull` ab.
-Sieh Dir das übertragene Commit an.
+Go to the `backend` repo, change the `service.java` file, commit and push.
+Look at the resulting commit (`show --stat`)
+Go to the `application/backend` repo and fetch the changes using `pull`.
+Look at the transferred commit.
 
 
 <pre><code>$ <b>cd backend</b><br><br><br></code></pre>
@@ -96,11 +96,11 @@ Sieh Dir das übertragene Commit an.
 <pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 3 - Änderung in ein Modul übertragen
+## Solution to Step 3 - Transferring changes to a module
 
-Gehe in `subtrees/frontend` ändere `main.ts` und committe.
-Übertrage die Änderung per `push` nach `frontend.git`.
-Sieh Dir das übertragene Commit in `frontend.git` an.
+Go to `subtrees/frontend`, change `main.ts` and commit.
+Transfer the change to `frontend.git` using `push`.
+Look at the transferred commit in `frontend.git`.
 
 
 <pre><code>$ <b>cd application</b><br><br><br></code></pre>
@@ -126,7 +126,7 @@ Sieh Dir das übertragene Commit in `frontend.git` an.
 <pre><code>frontend $ <b>cd ..</b><br><br><br></code></pre>
 
 
-Nicht vergessen: Änderungen am im übergeordenten Repository committen.
+Don't forget: commit changes in the parent repository.
 
 
 <pre><code>application $ <b>git add frontend</b><br><br><br></code></pre>
@@ -152,11 +152,11 @@ Nicht vergessen: Änderungen am im übergeordenten Repository committen.
 <pre><code>frontend.git $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 4 - Übergeordnetes Repo klonen
+## Solution to Step 4 - Cloning the parent repo
 
-Klone `application` zu `myapplication`.
-Untersuche die Verzeichnisstruktur.
-Vergiß nicht, ein `submodule update` auszuführen.
+Clone `application` to `myapplication`.
+Examine the directory structure.
+Don't forget to run `submodule update`.
 
 
 <pre><code>$ <b>git clone application myapplication</b><br><br>Cloning into 'myapplication'...<br>done.<br><br></code></pre>
@@ -166,13 +166,13 @@ Vergiß nicht, ein `submodule update` auszuführen.
 <pre><code>$ <b>cd myapplication</b><br><br><br></code></pre>
 
 
-Die Modulverzeichnisse sind da aber noch leer:
+The module directories are there but still empty:
 
 
 <pre><code>myapplication $ <b>ll frontend backend</b><br><br>backend:<br>total 0<br><br>frontend:<br>total 0<br><br></code></pre>
 
 
-Jetzt holen wir die Module:
+Now we fetch the modules:
 
 
 <pre><code>myapplication $ <b>git submodule update --init</b><br><br>Submodule path 'backend': checked out '5465a0638bf7e6f63a41baded2cf6cf770d6b659'<br>Submodule path 'frontend': checked out '357f243ea0f6d3c6f832fb0e0f41743e44376a61'<br>Submodule 'backend' (/workspaces/git-workshop/build/git-uebungen-en/loesungen/modularisierung-submodules/backend.git) registered for path 'backend'<br>Submodule 'frontend' (/workspaces/git-workshop/build/git-uebungen-en/loesungen/modularisierung-submodules/frontend.git) registered for path 'frontend'<br>Cloning into '/workspaces/git-workshop/build/git-uebungen-en/loesungen/modularisierung-submodules/myapplication/backend'...<br>done.<br>Cloning into '/workspaces/git-workshop/build/git-uebungen-en/loesungen/modularisierung-submodules/myapplication/frontend'...<br>done.<br><br></code></pre>

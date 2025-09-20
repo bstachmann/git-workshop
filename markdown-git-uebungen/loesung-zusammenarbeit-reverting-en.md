@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 14
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Einzelnes Commit rückgängig machen.
+## Solution to Step 1 - Einzelnes Commit rückgängig machen.
 
 In der Historie wurde die Datei `README.md` in `liesmich`
 umbenannt. Mache diese Änderung rückgängig.
@@ -25,7 +25,7 @@ Tipp: Das Commit ist als `umbenennung` getagged.
 <pre><code>repo $ <b>ls</b><br><br>README.md<br>from-feature<br><br></code></pre>
 
 
-## Solution zu Step 2 - Merge-Commit rückgängig machen.
+## Solution to Step 2 - Merge-Commit rückgängig machen.
 
 In der Historie wurde ein Feature-Branch per Merge integriert.file . Mache dies änderung rückgängig.
 Tipp: Das Merge-Commit ist als `feature-merge` getagged. 
@@ -47,7 +47,7 @@ Tipp: Am verschinden der Datei `from-feature` kann man den Erfolg erkennen.
 <pre><code>repo $ <b>git tag merge-reverted</b><br><br><br></code></pre>
 
 
-## Solution zu Step 3 - Feature-Branch kaputt!?
+## Solution to Step 3 - Feature-Branch kaputt!?
 
 Ein Revert wird oft genutzt, um ein Feature kurzfristig zurückzunehmen,
 z. B. wegen eine Produktionsproblems.
@@ -81,7 +81,7 @@ in einem späteren Commit (Dem Revert) wurde die Datei gelöscht.
 Der Mergekonflikt meldet also, dass die Datei auf der einen
 Seite bearbeitet und auf der Anderen gelöscht wurde.
 
-## Solution zu Step 4 - Merge-Revert wieder rückgängig machen.
+## Solution to Step 4 - Merge-Revert wieder rückgängig machen.
 
 Der Trick ist, das Revert-Commit selbst zu reverten,
 dann sind jene Änderungen wieder da,

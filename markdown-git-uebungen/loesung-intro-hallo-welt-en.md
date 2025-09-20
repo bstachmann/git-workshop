@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 1
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - The first repo
+## Solution to Step 1 - The first repo
 
 Create your first repository with the following commands:
 
@@ -48,7 +48,7 @@ Congratulations: You see your first commit in your first Git repository!
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 2 - ⭐ And another commit
+## Solution to Step 2 - ⭐ And another commit
 
 Edit the file 'hallo' and create a new commit.
 With the `-am` option, you don't need to call `git add hallo` again.
@@ -77,7 +77,7 @@ Then look at the log.
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 3 - ⭐ Where is the repository
+## Solution to Step 3 - ⭐ Where is the repository
 
 Examine the directory.
 Where is the Git repository located? What does it contain?

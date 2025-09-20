@@ -5,31 +5,30 @@ parent: Exercises
 
 nav_order: 19
 ---
-# Exercise - Fröhliche Weihnachten!
+# Exercise - Merry Christmas!
 
-Auch Git kann ein Weihnachtliches Tool sein.
+Git can also be a Christmas tool.
 
-Hier geht es darum durch Branchen und mergen 
-Git-Graphen zu erzeugen, der wie ein
-Weihnachtsbaum aussieht.
+This is about creating a Git graph that looks like a
+Christmas tree by branching and merging.
 
-Lasse Deiner Kreativität freien Lauf, oder folge diesen **Tipps:**
+Let your creativity run wild, or follow these **tips:**
 
- * Zweige eine Reihe von Branches von ˋmainˋ ab
- * Mache ein Commit auf jedem der Branches, damit es was zu mergen gibt.
- * Gehe auf den zweiten Branch und merge den ersten. Gehe dann auf den dritten ...
- * Dann merge den letzten Branch nach ˋmainˋ.
- * Wenn Du scripten kannst, z.B. mit Bash oder Python: ˋforˋ-Schleifen sind nützlich.
+ * Branch a series of branches from ˋmainˋ
+ * Make a commit on each of the branches so there is something to merge.
+ * Go to the second branch and merge the first. Then go to the third...
+ * Then merge the last branch to ˋmainˋ.
+ * If you can script, e.g. with Bash or Python: ˋforˋ loops are useful.
 
 
-<h2>Step 0 - START <!-- UEB/Fröhliche Weihnachten!/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Merry Christmas!/0 --></h2>
 
-<h2>Step 1 - Und jetzt ein Weihnachtsbaum <!-- UEB/Fröhliche Weihnachten!/1 --></h2>
+<h2>Step 1 - And now a Christmas tree <!-- UEB/Merry Christmas!/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Branche und Merge so, dass ˋgit log --graph --onelineˋ
-einen Weihnachtsbaum ausgibt.
+Branch and merge so that ˋgit log --graph --onelineˋ
+outputs a Christmas tree.
 
 [To the exercise](loesung-weihnachten-gitmas-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 

@@ -5,96 +5,96 @@ parent: Exercises
 
 nav_order: 16
 ---
-# Exercise - Modularisierung mit Submodules
+# Exercise - Modularization with Submodules
 
 
-Es geht darum, wie man in Git ein übergreifendes
-Repository erstellt, dass Inhalte aus mehreren
-anderen Repository einbettet.
+This is about how to create a comprehensive
+repository in Git that embeds content from several
+other repositories.
 
-Git bietet dazu zwei unterschiedliche Ansätze:
-Eine davon ist `git submodule`.
-Wir werden hier beide für folgende Anwendungsfälle erprobe:
+Git offers two different approaches for this:
+One of them is `git submodule`.
+We will try both here for the following use cases:
 
-* Module als Submodule einbinden
-* Änderung aus einem Modul übernehmen
-* Änderung in ein Modul übertragen
-* Übergeordnetes Repo klonen
+* Integrating modules as submodules
+* Adopting changes from a module
+* Transferring changes to a module
+* Cloning the parent repo
 
 ### Submodules
 
-Bei einem Submodule werden Git-Repositorys ineinander geschachtelt.
-Das übergeordnete Repo merkt sich dann für jedes untergeordnete Repo (*submodule*)
+With a submodule, Git repositories are nested within each other.
+The parent repo then remembers for each child repo (*submodule*)
 
 
- 1. von wo geklont werden soll (URL) und
- 2. welche Revison benötigt wird.
+ 1. where to clone from (URL) and
+ 2. which revision is needed.
 
-Da die Submodules in ihren Verzeichnissen eigenständige Git-Repositorys sind,
-kann man dort mit den üblichen Befehlen wie `switch`, `pull` oder auch `commit` arbeiten.
-Wenn man die Änderungen im übergeordneten Repo übernehmen möchen,
-tut dies durch ein *top-level*-commit.
+Since the submodules are independent Git repositories in their directories,
+you can work there with the usual commands like `switch`, `pull` or `commit`.
+If you want to apply the changes in the parent repo,
+you do this with a *top-level* commit.
 
- * `git submodule add  <Quellrepository> <Zielverzeichnis>`:> Initales einbetten. *Danach* Commit erforderlich.
- * `git submodule update --init`:> Holt beziehungsweise aktualisiert. Nach dem Klonen erforderlich. 
+ * `git submodule add <source-repository> <target-directory>`:> Initial embedding. *Afterwards* a commit is required.
+ * `git submodule update --init`:> Fetches or updates. Required after cloning.
 
 
 
 ## Setup
 
-Zwei separate Repositorys `frontend` und `backend` sind vorhanden.
-Diese sollen in ein übergeordnetes Repo `application` eingebettet werden.
+Two separate repositories `frontend` and `backend` are available.
+These are to be embedded in a parent repo `application`.
 
 ```
 application/
 |- frontend/
-|- backen/
+|- backend/
 ```
 
   
 
-<h2>Step 0 - START <!-- UEB/Modularisierung mit Submodules/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Modularization with Submodules/0 --></h2>
 
 
 <pre><code>$ <b>cd application</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Module als Submodule einbinden <!-- UEB/Modularisierung mit Submodules/1 --></h2>
+<h2>Step 1 - Integrating modules as submodules <!-- UEB/Modularization with Submodules/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Binde die Module `frontend.git` und `backend.git`
-per `submodule add` ein.
-Untersuche dann die entstandene Verzeichnisstruktur.
+Integrate the modules `frontend.git` and `backend.git`
+using `submodule add`.
+Then examine the resulting directory structure.
 
 
 <pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-<h2>Step 2 - Änderung aus einem Modul übernehmen <!-- UEB/Modularisierung mit Submodules/2 --></h2>
+<h2>Step 2 - Adopting changes from a module <!-- UEB/Modularization with Submodules/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
-Sie Dir das entstandene Commit an (`show --stat`)
-Gehe in das Repo `application/backend` und hole die Änderungen per `pull` ab.
-Sieh Dir das übertragene Commit an.
+Go to the `backend` repo, change the `service.java` file, commit and push.
+Look at the resulting commit (`show --stat`)
+Go to the `application/backend` repo and fetch the changes using `pull`.
+Look at the transferred commit.
 
-<h2>Step 3 - Änderung in ein Modul übertragen <!-- UEB/Modularisierung mit Submodules/3 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Gehe in `subtrees/frontend` ändere `main.ts` und committe.
-Übertrage die Änderung per `push` nach `frontend.git`.
-Sieh Dir das übertragene Commit in `frontend.git` an.
-
-<h2>Step 4 - Übergeordnetes Repo klonen <!-- UEB/Modularisierung mit Submodules/4 --></h2>
+<h2>Step 3 - Transferring changes to a module <!-- UEB/Modularization with Submodules/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Klone `application` zu `myapplication`.
-Untersuche die Verzeichnisstruktur.
-Vergiß nicht, ein `submodule update` auszuführen.
+Go to `subtrees/frontend`, change `main.ts` and commit.
+Transfer the change to `frontend.git` using `push`.
+Look at the transferred commit in `frontend.git`.
+
+<h2>Step 4 - Cloning the parent repo <!-- UEB/Modularization with Submodules/4 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Clone `application` to `myapplication`.
+Examine the directory structure.
+Don't forget to run `submodule update`.
 
 [To the exercise](loesung-modularisierung-submodules-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 

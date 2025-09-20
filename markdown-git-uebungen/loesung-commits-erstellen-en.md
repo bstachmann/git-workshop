@@ -5,13 +5,13 @@ parent: Solutions
 
 nav_order: 6
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Commit - mit Staging
+## Solution to Step 1 - Commit - with Staging
 
-Bearbeite die Datei `hallo-welt`,
-füge sie mit `git add` zum Index hinzu (Staging)
-und erstelle ein Commit mit diesen Änderungen.
+Edit the file `hallo-welt`,
+add it to the index with `git add` (staging)
+and create a commit with these changes.
 
 
 <pre><code>repo $ <b># Edit file hallo-welt</b><br><br><br></code></pre>
@@ -29,11 +29,11 @@ und erstelle ein Commit mit diesen Änderungen.
 <pre><code>repo $ <b>git show</b><br><br>commit 7472c9afd84a9c8b77a5581c15b41220b0c50209<br>Author: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>    Erste ?nderung<br><br>diff --git a/hallo-welt b/hallo-welt<br>index a92550c..dfb4ae8 100644<br>--- a/hallo-welt<br>+++ b/hallo-welt<br>@@ -1 +1 @@<br>-Hallo Welt<br>\ No newline at end of file<br>+Hallo Welt!<br>\ No newline at end of file<br><br></code></pre>
 
 
-## Solution zu Step 2 - Commit - automatisches Staging
+## Solution to Step 2 - Commit - automatic staging
 
-Bearbeite die Datei `hallo-welt` erneut
-und erstelle wieder ein Commit,
-dieses mal mal aber mit `-a`.
+Edit the file `hallo-welt` again
+and create another commit,
+but this time with `-a`.
 
 
 <pre><code>repo $ <b># Edit file hallo-welt</b><br><br><br></code></pre>
@@ -43,15 +43,15 @@ dieses mal mal aber mit `-a`.
 <pre><code>repo $ <b>git commit -am 'Zweite Änderung'</b><br><br>[main 478ab67] Zweite ?nderung<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>
 
 
-Mit der Option `-a` kann man sich den `add`-Aufruf sparen:
+With the `-a` option, you can save the `add` call:
 
 
 <pre><code>repo $ <b>git log --oneline</b><br><br>478ab67 Zweite ?nderung<br>7472c9a Erste ?nderung<br>8d91794 Created file datei1 on branch main by bjoern.<br>331ed0e Created file hello-world on branch main by bjoern.<br>f55db71 Created file hallo-welt on branch main by bjoern.<br><br></code></pre>
 
 
-## Solution zu Step 3 - Commit - neue Datei
+## Solution to Step 3 - Commit - new file
 
-Erstelle `new-world` und bestätige sie mit einem Commit.
+Create `new-world` and confirm it with a commit.
 
 
 <pre><code>repo $ <b># created file 'new-world'</b><br><br><br></code></pre>
@@ -69,9 +69,9 @@ Erstelle `new-world` und bestätige sie mit einem Commit.
 <pre><code>repo $ <b>git commit -m 'Neue Datei'</b><br><br>[main 767f657] Neue Datei<br> 1 file changed, 1 insertion(+)<br> create mode 100644 new-world<br><br></code></pre>
 
 
-## Solution zu Step 4 - Commit - Datei löschen
+## Solution to Step 4 - Commit - delete file
 
-Lösche `hallo-welt` und bestätige dies per Commit.
+Delete `hallo-welt` and confirm this with a commit.
 
 
 <pre><code>repo $ <b>rm hallo-welt</b><br><br><br></code></pre>
@@ -81,11 +81,11 @@ Lösche `hallo-welt` und bestätige dies per Commit.
 <pre><code>repo $ <b>git commit -am 'Datei löschen'</b><br><br>[main b4d22e4] Datei l?schen<br> 1 file changed, 1 deletion(-)<br> delete mode 100644 hallo-welt<br><br></code></pre>
 
 
-## Solution zu Step 5 - ⭐ Add - Dateien rekursiv hinzufügen
+## Solution to Step 5 - ⭐ Add - recursively add files
 
-Lege eine Datei `superneu` und eine Verzeichnis `sub`mit einer
-Datei `auchneu` an füge beide mit *einem* Add-Aufruf hinzu und erstelle
-dann ein Commit.
+Create a file `superneu` and a directory `sub` with a
+file `auchneu`, add both with *one* add call and then create
+a commit.
 
 
 <pre><code>repo $ <b># created file 'superneu'</b><br><br><br></code></pre>
@@ -107,8 +107,8 @@ dann ein Commit.
 <pre><code>sub $ <b>cd ..</b><br><br><br></code></pre>
 
 
- `.` steht für: *aktuelles Verzeichnis*."
-Alle Dateien darin und auch darunter werden hinzugefügt.
+ `.` stands for: *current directory*."
+All files in it and below it will be added.
 
 
 <pre><code>repo $ <b>git add .</b><br><br><br></code></pre>
@@ -118,10 +118,10 @@ Alle Dateien darin und auch darunter werden hinzugefügt.
 <pre><code>repo $ <b>git commit -am 'Neue Dateien'</b><br><br>[main 601dbf4] Neue Dateien<br> 2 files changed, 24 insertions(+)<br> create mode 100644 sub/auchneu<br> create mode 100644 superneu<br><br></code></pre>
 
 
-## Solution zu Step 6 - ⭐ Commit - Datei verschieben/umbenennen
+## Solution to Step 6 - ⭐ Commit - move/rename file
 
-Benenne die Datei `hello-world` in `renamed-world` um
-und bestätige dies durch ein Commit.
+Rename the file `hello-world` to `renamed-world`
+and confirm this with a commit.
 
 
 <pre><code>repo $ <b>mv hello-world renamed-world</b><br><br><br></code></pre>
@@ -135,16 +135,16 @@ und bestätige dies durch ein Commit.
 <pre><code>repo $ <b>git commit -am 'Umbenennen'</b><br><br>[main dee82fa] Umbenennen<br> 1 file changed, 0 insertions(+), 0 deletions(-)<br> rename hello-world =&gt; renamed-world (100%)<br><br></code></pre>
 
 
-Anmerkung: Wenn wir `git mv`  statt `mv` genutzt hätten, dann wäre das separate `git add` nicht nötig gewesen.
+Note: If we had used `git mv` instead of `mv`, the separate `git add` would not have been necessary.
 
 
 <pre><code>repo $ <b>git log --follow --oneline -- renamed-world</b><br><br>dee82fa Umbenennen<br>331ed0e Created file hello-world on branch main by bjoern.<br><br></code></pre>
 
 
-## Solution zu Step 7 - ⭐ Rename detection
+## Solution to Step 7 - ⭐ Rename detection
 
-Benenne die Datei `datei1` in `datei2` mit `git mv` um. 
-Sorge dafür, dass die *Rename Detection* dies nicht erkennt.
+Rename the file `datei1` to `datei2` with `git mv`.
+Make sure that the *Rename Detection* does not recognize this.
 
 
 <pre><code>repo $ <b>git mv datei1 datei2</b><br><br><br></code></pre>

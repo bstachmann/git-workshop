@@ -5,9 +5,9 @@ parent: Solutions
 
 nav_order: 3
 ---
-## Solution zu Step 0 - START
+## Solution to Step 0 - START
 
-## Solution zu Step 1 - Branches zeigen
+## Solution to Step 1 - Branches zeigen
 
 Zeige an, welche Branches es gibt.
 Zeige jetzt den Commit-Graphen über alle Branches an.
@@ -22,7 +22,7 @@ Im Commit-Graphen sieht man, wo die Branches und Tag stehen:
 <pre><code>repo $ <b>git log --decorate --oneline --graph --all</b><br><br>* 9df530e (feature-a) Edited file bar on branch feature-a by bjoern.<br>| * bcd8ce5 (HEAD -&gt; main) Created file und-tschuess on branch main by bjoern.<br>| * ec6319f (tag: release1.1) : Edit file bar at line 5 on branch main by bjoern.<br>| * 03e1bea (some-old-branch) : Edit file bar at line 1 on branch main by bjoern.<br>|/  <br>* 95fb57f Edited file hallo-welt on branch main by bjoern.<br>* 6121b42 (tag: release1.0) Eine Zeile verschieben<br>* 85f5f20 Noch ein paar neue Zeilen<br>* 0144fe4 Verschiebe eine  Zeile<br>* 1178ed1 Created file restaurant on branch main by bjoern.<br>* eaa5d5c Kopiere eine Zeile aus 'bar'<br>* f9dc882 Erg?nze eine Zeile<br>* 3592a48 Benenne die Datei im<br>* 76dd3c1 Erg?nze zwei zeilen<br>* 5498956 Beginne mit leerer Datei<br>* e51b518 Created file bar on branch main by bjoern.<br>* 7b2a390 Created file hallo-welt on branch main by bjoern.<br><br></code></pre>
 
 
-## Solution zu Step 2 - Branch wechseln
+## Solution to Step 2 - Branch wechseln
 
 Wechsle auf den Branch `feature-a`.
 Sieh Dir den Inhalt der Datei `bar` im Verzeichnis `foo` an.
@@ -40,7 +40,7 @@ Wechsle zurück auf `main`.
 <pre><code>repo $ <b>git switch main</b><br><br>Switched to branch 'main'<br><br></code></pre>
 
 
-## Solution zu Step 3 - Tags zeigen
+## Solution to Step 3 - Tags zeigen
 
 Zeige alle Tags an.
 
@@ -48,7 +48,7 @@ Zeige alle Tags an.
 <pre><code>repo $ <b>git tag</b><br><br>release1.0<br>release1.1<br><br></code></pre>
 
 
-## Solution zu Step 4 - ⭐ Inhalte vergangener Versionen untersuchen
+## Solution to Step 4 - ⭐ Inhalte vergangener Versionen untersuchen
 
 Lasse dir anzeigen, welche Dateien es im Workspace gibt.
 Lasse Dir anzeigen welche Dateien es in vorigen Commit gab.            
@@ -85,7 +85,7 @@ Und jetzt holen wir genau diese Version in den Workspace:
 <pre><code>repo $ <b>git switch main</b><br><br>Previous HEAD position was ec6319f : Edit file bar at line 5 on branch main by bjoern.<br>Switched to branch 'main'<br><br></code></pre>
 
 
-## Solution zu Step 5 - ⭐ Hole alten Stand einer einzelnen Datei zurück.
+## Solution to Step 5 - ⭐ Hole alten Stand einer einzelnen Datei zurück.
 
 Die Datei `hallo-welt` wurde nach dem `release1.0` bearbeitet.
 Dem Kunden gefällt das nicht. Stelle den alten Zustand mit
