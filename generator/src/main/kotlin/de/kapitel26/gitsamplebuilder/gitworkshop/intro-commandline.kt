@@ -331,7 +331,7 @@ fun CollectionOfSamples.commandline() {
                 )
                 log.shell(
                         "git config --global merge.conflictStyle diff3",
-                        root - Dir.name,
+                        rootDir.name,
                         emptyList(),
                         emptyList()
                 )
