@@ -4,8 +4,8 @@ title: Understanding Git
 description: |
     Get to know Git: From basics to branching. 
     Everything you need to work with Git as a developer in a team.
-id: git-verstehen.en
-nav_order: 10
+id: git-verstehen-en
+nav_order: 11
 agenda_slide_nr: 2/2
 ---
 

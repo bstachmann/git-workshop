@@ -3,7 +3,7 @@ layout: workshop
 title: Git Kompakt
 description: Das Allerwichtigste in nur einem Tag
 id: git-kompakt
-nav_order: 11
+nav_order: 12
 agenda_slide_nr: 2/2
 ---
 
