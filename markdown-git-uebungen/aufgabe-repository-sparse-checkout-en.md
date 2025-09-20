@@ -60,7 +60,7 @@ Start in directory `git-uebungen/aufgaben/<unknown>`.
 Klone `myrepo`, schränke auf `component-a` ein
 und mache ein Checkout. Nutze die `--cone`-Option.
 
-[To the exercise](loesung-repository-sparse-checkout.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-repository-sparse-checkout-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-[To the overview](../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

@@ -49,7 +49,7 @@ Start in directory `git-uebungen/aufgaben/<unknown>`.
 
 Erstelle ein Commit und zeige dann den Status.
 
-[To the exercise](loesung-repository-klonen.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-repository-klonen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-[To the overview](../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

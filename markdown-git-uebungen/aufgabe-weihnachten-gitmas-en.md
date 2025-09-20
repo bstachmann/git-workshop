@@ -31,7 +31,7 @@ Start in directory `git-uebungen/aufgaben/<unknown>`.
 Branche und Merge so, dass ˋgit log --graph --onelineˋ
 einen Weihnachtsbaum ausgibt.
 
-[To the exercise](loesung-weihnachten-gitmas.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-weihnachten-gitmas-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-[To the overview](../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

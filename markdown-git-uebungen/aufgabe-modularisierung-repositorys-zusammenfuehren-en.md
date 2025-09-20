@@ -53,7 +53,7 @@ UI und Backend sollen in einem neuen Klon `gesamt` zusammengeführt werden.
 Folge den Anweisungen im Kapitel *"Kleine Projekte zusammenführen"*.
 Untersuche dann Verzeichnissstruktur und Commit-Graphen
 
-[To the exercise](loesung-modularisierung-repositorys-zusammenfuehren.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-modularisierung-repositorys-zusammenfuehren-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-[To the overview](../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

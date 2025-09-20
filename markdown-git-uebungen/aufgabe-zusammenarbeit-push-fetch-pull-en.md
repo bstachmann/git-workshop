@@ -52,7 +52,7 @@ in den lokalen `main`.
 <pre><code>mein-klon $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-zusammenarbeit-push-fetch-pull.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-zusammenarbeit-push-fetch-pull-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-[To the overview](../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 

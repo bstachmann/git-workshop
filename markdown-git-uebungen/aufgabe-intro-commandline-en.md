@@ -149,7 +149,7 @@ Start in directory `git-uebungen/aufgaben/<unknown>`.
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-[To the exercise](loesung-intro-commandline.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-intro-commandline-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-[To the overview](../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick-en.html){:style="visibility: hidden"}
 
