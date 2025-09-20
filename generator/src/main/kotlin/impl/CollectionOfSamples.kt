@@ -32,11 +32,11 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
                     commands()
                     markdown(
                             ("[Zur Lösung]" en "[To the exercise]") +
-                                    "(loesung-$fullName.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
+                                    "(loesung-$fullName${lang_suffix}.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
                     )
                     markdown(
                             ("[Zum Überblick]" en "[To the overview]") +
-                                    "(../../ueberblick.html){:style=\"visibility: hidden\"}"
+                                    "(../../ueberblick${lang_suffix}.html){:style=\"visibility: hidden\"}"
                     )
                 }
             }

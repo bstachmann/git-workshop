@@ -86,7 +86,7 @@ Tipp: Das Commit ist als `feature-merge` getagged.
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-To the exercise(loesung-zusammenarbeit-reverting.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-zusammenarbeit-reverting.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-To the overview(../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick.html){:style="visibility: hidden"}
 

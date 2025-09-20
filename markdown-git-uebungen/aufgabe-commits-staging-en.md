@@ -89,7 +89,7 @@ Man kann sie mit dem `stash`-Befehl abräumen.
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-To the exercise(loesung-commits-staging.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
+[To the exercise](loesung-commits-staging.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
 
-To the overview(../../ueberblick.html){:style="visibility: hidden"}
+[To the overview](../../ueberblick.html){:style="visibility: hidden"}
 
