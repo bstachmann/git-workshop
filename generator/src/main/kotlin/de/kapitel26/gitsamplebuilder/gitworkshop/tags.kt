@@ -1,13 +1,13 @@
 package de.kapitel26.gitsamplebuilder.gitworkshop
 
 import impl.CollectionOfSamples
+import impl.en
 
 fun CollectionOfSamples.tags() {
     createAufgabenFolge("tags") {
-
         createIntro(
-            """Tags""",
-            """
+                "Tags",
+                """
 
                 ## Tipps
 
@@ -31,10 +31,34 @@ fun CollectionOfSamples.tags() {
                             
                 ## Setup
                                   
+            """ en
+                        """
+
+                ## Tips
+
+                * Create tags
+                  - `git tag 'my-first-tag'`
+                  - optionally a revision can be specified (default: `HEAD`)
+                * Simple tags are just names for commits
+                * For releases, one uses *annotated tags*, which carry a description and metadata.
+                  The following options are helpful:
+                  - `-a` ensures the creation of an *annotated tag*.
+                  - `-m 'And here comes text'` for the description
+                * Tags are not automatically transferred on *push*.
+                   - You can either specify individual tags, e.g. `git push origin v1.0 v1.1`
+                   - `git push --tags` transfers tags
+                * Tags are usually transferred on pull.
+                  With `--tags` you can have all tags transferred.
+                * Recommendation: Tags that you share with others (push),
+                  should not be changed anymore.
+                  Git warns before transferring changed tags.
+                  If necessary, you can force the transfer with `-f`.
+                            
+                ## Setup
+                                  
             """
         ) {
             createRepo("blessed.git", "--bare") {
-
                 createClone("../anderer-klon") {
                     createFileAndCommit("foobar", "Initial edit before cloning")
                     git("tag v0.1 -m 'initial'")
@@ -43,7 +67,7 @@ fun CollectionOfSamples.tags() {
                     git("push")
                 }
 
-                createClone("../mein-klon") 
+                createClone("../mein-klon")
             }
 
             inRepo("anderer-klon") {
@@ -60,36 +84,51 @@ fun CollectionOfSamples.tags() {
         }
 
         inRepo("mein-klon") {
-
             createAufgabe(
-                "Tags erstellen", """
+                    "Tags erstellen" en "Create tags",
+                    """
                     Erstelle ein einfaches Tag `simple1` auf `HEAD` und
                     ein annotated Tag `annotated1` auf `HEAD~1`.
                     Sieh zuerst das Log und dann beide Tags einzeln an (`git show an`).
+                """ en
+                            """
+                    Create a simple tag `simple1` on `HEAD` and
+                    an annotated tag `annotated1` on `HEAD~1`.
+                    First look at the log and then at both tags individually (`git show an`).
                 """
             ) {
-                    git("tag simple1")
-                    git("tag annotated1 HEAD~1 -m 'Mit Beschreibung'")
-                    git("log --oneline --decorate")
-                    git("show simple1 --no-patch")
-                    markdown("Beim *annotated Tag* werden zusätzlich Beschreibung und Metadaten angezeigt:")
-                    git("show annotated1 --no-patch")
+                git("tag simple1")
+                git("tag annotated1 HEAD~1 -m 'Mit Beschreibung'")
+                git("log --oneline --decorate")
+                git("show simple1 --no-patch")
+                markdown(
+                        "Beim *annotated Tag* werden zusätzlich Beschreibung und Metadaten angezeigt:" en
+                                "With the *annotated tag*, the description and metadata are also displayed:"
+                )
+                git("show annotated1 --no-patch")
             }
 
             createAufgabe(
-                "Tags holen", """
+                    "Tags holen" en "Fetch tags",
+                    """
                     Einfach per pull.
+                """ en
+                            """
+                    Simply by pull.
                 """
-            ) {
-                git("pull")
-            }                    
-
+            ) { git("pull") }
 
             createAufgabe(
-                "Tags pushen", """
+                    "Tags pushen" en "Push tags",
+                    """
                     Beim einfachen `git push` werden keine Tags übertragen.
                     Übertrage zunächste gezielt das Tag `simple1` mit einem Push
                     und danach alle weiteren Tags mit einem weiteren Push
+                """ en
+                            """
+                    A simple `git push` does not transfer tags.
+                    First, specifically transfer the tag `simple1` with a push
+                    and then all other tags with another push
                 """
             ) {
                 git("push")
@@ -98,11 +137,18 @@ fun CollectionOfSamples.tags() {
             }
 
             createAufgabe(
-                "Manipulieren", """
+                    "Manipulieren" en "Manipulate",
+                    """
                     Überschreibe das Tag `v0.1`, so dass es auf den`HEAD` zeigt.
                     Pushe das Tag.
                     Gehe in das Verzeichnis `../anderer-klon` und hole das Tag mit pull.
                     Schaue ins Log, um zu überprüfen, dass das Tag aktualisiert wurde.
+                """ en
+                            """
+                    Overwrite the tag `v0.1` so that it points to `HEAD`.
+                    Push the tag.
+                    Go to the directory `../anderer-klon` and fetch the tag with pull.
+                    Look at the log to verify that the tag has been updated.
                 """
             ) {
                 editAndCommit("foobar", 8, "Something else")
@@ -119,5 +165,5 @@ fun CollectionOfSamples.tags() {
                 }
             }
         }
-    }    
+    }
 }
