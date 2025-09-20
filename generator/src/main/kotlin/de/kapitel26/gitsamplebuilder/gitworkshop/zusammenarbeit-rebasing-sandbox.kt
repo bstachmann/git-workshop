@@ -1,16 +1,15 @@
 package de.kapitel26.gitsamplebuilder.gitworkshop
 
 import impl.CollectionOfSamples
+import impl.en
 
 fun CollectionOfSamples.rebasingSandbox() {
     createAufgabenFolge("rebasing") {
+        createIntro("Rebasing Sandbox", """
 
-        createIntro(
-            """Rebasing Sandbox""",
-            """
+            """ en """
 
-            """
-        ) {
+            """) {
             createRepo("repo-rebase") {
                 createFileAndCommit("hello") { content = "hallo welt" }
 
@@ -25,21 +24,18 @@ fun CollectionOfSamples.rebasingSandbox() {
         }
 
         createAufgabe(
-            "Feature-Branch per Rebase aktualiseren.",
-            """
+                "Feature-Branch per Rebase aktualiseren." en "Update feature branch via rebase.",
+                """
+                    """ en """
                     """
         ) {
-
             inRepo("repo-rebase") {
                 // rebase onto main, but keep feature
-                startBranch("f-tmp", "feature") {
-                    git("rebase main")
-                }
+                startBranch("f-tmp", "feature") { git("rebase main") }
                 git("rebase f-tmp")
                 git("branch -d f-tmp")
 
                 editAndCommit("hello", "Add !") { content = "Hallo Welt!" }
-
 
                 git("switch feature")
                 createFile("wurst")
@@ -48,13 +44,13 @@ fun CollectionOfSamples.rebasingSandbox() {
                 git("log --graph --all --decorate --oneline")
                 git("rebase main", acceptableExitCodes = setOf(1))
                 bash("cat hello")
-
             }
         }
 
         createAufgabe(
-            "Feature-Branch per Merge aktualiseren.",
-            """
+                "Feature-Branch per Merge aktualiseren." en "Update feature branch via merge.",
+                """
+                    """ en """
                     """
         ) {
             inRepo("repo-merge") {
@@ -69,7 +65,6 @@ fun CollectionOfSamples.rebasingSandbox() {
                 git("switch feature")
                 git("merge main", acceptableExitCodes = setOf(0))
                 bash("cat hello")
-
             }
         }
     }
