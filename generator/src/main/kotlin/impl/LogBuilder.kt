@@ -88,8 +88,8 @@ class LogBuilder(
             names.forEach { name ->
                 val type =
                         when ("""aufgabe|loesung""".toRegex().find(name)?.value) {
-                            "aufgabe" -> "parent: Aufgaben\n"
-                            "loesung" -> "parent: Lösungen\n"
+                            "aufgabe" -> "parent: ${"Aufgaben" en "Exercises"}\n"
+                            "loesung" -> "parent: ${"Lösungen" en "Solutions"}\n"
                             else -> ""
                         }
 
