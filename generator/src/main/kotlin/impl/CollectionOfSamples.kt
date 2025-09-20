@@ -31,7 +31,7 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
                 logTo("aufgabe-$fullName$lang_suffix.md") {
                     commands()
                     markdown(
-                            ("[Zur Lösung]" en "[To the exercise]") +
+                            ("[Zur Lösung]" en "[To the solution]") +
                                     "(loesung-$fullName${lang_suffix}.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
                     )
                     markdown(
