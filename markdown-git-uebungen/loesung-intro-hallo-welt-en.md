@@ -7,15 +7,15 @@ nav_order: 1
 ---
 ## Solution zu Step 0 - START
 
-## Solution zu Step 1 - Das erste Repo
+## Solution zu Step 1 - The first repo
 
-Erstellen sie ihr erstes Repository mit den folgenden Befehlen:
+Create your first repository with the following commands:
 
     $ git init myrepo
     $ cd myrepo
-    $ echo 'welt' >hallo    # erzeugt eine Datei
+    $ echo 'welt' >hallo    # creates a file
     $ git add hallo
-    $ git commit -m 'Hallo Welt!'
+    $ git commit -m 'Hello World!'
     $ git log
 
 
@@ -38,7 +38,7 @@ Erstellen sie ihr erstes Repository mit den folgenden Befehlen:
 <pre><code>myrepo $ <b>git commit -m 'Hallo Welt!'</b><br><br>[main (root-commit) 48dd4eb] Hallo Welt!<br> 1 file changed, 1 insertion(+)<br> create mode 100644 hallo<br><br></code></pre>
 
 
-Glückwunsch: Sieh sehen Ihr erstes Commit in Ihrem ersten Git-Repository!
+Congratulations: You see your first commit in your first Git repository!
 
 
 <pre><code>myrepo $ <b>git log</b><br><br>commit 48dd4eb91e6605e068edb66c2653303502812e3b<br>Author: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>    Hallo Welt!<br><br></code></pre>
@@ -48,13 +48,13 @@ Glückwunsch: Sieh sehen Ihr erstes Commit in Ihrem ersten Git-Repository!
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 2 - ⭐ Und noch ein Commit
+## Solution zu Step 2 - ⭐ And another commit
 
-Bearbeiten Sie die Datei 'hallo' und erstellen ein neues commit.
-Mit der Option `-am` brauchen Sie 'git add hallo` nicht erneut aufrufen.
-Schauen Sie dann das log an.
+Edit the file 'hallo' and create a new commit.
+With the `-am` option, you don't need to call `git add hallo` again.
+Then look at the log.
 
-    $ git commit -am 'Es geht weiter!'
+    $ git commit -am 'Here we go again!'
     $ git log
 
 
@@ -77,10 +77,10 @@ Schauen Sie dann das log an.
 <pre><code>myrepo $ <b>cd ..</b><br><br><br></code></pre>
 
 
-## Solution zu Step 3 - ⭐ Wo liegt das Repository
+## Solution zu Step 3 - ⭐ Where is the repository
 
-Untersuchen Sie das Verzeichnis.
-Wo liegt wohl das Git-Repository? Was enthält es?
+Examine the directory.
+Where is the Git repository located? What does it contain?
 
     $ ll -a
     $ ll .git/

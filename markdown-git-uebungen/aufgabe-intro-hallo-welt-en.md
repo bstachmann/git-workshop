@@ -5,54 +5,52 @@ parent: Exercises
 
 nav_order: 1
 ---
-# Exercise - Hallo Git!
+# Exercise - Hello Git!
 
-Hier geht es darum, ein Gefühl dafür zu bekommen,
-wie die Git-Kommandozeile funktioniert.
-Führen Sie die vorgegebenen Kommandos aus und schauen Sie,
-was passiert.
-Was die Kommandos genau tun, erfahren Sie im Verlauf des Seminars.
+This is about getting a feel for how the Git command line works.
+Execute the given commands and see what happens.
+You will learn what the commands do in detail during the course.
 
-## Kurze Info zu den ersten Git-Befehlen
+## Brief info on the first Git commands
 
-* `git init` Erstellt ein neues Git-Repository.
-* `git add <datei(en)>` Datei(-änderungen) für das nächsten Commit hinzufügen.
-* `git commit -m <beschreibung>` Erstellt ein Commit.
-* `git log` zeigt Commits an.
+* `git init` Creates a new Git repository.
+* `git add <file(s)>` Add file changes for the next commit.
+* `git commit -m <description>` Creates a commit.
+* `git log` shows commits.
 
 
-<h2>Step 0 - START <!-- UEB/Hallo Git!/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Hello Git!/0 --></h2>
 
-<h2>Step 1 - Das erste Repo <!-- UEB/Hallo Git!/1 --></h2>
+<h2>Step 1 - The first repo <!-- UEB/Hello Git!/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Erstellen sie ihr erstes Repository mit den folgenden Befehlen:
+Create your first repository with the following commands:
 
     $ git init myrepo
     $ cd myrepo
-    $ echo 'welt' >hallo    # erzeugt eine Datei
+    $ echo 'welt' >hallo    # creates a file
     $ git add hallo
-    $ git commit -m 'Hallo Welt!'
+    $ git commit -m 'Hello World!'
     $ git log
 
-<h2>Step 2 - ⭐ Und noch ein Commit <!-- UEB/Hallo Git!/2 --></h2>
+<h2>Step 2 - ⭐ And another commit <!-- UEB/Hello Git!/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Bearbeiten Sie die Datei 'hallo' und erstellen ein neues commit.
-Mit der Option `-am` brauchen Sie 'git add hallo` nicht erneut aufrufen.
-Schauen Sie dann das log an.
+Edit the file 'hallo' and create a new commit.
+With the `-am` option, you don't need to call `git add hallo` again.
+Then look at the log.
 
-    $ git commit -am 'Es geht weiter!'
+    $ git commit -am 'Here we go again!'
     $ git log
 
-<h2>Step 3 - ⭐ Wo liegt das Repository <!-- UEB/Hallo Git!/3 --></h2>
+<h2>Step 3 - ⭐ Where is the repository <!-- UEB/Hello Git!/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Untersuchen Sie das Verzeichnis.
-Wo liegt wohl das Git-Repository? Was enthält es?
+Examine the directory.
+Where is the Git repository located? What does it contain?
 
     $ ll -a
     $ ll .git/
