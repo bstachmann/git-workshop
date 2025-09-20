@@ -1,14 +1,15 @@
 package impl
 
-import java.io.File
-import io.ktor.serialization.jackson.*
 import com.fasterxml.jackson.databind.ObjectMapper
+import io.ktor.serialization.jackson.*
+import java.io.File
 
-class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) : AbstractDir<CollectionOfSamples>(
-    rootDir,
-    log = LogBuilder(options, rootDir),
-    solutionCollector = SolutionCollector()
-) {
+class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
+        AbstractDir<CollectionOfSamples>(
+                rootDir,
+                log = LogBuilder(options, rootDir),
+                solutionCollector = SolutionCollector()
+        ) {
 
     var aufgabenNamen: MutableList<String> = mutableListOf()
     var thema: String? = null
@@ -20,17 +21,23 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) : AbstractD
 
     fun createAufgabenFolge(name: String, commands: Dir.() -> Unit) {
         val fullName = thema?.let { "${it.lowercase()}-$name" } ?: "$name"
-        log.nav_order.put("aufgabe-$fullName.md", aufgabenNamen.size)
-        log.nav_order.put("loesung-$fullName.md", aufgabenNamen.size)
+        val lang_suffix = BuildParameters.language_suffix
+        log.nav_order.put("aufgabe-$fullName$lang_suffix.md", aufgabenNamen.size)
+        log.nav_order.put("loesung-$fullName$lang_suffix.md", aufgabenNamen.size)
         aufgabenNamen.add(fullName)
 
         createSample("loesungen/$fullName") {
-
             inDir(".") {
-                logTo("aufgabe-$fullName.md") {
+                logTo("aufgabe-$fullName$lang_suffix.md") {
                     commands()
-                    markdown("[Zur Lösung](loesung-$fullName.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}")
-                    markdown("[Zum Überblick](../../ueberblick.html){:style=\"visibility: hidden\"}")
+                    markdown(
+                            ("[Zur Lösung]" en "[To the solution]") +
+                                    "(loesung-$fullName${lang_suffix}.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
+                    )
+                    markdown(
+                            ("[Zum Überblick]" en "[To the overview]") +
+                                    "(../../ueberblick${lang_suffix}.html){:style=\"visibility: hidden\"}"
+                    )
                 }
             }
             writeDocs()
@@ -45,12 +52,17 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) : AbstractD
 
         logTo("ueberblick.md") {
             aufgabenNamen.forEach { name ->
-                markdown(" * [$name](loesungen/$name/aufgabe-$name.html) [Lösung](loesungen/$name/loesung-$name.html)")
+                markdown(
+                        " * [$name](loesungen/$name/aufgabe-$name.html) [${"Lösung" en "Solution"}](loesungen/$name/loesung-$name.html)"
+                )
             }
         }
         writeDocs()
-        
-        write("aufgaben.json",ObjectMapper().writeValueAsString(solutionCollector.aufgabenUndSchritte))
+
+        write(
+                "aufgaben${BuildParameters.language_suffix}.json",
+                ObjectMapper().writeValueAsString(solutionCollector.aufgabenUndSchritte)
+        )
     }
 
     fun createSample(sampleName: String, commands: (Dir.() -> Unit)? = null) {

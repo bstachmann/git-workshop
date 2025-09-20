@@ -1,13 +1,13 @@
 package de.kapitel26.gitsamplebuilder.gitworkshop
 
 import impl.CollectionOfSamples
+import impl.en
 
 fun CollectionOfSamples.branching() {
     createAufgabenFolge("branching") {
-
         createIntro(
-            """Branching""",
-            """
+                "Branching",
+                """
 
                
                 ## Infos
@@ -27,24 +27,42 @@ fun CollectionOfSamples.branching() {
                   
                 ## Ausgangssituation
 
+            """ en
+                        """
+
+               
+                ## Info
+                
+                * `git branch` 
+
+                ## Tips
+                
+                * `git switch -c <name>` creates a new branch and activates
+                  it immediately.
+                * `git branch -vv` shows details about the local branches
+                * `git switch <name>` switches the active branch
+                * `git merge <branch>` integrates the changes from `branch` and creates a commit
+                   on the active branch.
+                * 
+
+                  
+                ## Initial situation
+
             """
         ) {
-            createRepo("blessed.git", "--bare") {
-                createClone("../repo")
-            }
+            createRepo("blessed.git", "--bare") { createClone("../repo") }
 
             inRepo {
                 createFileAndCommit("foo", "Initial edit before cloning")
                 createFileAndCommit("bar", "Initial edit before cloning")
                 git("push")
-
             }
 
             inRepo("blessed.git") {
                 createClone("../other") {
                     startBranch("feature-x") {
                         createFileAndCommit("datei-x")
-                        editAndCommit("datei-x",3)
+                        editAndCommit("datei-x", 3)
                         git("push origin feature-x")
                     }
                     startBranch("feature-y") {
@@ -56,36 +74,41 @@ fun CollectionOfSamples.branching() {
         }
 
         inRepo {
-
             createAufgabe(
-                    "Branch erstellen",
+                    "Branch erstellen" en "Create branch",
                     """
                     Erstelle einen Branch `feature-a`, bearbeite die Datei `foo`
                     und erstelle ein Commit.
                     Wechsle dann zurück auf den `main` und bearbeite dort `bar`.
                     Zeige den Commit-Graphen.
+                    """ en
+                            """
+                    Create a branch `feature-a`, edit the file `foo`
+                    and create a commit.
+                    Then switch back to `main` and edit `bar` there.
+                    Show the commit graph.
                     """
             ) {
-                startBranch("feature-a") {
-                    editAndCommit("foo", 7)
-                }
+                startBranch("feature-a") { editAndCommit("foo", 7) }
 
                 editAndCommit("bar", 3)
                 git("log --all --oneline --graph --decorate")
             }
 
             createAufgabe(
-                    "Branch mergen",
+                    "Branch mergen" en "Merge branch",
                     """
                     Merge `feature-a` auf den `main`und
                     zeige den Commit-Graphen.
+                    """ en
+                            """
+                    Merge `feature-a` into `main` and
+                    show the commit graph.
                     """
             ) {
                 git("merge feature-a")
                 git("log --all --oneline --graph --decorate")
             }
-
-
         }
     }
 }

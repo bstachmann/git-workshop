@@ -3,7 +3,7 @@ layout: workshop
 title: Git Impulsvorträge
 description: Impulse für Entwickler, die schon mit Git arbeiten.
 id: git-impulsvortraege
-nav_order: 12
+nav_order: 14
 agenda_slide_nr: 2/1
 ---
 
