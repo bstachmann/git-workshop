@@ -9,18 +9,18 @@ nav_order: 15
 
 
 
-Rebasing ist, neben dem Merging, eine weitere Möglichkeit,
-Änderung zu integrieren.
+Rebasing is, besides merging, another way
+to integrate changes.
 
-## Infos
+## Info
 
 * `git rebase` 
 
-## Tipps
+## Tips
 
 * `git rebase`
   
-## Ausgangssituation
+## Initial situation
 
 
 <h2>Step 0 - START <!-- UEB/Rebasing/0 --></h2>
@@ -29,17 +29,17 @@ Rebasing ist, neben dem Merging, eine weitere Möglichkeit,
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Feature-Branch per Rebase aktualiseren. <!-- UEB/Rebasing/1 --></h2>
+<h2>Step 1 - Update feature branch via rebase. <!-- UEB/Rebasing/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Auf dem main gibt es Neuerungen.
+There are new features on main.
 
-Lasse Dir den Commit-Graphen über alle Branches zeigen.
+Show the commit graph across all branches.
 
-Aktualisiere Deinen Feature-Branch.
+Update your feature branch.
 
-Lasse Dir den Commit-Graphen über alle Branches zeigen.
+Show the commit graph across all branches.
 
 
 <pre><code>repo $ <b>cd ..</b><br><br><br></code></pre>

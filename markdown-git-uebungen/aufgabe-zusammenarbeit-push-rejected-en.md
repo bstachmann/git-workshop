@@ -5,93 +5,93 @@ parent: Exercises
 
 nav_order: 11
 ---
-# Exercise - Umgang mit "Push Reject"
+# Exercise - Dealing with "Push Reject"
 
  
-Wenn mehrere Entwickler am selben Projekt arbeiten,
-kommt es beim `git push` häufig zu der Meldung
-`error: failed to push some refs ...`,
-dem sogenannten *Push Reject*.
+When multiple developers work on the same project,
+the message `error: failed to push some refs ...`
+often occurs during `git push`,
+the so-called *Push Reject*.
 
-**Das ist nicht schlimm.** 
-Es bedeutet lediglich, dass im `origin`-Repository
-Commits gefunden wurden, 
-die lokal noch nicht integriert sind.
+**This is not a bad thing.**
+It simply means that in the `origin` repository
+commits were found
+that are not yet integrated locally.
 
-Man mit `git pull` kann man die Änderungen holen und integrieren.
+You can fetch and integrate the changes with `git pull`.
 
-Oder man kann mit `git fetch` die Änderungen zunächst nur abholen,
-um sie zu untersuchen, und später zu entscheiden,
-was man damit machen möchte.
+Or you can first fetch the changes with `git fetch`
+to examine them, and later decide
+what you want to do with them.
 
-## Tipps
+## Tips
 
- * `git push`: Überträgt Commits zum `origin`.
- * `git fetch`: Holt Commit, ändert aber Workspace und lokalen Branch nicht
- * `git pull`: Holt und **integriert** Commits.
- * `git log A..B` zeigt "was B gemacht hat".\
-    Oder etwas genauer: Jenes Commits aus der Historie von `B`, 
-    die noch nicht in `A` enthalten sind.
- * `git diff A B` zeigt die Unterschiede zwischen A und B\
-   (symmetrisches Diff)
- * `git diff A...B` zeigt die Änderungen der Seite B.\
-    Oder etwas genauer: Das Diff zwischen dem letzen gemeinsamen Vorgänger zu B.\
-    (asymmetrisches Diff)
+ * `git push`: Transfers commits to `origin`.
+ * `git fetch`: Fetches commits, but does not change the workspace and local branch
+ * `git pull`: Fetches and **integrates** commits.
+ * `git log A..B` shows "what B did".\
+    Or more precisely: Those commits from the history of `B`
+    that are not yet contained in `A`.
+ * `git diff A B` shows the differences between A and B\
+   (symmetrical diff)
+ * `git diff A...B` shows the changes of side B.\
+    Or more precisely: The diff between the last common ancestor and B.\
+    (asymmetrical diff)
 
 ## Setup
 
- * Du arbeitest an einem Projekt `apollo`,
-   das von Deiner Kollegin Anja erstellt wurde.
- * Du sollst die Datei `frontend.java` verbessern,
-   während Anja an der Datei `backend.java` weiterarbeitet.
+ * You are working on a project `apollo`,
+   that was created by your colleague Anja.
+ * You are supposed to improve the file `frontend.java`,
+   while Anja continues to work on the file `backend.java`.
 
-Wenn Anja ihre Änderungen vor Dir hochlädt,
-wirst Du einen *Push Reject* erfahren.
+If Anja uploads her changes before you,
+you will experience a *Push Reject*.
 
-### Verzeichnisse
+### Directories
 
- * `./` Haupverzeichnis für diese Übung 
-   - `blessed-apollo.git/` Das geteilte (blessed) Repository liegt hier.
-   - `anjas-apollo/` Hier arbeitet Anja.  
-   - `my-apollo/` **Du arbeitest hier.**
+ * `./` Main directory for this exercise
+   - `blessed-apollo.git/` The shared (blessed) repository is here.
+   - `anjas-apollo/` Anja works here.
+   - `my-apollo/` **You work here.**
 
-<h2>Step 0 - START <!-- UEB/Umgang mit "Push Reject"/0 --></h2>
+<h2>Step 0 - START <!-- UEB/Dealing with "Push Reject"/0 --></h2>
 
 
 <pre><code>$ <b>cd my-apollo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Lokal Commit(s) erstellen <!-- UEB/Umgang mit "Push Reject"/1 --></h2>
+<h2>Step 1 - Create local commit(s) <!-- UEB/Dealing with "Push Reject"/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Bearbeite die Datei `frontend.java` und erstelle (mindestens) ein Commit mit den Änderungen.
-Überprüfe danach mit `git status`, ob der Workspace sauber ist.
+Edit the file `frontend.java` and create (at least) one commit with the changes.
+Then check with `git status` if the workspace is clean.
 
-<h2>Step 2 - Push versuchen <!-- UEB/Umgang mit "Push Reject"/2 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Versuche jetzt Deine Änderungen zu pushen.
-
-<h2>Step 3 - (optional) Problem analysieren <!-- UEB/Umgang mit "Push Reject"/3 --></h2>
+<h2>Step 2 - Try to push <!-- UEB/Dealing with "Push Reject"/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Hole zunächt die Änderungen, ohne zu integrieren (`fetch`),
-und lasse Dir die Änderungen von *Anja* zeigen.
+Now try to push your changes.
+
+<h2>Step 3 - (optional) Analyze problem <!-- UEB/Dealing with "Push Reject"/3 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+First fetch the changes without integrating (`fetch`),
+and let *Anja's* changes be shown to you.
  
- * Welche Commits hat Anja gemacht (`log`)?
- * Welche Unterschiede gibt es zweichen deiner und Anjas Version (symmetrisches `diff`)?
- * Welche Änderungen hat Anja gemacht (asymmetrisches `diff`)?
+ * Which commits did Anja make (`log`)?
+ * What are the differences between your and Anja's version (symmetrical `diff`)?
+ * What changes did Anja make (asymmetrical `diff`)?
 
-<h2>Step 4 - Fremde Änderungen integrieren <!-- UEB/Umgang mit "Push Reject"/4 --></h2>
+<h2>Step 4 - Integrate foreign changes <!-- UEB/Dealing with "Push Reject"/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Integriere die Änderungen mit Pull und sieh Dir dann den Commit-Graphen an.
+Integrate the changes with pull and then look at the commit graph.
 
-<h2>Step 5 - Erneut pushen <!-- UEB/Umgang mit "Push Reject"/5 --></h2>
+<h2>Step 5 - Push again <!-- UEB/Dealing with "Push Reject"/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 

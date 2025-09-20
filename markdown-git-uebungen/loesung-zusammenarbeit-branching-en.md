@@ -7,12 +7,12 @@ nav_order: 8
 ---
 ## Solution to Step 0 - START
 
-## Solution to Step 1 - Branch erstellen
+## Solution to Step 1 - Create branch
 
-Erstelle einen Branch `feature-a`, bearbeite die Datei `foo`
-und erstelle ein Commit.
-Wechsle dann zurück auf den `main` und bearbeite dort `bar`.
-Zeige den Commit-Graphen.
+Create a branch `feature-a`, edit the file `foo`
+and create a commit.
+Then switch back to `main` and edit `bar` there.
+Show the commit graph.
 
 
 <pre><code>repo $ <b>git switch -c feature-a HEAD</b><br><br>Switched to a new branch 'feature-a'<br><br></code></pre>
@@ -42,10 +42,10 @@ Zeige den Commit-Graphen.
 <pre><code>repo $ <b>git log --all --oneline --graph --decorate</b><br><br>* 300f5e9 (feature-a) : Edit file foo at line 7 on branch feature-a by bjoern.<br>| * b5cd7e9 (HEAD -&gt; main) : Edit file bar at line 3 on branch main by bjoern.<br>|/  <br>* 6014eb9 (origin/main) Initial edit before cloning<br>* de06cfe Initial edit before cloning<br><br></code></pre>
 
 
-## Solution to Step 2 - Branch mergen
+## Solution to Step 2 - Merge branch
 
-Merge `feature-a` auf den `main`und
-zeige den Commit-Graphen.
+Merge `feature-a` into `main` and
+show the commit graph.
 
 
 <pre><code>repo $ <b>git merge feature-a</b><br><br>Merge made by the 'ort' strategy.<br> foo | 2 +-<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>

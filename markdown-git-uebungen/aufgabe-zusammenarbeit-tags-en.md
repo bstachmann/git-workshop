@@ -8,25 +8,25 @@ nav_order: 10
 # Exercise - Tags
 
 
-## Tipps
+## Tips
 
-* Tags erstellen
-  - `git tag `mein-erstes-tag`
-  - optional darf eine Revision angegeben werden (Default: `HEAD`)
-* Einfache Tags sind nur Namen für Commits
-* Für Releases nutzt man *annotated Tags*, diesen tragen eine Beschreibung und Metadaten. 
-  Folgende Optionen sind hilfreich:
-  - `-a` sorgt für die Erstellung eines *annotated Tags*.
-  - `-m 'Und hier kommt Text'` für die Beschreibung                    
-* Tags werden beim *Push* nicht automatisch Übertragen.
-   - Man gibt entweder einzelne Tags an, z.B. `git push origin v1.0 v1.1`
-   - `git push --tags` überträgt tags
-* Beim Pull werden Tags in der Regel mit übertragen. 
-  Mit `--tags` kann man alle Tags übertragen lassen.
-* Empfehlung: Tags, die man mit Anderen teilt (push),
-  sollte man nicht mehr ändern.
-  Git warnt, bevor man geänderte Tags überträgt.
-  Notfalls kann man die Übertragung mit `-f` forcieren.
+* Create tags
+  - `git tag 'my-first-tag'`
+  - optionally a revision can be specified (default: `HEAD`)
+* Simple tags are just names for commits
+* For releases, one uses *annotated tags*, which carry a description and metadata.
+  The following options are helpful:
+  - `-a` ensures the creation of an *annotated tag*.
+  - `-m 'And here comes text'` for the description
+* Tags are not automatically transferred on *push*.
+   - You can either specify individual tags, e.g. `git push origin v1.0 v1.1`
+   - `git push --tags` transfers tags
+* Tags are usually transferred on pull.
+  With `--tags` you can have all tags transferred.
+* Recommendation: Tags that you share with others (push),
+  should not be changed anymore.
+  Git warns before transferring changed tags.
+  If necessary, you can force the transfer with `-f`.
             
 ## Setup
                   
@@ -37,36 +37,36 @@ nav_order: 10
 <pre><code>$ <b>cd mein-klon</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Tags erstellen <!-- UEB/Tags/1 --></h2>
+<h2>Step 1 - Create tags <!-- UEB/Tags/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Erstelle ein einfaches Tag `simple1` auf `HEAD` und
-ein annotated Tag `annotated1` auf `HEAD~1`.
-Sieh zuerst das Log und dann beide Tags einzeln an (`git show an`).
+Create a simple tag `simple1` on `HEAD` and
+an annotated tag `annotated1` on `HEAD~1`.
+First look at the log and then at both tags individually (`git show an`).
 
-<h2>Step 2 - Tags holen <!-- UEB/Tags/2 --></h2>
-
-Start in directory `git-uebungen/aufgaben/<unknown>`.
-
-Einfach per pull.
-
-<h2>Step 3 - Tags pushen <!-- UEB/Tags/3 --></h2>
+<h2>Step 2 - Fetch tags <!-- UEB/Tags/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Beim einfachen `git push` werden keine Tags übertragen.
-Übertrage zunächste gezielt das Tag `simple1` mit einem Push
-und danach alle weiteren Tags mit einem weiteren Push
+Simply by pull.
 
-<h2>Step 4 - Manipulieren <!-- UEB/Tags/4 --></h2>
+<h2>Step 3 - Push tags <!-- UEB/Tags/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/<unknown>`.
 
-Überschreibe das Tag `v0.1`, so dass es auf den`HEAD` zeigt.
-Pushe das Tag.
-Gehe in das Verzeichnis `../anderer-klon` und hole das Tag mit pull.
-Schaue ins Log, um zu überprüfen, dass das Tag aktualisiert wurde.
+A simple `git push` does not transfer tags.
+First, specifically transfer the tag `simple1` with a push
+and then all other tags with another push
+
+<h2>Step 4 - Manipulate <!-- UEB/Tags/4 --></h2>
+
+Start in directory `git-uebungen/aufgaben/<unknown>`.
+
+Overwrite the tag `v0.1` so that it points to `HEAD`.
+Push the tag.
+Go to the directory `../anderer-klon` and fetch the tag with pull.
+Look at the log to verify that the tag has been updated.
 
 
 <pre><code>mein-klon $ <b>cd ..</b><br><br><br></code></pre>

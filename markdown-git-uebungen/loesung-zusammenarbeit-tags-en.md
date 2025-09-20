@@ -7,11 +7,11 @@ nav_order: 10
 ---
 ## Solution to Step 0 - START
 
-## Solution to Step 1 - Tags erstellen
+## Solution to Step 1 - Create tags
 
-Erstelle ein einfaches Tag `simple1` auf `HEAD` und
-ein annotated Tag `annotated1` auf `HEAD~1`.
-Sieh zuerst das Log und dann beide Tags einzeln an (`git show an`).
+Create a simple tag `simple1` on `HEAD` and
+an annotated tag `annotated1` on `HEAD~1`.
+First look at the log and then at both tags individually (`git show an`).
 
 
 <pre><code>mein-klon $ <b>git tag simple1</b><br><br><br></code></pre>
@@ -29,25 +29,25 @@ Sieh zuerst das Log und dann beide Tags einzeln an (`git show an`).
 <pre><code>mein-klon $ <b>git show simple1 --no-patch</b><br><br>commit af500f303ef2cc7b770c560190d4072d2c879972<br>Author: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>    : Just editing<br><br></code></pre>
 
 
-Beim *annotated Tag* werden zusätzlich Beschreibung und Metadaten angezeigt:
+With the *annotated tag*, the description and metadata are also displayed:
 
 
 <pre><code>mein-klon $ <b>git show annotated1 --no-patch</b><br><br>tag annotated1<br>Tagger: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>Mit Beschreibung<br><br>commit d4d7875a179ac89a40ed04b1e6cf33a5111fcedf<br>Author: bjoern &lt;kapitel26blog@gmail.com&gt;<br>Date:   Thu Jul 29 00:00:00 2021 +0000<br><br>    Initial edit before cloning<br><br></code></pre>
 
 
-## Solution to Step 2 - Tags holen
+## Solution to Step 2 - Fetch tags
 
-Einfach per pull.
+Simply by pull.
 
 
 <pre><code>mein-klon $ <b>git pull</b><br><br>Updating af500f3..06d348f<br>Fast-forward<br> foobar | 8 ++++----<br> 1 file changed, 4 insertions(+), 4 deletions(-)<br>From ../blessed<br>   af500f3..06d348f  main       -&gt; origin/main<br> * [new tag]         v0.2       -&gt; v0.2<br> * [new tag]         v0.3       -&gt; v0.3<br> * [new tag]         v1.0       -&gt; v1.0<br><br></code></pre>
 
 
-## Solution to Step 3 - Tags pushen
+## Solution to Step 3 - Push tags
 
-Beim einfachen `git push` werden keine Tags übertragen.
-Übertrage zunächste gezielt das Tag `simple1` mit einem Push
-und danach alle weiteren Tags mit einem weiteren Push
+A simple `git push` does not transfer tags.
+First, specifically transfer the tag `simple1` with a push
+and then all other tags with another push
 
 
 <pre><code>mein-klon $ <b>git push</b><br><br>Everything up-to-date<br><br></code></pre>
@@ -61,12 +61,12 @@ und danach alle weiteren Tags mit einem weiteren Push
 <pre><code>mein-klon $ <b>git push --tags</b><br><br>To ../blessed.git<br> * [new tag]         annotated1 -&gt; annotated1<br><br></code></pre>
 
 
-## Solution to Step 4 - Manipulieren
+## Solution to Step 4 - Manipulate
 
-Überschreibe das Tag `v0.1`, so dass es auf den`HEAD` zeigt.
-Pushe das Tag.
-Gehe in das Verzeichnis `../anderer-klon` und hole das Tag mit pull.
-Schaue ins Log, um zu überprüfen, dass das Tag aktualisiert wurde.
+Overwrite the tag `v0.1` so that it points to `HEAD`.
+Push the tag.
+Go to the directory `../anderer-klon` and fetch the tag with pull.
+Look at the log to verify that the tag has been updated.
 
 
 <pre><code>mein-klon $ <b># Something else</b><br><br><br></code></pre>

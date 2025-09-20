@@ -7,15 +7,15 @@ nav_order: 15
 ---
 ## Solution to Step 0 - START
 
-## Solution to Step 1 - Feature-Branch per Rebase aktualiseren.
+## Solution to Step 1 - Update feature branch via rebase.
 
-Auf dem main gibt es Neuerungen.
+There are new features on main.
 
-Lasse Dir den Commit-Graphen über alle Branches zeigen.
+Show the commit graph across all branches.
 
-Aktualisiere Deinen Feature-Branch.
+Update your feature branch.
 
-Lasse Dir den Commit-Graphen über alle Branches zeigen.
+Show the commit graph across all branches.
 
 
 <pre><code>repo $ <b>git log --graph --all --decorate --oneline</b><br><br>* 796a63e (HEAD -&gt; feature) : Feature weitermachen.<br>* e65c718 : Feature anfangen.<br>| * 57f8edc (main) : Neuerung auf dem main<br>|/  <br>* 097f971 Created file bar on branch main by bjoern.<br>* 9799da6 Created file foo on branch main by bjoern.<br><br></code></pre>
