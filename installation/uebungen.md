@@ -12,7 +12,7 @@ permalink: /installation/uebungen
 Öffen sie die [Git-Bash](/installation/kommandozeile).
 Navigieren Sie in das Verzeichnis, wo sie die Übungen ablegen wollen.
 
-**Tipp**: Arbeiten Sie, wenn möglich, auf einen lokalen Laufwerk. Auf Netzlaufwerken gibt es manchmal  Performance-Probleme. 
+**Tipp**: Arbeiten Sie, wenn möglich, auf einen **lokalen Laufwerk**. Auf Netzlaufwerken gibt es manchmal  Performance-Probleme. 
 
 Amerkung: Das Herunterladen und und Entpacken kann statt mit der Git-Bash natürlich auch mit dem *File Explorer* gemacht werden.
 
