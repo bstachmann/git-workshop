@@ -3,7 +3,7 @@ layout: page
 title: <code>zusammenarbeit-rebasing</code>
 parent: Lösungen
 
-nav_order: 15
+nav_order: 999
 ---
 ## Lösung zu Schritt 0 - START
 

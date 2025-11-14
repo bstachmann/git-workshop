@@ -3,7 +3,7 @@ layout: page
 title: <code>zusammenarbeit-push-fetch-pull</code>
 parent: Aufgaben
 
-nav_order: 9
+nav_order: 999
 ---
 # Übung - Fetch und Pull
 

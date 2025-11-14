@@ -3,7 +3,7 @@ layout: page
 title: <code>zusammenarbeit-push-rejected</code>
 parent: Lösungen
 
-nav_order: 11
+nav_order: 999
 ---
 ## Lösung zu Schritt 0 - START
 

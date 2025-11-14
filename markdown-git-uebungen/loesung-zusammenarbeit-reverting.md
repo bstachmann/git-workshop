@@ -3,7 +3,7 @@ layout: page
 title: <code>zusammenarbeit-reverting</code>
 parent: Lösungen
 
-nav_order: 14
+nav_order: 999
 ---
 ## Lösung zu Schritt 0 - START
 
@@ -22,7 +22,7 @@ Tipp: Das Commit ist als `umbenennung` getagged.
 
 
 
-<pre><code>repo $ <b>ls</b><br><br>README.md<br>from-feature<br><br></code></pre>
+<pre><code>repo $ <b>ls</b><br><br>from-feature<br>README.md<br><br></code></pre>
 
 
 ## Lösung zu Schritt 2 - Merge-Commit rückgängig machen.
@@ -32,7 +32,7 @@ Tipp: Das Merge-Commit ist als `feature-merge` getagged.
 Tipp: Am verschinden der Datei `from-feature` kann man den Erfolg erkennen.
 
 
-<pre><code>repo $ <b>ls</b><br><br>README.md<br>from-feature<br><br></code></pre>
+<pre><code>repo $ <b>ls</b><br><br>from-feature<br>README.md<br><br></code></pre>
 
 
 
