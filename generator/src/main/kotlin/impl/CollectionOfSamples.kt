@@ -21,22 +21,21 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
 
     fun createAufgabenFolge(name: String, commands: Dir.() -> Unit) {
         val fullName = thema?.let { "${it.lowercase()}-$name" } ?: "$name"
-        val lang_suffix = BuildParameters.language_suffix
-        log.nav_order.put("aufgabe-$fullName$lang_suffix.md", aufgabenNamen.size)
-        log.nav_order.put("loesung-$fullName$lang_suffix.md", aufgabenNamen.size)
+        log.nav_order.put("aufgabe-$fullName", aufgabenNamen.size)
+        log.nav_order.put("loesung-$fullName", aufgabenNamen.size)
         aufgabenNamen.add(fullName)
 
         createSample("loesungen/$fullName") {
             inDir(".") {
-                logTo("aufgabe-$fullName$lang_suffix.md") {
+                logTo("aufgabe-$fullName.md") {
                     commands()
                     markdown(
                             ("[Zur Lösung]" en "[To the solution]") +
-                                    "(loesung-$fullName${lang_suffix}.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
+                                    "(loesung-$fullName.html){:style=\"position: fixed; right: 10px; top:60px\" .btn .btn-purple}"
                     )
                     markdown(
                             ("[Zum Überblick]" en "[To the overview]") +
-                                    "(../../ueberblick${lang_suffix}.html){:style=\"visibility: hidden\"}"
+                                    "(../../ueberblick${BuildParameters.language_suffix}.html){:style=\"visibility: hidden\"}"
                     )
                 }
             }
@@ -60,7 +59,7 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
         writeDocs()
 
         write(
-                "aufgaben${BuildParameters.language_suffix}.json",
+                "aufgaben.json",
                 ObjectMapper().writeValueAsString(solutionCollector.aufgabenUndSchritte)
         )
     }

@@ -3,10 +3,9 @@ package de.kapitel26.gitsamplebuilder
 import java.io.File
 
 fun main() {
-    val targetDir = File("markdown-git-uebungen")
-
-    targetDir.deleteRecursively()
     for (lang_suffix in listOf("", "-en")) {
+        val targetDir = File("markdown-git-uebungen$lang_suffix")
+        targetDir.deleteRecursively()
         val srcDir = File("build/git-uebungen$lang_suffix/loesungen")
         copy(srcDir, targetDir)
     }

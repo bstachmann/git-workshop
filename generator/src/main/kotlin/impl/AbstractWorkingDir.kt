@@ -308,7 +308,7 @@ abstract class AbstractWorkingDir<T>(
         fun currentUser(): String = getLocalGitConfig("user.name") ?: "bjoern"
 
         fun applyLoesungen(fullName: String) =
-                logTo("loesung-${fullName}${BuildParameters.language_suffix}.md") {
+                logTo("loesung-${fullName}.md") {
                         solutionCollector.collectedCommands.forEach { (header, command) ->
                                 markdown("## " + ("Lösung zu $header" en "Solution to $header"))
                                 command()
