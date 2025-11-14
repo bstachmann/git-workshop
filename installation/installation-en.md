@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installation (en)
-nav_order: 80
+nav_order: 81
 has_children: true
 permalink: /installation-en
 ---
