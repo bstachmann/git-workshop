@@ -225,9 +225,13 @@ abstract class AbstractWorkingDir<T>(
                                 }
                 )
 
+                // Note we get the path from `loesungen` since some paths
+                // don´t exist in `aufgaben`, since they will have to be created by the user.
+                val pathRegex =
+                        ".*build/git-uebungen${BuildParameters.language_suffix}/loesungen/(.*)"
                 val pathInUebungsverzeichnis =
                         "git-uebungen/aufgaben/" +
-                                (""".*build/git-uebungen/loesungen/(.*)"""
+                                (pathRegex
                                         .toRegex()
                                         .matchEntire(rootDir.canonicalPath)
                                         ?.groups
