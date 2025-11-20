@@ -48,9 +48,9 @@ the `git` command.
 
 [Short intro to the command line](../installation/commandline)
 
-<h2>Step 0 - START <!-- UEB/The `git` command!/0 --></h2>
+<h2>Step 0 - START <!-- UEB/intro-commandline/0 --></h2>
 
-<h2>Step 1 - Navigation in exercise directories <!-- UEB/The `git` command!/1 --></h2>
+<h2>Step 1 - Navigation in exercise directories <!-- UEB/intro-commandline/1 --></h2>
 
 Start in directory `git-uebungen`.
 
@@ -62,13 +62,13 @@ Use tab completion to avoid typing so much.
 Then navigate back to the parent
 directory `intro-commandline`.
 
-<h2>Step 2 - Check Git version <!-- UEB/The `git` command!/2 --></h2>
+<h2>Step 2 - Check Git version <!-- UEB/intro-commandline/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline`.
 
 Print which version of Git is installed.
 
-<h2>Step 3 - Help <!-- UEB/The `git` command!/3 --></h2>
+<h2>Step 3 - Help <!-- UEB/intro-commandline/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline`.
 
@@ -78,7 +78,7 @@ Show the help page for the `log` command.
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 4 - `less` and long outputs <!-- UEB/The `git` command!/4 --></h2>
+<h2>Step 4 - `less` and long outputs <!-- UEB/intro-commandline/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -87,7 +87,7 @@ Because this does not fit in a terminal window,
 the `less` viewer is opened. Close it.
 Then use `less some-file.txt` to view a file in `less` mode.
 
-<h2>Step 5 - Configure Git <!-- UEB/The `git` command!/5 --></h2>
+<h2>Step 5 - Configure Git <!-- UEB/intro-commandline/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -114,7 +114,7 @@ It is recommended to set them for this workshop:
     $ git config --global init.defaultBranch main
 
 
-<h2>Step 6 - ⭐ History <!-- UEB/The `git` command!/6 --></h2>
+<h2>Step 6 - ⭐ History <!-- UEB/intro-commandline/6 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -123,7 +123,7 @@ to execute one of the previous commands again.
 Type `ctrl+r` and then enter `conflict`,
 to re-run the command to set `merge.conflictStyle`.
 
-<h2>Step 7 - ⭐ Configure Git editor <!-- UEB/The `git` command!/7 --></h2>
+<h2>Step 7 - ⭐ Configure Git editor <!-- UEB/intro-commandline/7 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -131,14 +131,14 @@ Configure an editor for git.
 [Tips on this](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config).f
 Then test with `git config -e` to see if it worked.
 
-<h2>Step 8 - ⭐ Working directory <!-- UEB/The `git` command!/8 --></h2>
+<h2>Step 8 - ⭐ Working directory <!-- UEB/intro-commandline/8 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline/repo`.
 
 Print out which working directory you are currently in.
 For Windows users: also test the command with the `-W` option.
 
-<h2>Step 9 - ⭐ Open applications <!-- UEB/The `git` command!/9 --></h2>
+<h2>Step 9 - ⭐ Open applications <!-- UEB/intro-commandline/9 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-commandline/repo`.
 

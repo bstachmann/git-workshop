@@ -53,13 +53,13 @@ Anja hat aber parallel ebenfalls weiter gearbeitet.
 Integrieren Sie die neuen Änderungen von Anja.
 
 
-<h2>Schritt 0 - START <!-- UEB/Integration von Änderungen/0 --></h2>
+<h2>Schritt 0 - START <!-- UEB/zusammenarbeit-integration-von-aenderungen/0 --></h2>
 
 
 <pre><code>$ <b>cd fast-forward</b><br><br><br></code></pre>
 
 
-<h2>Schritt 1 - Fast-Forward beim Pull <!-- UEB/Integration von Änderungen/1 --></h2>
+<h2>Schritt 1 - Fast-Forward beim Pull <!-- UEB/zusammenarbeit-integration-von-aenderungen/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/fast-forward`.
 
@@ -78,7 +78,7 @@ Lasse Dir Status und den Commit-Graphen zeigen.
 <pre><code>$ <b>cd no-ff</b><br><br><br></code></pre>
 
 
-<h2>Schritt 2 - Merge erzwingen beim Pull <!-- UEB/Integration von Änderungen/2 --></h2>
+<h2>Schritt 2 - Merge erzwingen beim Pull <!-- UEB/zusammenarbeit-integration-von-aenderungen/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/no-ff`.
 
@@ -97,7 +97,7 @@ Lasse Dir Status und den Commit-Graphen zeigen.
 <pre><code>$ <b>cd changes-in-different-files</b><br><br><br></code></pre>
 
 
-<h2>Schritt 3 - Integration bei Änderungen in verschiedenen Dateien <!-- UEB/Integration von Änderungen/3 --></h2>
+<h2>Schritt 3 - Integration bei Änderungen in verschiedenen Dateien <!-- UEB/zusammenarbeit-integration-von-aenderungen/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/changes-in-different-files`.
 
@@ -122,7 +122,7 @@ Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-integration-von-aend
 <pre><code>$ <b>cd changes-in-same-files</b><br><br><br></code></pre>
 
 
-<h2>Schritt 4 - Integration bei Änderungen in derselben Datei <!-- UEB/Integration von Änderungen/4 --></h2>
+<h2>Schritt 4 - Integration bei Änderungen in derselben Datei <!-- UEB/zusammenarbeit-integration-von-aenderungen/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/changes-in-same-files`.
 

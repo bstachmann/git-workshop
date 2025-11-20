@@ -27,13 +27,13 @@ nav_order: 999
 ## Initial situation
 
 
-<h2>Step 0 - START <!-- UEB/Branching/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-branching/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Create branch <!-- UEB/Branching/1 --></h2>
+<h2>Step 1 - Create branch <!-- UEB/zusammenarbeit-branching/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-branching/repo`.
 
@@ -42,7 +42,7 @@ and create a commit.
 Then switch back to `main` and edit `bar` there.
 Show the commit graph.
 
-<h2>Step 2 - Merge branch <!-- UEB/Branching/2 --></h2>
+<h2>Step 2 - Merge branch <!-- UEB/zusammenarbeit-branching/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-branching/repo`.
 

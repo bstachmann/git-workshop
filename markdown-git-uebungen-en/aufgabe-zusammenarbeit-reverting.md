@@ -35,13 +35,13 @@ The merge commit is tagged with `feature-merge`.
 
 Both changes are to be undone.
 
-<h2>Step 0 - START <!-- UEB/Reverting/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-reverting/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Undo a single commit. <!-- UEB/Reverting/1 --></h2>
+<h2>Step 1 - Undo a single commit. <!-- UEB/zusammenarbeit-reverting/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 
@@ -49,7 +49,7 @@ In the history, the file `README.md` was renamed to `liesmich`.
 Undo this change.
 Tip: The commit is tagged as `umbenennung`.
 
-<h2>Step 2 - Undo merge commit. <!-- UEB/Reverting/2 --></h2>
+<h2>Step 2 - Undo merge commit. <!-- UEB/zusammenarbeit-reverting/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 
@@ -57,7 +57,7 @@ In the history, a feature branch was integrated via merge.file . Undo this chang
 Tip: The merge commit is tagged as `feature-merge`.
 Tip: The success can be recognized by the disappearance of the file `from-feature`.
 
-<h2>Step 3 - Feature branch broken!? <!-- UEB/Reverting/3 --></h2>
+<h2>Step 3 - Feature branch broken!? <!-- UEB/zusammenarbeit-reverting/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 
@@ -71,7 +71,7 @@ Try to merge it again.
 Examine the error message and the commit graph.
 Tip: The failed merge can be aborted with `git merge --abort`.
 
-<h2>Step 4 - Undo merge revert again. <!-- UEB/Reverting/4 --></h2>
+<h2>Step 4 - Undo merge revert again. <!-- UEB/zusammenarbeit-reverting/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 

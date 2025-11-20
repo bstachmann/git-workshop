@@ -34,13 +34,13 @@ In the `repo` directory, a Git project is waiting
 to be edited.
 
 
-<h2>Step 0 - START <!-- UEB/Staging/0 --></h2>
+<h2>Step 0 - START <!-- UEB/commits-staging/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Staging <!-- UEB/Staging/1 --></h2>
+<h2>Step 1 - Staging <!-- UEB/commits-staging/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/commits-staging/repo`.
 
@@ -51,28 +51,28 @@ Then replace `doof` with `toll`.
 Show the status and diffs
 for the workspace and stage.
 
-<h2>Step 2 - Restore - Staging zurücknehmen <!-- UEB/Staging/2 --></h2>
+<h2>Step 2 - Restore - Staging zurücknehmen <!-- UEB/commits-staging/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/commits-staging/repo`.
 
 The last change should not be included in the next commit yet,
 so undo it.
 
-<h2>Step 3 - Restore - Änderung ganz zurücknehmen <!-- UEB/Staging/3 --></h2>
+<h2>Step 3 - Restore - Änderung ganz zurücknehmen <!-- UEB/commits-staging/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/commits-staging/repo`.
 
 The changes to `demo` should be completely undone.
 Show the status and diffs afterwards.
 
-<h2>Step 4 - ⭐ Restore - Älteren Inhalt einer Datei zurückholen <!-- UEB/Staging/4 --></h2>
+<h2>Step 4 - ⭐ Restore - Älteren Inhalt einer Datei zurückholen <!-- UEB/commits-staging/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/commits-staging/repo`.
 
 The file `beispiel` was edited three times.
 Restore the middle state and create a commit.
 
-<h2>Step 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen <!-- UEB/Staging/5 --></h2>
+<h2>Step 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen <!-- UEB/commits-staging/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/commits-staging/repo`.
 

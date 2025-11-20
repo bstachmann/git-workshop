@@ -33,9 +33,9 @@ Two repositories
 are already present.
 
 
-<h2>Step 0 - START <!-- UEB/Merging small projects/0 --></h2>
+<h2>Step 0 - START <!-- UEB/modularisierung-repositorys-zusammenfuehren/0 --></h2>
 
-<h2>Step 1 - Merge `git subtree` <!-- UEB/Merging small projects/1 --></h2>
+<h2>Step 1 - Merge `git subtree` <!-- UEB/modularisierung-repositorys-zusammenfuehren/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/modularisierung-repositorys-zusammenfuehren`.
 
@@ -45,7 +45,7 @@ Start in directory `git-uebungen/aufgaben/modularisierung-repositorys-zusammenfu
 3. Add `ui.git` in a subdirectory `ui`.
 4. Examine the directory structure and commit graph
 
-<h2>Step 2 - Merge with `fetch`, `mv` and `merge` <!-- UEB/Merging small projects/2 --></h2>
+<h2>Step 2 - Merge with `fetch`, `mv` and `merge` <!-- UEB/modularisierung-repositorys-zusammenfuehren/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/modularisierung-repositorys-zusammenfuehren`.
 

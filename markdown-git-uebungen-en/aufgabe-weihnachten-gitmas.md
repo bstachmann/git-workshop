@@ -21,9 +21,9 @@ Let your creativity run wild, or follow these **tips:**
  * If you can script, e.g. with Bash or Python: ˋforˋ loops are useful.
 
 
-<h2>Step 0 - START <!-- UEB/Merry Christmas!/0 --></h2>
+<h2>Step 0 - START <!-- UEB/weihnachten-gitmas/0 --></h2>
 
-<h2>Step 1 - And now a Christmas tree <!-- UEB/Merry Christmas!/1 --></h2>
+<h2>Step 1 - And now a Christmas tree <!-- UEB/weihnachten-gitmas/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/weihnachten-gitmas`.
 

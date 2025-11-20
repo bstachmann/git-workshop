@@ -23,13 +23,13 @@ Rebasing ist, neben dem Merging, eine weitere Möglichkeit,
 ## Ausgangssituation
 
 
-<h2>Schritt 0 - START <!-- UEB/Rebasing/0 --></h2>
+<h2>Schritt 0 - START <!-- UEB/zusammenarbeit-rebasing/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Schritt 1 - Feature-Branch per Rebase aktualiseren. <!-- UEB/Rebasing/1 --></h2>
+<h2>Schritt 1 - Feature-Branch per Rebase aktualiseren. <!-- UEB/zusammenarbeit-rebasing/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-rebasing/repo`.
 

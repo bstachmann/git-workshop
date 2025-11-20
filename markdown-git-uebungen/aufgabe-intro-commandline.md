@@ -48,9 +48,9 @@ das `git`-Kommando kennenzulernen.
 
 [Kurze Intro zur Kommandozeile](../installation/kommandozeile)
 
-<h2>Schritt 0 - START <!-- UEB/Das `git`-Kommando!/0 --></h2>
+<h2>Schritt 0 - START <!-- UEB/intro-commandline/0 --></h2>
 
-<h2>Schritt 1 - Navigation in Übungsverzeichnisse <!-- UEB/Das `git`-Kommando!/1 --></h2>
+<h2>Schritt 1 - Navigation in Übungsverzeichnisse <!-- UEB/intro-commandline/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen`.
 
@@ -62,13 +62,13 @@ Nutze die Tab-Completion, um nicht so viel tippen zu müssen.
 Navigiere dann wieder zurück ins übergeordnete 
 Verzeichnis `intro-commandline`.
 
-<h2>Schritt 2 - Git-Version prüfen <!-- UEB/Das `git`-Kommando!/2 --></h2>
+<h2>Schritt 2 - Git-Version prüfen <!-- UEB/intro-commandline/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline`.
 
 Gib aus, welche Version von Git installiert ist.
 
-<h2>Schritt 3 - Hilfe <!-- UEB/Das `git`-Kommando!/3 --></h2>
+<h2>Schritt 3 - Hilfe <!-- UEB/intro-commandline/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline`.
 
@@ -78,7 +78,7 @@ Zeige die Hilfeseite zum `log`-Befehl an.
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Schritt 4 - `less` und lange Ausgaben <!-- UEB/Das `git`-Kommando!/4 --></h2>
+<h2>Schritt 4 - `less` und lange Ausgaben <!-- UEB/intro-commandline/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -87,7 +87,7 @@ Weil diese nicht in ein Terminalfenster passt,
 wird der `less`-Viewer geöffnet. Schliessen sie ihn.
 Nutzen sie dann `less some-file.txt` um eine Datei im `less`-Modus anzusehen.
 
-<h2>Schritt 5 - Git konfigurieren <!-- UEB/Das `git`-Kommando!/5 --></h2>
+<h2>Schritt 5 - Git konfigurieren <!-- UEB/intro-commandline/5 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -114,7 +114,7 @@ Es ist empfehlenswert sie für diesen Workshop setzen:
     $ git config --global init.defaultBranch main
 
 
-<h2>Schritt 6 - ⭐ Historie <!-- UEB/Das `git`-Kommando!/6 --></h2>
+<h2>Schritt 6 - ⭐ Historie <!-- UEB/intro-commandline/6 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -123,7 +123,7 @@ um einen der vorigen Befehle erneut auszuführen.
 Tippen sie `strg+r` und geben sie dann `conflict`ein,
 um den Befehl zum Setzen von `merge.conflictStyle` erneut auszuführen.
 
-<h2>Schritt 7 - ⭐ Git-Editor konfigurieren <!-- UEB/Das `git`-Kommando!/7 --></h2>
+<h2>Schritt 7 - ⭐ Git-Editor konfigurieren <!-- UEB/intro-commandline/7 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 
@@ -131,14 +131,14 @@ Konfigurieren Sie einen Editor für git.
 [Tipps dazu](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config).f
 Testen Sie dann mit `git config -e`, ob es geklappt hat.
 
-<h2>Schritt 8 - ⭐ Arbeitsverzeichnis <!-- UEB/Das `git`-Kommando!/8 --></h2>
+<h2>Schritt 8 - ⭐ Arbeitsverzeichnis <!-- UEB/intro-commandline/8 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 
 Geben Sie aus, in welchem Arbeitzverzeichnis Sie sich gerade befinden.
 Für Windows-User: Testen sie den Befehl auch mit der Option `-W`.
 
-<h2>Schritt 9 - ⭐ Anwendungen öfnen <!-- UEB/Das `git`-Kommando!/9 --></h2>
+<h2>Schritt 9 - ⭐ Anwendungen öfnen <!-- UEB/intro-commandline/9 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/intro-commandline/repo`.
 

@@ -23,13 +23,13 @@ to integrate changes.
 ## Initial situation
 
 
-<h2>Step 0 - START <!-- UEB/Rebasing/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-rebasing/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Update feature branch via rebase. <!-- UEB/Rebasing/1 --></h2>
+<h2>Step 1 - Update feature branch via rebase. <!-- UEB/zusammenarbeit-rebasing/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-rebasing/repo`.
 

@@ -30,20 +30,20 @@ Im Verzeichnis `repo` wartet ein Git-Projekt darauf,
 untersucht zu werden. 
 
 
-<h2>Schritt 0 - START <!-- UEB/Repository untersuchen/0 --></h2>
+<h2>Schritt 0 - START <!-- UEB/repository-untersuchen/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Schritt 1 - Branches zeigen <!-- UEB/Repository untersuchen/1 --></h2>
+<h2>Schritt 1 - Branches zeigen <!-- UEB/repository-untersuchen/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
 Zeige an, welche Branches es gibt.
 Zeige jetzt den Commit-Graphen über alle Branches an.
 
-<h2>Schritt 2 - Branch wechseln <!-- UEB/Repository untersuchen/2 --></h2>
+<h2>Schritt 2 - Branch wechseln <!-- UEB/repository-untersuchen/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
@@ -51,13 +51,13 @@ Wechsle auf den Branch `feature-a`.
 Sieh Dir den Inhalt der Datei `bar` im Verzeichnis `foo` an.
 Wechsle zurück auf `main`.
 
-<h2>Schritt 3 - Tags zeigen <!-- UEB/Repository untersuchen/3 --></h2>
+<h2>Schritt 3 - Tags zeigen <!-- UEB/repository-untersuchen/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
 Zeige alle Tags an.
 
-<h2>Schritt 4 - ⭐ Inhalte vergangener Versionen untersuchen <!-- UEB/Repository untersuchen/4 --></h2>
+<h2>Schritt 4 - ⭐ Inhalte vergangener Versionen untersuchen <!-- UEB/repository-untersuchen/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
@@ -67,7 +67,7 @@ Wechsle zum vorigen Commit, und untersuche, wie der Workspace dannn aussieht.
 
 Wechsle dann wieder auf `main` zurück.
 
-<h2>Schritt 5 - ⭐ Hole alten Stand einer einzelnen Datei zurück. <!-- UEB/Repository untersuchen/5 --></h2>
+<h2>Schritt 5 - ⭐ Hole alten Stand einer einzelnen Datei zurück. <!-- UEB/repository-untersuchen/5 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/repository-untersuchen/repo`.
 

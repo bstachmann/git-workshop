@@ -34,13 +34,13 @@ Im Verzeichnis `repo` wartet ein Git-Projekt darauf,
 bearbeitet zu werden. 
 
 
-<h2>Schritt 0 - START <!-- UEB/Staging/0 --></h2>
+<h2>Schritt 0 - START <!-- UEB/commits-staging/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Schritt 1 - Staging <!-- UEB/Staging/1 --></h2>
+<h2>Schritt 1 - Staging <!-- UEB/commits-staging/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/commits-staging/repo`.
 
@@ -51,28 +51,28 @@ Ersetze dann `doof` durch `toll`.
 Lasse dir den Status und die Diffs
 für Workspace und Stage zeigen.
 
-<h2>Schritt 2 - Restore - Staging zurücknehmen <!-- UEB/Staging/2 --></h2>
+<h2>Schritt 2 - Restore - Staging zurücknehmen <!-- UEB/commits-staging/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/commits-staging/repo`.
 
 Die letzte Änderung soll doch noch nicht in das nächste Commit übernommen werden,
 nehme sie zurück. 
 
-<h2>Schritt 3 - Restore - Änderung ganz zurücknehmen <!-- UEB/Staging/3 --></h2>
+<h2>Schritt 3 - Restore - Änderung ganz zurücknehmen <!-- UEB/commits-staging/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/commits-staging/repo`.
 
 Die Änderungen an `demo` sollen ganz zurückgenommen werden.
 Lasse Dir nachher Status und Diffs anzeigen.
 
-<h2>Schritt 4 - ⭐ Restore - Älteren Inhalt einer Datei zurückholen <!-- UEB/Staging/4 --></h2>
+<h2>Schritt 4 - ⭐ Restore - Älteren Inhalt einer Datei zurückholen <!-- UEB/commits-staging/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/commits-staging/repo`.
 
 Die Datei `beispiel` wurde dreimal bearbeitet.
 Hole den mittleren Stand zurück und erstelle ein Commit.
 
-<h2>Schritt 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen <!-- UEB/Staging/5 --></h2>
+<h2>Schritt 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen <!-- UEB/commits-staging/5 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/commits-staging/repo`.
 
