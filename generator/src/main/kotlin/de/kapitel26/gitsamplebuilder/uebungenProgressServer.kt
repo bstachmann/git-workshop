@@ -167,7 +167,7 @@ fun Route.aufgabenFilesLocalJekyll() {
 
             val response =
                     this.getStaticContent(
-                            "markdown-git-uebungen/" +
+                            "markdown-git-uebungen${call.parameters["language_suffix"] ?: ""}/" +
                                     (call.parameters.getAll("path")?.joinToString("/") ?: "")
                     )
             // Schritt 1 - Navigation in Übungsverzeichnisse <!-- UEB/Das `git`-Kommando!/1 -->
