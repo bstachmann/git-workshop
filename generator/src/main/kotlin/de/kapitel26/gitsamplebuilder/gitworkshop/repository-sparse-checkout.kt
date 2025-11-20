@@ -62,7 +62,6 @@ fun CollectionOfSamples.sparseCeckout() {
         }
 
         createAufgabe(
-                "repository-sparse-checkout",
                 "Sparse-Klon durchführen" en "Perform sparse clone",
                 """
                 | Erstelle einen Sparse-Klon von `repo` mit dem Namen `myrepo`,
@@ -78,7 +77,6 @@ fun CollectionOfSamples.sparseCeckout() {
         }
 
         createAufgabe(
-                "repository-sparse-checkout",
                 "Verzeichnis hinzufügen" en "Add directory",
                 """
             | Füge das Verzeichnis `component-a` hinzu .
@@ -100,7 +98,6 @@ fun CollectionOfSamples.sparseCeckout() {
         }
 
         createAufgabe(
-                "repository-sparse-checkout",
                 "Sparse Checkout deaktivieren" en "Disable sparse checkout",
                 """
             | Deaktiviere Sparse-Checkout und führe erneut ein Checkout durch.
@@ -119,7 +116,6 @@ fun CollectionOfSamples.sparseCeckout() {
         }
 
         createAufgabe(
-                "repository-sparse-checkout",
                 "Klonen und auschecken" en "Clone and checkout",
                 """
                 | Klone `myrepo`, schränke auf `component-a` ein

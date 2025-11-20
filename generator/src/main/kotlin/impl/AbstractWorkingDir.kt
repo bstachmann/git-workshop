@@ -207,7 +207,6 @@ abstract class AbstractWorkingDir<T>(
 
         @Suppress("UNCHECKED_CAST")
         fun createAufgabe(
-                aufgabenId: String,        
                 title: String,
                 description: String = "",
                 startPath: String? = null,

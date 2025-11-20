@@ -39,7 +39,6 @@ fun CollectionOfSamples.halloWelt() {
         )
 
         createAufgabe(
-                "intro-hallo-welt",
                 "Das erste Repo" en "The first repo",
                 """
                 Erstellen sie ihr erstes Repository mit den folgenden Befehlen:
@@ -75,7 +74,6 @@ fun CollectionOfSamples.halloWelt() {
         }
 
         createAufgabe(
-                "intro-hallo-welt",
                 "⭐ Und noch ein Commit" en "⭐ And another commit",
                 """
             Bearbeiten Sie die Datei 'hallo' und erstellen ein neues commit.
@@ -101,7 +99,6 @@ fun CollectionOfSamples.halloWelt() {
             }
         }
         createAufgabe(
-                "intro-hallo-welt",
                 "⭐ Wo liegt das Repository" en "⭐ Where is the repository",
                 """
             Untersuchen Sie das Verzeichnis.

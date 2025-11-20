@@ -148,7 +148,6 @@ fun CollectionOfSamples.integrationVonAenderungen() {
 
         inRepo("fast-forward") {
             createAufgabe(
-                    "zusammenarbeit-integration-von-aenderungen",
                     "Fast-Forward beim Pull" en "Fast-forward on pull",
                     """
                     Im einfachste Fall haben wir selber gar nichts gemacht,
@@ -184,7 +183,6 @@ fun CollectionOfSamples.integrationVonAenderungen() {
 
         inRepo("no-ff") {
             createAufgabe(
-                    "zusammenarbeit-integration-von-aenderungen",
                     "Merge erzwingen beim Pull" en "Force merge on pull",
                     """
                     Auch dieses haben wir nichtnichts gemacht,
@@ -220,7 +218,6 @@ fun CollectionOfSamples.integrationVonAenderungen() {
 
         inRepo("changes-in-different-files") {
             createAufgabe(
-                    "zusammenarbeit-integration-von-aenderungen",
                     "Integration bei Änderungen in verschiedenen Dateien" en
                             "Integration with changes in different files",
                     """
@@ -302,7 +299,6 @@ fun CollectionOfSamples.integrationVonAenderungen() {
 
         inRepo("changes-in-same-files") {
             createAufgabe(
-                    "zusammenarbeit-integration-von-aenderungen",
                     "Integration bei Änderungen in derselben Datei" en
                             "Integration with changes in the same file",
                     """

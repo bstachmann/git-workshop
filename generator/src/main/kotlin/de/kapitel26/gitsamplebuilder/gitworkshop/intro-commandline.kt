@@ -106,7 +106,6 @@ fun CollectionOfSamples.commandline() {
         }
 
         createAufgabe(
-                "intro-commandline",
                 "Navigation in Übungsverzeichnisse" en "Navigation in exercise directories",
                 """
             (aus dem entpackten Zip-File)
@@ -148,7 +147,6 @@ fun CollectionOfSamples.commandline() {
         }
 
         createAufgabe(
-                "intro-commandline",
                 "Git-Version prüfen" en "Check Git version",
                 """
             Gib aus, welche Version von Git installiert ist.
@@ -159,7 +157,6 @@ fun CollectionOfSamples.commandline() {
         ) { bash("git version") }
 
         createAufgabe(
-                "intro-commandline",
                 "Hilfe" en "Help",
                 """
                 Zeige die Hilfeseite zum `log`-Befehl an.
@@ -181,7 +178,6 @@ fun CollectionOfSamples.commandline() {
 
         inRepo() {
             createAufgabe(
-                    "intro-commandline",
                     "`less` und lange Ausgaben" en "`less` and long outputs",
                     """
                     Wenn Sie `git log` ausführen, sollen 99 Commits angezeigt werden.
@@ -230,7 +226,6 @@ fun CollectionOfSamples.commandline() {
             }
 
             createAufgabe(
-                    "intro-commandline",
                     "Git konfigurieren" en "Configure Git",
                     """
                     Prüfe die User-Konfiguration:
@@ -314,7 +309,6 @@ fun CollectionOfSamples.commandline() {
             }
 
             createAufgabe(
-                    "intro-commandline",
                     "⭐ Historie" en "⭐ History",
                     """
                     Blättern sie die 🡅-Taste mehrfach und drücken dann enter,
@@ -344,7 +338,6 @@ fun CollectionOfSamples.commandline() {
             }
 
             createAufgabe(
-                    "intro-commandline",
                     "⭐ Git-Editor konfigurieren" en "⭐ Configure Git editor",
                     """
                 Konfigurieren Sie einen Editor für git.
@@ -367,7 +360,6 @@ fun CollectionOfSamples.commandline() {
             }
 
             createAufgabe(
-
                     "⭐ Arbeitsverzeichnis" en "⭐ Working directory",
                     """
                 Geben Sie aus, in welchem Arbeitzverzeichnis Sie sich gerade befinden.
@@ -380,7 +372,6 @@ fun CollectionOfSamples.commandline() {
             ) { bash("pwd") }
 
             createAufgabe(
-                    "intro-commandline",
                     "⭐ Anwendungen öfnen" en "⭐ Open applications",
                     """
                 Öffnen Sie die Datei `some-file.txt` mit der Standaranwendung.

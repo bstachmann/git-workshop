@@ -71,7 +71,6 @@ fun CollectionOfSamples.lfs() {
 
         inRepo() {
             createAufgabe(
-                    "modularisierung-lfs",
                     "LFS einrichten" en "Set up LFS",
                     """
                     Richte LFS in für `png`-Dateien ein und pushe das Ergebnis.
@@ -107,7 +106,6 @@ fun CollectionOfSamples.lfs() {
         }
 
         createAufgabe(
-                "modularisierung-lfs",
                 "Ein LFS-Repo klonen" en "Clone an LFS repo",
                 """
                 Klone das Repository.
@@ -122,7 +120,6 @@ fun CollectionOfSamples.lfs() {
             inRepo("myclone") { bash("cat bild.png") }
         }
         createAufgabe(
-                "modularisierung-lfs",
                 "Noch ein Bild" en "Another picture",
                 """
                 Ändere das `png` in `repo` und pushe das Ergebnis. 
@@ -148,7 +145,6 @@ fun CollectionOfSamples.lfs() {
         }
 
         createAufgabe(
-                "modularisierung-lfs",
                 "Auf alte Versionen wechseln" en "Switch to old versions",
                 """
                 Erstelle einen neuen Klon `myclone2` und checke dort `main~2` aus.
@@ -171,7 +167,6 @@ fun CollectionOfSamples.lfs() {
         }
 
         createAufgabe(
-                "modularisierung-lfs",
                 "Trouble",
                 """
                 Erstelle einen neuen Klon `myclone3`

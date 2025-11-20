@@ -131,8 +131,7 @@ fun CollectionOfSamples.repositoryUntersuchen() {
 
         inRepo {
             createAufgabe(
-                "repository-untersuchen",
-                "Branches zeigen" en "Show branches",
+                    "Branches zeigen" en "Show branches",
                     """
                     Zeige an, welche Branches es gibt.
                     Zeige jetzt den Commit-Graphen über alle Branches an.
@@ -151,7 +150,6 @@ fun CollectionOfSamples.repositoryUntersuchen() {
             }
 
             createAufgabe(
-                    "repository-untersuchen",
                     "Branch wechseln" en "Switch branch",
                     """
                     Wechsle auf den Branch `feature-a`.
@@ -166,7 +164,6 @@ fun CollectionOfSamples.repositoryUntersuchen() {
             ) { onBranch("feature-a") { bash("cat foo/bar") } }
 
             createAufgabe(
-                    "repository-untersuchen",
                     "Tags zeigen" en "Show tags",
                     """
                     Zeige alle Tags an.
@@ -177,7 +174,6 @@ fun CollectionOfSamples.repositoryUntersuchen() {
             ) { git("tag") }
 
             createAufgabe(
-                    "repository-untersuchen",
                     "⭐ Inhalte vergangener Versionen untersuchen" en
                             "⭐ Investigate contents of past versions",
                     """
@@ -215,7 +211,6 @@ fun CollectionOfSamples.repositoryUntersuchen() {
             }
 
             createAufgabe(
-                    "repository-untersuchen",
                     "⭐ Hole alten Stand einer einzelnen Datei zurück." en
                             "⭐ Restore old state of a single file.",
                     """

@@ -75,7 +75,6 @@ fun CollectionOfSamples.branching() {
 
         inRepo {
             createAufgabe(
-                    "zusammenarbeit-branching",
                     "Branch erstellen" en "Create branch",
                     """
                     Erstelle einen Branch `feature-a`, bearbeite die Datei `foo`
@@ -97,7 +96,6 @@ fun CollectionOfSamples.branching() {
             }
 
             createAufgabe(
-                    "zusammenarbeit-branching",
                     "Branch mergen" en "Merge branch",
                     """
                     Merge `feature-a` auf den `main`und

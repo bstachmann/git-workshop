@@ -133,7 +133,6 @@ fun CollectionOfSamples.pushRejected() {
 
         inRepo(myClone) {
             createAufgabe(
-                    "zusammenarbeit-push-rejected",
                     "Lokal Commit(s) erstellen" en "Create local commit(s)",
                     """
                     Bearbeite die Datei `$myFile` und erstelle (mindestens) ein Commit mit den Änderungen.
@@ -153,7 +152,6 @@ fun CollectionOfSamples.pushRejected() {
             }
 
             createAufgabe(
-                    "zusammenarbeit-push-rejected",
                     "Push versuchen" en "Try to push",
                     """Versuche jetzt Deine Änderungen zu pushen.""" en
                             """Now try to push your changes."""
@@ -174,7 +172,6 @@ fun CollectionOfSamples.pushRejected() {
             }
 
             createAufgabe(
-                    "zusammenarbeit-push-rejected",
                     "(optional) Problem analysieren" en "(optional) Analyze problem",
                     """
                     Hole zunächt die Änderungen, ohne zu integrieren (`fetch`),
@@ -234,7 +231,6 @@ fun CollectionOfSamples.pushRejected() {
             }
 
             createAufgabe(
-                    "zusammenarbeit-push-rejected",
                     "Fremde Änderungen integrieren" en "Integrate foreign changes",
                     """
                     Integriere die Änderungen mit Pull und sieh Dir dann den Commit-Graphen an.
@@ -277,7 +273,6 @@ fun CollectionOfSamples.pushRejected() {
             }
 
             createAufgabe(
-                    "zusammenarbeit-push-rejected",
                     "Erneut pushen" en "Push again",
                     """
                     

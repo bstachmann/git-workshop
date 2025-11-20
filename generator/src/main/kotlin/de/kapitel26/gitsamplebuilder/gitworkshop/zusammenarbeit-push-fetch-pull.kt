@@ -54,7 +54,6 @@ fun CollectionOfSamples.fetchAndPull() {
 
         inRepo("mein-klon") {
             createAufgabe(
-                    "zusammenarbeit-push-fetch-pull",
                     "Änderungen holen" en "Fetch changes",
                     """
                     Hole die beiden neuen Commits vom `origin`-Repository,
@@ -74,7 +73,6 @@ fun CollectionOfSamples.fetchAndPull() {
             }
 
             createAufgabe(
-                    "zusammenarbeit-push-fetch-pull",
                     "Änderungen untersuchen" en "Examine changes",
                     """
                     Lasse dir den Status zeigen,
@@ -120,7 +118,6 @@ fun CollectionOfSamples.fetchAndPull() {
             }
 
             createAufgabe(
-                    "zusammenarbeit-push-fetch-pull",
                     "Änderungen integrieren" en "Integrate changes",
                     """
                     Integriere die neuesten Commits vom `origin`-Repository

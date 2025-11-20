@@ -79,7 +79,6 @@ fun CollectionOfSamples.repositorysZusammenfuehren() {
         }
 
         createAufgabe(
-                "modularisierung-repositorys-zusammenfuehren",
                 "Zusammenführen `git subtree`" en "Merge `git subtree`",
                 """
                 
@@ -119,7 +118,6 @@ fun CollectionOfSamples.repositorysZusammenfuehren() {
         }
 
         createAufgabe(
-                "modularisierung-repositorys-zusammenfuehren",
                 "Zusammenführen mit `fetch`, `mv` und `merge`" en
                         "Merge with `fetch`, `mv` and `merge`",
                 """

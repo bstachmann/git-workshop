@@ -59,7 +59,6 @@ fun CollectionOfSamples.rebasing() {
 
         inRepo {
             createAufgabe(
-                    "zusammenarbeit-rebasing",
                     "Feature-Branch per Rebase aktualiseren." en
                             "Update feature branch via rebase.",
                     """

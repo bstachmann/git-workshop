@@ -66,7 +66,6 @@ fun CollectionOfSamples.erstellen() {
 
         inRepo {
             createAufgabe(
-                    "commits-erstellen",
                     "Commit - mit Staging" en "Commit - with Staging",
                     """
                     Bearbeite die Datei `hallo-welt`,
@@ -86,7 +85,6 @@ fun CollectionOfSamples.erstellen() {
             }
 
             createAufgabe(
-                    "commits-erstellen",
                     "Commit - automatisches Staging" en "Commit - automatic staging",
                     """
                     Bearbeite die Datei `hallo-welt` erneut
@@ -109,7 +107,6 @@ fun CollectionOfSamples.erstellen() {
             }
 
             createAufgabe(
-                    "commits-erstellen",
                     "Commit - neue Datei" en "Commit - new file",
                     """
                     Erstelle `new-world` und bestätige sie mit einem Commit.
@@ -124,7 +121,6 @@ fun CollectionOfSamples.erstellen() {
             }
 
             createAufgabe(
-                    "commits-erstellen",
                     "Commit - Datei löschen" en "Commit - delete file",
                     """
                     Lösche `hallo-welt` und bestätige dies per Commit.
@@ -138,7 +134,6 @@ fun CollectionOfSamples.erstellen() {
             }
 
             createAufgabe(
-                    "commits-erstellen",
                     "⭐ Add - Dateien rekursiv hinzufügen" en "⭐ Add - recursively add files",
                     """
                     Lege eine Datei `superneu` und eine Verzeichnis `sub`mit einer
@@ -170,7 +165,6 @@ fun CollectionOfSamples.erstellen() {
             // dateien erstellen und bearbeiten editor konfigurieren
 
             createAufgabe(
-                    "commits-erstellen",
                     "⭐ Commit - Datei verschieben/umbenennen" en "⭐ Commit - move/rename file",
                     """
                     Benenne die Datei `hello-world` in `renamed-world` um
