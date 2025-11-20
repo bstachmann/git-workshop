@@ -53,12 +53,14 @@ fun CollectionOfSamples.klonen() {
         }
 
         createAufgabe(
+                "repository-klonen",
                 "Klon durchführen" en "Perform clone",
                 """Erstelle einen Klon von `myfirstrepo` mit dem Namen `myfirstclone`.""" en
                         """Create a clone of `myfirstrepo` named `myfirstclone`."""
         ) { git("clone myfirstrepo myfirstclone") }
 
         createAufgabe(
+                "repository-klonen",
                 "Klon untersuchen" en "Examine clone",
                 """
                     Schaue die Commits an und
@@ -81,7 +83,8 @@ fun CollectionOfSamples.klonen() {
             }
         }
 
-        createAufgabe(
+        createAufgabe(  
+                "repository-klonen",
                 "Im Klon arbeiten" en "Work in the clone",
                 """ Erstelle ein Commit und zeige dann den Status.""" en
                         """ Create a commit and then show the status."""

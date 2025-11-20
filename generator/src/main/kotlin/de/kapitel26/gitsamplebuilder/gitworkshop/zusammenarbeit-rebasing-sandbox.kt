@@ -24,6 +24,7 @@ fun CollectionOfSamples.rebasingSandbox() {
         }
 
         createAufgabe(
+                "zusammenarbeit-rebasing-sandbox",
                 "Feature-Branch per Rebase aktualiseren." en "Update feature branch via rebase.",
                 """
                     """ en """
@@ -48,6 +49,7 @@ fun CollectionOfSamples.rebasingSandbox() {
         }
 
         createAufgabe(
+                "zusammenarbeit-rebasing-sandbox",
                 "Feature-Branch per Merge aktualiseren." en "Update feature branch via merge.",
                 """
                     """ en """

@@ -30,7 +30,7 @@ fun buildSomeUebungen() {
         thema("sandkasten" en "sandbox") {
             createAufgabenFolge("moin" en "hello") {
                 createIntro("MOIN" en "HELLO", "MOIN MOIN" en "HELLO HELLO")
-                createAufgabe("Aufgabe" en "Task", "tu was" en "do something") {
+                createAufgabe("sandkasten", "Aufgabe" en "Task", "tu was" en "do something") {
                     markdown("und hier details" en "and here details")
                 }
             }

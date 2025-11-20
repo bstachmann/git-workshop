@@ -141,6 +141,7 @@ fun CollectionOfSamples.repositoryLog() {
 
         inRepo {
             createAufgabe(
+                    "repository-log",
                     "Verzeichnisstruktur" en "Directory structure",
                     """
                     Untersuche das Projektverzeichnis.
@@ -170,6 +171,7 @@ fun CollectionOfSamples.repositoryLog() {
             }
 
             createAufgabe(
+                    "repository-log",
                     "Commits ansehen" en "View commits",
                     """
                     Sieh Dir die Commits. 
@@ -182,6 +184,7 @@ fun CollectionOfSamples.repositoryLog() {
             ) { git("log --oneline") }
 
             createAufgabe(
+                    "repository-log",
                     "Head-Commit untersuchen" en "Examine head commit",
                     """
                     Zeige Details zur aktuellen Version,
@@ -200,6 +203,7 @@ fun CollectionOfSamples.repositoryLog() {
             }
 
             createAufgabe(
+                    "repository-log",
                     "Vergangene Commits untersuchen" en "Examine past commits",
                     """
                     Zeige Details zum Release1.0,
@@ -217,6 +221,7 @@ fun CollectionOfSamples.repositoryLog() {
             }
 
             createAufgabe(
+                    "repository-log",
                     "⭐ Inhalte vergangener Versionen untersuchen" en
                             "⭐ Examine contents of past versions",
                     """
@@ -245,6 +250,7 @@ fun CollectionOfSamples.repositoryLog() {
             }
 
             createAufgabe(
+                    "repository-log",
                     "⭐ Commits ansehen: Datei-Statistik" en "⭐ View commits: file statistics",
                     """
                     Sieh Dir die Commits an. 
@@ -259,6 +265,7 @@ fun CollectionOfSamples.repositoryLog() {
             ) { git("log --stat") }
 
             createAufgabe(
+                    "repository-log",
                     "⭐ Herkunft von Zeilen ermitteln" en "⭐ Determine origin of lines",
                     """
                     Es geht darum für die Datei `nachher` Folgendes zu ermitteln:

@@ -42,6 +42,7 @@ fun CollectionOfSamples.gitmas() {
         )
 
         createAufgabe(
+                "gitmas",
                 "Und jetzt ein Weihnachtsbaum" en "And now a Christmas tree",
                 """
                 Branche und Merge so, dass ˋgit log --graph --onelineˋ

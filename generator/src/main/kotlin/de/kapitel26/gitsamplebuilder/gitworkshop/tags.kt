@@ -85,6 +85,7 @@ fun CollectionOfSamples.tags() {
 
         inRepo("mein-klon") {
             createAufgabe(
+                    "tags",
                     "Tags erstellen" en "Create tags",
                     """
                     Erstelle ein einfaches Tag `simple1` auf `HEAD` und
@@ -109,6 +110,7 @@ fun CollectionOfSamples.tags() {
             }
 
             createAufgabe(
+                    "tags",
                     "Tags holen" en "Fetch tags",
                     """
                     Einfach per pull.
@@ -119,6 +121,7 @@ fun CollectionOfSamples.tags() {
             ) { git("pull") }
 
             createAufgabe(
+                    "tags",
                     "Tags pushen" en "Push tags",
                     """
                     Beim einfachen `git push` werden keine Tags übertragen.
@@ -137,6 +140,7 @@ fun CollectionOfSamples.tags() {
             }
 
             createAufgabe(
+                    "tags",
                     "Manipulieren" en "Manipulate",
                     """
                     Überschreibe das Tag `v0.1`, so dass es auf den`HEAD` zeigt.

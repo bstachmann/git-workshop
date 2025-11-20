@@ -75,6 +75,7 @@ fun CollectionOfSamples.branchingFortgeschritten() {
 
         inRepo {
             createAufgabe(
+                    "zusammenarbeit-branching-advanced",
                     "Branch erstellen" en "Create branch",
                     """
                     Erstelle einen Branch `feature-a`, bearbeite die Datei `foo`
@@ -96,6 +97,7 @@ fun CollectionOfSamples.branchingFortgeschritten() {
             }
 
             createAufgabe(
+                    "zusammenarbeit-branching-advanced",
                     "Branch mergen" en "Merge branch",
                     """
                     Merge `feature-a` auf den `main`und
@@ -111,6 +113,7 @@ fun CollectionOfSamples.branchingFortgeschritten() {
             }
 
             createAufgabe(
+                    "zusammenarbeit-branching-advanced",
                     "⭐ Merge analysieren" en "⭐ Analyze merge",
                     """
                     Zeige, welche Commits vom `main` im Merge hinzugekommen sind.
@@ -130,6 +133,7 @@ fun CollectionOfSamples.branchingFortgeschritten() {
             }
 
             createAufgabe(
+                    "zusammenarbeit-branching-advanced",
                     "⭐ Merge analysieren" en "⭐ Analyze merge",
                     """
                     Zeige, welche Commits vom `main` im Merge hinzugekommen sind.
@@ -149,6 +153,7 @@ fun CollectionOfSamples.branchingFortgeschritten() {
             }
 
             createAufgabe(
+                    "zusammenarbeit-branching-advanced",
                     "Remote Branches untersuchen" en "Examine remote branches",
                     """
                     """ en """

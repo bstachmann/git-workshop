@@ -114,6 +114,7 @@ fun CollectionOfSamples.subtrees() {
 
         inRepo("application") {
             createAufgabe(
+                    "modularisierung-subtrees",
                     "Module als Subtree einbinden" en "Integrating modules as subtrees",
                     """
                     Binde die Module `frontend.git` und `backend.git`
@@ -133,6 +134,7 @@ fun CollectionOfSamples.subtrees() {
         }
 
         createAufgabe(
+                "modularisierung-subtrees",
                 "Änderung aus einem Modul übernehmen" en "Adopting changes from a module",
                 """
                     Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
@@ -160,6 +162,7 @@ fun CollectionOfSamples.subtrees() {
         }
 
         createAufgabe(
+                "modularisierung-subtrees",
                 "Änderung in ein Modul übertragen" en "Transferring changes to a module",
                 """
                     Gehe in `application` ändere `frontend/main.ts` und committe.
@@ -181,6 +184,7 @@ fun CollectionOfSamples.subtrees() {
         }
 
         createAufgabe(
+                "modularisierung-subtrees",
                 "Übergeordnetes Repo klonen" en "Cloning the parent repo",
                 """
                     Klone `application` zu `myapplication`.

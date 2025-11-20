@@ -106,6 +106,7 @@ fun CollectionOfSamples.staging() {
 
         inRepo {
             createAufgabe(
+                    "commit-staging",
                     "Staging",
                     """
                     Ersetze in der Datei `demo`,
@@ -143,6 +144,7 @@ fun CollectionOfSamples.staging() {
             }
 
             createAufgabe(
+                    "commit-staging",
                     "Restore - Staging zurücknehmen",
                     """
                     Die letzte Änderung soll doch noch nicht in das nächste Commit übernommen werden,
@@ -164,6 +166,7 @@ fun CollectionOfSamples.staging() {
             }
 
             createAufgabe(
+                    "commit-staging",
                     "Restore - Änderung ganz zurücknehmen",
                     """
                     Die Änderungen an `demo` sollen ganz zurückgenommen werden.
@@ -186,6 +189,7 @@ fun CollectionOfSamples.staging() {
             }
 
             createAufgabe(
+                    "commit-staging",
                     "⭐ Restore - Älteren Inhalt einer Datei zurückholen",
                     """
                     Die Datei `beispiel` wurde dreimal bearbeitet.
@@ -203,6 +207,7 @@ fun CollectionOfSamples.staging() {
             }
 
             createAufgabe(
+                    "commit-staging",
                     "⭐ Restore - Zurückholen älterer Verzeichnisversionen",
                     """
                     Im Folder `ufer` wurde ein Spiel gespielt.

@@ -87,6 +87,7 @@ fun CollectionOfSamples.reverting() {
 
         inRepo {
             createAufgabe(
+                    "zusammenarbeit-reverting",
                     "Einzelnes Commit rückgängig machen." en "Undo a single commit.",
                     """
                     In der Historie wurde die Datei `README.md` in `liesmich`
@@ -105,6 +106,7 @@ fun CollectionOfSamples.reverting() {
             }
 
             createAufgabe(
+                    "zusammenarbeit-reverting",
                     "Merge-Commit rückgängig machen." en "Undo merge commit.",
                     """
                     In der Historie wurde ein Feature-Branch per Merge integriert.file . Mache dies änderung rückgängig.
@@ -126,6 +128,7 @@ fun CollectionOfSamples.reverting() {
             }
 
             createAufgabe(
+                    "zusammenarbeit-reverting",
                     "Feature-Branch kaputt!?" en "Feature branch broken!?",
                     """
                     Ein Revert wird oft genutzt, um ein Feature kurzfristig zurückzunehmen,
@@ -180,6 +183,7 @@ fun CollectionOfSamples.reverting() {
             }
 
             createAufgabe(
+                    "zusammenarbeit-reverting",
                     "Merge-Revert wieder rückgängig machen." en "Undo merge revert again.",
                     """
                     Der Trick ist, das Revert-Commit selbst zu reverten,

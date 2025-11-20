@@ -120,6 +120,7 @@ fun CollectionOfSamples.submodules() {
 
         inRepo("application") {
             createAufgabe(
+                    "modularisierung-submodules",
                     "Module als Submodule einbinden" en "Integrating modules as submodules",
                     """
                     Binde die Module `frontend.git` und `backend.git`
@@ -152,6 +153,7 @@ fun CollectionOfSamples.submodules() {
         }
 
         createAufgabe(
+                "modularisierung-submodules",
                 "Änderung aus einem Modul übernehmen" en "Adopting changes from a module",
                 """
                     Gehe in das Repo `backend` ändere die Datei `service.java`, committe und pushe.
@@ -180,6 +182,7 @@ fun CollectionOfSamples.submodules() {
         }
 
         createAufgabe(
+                "modularisierung-submodules",
                 "Änderung in ein Modul übertragen" en "Transferring changes to a module",
                 """
                     Gehe in `subtrees/frontend` ändere `main.ts` und committe.
@@ -209,6 +212,7 @@ fun CollectionOfSamples.submodules() {
         }
 
         createAufgabe(
+                "modularisierung-submodules",
                 "Übergeordnetes Repo klonen" en "Cloning the parent repo",
                 """
                     Klone `application` zu `myapplication`.
