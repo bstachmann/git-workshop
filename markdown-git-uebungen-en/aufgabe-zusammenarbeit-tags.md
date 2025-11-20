@@ -31,13 +31,13 @@ nav_order: 999
 ## Setup
                   
 
-<h2>Step 0 - START <!-- UEB/Tags/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-tags/0 --></h2>
 
 
 <pre><code>$ <b>cd mein-klon</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Create tags <!-- UEB/Tags/1 --></h2>
+<h2>Step 1 - Create tags <!-- UEB/zusammenarbeit-tags/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
@@ -45,13 +45,13 @@ Create a simple tag `simple1` on `HEAD` and
 an annotated tag `annotated1` on `HEAD~1`.
 First look at the log and then at both tags individually (`git show an`).
 
-<h2>Step 2 - Fetch tags <!-- UEB/Tags/2 --></h2>
+<h2>Step 2 - Fetch tags <!-- UEB/zusammenarbeit-tags/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
 Simply by pull.
 
-<h2>Step 3 - Push tags <!-- UEB/Tags/3 --></h2>
+<h2>Step 3 - Push tags <!-- UEB/zusammenarbeit-tags/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 
@@ -59,7 +59,7 @@ A simple `git push` does not transfer tags.
 First, specifically transfer the tag `simple1` with a push
 and then all other tags with another push
 
-<h2>Step 4 - Manipulate <!-- UEB/Tags/4 --></h2>
+<h2>Step 4 - Manipulate <!-- UEB/zusammenarbeit-tags/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-tags/mein-klon`.
 

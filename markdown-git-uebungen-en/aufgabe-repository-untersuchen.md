@@ -30,20 +30,20 @@ In the `repo` directory, a Git project is waiting
 to be examined.
 
 
-<h2>Step 0 - START <!-- UEB/Investigating the repository/0 --></h2>
+<h2>Step 0 - START <!-- UEB/repository-untersuchen/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Show branches <!-- UEB/Investigating the repository/1 --></h2>
+<h2>Step 1 - Show branches <!-- UEB/repository-untersuchen/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
 Show which branches exist.
 Now show the commit graph across all branches.
 
-<h2>Step 2 - Switch branch <!-- UEB/Investigating the repository/2 --></h2>
+<h2>Step 2 - Switch branch <!-- UEB/repository-untersuchen/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
@@ -51,13 +51,13 @@ Switch to the `feature-a` branch.
 Look at the content of the `bar` file in the `foo` directory.
 Switch back to `main`.
 
-<h2>Step 3 - Show tags <!-- UEB/Investigating the repository/3 --></h2>
+<h2>Step 3 - Show tags <!-- UEB/repository-untersuchen/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
 Show all tags.
 
-<h2>Step 4 - ⭐ Investigate contents of past versions <!-- UEB/Investigating the repository/4 --></h2>
+<h2>Step 4 - ⭐ Investigate contents of past versions <!-- UEB/repository-untersuchen/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-untersuchen/repo`.
 
@@ -67,7 +67,7 @@ Switch to the previous commit and examine what the workspace looks like then.
 
 Then switch back to `main`.
 
-<h2>Step 5 - ⭐ Restore old state of a single file. <!-- UEB/Investigating the repository/5 --></h2>
+<h2>Step 5 - ⭐ Restore old state of a single file. <!-- UEB/repository-untersuchen/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-untersuchen/repo`.
 

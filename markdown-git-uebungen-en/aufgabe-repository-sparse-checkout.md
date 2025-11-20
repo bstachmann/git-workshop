@@ -29,16 +29,16 @@ It contains files at the top level and in two subdirectories.
    - `repo/` Existing repository.
   
 
-<h2>Step 0 - START <!-- UEB/Sparse Checkout/0 --></h2>
+<h2>Step 0 - START <!-- UEB/repository-sparse-checkout/0 --></h2>
 
-<h2>Step 1 - Perform sparse clone <!-- UEB/Sparse Checkout/1 --></h2>
+<h2>Step 1 - Perform sparse clone <!-- UEB/repository-sparse-checkout/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-sparse-checkout`.
 
 Create a sparse clone of `repo` named `myrepo`,
 verify that only top-level files have been fetched into the workspace.
 
-<h2>Step 2 - Add directory <!-- UEB/Sparse Checkout/2 --></h2>
+<h2>Step 2 - Add directory <!-- UEB/repository-sparse-checkout/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-sparse-checkout`.
 
@@ -46,14 +46,14 @@ Add the directory `component-a`.
 Check the new configuration.
 Validate that `component-a` is now present.
 
-<h2>Step 3 - Disable sparse checkout <!-- UEB/Sparse Checkout/3 --></h2>
+<h2>Step 3 - Disable sparse checkout <!-- UEB/repository-sparse-checkout/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-sparse-checkout`.
 
 | Disable sparse-checkout and perform a checkout again.
 | Validate that all files are now present.
 
-<h2>Step 4 - Clone and checkout <!-- UEB/Sparse Checkout/4 --></h2>
+<h2>Step 4 - Clone and checkout <!-- UEB/repository-sparse-checkout/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-sparse-checkout`.
 

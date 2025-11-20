@@ -19,20 +19,20 @@ nav_order: 999
 ## Setup
                   
 
-<h2>Step 0 - START <!-- UEB/Fetch and Pull/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-push-fetch-pull/0 --></h2>
 
 
 <pre><code>$ <b>cd mein-klon</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Fetch changes <!-- UEB/Fetch and Pull/1 --></h2>
+<h2>Step 1 - Fetch changes <!-- UEB/zusammenarbeit-push-fetch-pull/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-fetch-pull/mein-klon`.
 
 Fetch the two new commits from the `origin` repository
 without changing the local `main`.
 
-<h2>Step 2 - Examine changes <!-- UEB/Fetch and Pull/2 --></h2>
+<h2>Step 2 - Examine changes <!-- UEB/zusammenarbeit-push-fetch-pull/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-fetch-pull/mein-klon`.
 
@@ -41,7 +41,7 @@ and then examine
 which commits are present in the `main` of the `origin` repository,
 which have not yet been integrated into the local `main`.
 
-<h2>Step 3 - Integrate changes <!-- UEB/Fetch and Pull/3 --></h2>
+<h2>Step 3 - Integrate changes <!-- UEB/zusammenarbeit-push-fetch-pull/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-fetch-pull/mein-klon`.
 

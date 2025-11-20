@@ -19,9 +19,9 @@ You will learn what the commands do in detail during the course.
 * `git log` shows commits.
 
 
-<h2>Step 0 - START <!-- UEB/Hello Git!/0 --></h2>
+<h2>Step 0 - START <!-- UEB/intro-hallo-welt/0 --></h2>
 
-<h2>Step 1 - The first repo <!-- UEB/Hello Git!/1 --></h2>
+<h2>Step 1 - The first repo <!-- UEB/intro-hallo-welt/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-hallo-welt`.
 
@@ -34,7 +34,7 @@ Create your first repository with the following commands:
     $ git commit -m 'Hello World!'
     $ git log
 
-<h2>Step 2 - ⭐ And another commit <!-- UEB/Hello Git!/2 --></h2>
+<h2>Step 2 - ⭐ And another commit <!-- UEB/intro-hallo-welt/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-hallo-welt`.
 
@@ -45,7 +45,7 @@ Then look at the log.
     $ git commit -am 'Here we go again!'
     $ git log
 
-<h2>Step 3 - ⭐ Where is the repository <!-- UEB/Hello Git!/3 --></h2>
+<h2>Step 3 - ⭐ Where is the repository <!-- UEB/intro-hallo-welt/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/intro-hallo-welt`.
 

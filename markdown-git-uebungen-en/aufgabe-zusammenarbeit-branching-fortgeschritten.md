@@ -27,13 +27,13 @@ nav_order: 999
 ## Initial situation
 
 
-<h2>Step 0 - START <!-- UEB/Branching (advanced)/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-branching-fortgeschritten/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Create branch <!-- UEB/Branching (advanced)/1 --></h2>
+<h2>Step 1 - Create branch <!-- UEB/zusammenarbeit-branching-fortgeschritten/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
@@ -42,14 +42,14 @@ and create a commit.
 Then switch back to `main` and edit `bar` there.
 Show the commit graph.
 
-<h2>Step 2 - Merge branch <!-- UEB/Branching (advanced)/2 --></h2>
+<h2>Step 2 - Merge branch <!-- UEB/zusammenarbeit-branching-fortgeschritten/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
 Merge `feature-a` into `main` and
 show the commit graph.
 
-<h2>Step 3 - ⭐ Analyze merge <!-- UEB/Branching (advanced)/3 --></h2>
+<h2>Step 3 - ⭐ Analyze merge <!-- UEB/zusammenarbeit-branching-fortgeschritten/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
@@ -57,7 +57,7 @@ Show which commits from `main` were added in the merge.
 Show which commits from `feature-a` were added in the merge.
 Also show the changes (diffs) for both sides.
 
-<h2>Step 4 - ⭐ Analyze merge <!-- UEB/Branching (advanced)/4 --></h2>
+<h2>Step 4 - ⭐ Analyze merge <!-- UEB/zusammenarbeit-branching-fortgeschritten/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 
@@ -65,7 +65,7 @@ Show which commits from `main` were added in the merge.
 Show which commits from `feature-a` were added in the merge.
 Also show the changes (diffs) for both sides.
 
-<h2>Step 5 - Examine remote branches <!-- UEB/Branching (advanced)/5 --></h2>
+<h2>Step 5 - Examine remote branches <!-- UEB/zusammenarbeit-branching-fortgeschritten/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-branching-fortgeschritten/repo`.
 

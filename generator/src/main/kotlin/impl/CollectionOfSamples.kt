@@ -24,6 +24,7 @@ class CollectionOfSamples(rootDir: File, options: LogBuilderOptions) :
         log.nav_order.put("aufgabe-$fullName", aufgabenNamen.size)
         log.nav_order.put("loesung-$fullName", aufgabenNamen.size)
         aufgabenNamen.add(fullName)
+        solutionCollector.registerAufgabe(fullName)
 
         createSample("loesungen/$fullName") {
             inDir(".") {

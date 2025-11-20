@@ -36,13 +36,13 @@ In the `repo` directory, a Git project is waiting
 to be examined.
 
 
-<h2>Step 0 - START <!-- UEB/Repository - Log/0 --></h2>
+<h2>Step 0 - START <!-- UEB/repository-log/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Directory structure <!-- UEB/Repository - Log/1 --></h2>
+<h2>Step 1 - Directory structure <!-- UEB/repository-log/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-log/repo`.
 
@@ -50,28 +50,28 @@ Examine the project directory.
 What files are there in the workspace? What directories?
 Where is the repository?
 
-<h2>Step 2 - View commits <!-- UEB/Repository - Log/2 --></h2>
+<h2>Step 2 - View commits <!-- UEB/repository-log/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-log/repo`.
 
 Look at the commits.
 Pay attention to the displayed branches and tags.
 
-<h2>Step 3 - Examine head commit <!-- UEB/Repository - Log/3 --></h2>
+<h2>Step 3 - Examine head commit <!-- UEB/repository-log/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-log/repo`.
 
 Show details about the current version
 that is checked out in the workspace.
 
-<h2>Step 4 - Examine past commits <!-- UEB/Repository - Log/4 --></h2>
+<h2>Step 4 - Examine past commits <!-- UEB/repository-log/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-log/repo`.
 
 Show details for Release 1.0,
 and then for the predecessor version of Release 1.0
 
-<h2>Step 5 - ⭐ Examine contents of past versions <!-- UEB/Repository - Log/5 --></h2>
+<h2>Step 5 - ⭐ Examine contents of past versions <!-- UEB/repository-log/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-log/repo`.
 
@@ -80,7 +80,7 @@ existed in the previous commit.
 
 Output the content of the file `bar` as it was in the previous commit.
 
-<h2>Step 6 - ⭐ View commits: file statistics <!-- UEB/Repository - Log/6 --></h2>
+<h2>Step 6 - ⭐ View commits: file statistics <!-- UEB/repository-log/6 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-log/repo`.
 
@@ -88,7 +88,7 @@ Look at the commits.
 Have the statistics displayed,
 i.e. how many lines were changed in which file.
 
-<h2>Step 7 - ⭐ Determine origin of lines <!-- UEB/Repository - Log/7 --></h2>
+<h2>Step 7 - ⭐ Determine origin of lines <!-- UEB/repository-log/7 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-log/repo`.
 

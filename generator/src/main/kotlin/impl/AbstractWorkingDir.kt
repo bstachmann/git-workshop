@@ -191,7 +191,6 @@ abstract class AbstractWorkingDir<T>(
 
         @Suppress("UNCHECKED_CAST")
         fun createIntro(title: String, description: String = "", setup: T.() -> Unit = {}) {
-                solutionCollector.registerAufgabe(title)
                 markdown(("# Übung" en "# Exercise") + " - $title")
                 markdown(description)
                 supressLogging(setup)

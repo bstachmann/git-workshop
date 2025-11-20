@@ -50,13 +50,13 @@ application/
 ```
   
 
-<h2>Step 0 - START <!-- UEB/Modularization with Subtrees/0 --></h2>
+<h2>Step 0 - START <!-- UEB/modularisierung-subtrees/0 --></h2>
 
 
 <pre><code>$ <b>cd application</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Integrating modules as subtrees <!-- UEB/Modularization with Subtrees/1 --></h2>
+<h2>Step 1 - Integrating modules as subtrees <!-- UEB/modularisierung-subtrees/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/modularisierung-subtrees/application`.
 
@@ -68,7 +68,7 @@ Then examine the resulting directory structure.
 <pre><code>application $ <b>cd ..</b><br><br><br></code></pre>
 
 
-<h2>Step 2 - Adopting changes from a module <!-- UEB/Modularization with Subtrees/2 --></h2>
+<h2>Step 2 - Adopting changes from a module <!-- UEB/modularisierung-subtrees/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/modularisierung-subtrees`.
 
@@ -77,7 +77,7 @@ Look at the resulting commit (`show --stat`)
 Go to the `application` repo and fetch the changes using `subtree pull`.
 Look at the transferred commit.
 
-<h2>Step 3 - Transferring changes to a module <!-- UEB/Modularization with Subtrees/3 --></h2>
+<h2>Step 3 - Transferring changes to a module <!-- UEB/modularisierung-subtrees/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/modularisierung-subtrees`.
 
@@ -85,7 +85,7 @@ Go to `application`, change `frontend/main.ts` and commit.
 Transfer the change to `frontend.git` using `subtree push`.
 Look at the transferred commit in `frontend.git`.
 
-<h2>Step 4 - Cloning the parent repo <!-- UEB/Modularization with Subtrees/4 --></h2>
+<h2>Step 4 - Cloning the parent repo <!-- UEB/modularisierung-subtrees/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/modularisierung-subtrees`.
 

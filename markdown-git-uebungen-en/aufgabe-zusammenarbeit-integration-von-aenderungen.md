@@ -53,13 +53,13 @@ But Anja has also continued to work in parallel.
 Integrate the new changes from Anja.
 
 
-<h2>Step 0 - START <!-- UEB/Integration of changes/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-integration-von-aenderungen/0 --></h2>
 
 
 <pre><code>$ <b>cd fast-forward</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Fast-forward on pull <!-- UEB/Integration of changes/1 --></h2>
+<h2>Step 1 - Fast-forward on pull <!-- UEB/zusammenarbeit-integration-von-aenderungen/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/fast-forward`.
 
@@ -78,7 +78,7 @@ Show the status and the commit graph.
 <pre><code>$ <b>cd no-ff</b><br><br><br></code></pre>
 
 
-<h2>Step 2 - Force merge on pull <!-- UEB/Integration of changes/2 --></h2>
+<h2>Step 2 - Force merge on pull <!-- UEB/zusammenarbeit-integration-von-aenderungen/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/no-ff`.
 
@@ -97,7 +97,7 @@ Show the status and the commit graph.
 <pre><code>$ <b>cd changes-in-different-files</b><br><br><br></code></pre>
 
 
-<h2>Step 3 - Integration with changes in different files <!-- UEB/Integration of changes/3 --></h2>
+<h2>Step 3 - Integration with changes in different files <!-- UEB/zusammenarbeit-integration-von-aenderungen/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/changes-in-different-files`.
 
@@ -122,7 +122,7 @@ Start in directory `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderu
 <pre><code>$ <b>cd changes-in-same-files</b><br><br><br></code></pre>
 
 
-<h2>Step 4 - Integration with changes in the same file <!-- UEB/Integration of changes/4 --></h2>
+<h2>Step 4 - Integration with changes in the same file <!-- UEB/zusammenarbeit-integration-von-aenderungen/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-integration-von-aenderungen/changes-in-same-files`.
 

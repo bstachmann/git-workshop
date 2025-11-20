@@ -25,15 +25,15 @@ It contains two commits.
    - `myfirstrepo/` Existing repository.
   
 
-<h2>Step 0 - START <!-- UEB/Cloning Repositories/0 --></h2>
+<h2>Step 0 - START <!-- UEB/repository-klonen/0 --></h2>
 
-<h2>Step 1 - Perform clone <!-- UEB/Cloning Repositories/1 --></h2>
+<h2>Step 1 - Perform clone <!-- UEB/repository-klonen/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-klonen`.
 
 Create a clone of `myfirstrepo` named `myfirstclone`.
 
-<h2>Step 2 - Examine clone <!-- UEB/Cloning Repositories/2 --></h2>
+<h2>Step 2 - Examine clone <!-- UEB/repository-klonen/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-klonen`.
 
@@ -43,7 +43,7 @@ show the origin of the clone `myfirstclone`.
 from which it was cloned.
 Then show the status.
 
-<h2>Step 3 - Work in the clone <!-- UEB/Cloning Repositories/3 --></h2>
+<h2>Step 3 - Work in the clone <!-- UEB/repository-klonen/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/repository-klonen`.
 

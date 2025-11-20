@@ -36,13 +36,13 @@ Das Merge-Commit ist mit `feature-merge` getagged.
 
 Beide Änderungen sollen zurückgenommen werden.
 
-<h2>Schritt 0 - START <!-- UEB/Reverting/0 --></h2>
+<h2>Schritt 0 - START <!-- UEB/zusammenarbeit-reverting/0 --></h2>
 
 
 <pre><code>$ <b>cd repo</b><br><br><br></code></pre>
 
 
-<h2>Schritt 1 - Einzelnes Commit rückgängig machen. <!-- UEB/Reverting/1 --></h2>
+<h2>Schritt 1 - Einzelnes Commit rückgängig machen. <!-- UEB/zusammenarbeit-reverting/1 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 
@@ -50,7 +50,7 @@ In der Historie wurde die Datei `README.md` in `liesmich`
 umbenannt. Mache diese Änderung rückgängig.
 Tipp: Das Commit ist als `umbenennung` getagged.
 
-<h2>Schritt 2 - Merge-Commit rückgängig machen. <!-- UEB/Reverting/2 --></h2>
+<h2>Schritt 2 - Merge-Commit rückgängig machen. <!-- UEB/zusammenarbeit-reverting/2 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 
@@ -58,7 +58,7 @@ In der Historie wurde ein Feature-Branch per Merge integriert.file . Mache dies 
 Tipp: Das Merge-Commit ist als `feature-merge` getagged. 
 Tipp: Am verschinden der Datei `from-feature` kann man den Erfolg erkennen.
 
-<h2>Schritt 3 - Feature-Branch kaputt!? <!-- UEB/Reverting/3 --></h2>
+<h2>Schritt 3 - Feature-Branch kaputt!? <!-- UEB/zusammenarbeit-reverting/3 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 
@@ -72,7 +72,7 @@ Versuche ihn erneut zu Mergen.
 Untersuche die Fehlermeldung und den Commit-Graphen.
 Tipp: Das gescheiterte Merge kann mit `git merge --abort` abgebrochen werden.
 
-<h2>Schritt 4 - Merge-Revert wieder rückgängig machen. <!-- UEB/Reverting/4 --></h2>
+<h2>Schritt 4 - Merge-Revert wieder rückgängig machen. <!-- UEB/zusammenarbeit-reverting/4 --></h2>
 
 Starte im Verzeichnis `git-uebungen/aufgaben/zusammenarbeit-reverting/repo`.
 

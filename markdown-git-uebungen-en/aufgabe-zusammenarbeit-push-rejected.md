@@ -55,26 +55,26 @@ you will experience a *Push Reject*.
    - `anjas-apollo/` Anja works here.
    - `my-apollo/` **You work here.**
 
-<h2>Step 0 - START <!-- UEB/Dealing with "Push Reject"/0 --></h2>
+<h2>Step 0 - START <!-- UEB/zusammenarbeit-push-rejected/0 --></h2>
 
 
 <pre><code>$ <b>cd my-apollo</b><br><br><br></code></pre>
 
 
-<h2>Step 1 - Create local commit(s) <!-- UEB/Dealing with "Push Reject"/1 --></h2>
+<h2>Step 1 - Create local commit(s) <!-- UEB/zusammenarbeit-push-rejected/1 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
 Edit the file `frontend.java` and create (at least) one commit with the changes.
 Then check with `git status` if the workspace is clean.
 
-<h2>Step 2 - Try to push <!-- UEB/Dealing with "Push Reject"/2 --></h2>
+<h2>Step 2 - Try to push <!-- UEB/zusammenarbeit-push-rejected/2 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
 Now try to push your changes.
 
-<h2>Step 3 - (optional) Analyze problem <!-- UEB/Dealing with "Push Reject"/3 --></h2>
+<h2>Step 3 - (optional) Analyze problem <!-- UEB/zusammenarbeit-push-rejected/3 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
@@ -85,13 +85,13 @@ and let *Anja's* changes be shown to you.
  * What are the differences between your and Anja's version (symmetrical `diff`)?
  * What changes did Anja make (asymmetrical `diff`)?
 
-<h2>Step 4 - Integrate foreign changes <!-- UEB/Dealing with "Push Reject"/4 --></h2>
+<h2>Step 4 - Integrate foreign changes <!-- UEB/zusammenarbeit-push-rejected/4 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
 Integrate the changes with pull and then look at the commit graph.
 
-<h2>Step 5 - Push again <!-- UEB/Dealing with "Push Reject"/5 --></h2>
+<h2>Step 5 - Push again <!-- UEB/zusammenarbeit-push-rejected/5 --></h2>
 
 Start in directory `git-uebungen/aufgaben/zusammenarbeit-push-rejected/my-apollo`.
 
