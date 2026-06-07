@@ -61,4 +61,3 @@ Die Website wird als *GitHub Pages*  https://bstachmann.github.io/git-workshop/ 
  $ git remote add github https://github.com/bstachmann/git-workshop.git
  $ git remote add gitlab https://gitlab.com/bjoern.stachmann/git-workshop.git
 ```
-`
