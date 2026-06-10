@@ -105,7 +105,7 @@ Look at the log to verify that the tag has been updated.
 
 
 
-<pre><code>anderer-klon $ <b>git pull --tags</b><br><br>From ../blessed<br> ! [rejected]        v0.1       -&gt; v0.1  (would clobber existing tag)<br><br></code></pre>
+<pre><code>anderer-klon $ <b>git pull --tags</b><br><br>From ../blessed<br> ! [rejected] v0.1       -&gt; v0.1  (would clobber existing tag)<br><br></code></pre>
 
 
 

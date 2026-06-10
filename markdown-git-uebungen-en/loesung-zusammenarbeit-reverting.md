@@ -22,7 +22,7 @@ Tip: The commit is tagged as `umbenennung`.
 
 
 
-<pre><code>repo $ <b>ls</b><br><br>from-feature<br>README.md<br><br></code></pre>
+<pre><code>repo $ <b>ls</b><br><br>README.md<br>from-feature<br><br></code></pre>
 
 
 ## Solution to Step 2 - Undo merge commit.
@@ -32,7 +32,7 @@ Tip: The merge commit is tagged as `feature-merge`.
 Tip: The success can be recognized by the disappearance of the file `from-feature`.
 
 
-<pre><code>repo $ <b>ls</b><br><br>from-feature<br>README.md<br><br></code></pre>
+<pre><code>repo $ <b>ls</b><br><br>README.md<br>from-feature<br><br></code></pre>
 
 
 

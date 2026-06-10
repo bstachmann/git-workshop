@@ -21,7 +21,7 @@ verify that only top-level files have been fetched into the workspace.
 
 
 
-<pre><code>myrepo $ <b>ll </b><br><br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  README.md<br><br></code></pre>
+<pre><code>myrepo $ <b>ll </b><br><br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  README.md<br><br></code></pre>
 
 
 
@@ -51,7 +51,7 @@ Validate that `component-a` is now present.
 
 
 
-<pre><code>myrepo $ <b>ll </b><br><br>total 8.0K<br>drwxr-xr-x 2 vscode vscode 4.0K  component-a<br>-rw-r--r-- 1 vscode vscode  181  README.md<br><br></code></pre>
+<pre><code>myrepo $ <b>ll </b><br><br>total 8.0K<br>-rw-rw-rw-  1 vscode vscode  181  README.md<br>drwxrwxrwx+ 2 vscode vscode 4.0K  component-a<br><br></code></pre>
 
 
 
@@ -76,7 +76,7 @@ Validate that `component-a` is now present.
 
 
 
-<pre><code>myrepo $ <b>ll </b><br><br>total 12K<br>drwxr-xr-x 2 vscode vscode 4.0K  component-a<br>drwxr-xr-x 2 vscode vscode 4.0K  component-b<br>-rw-r--r-- 1 vscode vscode  181  README.md<br><br></code></pre>
+<pre><code>myrepo $ <b>ll </b><br><br>total 12K<br>-rw-rw-rw-  1 vscode vscode  181  README.md<br>drwxrwxrwx+ 2 vscode vscode 4.0K  component-a<br>drwxrwxrwx+ 2 vscode vscode 4.0K  component-b<br><br></code></pre>
 
 
 
@@ -109,7 +109,7 @@ and do a checkout. Use the `--cone` option.
 
 
 
-<pre><code>myclone $ <b>ll </b><br><br>total 8.0K<br>drwxr-xr-x 2 vscode vscode 4.0K  component-a<br>-rw-r--r-- 1 vscode vscode  181  README.md<br><br></code></pre>
+<pre><code>myclone $ <b>ll </b><br><br>total 8.0K<br>-rw-rw-rw-  1 vscode vscode  181  README.md<br>drwxrwxrwx+ 2 vscode vscode 4.0K  component-a<br><br></code></pre>
 
 
 

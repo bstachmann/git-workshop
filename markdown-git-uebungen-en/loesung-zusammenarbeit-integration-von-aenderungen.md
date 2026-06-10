@@ -150,13 +150,13 @@ Don't forget: call `git add` after cleaning up.
 
 
 
-<pre><code>changes-in-same-files $ <b>git commit -m 'Änderungen von Anja integriert'</b><br><br>[main 8765039] Änderungen von Anja integriert<br><br></code></pre>
+<pre><code>changes-in-same-files $ <b>git commit -m 'Änderungen von Anja integriert'</b><br><br>[main 0f407b2] ?nderungen von Anja integriert<br><br></code></pre>
 
 
 And here again the resulting graph:
 
 
-<pre><code>changes-in-same-files $ <b>git log --graph --oneline</b><br><br>*   8765039 Änderungen von Anja integriert<br>|\  <br>| *   7136fb0 Merge branch 'main' of ../origin-for-merge-samples<br>| |\  <br>| | * 640cceb Use double values instead of int<br>| * | cc16e28 Commited file README.md on branch main by bjoern<br>| |/  <br>* / 1fac052 Refactoring: s in summe umbenennen<br>|/  <br>* 47053b2 Created file average.kts on branch main by anja .<br>* 75dfc35 Created file README.md on branch main by anja .<br><br></code></pre>
+<pre><code>changes-in-same-files $ <b>git log --graph --oneline</b><br><br>*   0f407b2 ?nderungen von Anja integriert<br>|\  <br>| *   7136fb0 Merge branch 'main' of ../origin-for-merge-samples<br>| |\  <br>| | * 640cceb Use double values instead of int<br>| * | cc16e28 Commited file README.md on branch main by bjoern<br>| |/  <br>* / 1fac052 Refactoring: s in summe umbenennen<br>|/  <br>* 47053b2 Created file average.kts on branch main by anja .<br>* 75dfc35 Created file README.md on branch main by anja .<br><br></code></pre>
 
 
 [To the exercise](aufgabe-zusammenarbeit-integration-von-aenderungen-en.html){:style="position: fixed; right: 10px; top:60px" .btn .btn-purple}
