@@ -24,7 +24,7 @@ Then examine the resulting directory structure.
 You can see that the modules are embedded as independent Git repositories with a separate `.git` directory.
 
 
-<pre><code>application $ <b>ll frontend backend</b><br><br>backend:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  service.java<br><br>frontend:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 181  main.ts<br><br></code></pre>
+<pre><code>application $ <b>ll frontend backend</b><br><br>backend:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  service.java<br><br>frontend:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 181  main.ts<br><br></code></pre>
 
 
 Attention! The submodules have been added, but a commit is still missing.
@@ -179,7 +179,7 @@ Now we fetch the modules:
 
 
 
-<pre><code>myapplication $ <b>ll frontend backend</b><br><br>backend:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 249  service.java<br><br>frontend:<br>total 4.0K<br>-rw-r--r-- 1 vscode vscode 244  main.ts<br><br></code></pre>
+<pre><code>myapplication $ <b>ll frontend backend</b><br><br>backend:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 249  service.java<br><br>frontend:<br>total 4.0K<br>-rw-rw-rw- 1 vscode vscode 244  main.ts<br><br></code></pre>
 
 
 
