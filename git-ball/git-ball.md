@@ -11,6 +11,7 @@ Plumbing
 `git show HEAD:README.md`
 `--oneline`
 Pull
+`git revert
 Revision-Hash
 `.gitignore` 
 `--graph`
