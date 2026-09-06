@@ -104,7 +104,7 @@ The file `beispiel` was edited three times.
 Restore the middle state and create a commit.
 
 
-<pre><code>repo $ <b>git log --oneline beispiel</b><br><br>2e48c2f sp?ter<br>4222f43 dazwischen<br>dfe79fa dazwischen<br><br></code></pre>
+<pre><code>repo $ <b>git log --oneline beispiel</b><br><br>c67dc27 später<br>4222f43 dazwischen<br>dfe79fa dazwischen<br><br></code></pre>
 
 
 
@@ -116,7 +116,7 @@ Restore the middle state and create a commit.
 
 
 
-<pre><code>repo $ <b>git commit -am &quot;Mittlerer Stand wiederhergestellt.&quot;</b><br><br>[main 27abb5e] Mittlerer Stand wiederhergestellt.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>
+<pre><code>repo $ <b>git commit -am &quot;Mittlerer Stand wiederhergestellt.&quot;</b><br><br>[main 2045b52] Mittlerer Stand wiederhergestellt.<br> 1 file changed, 1 insertion(+), 1 deletion(-)<br><br></code></pre>
 
 
 ## Solution to Step 5 - ⭐ Restore - Zurückholen älterer Verzeichnisversionen
@@ -131,7 +131,7 @@ Tip: When using `restore`, untracked files are not removed.
 You can remove them with the `stash` command.
 
 
-<pre><code>repo $ <b>git log --oneline -- ufer/</b><br><br>40f54a9 Zug 7<br>a9882a6 Zug 6<br>954d812 Zug 5<br>77f4917 Zug 4<br>e1ee973 Zug 3<br>3fe29e6 Zug 2<br>6d31336 Zug 1<br>cf716f5 Starte spiel<br><br></code></pre>
+<pre><code>repo $ <b>git log --oneline -- ufer/</b><br><br>b1ef622 Zug 7<br>f4bd978 Zug 6<br>d9717fe Zug 5<br>c3aaf58 Zug 4<br>742e18c Zug 3<br>ea7b14c Zug 2<br>751d90f Zug 1<br>cdc2f48 Starte spiel<br><br></code></pre>
 
 
 Move 1
@@ -151,7 +151,7 @@ Move 1
 Move 2
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -165,7 +165,7 @@ Move 2
 Move 3
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -179,7 +179,7 @@ Move 3
 Move 4
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -193,7 +193,7 @@ Move 4
 Move 5
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -207,7 +207,7 @@ Move 5
 Move 6
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 
@@ -221,7 +221,7 @@ Move 6
 Move 7
 
 
-<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 27abb5e Mittlerer Stand wiederhergestellt.<br><br></code></pre>
+<pre><code>repo $ <b>git stash -u</b><br><br>Saved working directory and index state WIP on main: 2045b52 Mittlerer Stand wiederhergestellt.<br><br></code></pre>
 
 
 

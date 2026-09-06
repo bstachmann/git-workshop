@@ -46,7 +46,7 @@ directory `intro-commandline`.
 Print which version of Git is installed.
 
 
-<pre><code>$ <b>git version</b><br><br>git version 2.54.0<br><br></code></pre>
+<pre><code>$ <b>git version</b><br><br>git version 2.55.0<br><br></code></pre>
 
 
 ## Solution to Step 3 - Help
